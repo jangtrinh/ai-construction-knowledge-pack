@@ -1,0 +1,38 @@
+# ontology.proposal.yaml — copy phần object_types vào ontology.yaml CHỈ SAU KHI owner duyệt (R1)
+# APPROVAL: owner duyệt qua AskUserQuestion 2026-10-29 — "Duyệt đề xuất" (6 tài liệu + entity_kind),
+#   ngôn ngữ thân bài: tiếng Việt (quote giữ nguyên gốc), phạm vi case study: toàn cầu + Việt Nam.
+#   Đã copy thay đổi entity vào ontology.yaml cùng ngày.
+# Pack: "Ứng dụng AI vào ngành xây dựng" — ai-nganh-xay-dung
+# Thay đổi DUY NHẤT so với starter ontology: entity thêm property enum `entity_kind`.
+
+object_types:
+  entity:
+    folder: entities
+    properties:
+      - {name: entity_kind, type: enum, values: [technology, organization, standard]}
+
+rationale:
+  - entity_kind: các tài liệu chia sẻ 2 nhóm thực thể lặp lại — công nghệ (robotics, iot, llm, ocr,
+    digital-twin, bim, autonomous-equipment...) và tổ chức (Komatsu, Trimble, Buildots, Vinci,
+    Coteccons...); owner lọc được bằng `query --where entity_kind=technology`.
+  - standard: chuẩn/quy định (vd ISO 19650, quy định chuyển đổi số ngành xây dựng VN) xuất hiện
+    trong >=2 tài liệu (công trường số + hạ tầng tập đoàn).
+  - không thêm document type hay link type nào: starter (concept, guide, comparison, decision-record;
+    cites / about / depends-on / compares) đủ cho bộ tài liệu bên dưới.
+  - chi phí: mỗi entity phải khai entity_kind (enum được tool kiểm tra); không tốn gì thêm.
+
+# Không phải schema — bộ tài liệu đề xuất, duyệt cùng lúc với schema:
+documents_proposed:
+  - {id: tong-quan-ai-nganh-xay-dung,    type: concept, cau_hoi: "AI đáng đầu tư vào ngành xây dựng không — số liệu adoption, giá trị, rào cản?"}
+  - {id: robotics-va-thiet-bi-tu-hanh,   type: concept, cau_hoi: "Robot thi công, xe/máy tự hành, drone nào đã dùng được thật trên công trường?"}
+  - {id: llm-va-ocr-tai-lieu-xay-dung,   type: concept, cau_hoi: "LLM (RAG/fine-tune) và OCR xử lý hồ sơ, bản vẽ, hợp đồng xây dựng tới đâu?"}
+  - {id: cong-truong-so-iot-giam-sat,    type: concept, cau_hoi: "Công trường số gồm gì — IoT, camera AI an toàn, capture tiến độ, digital twin?"}
+  - {id: ai-vong-doi-du-an-xay-dung,     type: concept, cau_hoi: "AI áp vào khâu nào của vòng đời dự án — thiết kế, dự toán, tiến độ, QC, O&M?"}
+  - {id: ha-tang-ai-va-ap-dung-tap-doan, type: guide,   cau_hoi: "Tập đoàn xây dựng cần hạ tầng gì và các tập đoàn lớn đang làm thế nào?"}
+
+required_claims_da_khoa_tai_pack_init:
+  - ai-adoption-construction-industry
+  - autonomous-equipment-production-deployment
+  - llm-document-ai-construction
+  - digital-construction-site-deployment
+  - enterprise-ai-construction-corporation

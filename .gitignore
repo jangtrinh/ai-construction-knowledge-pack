@@ -1,0 +1,4 @@
+# Full-text captures of third-party pages are copyrighted; keep them local only.
+ai-nganh-xay-dung/_evidence/*/sources/
+*.lock
+.DS_Store
