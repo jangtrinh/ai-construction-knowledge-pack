@@ -1,0 +1,2450 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CC1 Digital Construction OS · Báo cáo Trực quan Chủ tịch HĐQT (Bộ 41 Phối cảnh và Bản vẽ Kỹ thuật)</title>
+  <meta name="description" content="Bản trình chiếu trực quan dành cho Chủ tịch và Ban lãnh đạo Tổng Công ty Xây dựng Số 1 (CC1): Giải pháp cho Công trường Mở và Công trường Khép kín, Toàn cảnh 28 điểm chạm và đối chiếu Side by Side với 13 Bản vẽ kỹ thuật Isometric." />
+  <meta property="og:title" content="CC1 Digital Construction OS · Báo cáo Trực quan Chủ tịch HĐQT" />
+  <meta property="og:description" content="Giải pháp Công trường Mở (Tuyến cầu đường L1-L8) và Công trường Khép kín + 28 phối cảnh hiện trường + 13 bản vẽ kỹ thuật Isometric." />
+  <meta property="og:image" content="./01b_GD1_CP1_Cong_Kiem_Soat_AI_PPE_HUD.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="./cc1_official_logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      /* High-Key Architectural Studio Light Palette (matches #F4F7F5 Blueprint Studio) */
+      --bg-canvas: #FFFFFF;
+      --bg-surface: #F4F7F5;
+      --bg-elevated: #E8EFEA;
+      --ink-primary: #11181C;
+      --ink-secondary: #3F4B45;
+      --ink-muted: #57635C;
+      --accent: #0D6A38;
+      --accent-hover: #09522B;
+      --accent-soft: #DCEEE3;
+      --danger: #B91C1C;
+      --border-hairline: #D8E0DC;
+      --border-strong: #B8C4BE;
+
+      /* Strict Spacing Scale (0, 2, 4, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96px) */
+      --sp-0: 0px;
+      --sp-25: 2px;
+      --sp-50: 4px;
+      --sp-75: 8px;
+      --sp-100: 12px;
+      --sp-200: 16px;
+      --sp-300: 24px;
+      --sp-400: 32px;
+      --sp-500: 40px;
+      --sp-600: 48px;
+      --sp-700: 64px;
+      --sp-800: 80px;
+      --sp-900: 96px;
+
+      /* Tailwind Radius Scale */
+      --r-md: 6px;
+      --r-lg: 8px;
+      --r-xl: 12px;
+      --r-2xl: 16px;
+      --r-3xl: 24px;
+      --r-full: 9999px;
+
+      --ease-out-weighted: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: var(--sp-0);
+      padding: var(--sp-0);
+      font-style: normal;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-canvas);
+      color: var(--ink-primary);
+      font-family: "Manrope", "Be Vietnam Pro", sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--ink-primary);
+      overflow-x: clip;
+    }
+
+    ::selection {
+      background-color: var(--accent-soft);
+      color: var(--ink-primary);
+    }
+
+    h1, h2, h3, h4 {
+      text-wrap: balance;
+      font-weight: 700;
+      color: var(--ink-primary);
+    }
+
+    p, li {
+      text-wrap: pretty;
+    }
+
+    .num-inline {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Accessibility Focus Ring */
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: var(--sp-25);
+    }
+
+    /* Skip Link */
+    .skip-link {
+      position: fixed;
+      top: var(--sp-75);
+      left: var(--sp-75);
+      min-height: 44px;
+      min-width: 44px;
+      display: inline-flex;
+      align-items: center;
+      background: var(--bg-canvas);
+      color: var(--ink-primary);
+      border: 1px solid var(--border-strong);
+      padding: var(--sp-75) var(--sp-200);
+      border-radius: var(--r-lg);
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+      text-decoration: none;
+      z-index: 90;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 200ms var(--ease-out-weighted);
+    }
+    .skip-link:focus {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* ==========================================================================
+       ULTRA-COMPACT SINGLE-LINE FLOATING PILL NAVIGATION
+       Takes minimal vertical & horizontal space (~40px height, centered pill)
+       ========================================================================== */
+    .nav-wrapper {
+      position: sticky;
+      top: var(--sp-75);
+      z-index: 40;
+      display: flex;
+      justify-content: center;
+      padding-left: var(--sp-100);
+      padding-right: var(--sp-100);
+      margin-top: var(--sp-75);
+      pointer-events: none;
+    }
+
+    .floating-nav {
+      pointer-events: auto;
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--sp-50);
+      background-color: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--r-lg);
+      padding: var(--sp-50) var(--sp-100);
+      max-width: 100%;
+    }
+
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-75);
+      min-height: 32px;
+      padding: var(--sp-25) var(--sp-75);
+      text-decoration: none;
+      color: var(--ink-primary);
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 700;
+    }
+
+    .brand-logo {
+      height: 20px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--sp-25);
+      list-style: none;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: var(--sp-25) var(--sp-100);
+      border-radius: var(--r-md);
+      color: var(--ink-secondary);
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: color 300ms var(--ease-out-weighted), background-color 300ms var(--ease-out-weighted);
+    }
+
+    .nav-link.active {
+      color: #FFFFFF;
+      background-color: var(--accent);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--sp-75);
+      min-height: 44px;
+      min-width: 44px;
+      background-color: var(--accent);
+      color: #FFFFFF;
+      border: 1px solid var(--accent);
+      border-radius: var(--r-lg);
+      padding: var(--sp-75) var(--sp-200);
+      font-family: inherit;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 300ms var(--ease-out-weighted);
+    }
+
+    .ver-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--sp-50);
+      min-height: 44px;
+      min-width: 44px;
+      background-color: var(--bg-surface);
+      color: var(--ink-secondary);
+      border: 1px solid var(--border-strong);
+      padding: var(--sp-75) var(--sp-200);
+      border-radius: var(--r-lg);
+      font-family: inherit;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 300ms var(--ease-out-weighted), color 300ms var(--ease-out-weighted);
+    }
+
+    /* ==========================================================================
+       PHẦN 1 (ĐẦU TIÊN): GIẢI PHÁP CÔNG TRƯỜNG MỞ (DẠNG TUYẾN) & CÔNG TRƯỜNG KHÉP KÍN
+       ========================================================================== */
+    .modes-section {
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 24px 24px 64px 24px;
+      background-color: var(--bg-canvas);
+    }
+
+    .hero-top-split {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--sp-300);
+      margin-bottom: var(--sp-400);
+    }
+
+    .hero-heading {
+      max-width: 760px;
+      font-size: 40px;
+      line-height: 1.1;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: var(--ink-primary);
+    }
+
+    .hero-heading span {
+      color: var(--accent);
+    }
+
+    .hero-subheading {
+      max-width: 520px;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--ink-secondary);
+    }
+
+    .modes-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-500);
+      padding-top: var(--sp-300);
+      border-top: 2px solid var(--ink-primary);
+    }
+
+    .mode-col {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-200);
+    }
+
+    .mode-heading {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 700;
+      color: var(--ink-primary);
+    }
+
+    .mode-heading span {
+      color: var(--accent);
+    }
+
+    .mode-sub {
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--ink-secondary);
+    }
+
+    .mode-mosaic {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-200);
+    }
+
+    .mosaic-item {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-50);
+      background: transparent;
+      border: none;
+      padding: var(--sp-0);
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .mosaic-item img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: var(--r-xl);
+      border: 1px solid var(--border-strong);
+      display: block;
+    }
+
+    .mosaic-cap {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+      color: var(--ink-primary);
+    }
+
+    .mode-ledger {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid var(--border-hairline);
+    }
+
+    .mode-ledger li {
+      padding-top: var(--sp-100);
+      padding-bottom: var(--sp-100);
+      border-bottom: 1px solid var(--border-hairline);
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--ink-secondary);
+    }
+
+    .mode-ledger li strong {
+      color: var(--ink-primary);
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       PHẦN 2: TOÀN CẢNH 28 ĐIỂM CHẠM HIỆN TRƯỜNG & SÂN KHẤU ĐỐI CHIẾU TỨC THỜI
+       ========================================================================== */
+    .hero-section {
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 64px 24px;
+      background-color: var(--bg-canvas);
+      border-top: 1px solid var(--border-hairline);
+    }
+
+    .section-title {
+      max-width: 680px;
+      font-size: 36px;
+      line-height: 40px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--sp-100);
+    }
+
+    .section-lead {
+      max-width: 680px;
+      font-size: 18px;
+      line-height: 28px;
+      color: var(--ink-secondary);
+      margin-bottom: var(--sp-400);
+    }
+
+    /* Instant Interactive Dual Stage */
+    .hero-live-stage {
+      padding-top: var(--sp-300);
+      padding-bottom: var(--sp-300);
+      border-top: 2px solid var(--ink-primary);
+      border-bottom: 1px solid var(--border-hairline);
+      margin-bottom: var(--sp-400);
+    }
+
+    .stage-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--sp-200);
+      margin-bottom: var(--sp-200);
+    }
+
+    .stage-active-title {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 700;
+    }
+
+    .stage-sbs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-300);
+    }
+
+    .stage-pane-label {
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: var(--sp-75);
+    }
+
+    .media-trigger {
+      display: block;
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: var(--sp-0);
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .media-trigger img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      border-radius: var(--r-xl);
+      border: 1px solid var(--border-strong);
+    }
+
+    /* All 28 Field Touchpoints Visual Wall */
+    .panorama-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--sp-200);
+      margin-bottom: var(--sp-300);
+    }
+
+    .panorama-heading {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 700;
+    }
+
+    .tp-wall-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--sp-300);
+    }
+
+    .tp-thumb-btn {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-75);
+      background: transparent;
+      border: none;
+      padding: var(--sp-0);
+      text-align: left;
+      cursor: pointer;
+      min-height: 44px;
+    }
+
+    .tp-thumb-btn img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      border-radius: var(--r-xl);
+      border: 2px solid var(--border-hairline);
+      transition: border-color 300ms var(--ease-out-weighted);
+    }
+
+    .tp-thumb-btn.active img {
+      border-color: var(--accent);
+    }
+
+    .tp-thumb-caption {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+      color: var(--ink-primary);
+    }
+
+    /* ==========================================================================
+       PHẦN 3: 17 HÀNG ĐỐI CHIẾU SIDE BY SIDE (THỰC ĐỊA TRÁI <-> BẢN VẼ KỸ THUẬT PHẢI)
+       ========================================================================== */
+    .sbs-section {
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 64px 24px;
+      background-color: var(--bg-surface);
+      border-top: 1px solid var(--border-hairline);
+    }
+
+    .filter-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--sp-200);
+      padding-bottom: var(--sp-300);
+      border-bottom: 2px solid var(--ink-primary);
+      margin-bottom: var(--sp-400);
+    }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-75);
+    }
+
+    .filter-btn {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      min-width: 44px;
+      background-color: var(--bg-canvas);
+      color: var(--ink-secondary);
+      border: 1px solid var(--border-strong);
+      padding: var(--sp-50) var(--sp-200);
+      border-radius: var(--r-lg);
+      font-family: inherit;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 300ms var(--ease-out-weighted), color 300ms var(--ease-out-weighted);
+    }
+
+    .filter-btn.active {
+      background-color: var(--accent);
+      color: #FFFFFF;
+      border-color: var(--accent);
+    }
+
+    .sbs-band {
+      padding-bottom: var(--sp-500);
+      margin-bottom: var(--sp-600);
+      border-bottom: 1px solid var(--border-strong);
+    }
+
+    .sbs-band-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--sp-300);
+      margin-bottom: var(--sp-300);
+    }
+
+    .sbs-phase-label {
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: var(--sp-50);
+    }
+
+    .sbs-band-title {
+      max-width: 680px;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 700;
+    }
+
+    .sbs-band-summary {
+      max-width: 520px;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--ink-secondary);
+    }
+
+    .sbs-pair-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-400);
+      align-items: start;
+    }
+
+    .sbs-col {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-400);
+    }
+
+    .visual-unit {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-100);
+    }
+
+    .unit-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--sp-100);
+    }
+
+    .unit-role {
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .unit-title {
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 700;
+    }
+
+    .unit-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--sp-100);
+    }
+
+    .chips-row {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: var(--sp-75);
+    }
+
+    .metric-tag {
+      background-color: var(--bg-canvas);
+      border: 1px solid var(--border-strong);
+      color: var(--ink-primary);
+      padding: var(--sp-50) var(--sp-100);
+      border-radius: var(--r-md);
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .zoom-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-50);
+      min-height: 44px;
+      min-width: 44px;
+      padding: var(--sp-50) var(--sp-100);
+      background: transparent;
+      border: none;
+      color: var(--accent);
+      font-family: inherit;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    .site-footer {
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: var(--bg-surface);
+      padding: 32px 24px;
+      border-top: 1px solid var(--border-hairline);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--sp-200);
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-200);
+      flex-wrap: wrap;
+    }
+
+    .footer-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-50);
+      min-height: 44px;
+      padding: var(--sp-50) var(--sp-100);
+      color: var(--ink-secondary);
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: var(--sp-0);
+      background-color: rgba(17, 24, 28, 0.94);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 80;
+      padding: var(--sp-300);
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 96vw;
+      max-height: 82dvh;
+      width: auto;
+      height: auto;
+      border-radius: var(--r-xl);
+      background-color: #FFFFFF;
+    }
+
+    .lightbox-controls {
+      position: fixed;
+      bottom: var(--sp-300);
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-strong);
+      padding: var(--sp-75) var(--sp-200);
+      border-radius: var(--r-2xl);
+      display: flex;
+      align-items: center;
+      gap: var(--sp-75);
+      z-index: 90;
+    }
+
+    .ph-icon {
+      width: var(--sp-200);
+      height: var(--sp-200);
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    /* Hover rules guarded inside @media (hover: hover) for touch safety */
+    @media (hover: hover) {
+      .nav-link:hover {
+        color: var(--ink-primary);
+        background-color: var(--bg-surface);
+      }
+      .nav-link.active:hover {
+        color: #FFFFFF;
+        background-color: var(--accent-hover);
+      }
+      .btn-primary:hover {
+        background-color: var(--accent-hover);
+      }
+      .ver-btn:hover {
+        color: var(--ink-primary);
+        background-color: var(--bg-elevated);
+      }
+      .filter-btn:hover {
+        background-color: var(--bg-elevated);
+        color: var(--ink-primary);
+      }
+      .filter-btn.active:hover {
+        background-color: var(--accent-hover);
+        color: #FFFFFF;
+      }
+      .tp-thumb-btn:hover img {
+        border-color: var(--accent);
+      }
+      .zoom-link-btn:hover,
+      .footer-link:hover {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    @media (max-width: 1100px) {
+      .tp-wall-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .stage-sbs-grid,
+      .modes-split,
+      .sbs-pair-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      /* Ensure >=44px touch targets on tablet & mobile viewports */
+      .brand-link,
+      .nav-link {
+        min-height: 44px;
+        padding: var(--sp-75) var(--sp-100);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .tp-wall-grid,
+      .mode-mosaic {
+        grid-template-columns: 1fr;
+      }
+      .hero-heading {
+        font-size: 32px;
+        line-height: 36px;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body id="top">
+  <a href="#main-content" class="skip-link">Chuyển thẳng tới nội dung trình chiếu</a>
+
+  <header class="nav-wrapper">
+    <nav class="floating-nav" aria-label="Điều hướng trình chiếu Chủ tịch">
+      <a href="#top" class="brand-link">
+        <img src="./cc1_official_logo.png" alt="Logo CC1" width="60" height="24" class="brand-logo" onerror="this.style.opacity='0.2'" />
+        <span>CC1 OS</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#site-modes" class="nav-link active" data-section="site-modes">1. Mở &amp; Khép kín</a></li>
+        <li><a href="#touchpoints-panorama" class="nav-link" data-section="touchpoints-panorama">2. 28 Điểm chạm</a></li>
+        <li><a href="#sbs-deck" class="nav-link" data-section="sbs-deck">3. Đối chiếu Bản vẽ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- ========================================================================
+         PHẦN 1 (ĐẦU TIÊN): GIẢI PHÁP CÔNG TRƯỜNG MỞ (DẠNG TUYẾN) & CÔNG TRƯỜNG KHÉP KÍN
+         ======================================================================== -->
+    <section class="modes-section" id="site-modes" aria-label="Giải pháp Công trường Mở và Công trường Khép kín">
+      <header class="hero-top-split">
+        <h1 class="hero-heading">
+          Giải pháp chuyên biệt cho <span>Công trường Mở</span> (Tuyến cầu đường) và <span>Công trường Khép kín</span>
+        </h1>
+        <p class="hero-subheading">
+          Đặt cạnh nhau hai mô hình tổ chức công trường đặc thù của CC1: Dự án hạ tầng giao thông trải dài hàng chục kilômét và dự án dân dụng, nhà ga, công nghiệp có tường rào khép kín.
+        </p>
+      </header>
+
+      <div class="modes-split">
+        <!-- Cột Trái: Công trường Mở dạng Tuyến (8 điểm chạm L1..L8: 34..41) -->
+        <article class="mode-col">
+          <h2 class="mode-heading">Mô hình A · <span>Công trường Mở dạng Tuyến</span> (Corridor và Node · 8 Điểm chạm L1–L8)</h2>
+          <p class="mode-sub">Áp dụng cho: Cầu Cát Lái · Cầu Long Hưng · Vành đai 3 · Cao tốc Dầu Giây đi Tân Phú (60 km) · Hậu Giang đi Cà Mau (24 cầu).</p>
+
+          <div class="mode-mosaic" aria-label="8 điểm chạm Công trường Mở dạng Tuyến">
+            
+            <button type="button" class="mosaic-item" onclick="openLightboxById('34')">
+              <img src="./34b_GD_Tuyen_L1_TTM_So_Kiem_Tra_To_Chuc_Giao_Thong_HUD.jpg" alt="34. Tuyến L1: TTM số và kiểm tra tổ chức giao thông" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+              <span class="mosaic-cap"><strong class="num-inline">34.</strong> Tuyến L1: TTM số và kiểm tra tổ chức giao thông</span>
+            </button>
+
+            <button type="button" class="mosaic-item" onclick="openLightboxById('35')">
+              <img src="./35b_GD_Tuyen_L2_Giay_Phep_Mat_Tran_So_Chi_Huy_Ca_HUD.jpg" alt="35. Tuyến L2: Giấy phép mặt trận số và chỉ huy ca" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+              <span class="mosaic-cap"><strong class="num-inline">35.</strong> Tuyến L2: Giấy phép mặt trận số và chỉ huy ca</span>
+            </button>
+
+            <button type="button" class="mosaic-item" onclick="openLightboxById('36')">
+              <img src="./36b_GD_Tuyen_L3_E_Ticket_Geofence_Diem_Do_HUD.jpg" alt="36. Tuyến L3: Phiếu điện tử e-Ticket và Geofence điểm đổ" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+              <span class="mosaic-cap"><strong class="num-inline">36.</strong> Tuyến L3: Phiếu điện tử e-Ticket và Geofence điểm đổ</span>
+            </button>
+
+            <button type="button" class="mosaic-item" onclick="openLightboxById('37')">
+              <img src="./37b_GD_Tuyen_L4_Canh_Bao_Xam_Nhap_Cuoi_Hang_Cho_HUD.jpg" alt="37. Tuyến L4: Cảnh báo xâm nhập làn xe và cuối hàng chờ" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+              <span class="mosaic-cap"><strong class="num-inline">37.</strong> Tuyến L4: Cảnh báo xâm nhập làn xe và cuối hàng chờ</span>
+            </button>
+
+            <button type="button" class="mosaic-item" onclick="openLightboxById('38')">
+              <img src="./38b_GD_Tuyen_L5_Xuong_Song_Ly_Trinh_Tien_Do_HUD.jpg" alt="38. Tuyến L5: Xương sống lý trình và tiến độ Thời gian – Km" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+              <span class="mosaic-cap"><strong class="num-inline">38.</strong> Tuyến L5: Xương sống lý trình và tiến độ Thời gian – Km</span>
+            </button>
+
+            <button type="button" class="mosaic-item" onclick="openLightboxById('39')">
+              <img src="./39b_GD_Tuyen_L6_QA_Lu_Thong_Minh_Nhiet_May_Rai_HUD.jpg" alt="39. Tuyến L6: QA lu thông minh IC, nhiệt 145°C và xe LiDAR" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+              <span class="mosaic-cap"><strong class="num-inline">39.</strong> Tuyến L6: QA lu thông minh IC, nhiệt 145°C và xe LiDAR</span>
+            </button>
+
+            <button type="button" class="mosaic-item" onclick="openLightboxById('40')">
+              <img src="./40b_GD_Tuyen_L7_Man_Down_Nguoi_Lam_Don_Doc_HUD.jpg" alt="40. Tuyến L7: Bảo vệ người làm đơn độc trên mái taluy (Man-down)" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+              <span class="mosaic-cap"><strong class="num-inline">40.</strong> Tuyến L7: Bảo vệ người làm đơn độc trên mái taluy (Man-down)</span>
+            </button>
+
+            <button type="button" class="mosaic-item" onclick="openLightboxById('41')">
+              <img src="./41b_GD_Tuyen_L8_Node_Cau_So_Dot_Dam_Maturity_HUD.jpg" alt="41. Tuyến L8: Node Cầu số, quét 3D đốt dầm và độ chín bê tông" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+              <span class="mosaic-cap"><strong class="num-inline">41.</strong> Tuyến L8: Node Cầu số, quét 3D đốt dầm và độ chín bê tông</span>
+            </button>
+          </div>
+
+          <ul class="mode-ledger">
+            <li><strong>Cấu trúc không gian (L1, L5, L8):</strong> Chia tuyến dài thành chuỗi NODE kín (Bãi đúc dầm, Trạm trộn, Trụ cầu) nối bằng hành lang CORRIDOR mở theo lý trình Km + m.</li>
+            <li><strong>Điểm danh mặt trận &amp; Người làm đơn độc (L2, L7):</strong> Cấp giấy phép mặt trận số theo đoạn Km; chỉ huy quét thẻ QR/NFC tổ đội và đeo thẻ GNSS báo động Man-down 180 giây.</li>
+            <li><strong>Kiểm soát vật tư &amp; Chất lượng mặt đường (L3, L6):</strong> Cân LiDAR một lần tại mỏ → Phát phiếu eTicket tại vùng Geofence điểm đổ; kiểm soát lu thông minh K98 và nhiệt thảm 145°C.</li>
+            <li><strong>Bảo vệ làn xe đang khai thác (L4):</strong> Camera AI và Radar di động quét ngược dòng xe 250m, kích hoạt còi hú và vòng đeo tay rung cho công nhân trong 6 giây.</li>
+          </ul>
+        </article>
+
+        <!-- Cột Phải: Công trường Khép kín (8 điểm chạm tiêu biểu) -->
+        <article class="mode-col">
+          <h2 class="mode-heading">Mô hình B · <span>Công trường Khép kín</span> (Có tường rào và cổng chính)</h2>
+          <p class="mode-sub">Áp dụng cho: Nhà ga T3 Tân Sơn Nhất · Sân bay Long Thành · Bệnh viện Đa khoa · Tổ hợp Cao tầng và Nhà máy công nghiệp.</p>
+
+          <div class="mode-mosaic" aria-label="8 điểm chạm Công trường Khép kín">
+            
+            <button type="button" class="mosaic-item" onclick="openLightboxById('01')">
+              <img src="./01b_GD1_CP1_Cong_Kiem_Soat_AI_PPE_HUD.jpg" alt="01. Cổng kiểm soát AI và đồ bảo hộ PPE" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+              <span class="mosaic-cap"><strong class="num-inline">01.</strong> Cổng kiểm soát AI và đồ bảo hộ PPE</span>
+            </button>
+
+            <button type="button" class="mosaic-item" onclick="openLightboxById('02')">
+              <img src="./02b_GD1_CP2_Camera_AI_Giam_Sat_An_Toan_24_7_HUD.jpg" alt="02. Camera AI giám sát an toàn 24/7" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+              <span class="mosaic-cap"><strong class="num-inline">02.</strong> Camera AI giám sát an toàn 24/7</span>
+            </button>
+
+            <button type="button" class="mosaic-item" onclick="openLightboxById('04')">
+              <img src="./04b_GD1_CP4_Smart_Gate_AI_OCR_Kiem_Soat_Xe_HUD.jpg" alt="04. Cổng thông minh AI OCR kiểm soát xe" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+              <span class="mosaic-cap"><strong class="num-inline">04.</strong> Cổng thông minh AI OCR kiểm soát xe</span>
+            </button>
+
+            <button type="button" class="mosaic-item" onclick="openLightboxById('05')">
+              <img src="./05b_GD1_ReID_Tang1_Passthrough_3D_Skeleton_Gait_Gate_HUD.jpg" alt="05. ReID Tầng 1: Quét khung xương 3D tại cổng" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+              <span class="mosaic-cap"><strong class="num-inline">05.</strong> ReID Tầng 1: Quét khung xương 3D tại cổng</span>
+            </button>
+
+            <button type="button" class="mosaic-item" onclick="openLightboxById('10')">
+              <img src="./10b_GD2_CP1_Tram_Can_AI_Quet_3D_LiDAR_Vat_Tu_HUD.jpg" alt="10. Trạm cân AI và cổng quét 3D LiDAR vật tư" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+              <span class="mosaic-cap"><strong class="num-inline">10.</strong> Trạm cân AI và cổng quét 3D LiDAR vật tư</span>
+            </button>
+
+            <button type="button" class="mosaic-item" onclick="openLightboxById('11')">
+              <img src="./11b_GD2_CP2_Robot_In_Ban_Ve_BIM_Len_San_FieldPrinter_HUD.jpg" alt="11. Robot tự hành in bản vẽ BIM lên sàn" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+              <span class="mosaic-cap"><strong class="num-inline">11.</strong> Robot tự hành in bản vẽ BIM lên sàn</span>
+            </button>
+
+            <button type="button" class="mosaic-item" onclick="openLightboxById('13')">
+              <img src="./13b_GD2_CP4_AR_Mobile_BIM_Doi_Chieu_Nghiem_Thu_MEP_HUD.jpg" alt="13. Máy tính bảng AR LiDAR nghiệm thu MEP" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+              <span class="mosaic-cap"><strong class="num-inline">13.</strong> Máy tính bảng AR LiDAR nghiệm thu MEP</span>
+            </button>
+
+            <button type="button" class="mosaic-item" onclick="openLightboxById('17')">
+              <img src="./17b_GD3_CP4_Cau_Thap_Tu_Hanh_AI_Tower_Crane_HUD.jpg" alt="17. Cẩu tháp tự hành AI và chống lắc tải" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+              <span class="mosaic-cap"><strong class="num-inline">17.</strong> Cẩu tháp tự hành AI và chống lắc tải</span>
+            </button>
+          </div>
+
+          <ul class="mode-ledger">
+            <li><strong>Cấu trúc không gian:</strong> Quản lý theo Tầng cao, Phân khu và Mã cấu kiện BIM 4D; kiểm soát tuyệt đối quân số và phương tiện tại điểm thắt cổng ra vào cố định.</li>
+            <li><strong>Định danh xuyên tầng (3D ReID):</strong> Trích xuất khung xương 3D trong 1.5s lúc qua cổng + Theo vết dáng đi liên camera + Chip mũ UWB chống tráo mũ.</li>
+            <li><strong>Trắc đạc và nghiệm thu sàn:</strong> Robot tự hành in vách ngăn/lỗ mở lên sàn bê tông sai số dưới 1.5mm; kỹ sư dùng iPad AR soi ống cơ điện MEP.</li>
+            <li><strong>Hạ tầng truyền dẫn cố định:</strong> Vòng cáp quang nội bộ PoE+ và cầu sóng 5GHz từ đỉnh cẩu tháp về máy chủ CC1 Edge AI Box tại phòng chỉ huy.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PHẦN 2: TOÀN CẢNH 28 ĐIỂM CHẠM + SÂN KHẤU ĐỐI CHIẾU TỨC THỜI
+         ======================================================================== -->
+    <section class="hero-section" id="touchpoints-panorama" aria-label="Toàn cảnh 28 điểm chạm và sân khấu đối chiếu">
+      <h2 class="section-title">Bức tranh toàn cảnh 28 điểm chạm hiện trường CC1 và 13 bản vẽ kỹ thuật</h2>
+      <p class="section-lead">
+        Bấm vào bất kỳ điểm chạm nào trong 28 hình bên dưới (20 điểm chạm nền tảng + 8 điểm chạm công trường tuyến) để đối chiếu tức thời Phối cảnh hiện trường (Bên trái) song song với Bản vẽ kỹ thuật Isometric (Bên phải).
+      </p>
+
+      <!-- Sân khấu Side-by-Side trực tiếp -->
+      <article class="hero-live-stage" id="hero-stage" aria-label="Sân khấu đối chiếu tức thời">
+        <header class="stage-bar">
+          <h3 class="stage-active-title" id="hero-stage-title">Đang chọn: 01. Cổng kiểm soát AI và đồ bảo hộ PPE · Đối chiếu Bản vẽ 22</h3>
+          <a href="#sbs-deck" class="btn-primary">
+            <span>Cuộn xuống 17 hàng Side by Side</span>
+            <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><line x1="40" y1="128" x2="216" y2="128" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </header>
+
+        <div class="stage-sbs-grid">
+          <figure>
+            <figcaption class="stage-pane-label" id="stage-left-label">Phối cảnh hiện trường CC1 · Điểm chạm 01</figcaption>
+            <button type="button" class="media-trigger" onclick="openHeroStageLightbox('left')" aria-label="Phóng to hình hiện trường đang chọn">
+              <img id="stage-left-img" src="./01b_GD1_CP1_Cong_Kiem_Soat_AI_PPE_HUD.jpg" alt="Phối cảnh hiện trường đang chọn" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+            </button>
+          </figure>
+          <figure>
+            <figcaption class="stage-pane-label" id="stage-right-label">Bản vẽ kỹ thuật Isometric · Bản vẽ 22</figcaption>
+            <button type="button" class="media-trigger" onclick="openHeroStageLightbox('right')" aria-label="Phóng to bản vẽ kỹ thuật đang chọn">
+              <img id="stage-right-img" src="./22b_Blueprint_GD1_TP1_1_Cong_AI_PPE_Quy_Trinh_BOM_Ha_Tang_HUD.jpg" alt="Bản vẽ kỹ thuật đang chọn" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+            </button>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Toàn bộ 28 hình ảnh Touchpoint (01..20 + 34..41) -->
+      <header class="panorama-head">
+        <h3 class="panorama-heading">Toàn bộ 28 điểm chạm hiện trường CC1 (Chọn ảnh để nạp lên sân khấu đối chiếu)</h3>
+      </header>
+
+      <div class="tp-wall-grid" aria-label="Lưới 28 điểm chạm hiện trường">
+        
+        <button type="button" class="tp-thumb-btn visual-unit active" data-id="01" onclick="selectHeroTouchpoint('01', this)">
+          <img src="./01b_GD1_CP1_Cong_Kiem_Soat_AI_PPE_HUD.jpg" alt="Điểm chạm 01: Cổng kiểm soát AI và đồ bảo hộ PPE" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">01.</strong> Cổng kiểm soát AI và đồ bảo hộ PPE</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="02" onclick="selectHeroTouchpoint('02', this)">
+          <img src="./02b_GD1_CP2_Camera_AI_Giam_Sat_An_Toan_24_7_HUD.jpg" alt="Điểm chạm 02: Camera AI giám sát an toàn 24/7" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">02.</strong> Camera AI giám sát an toàn 24/7</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="03" onclick="selectHeroTouchpoint('03', this)">
+          <img src="./03b_GD1_CP3_Drone_AI_Quet_3D_Doi_Soat_BIM_HUD.jpg" alt="Điểm chạm 03: Drone RTK quét 3D đối soát BIM 4D" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">03.</strong> Drone RTK quét 3D đối soát BIM 4D</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="04" onclick="selectHeroTouchpoint('04', this)">
+          <img src="./04b_GD1_CP4_Smart_Gate_AI_OCR_Kiem_Soat_Xe_HUD.jpg" alt="Điểm chạm 04: Cổng thông minh AI OCR kiểm soát xe" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">04.</strong> Cổng thông minh AI OCR kiểm soát xe</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="05" onclick="selectHeroTouchpoint('05', this)">
+          <img src="./05b_GD1_ReID_Tang1_Passthrough_3D_Skeleton_Gait_Gate_HUD.jpg" alt="Điểm chạm 05: ReID Tầng 1: Quét khung xương 3D tại cổng" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">05.</strong> ReID Tầng 1: Quét khung xương 3D tại cổng</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="06" onclick="selectHeroTouchpoint('06', this)">
+          <img src="./06b_GD1_ReID_Tang2_Multi_Camera_3D_Pose_Tracking_HUD.jpg" alt="Điểm chạm 06: ReID Tầng 2: Theo vết dáng đi liên camera" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">06.</strong> ReID Tầng 2: Theo vết dáng đi liên camera</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="07" onclick="selectHeroTouchpoint('07', this)">
+          <img src="./07b_GD1_ReID_Tang3_Drone_50m_UWB_Helmet_Sensor_Fusion_HUD.jpg" alt="Điểm chạm 07: ReID Tầng 3: Drone 50m và chip mũ UWB" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">07.</strong> ReID Tầng 3: Drone 50m và chip mũ UWB</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="08" onclick="selectHeroTouchpoint('08', this)">
+          <img src="./08b_GD1_ReID_Quy_Trinh_4_Buoc_Khep_Kin_07h_17h_HUD.jpg" alt="Điểm chạm 08: Quy trình ReID 4 bước khép kín 07:00 đến 17:00" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">08.</strong> Quy trình ReID 4 bước khép kín 07:00 đến 17:00</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="09" onclick="selectHeroTouchpoint('09', this)">
+          <img src="./09b_GD1_ReID_Phu_Luc_Bac_Bo_3D_Avatar_vs_Edge_AI_Box_HUD.jpg" alt="Điểm chạm 09: Bác bỏ 3D Avatar tĩnh và chọn Edge AI Box" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">09.</strong> Bác bỏ 3D Avatar tĩnh và chọn Edge AI Box</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="10" onclick="selectHeroTouchpoint('10', this)">
+          <img src="./10b_GD2_CP1_Tram_Can_AI_Quet_3D_LiDAR_Vat_Tu_HUD.jpg" alt="Điểm chạm 10: Trạm cân AI và cổng quét 3D LiDAR vật tư" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">10.</strong> Trạm cân AI và cổng quét 3D LiDAR vật tư</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="11" onclick="selectHeroTouchpoint('11', this)">
+          <img src="./11b_GD2_CP2_Robot_In_Ban_Ve_BIM_Len_San_FieldPrinter_HUD.jpg" alt="Điểm chạm 11: Robot tự hành in bản vẽ BIM lên sàn" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">11.</strong> Robot tự hành in bản vẽ BIM lên sàn</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="12" onclick="selectHeroTouchpoint('12', this)">
+          <img src="./12b_GD2_CP3_May_Xuc_Dan_Duong_3D_Machine_Guidance_HUD.jpg" alt="Điểm chạm 12: Máy xúc dẫn đường 3D chống đào lố" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">12.</strong> Máy xúc dẫn đường 3D chống đào lố</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="13" onclick="selectHeroTouchpoint('13', this)">
+          <img src="./13b_GD2_CP4_AR_Mobile_BIM_Doi_Chieu_Nghiem_Thu_MEP_HUD.jpg" alt="Điểm chạm 13: Máy tính bảng AR LiDAR nghiệm thu MEP" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">13.</strong> Máy tính bảng AR LiDAR nghiệm thu MEP</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="14" onclick="selectHeroTouchpoint('14', this)">
+          <img src="./14b_GD3_CP1_Robot_Bon_Chan_Tuan_Dem_Quet_3D_LiDAR_HUD.jpg" alt="Điểm chạm 14: Robot bốn chân tuần đêm quét 3D LiDAR" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">14.</strong> Robot bốn chân tuần đêm quét 3D LiDAR</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="15" onclick="selectHeroTouchpoint('15', this)">
+          <img src="./15b_GD3_CP2_Cong_Nhan_Khung_Xuong_Tro_Luc_Exoskeleton_HUD.jpg" alt="Điểm chạm 15: Công nhân đeo khung xương trợ lực Exoskeleton" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">15.</strong> Công nhân đeo khung xương trợ lực Exoskeleton</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="16" onclick="selectHeroTouchpoint('16', this)">
+          <img src="./16b_GD3_CP3_May_Cong_Trinh_Tu_Hanh_Hoan_Toan_HUD.jpg" alt="Điểm chạm 16: Đội máy công trình tự hành hoàn toàn" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">16.</strong> Đội máy công trình tự hành hoàn toàn</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="17" onclick="selectHeroTouchpoint('17', this)">
+          <img src="./17b_GD3_CP4_Cau_Thap_Tu_Hanh_AI_Tower_Crane_HUD.jpg" alt="Điểm chạm 17: Cẩu tháp tự hành AI và chống lắc tải" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">17.</strong> Cẩu tháp tự hành AI và chống lắc tải</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="18" onclick="selectHeroTouchpoint('18', this)">
+          <img src="./18b_GD3_CP5_He_Dieu_Hanh_Da_Tac_Tu_Multi_Agent_Site_OS_HUD.jpg" alt="Điểm chạm 18: Hệ điều hành công trường đa tác tử Site OS" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">18.</strong> Hệ điều hành công trường đa tác tử Site OS</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="19" onclick="selectHeroTouchpoint('19', this)">
+          <img src="./19b_Vision2030_CP1_Nha_May_Vi_Mo_Container_OnSite_HUD.jpg" alt="Điểm chạm 19: Nhà máy vi mô Container 40ft tại chân công trình" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">19.</strong> Nhà máy vi mô Container 40ft tại chân công trình</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="20" onclick="selectHeroTouchpoint('20', this)">
+          <img src="./20b_Vision2030_CP2_Zero_UI_Smart_Contract_Payment_HUD.jpg" alt="Điểm chạm 20: Kính bảo hộ AR và hợp đồng thông minh 2 phút" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">20.</strong> Kính bảo hộ AR và hợp đồng thông minh 2 phút</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="34" onclick="selectHeroTouchpoint('34', this)">
+          <img src="./34b_GD_Tuyen_L1_TTM_So_Kiem_Tra_To_Chuc_Giao_Thong_HUD.jpg" alt="Điểm chạm 34: Tuyến L1: TTM số và kiểm tra tổ chức giao thông" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">34.</strong> Tuyến L1: TTM số và kiểm tra tổ chức giao thông</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="35" onclick="selectHeroTouchpoint('35', this)">
+          <img src="./35b_GD_Tuyen_L2_Giay_Phep_Mat_Tran_So_Chi_Huy_Ca_HUD.jpg" alt="Điểm chạm 35: Tuyến L2: Giấy phép mặt trận số và chỉ huy ca" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">35.</strong> Tuyến L2: Giấy phép mặt trận số và chỉ huy ca</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="36" onclick="selectHeroTouchpoint('36', this)">
+          <img src="./36b_GD_Tuyen_L3_E_Ticket_Geofence_Diem_Do_HUD.jpg" alt="Điểm chạm 36: Tuyến L3: Phiếu điện tử e-Ticket và Geofence điểm đổ" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">36.</strong> Tuyến L3: Phiếu điện tử e-Ticket và Geofence điểm đổ</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="37" onclick="selectHeroTouchpoint('37', this)">
+          <img src="./37b_GD_Tuyen_L4_Canh_Bao_Xam_Nhap_Cuoi_Hang_Cho_HUD.jpg" alt="Điểm chạm 37: Tuyến L4: Cảnh báo xâm nhập làn xe và cuối hàng chờ" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">37.</strong> Tuyến L4: Cảnh báo xâm nhập làn xe và cuối hàng chờ</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="38" onclick="selectHeroTouchpoint('38', this)">
+          <img src="./38b_GD_Tuyen_L5_Xuong_Song_Ly_Trinh_Tien_Do_HUD.jpg" alt="Điểm chạm 38: Tuyến L5: Xương sống lý trình và tiến độ Thời gian – Km" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">38.</strong> Tuyến L5: Xương sống lý trình và tiến độ Thời gian – Km</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="39" onclick="selectHeroTouchpoint('39', this)">
+          <img src="./39b_GD_Tuyen_L6_QA_Lu_Thong_Minh_Nhiet_May_Rai_HUD.jpg" alt="Điểm chạm 39: Tuyến L6: QA lu thông minh IC, nhiệt 145°C và xe LiDAR" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">39.</strong> Tuyến L6: QA lu thông minh IC, nhiệt 145°C và xe LiDAR</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="40" onclick="selectHeroTouchpoint('40', this)">
+          <img src="./40b_GD_Tuyen_L7_Man_Down_Nguoi_Lam_Don_Doc_HUD.jpg" alt="Điểm chạm 40: Tuyến L7: Bảo vệ người làm đơn độc trên mái taluy (Man-down)" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">40.</strong> Tuyến L7: Bảo vệ người làm đơn độc trên mái taluy (Man-down)</span>
+        </button>
+
+        <button type="button" class="tp-thumb-btn visual-unit" data-id="41" onclick="selectHeroTouchpoint('41', this)">
+          <img src="./41b_GD_Tuyen_L8_Node_Cau_So_Dot_Dam_Maturity_HUD.jpg" alt="Điểm chạm 41: Tuyến L8: Node Cầu số, quét 3D đốt dầm và độ chín bê tông" width="1376" height="768" loading="lazy" onerror="this.style.opacity='0.2'" />
+          <span class="tp-thumb-caption"><strong class="num-inline">41.</strong> Tuyến L8: Node Cầu số, quét 3D đốt dầm và độ chín bê tông</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PHẦN 3: 17 HÀNG ĐỐI CHIẾU SIDE BY SIDE (THỰC ĐỊA TRÁI <-> BẢN VẼ KỸ THUẬT PHẢI)
+         ======================================================================== -->
+    <section class="sbs-section" id="sbs-deck" aria-label="17 hàng đối chiếu trực quan Side by Side">
+      <h2 class="section-title">Đối chiếu trực quan Side by Side: Thực địa CC1 (Trái) và Bản vẽ kỹ thuật (Phải)</h2>
+      <p class="section-lead">
+        Mỗi hàng đặt song song hình ảnh vận hành thực tế ngoài công trường bên cạnh bản vẽ bóc tách Isometric giải thích quy trình 4 bước, thuật toán AI, thiết bị BOM và hạ tầng.
+      </p>
+
+      <nav class="filter-toolbar" aria-label="Bộ lọc giai đoạn">
+        <span class="filter-pills" role="group" aria-label="Lọc theo giai đoạn">
+          <button type="button" class="filter-btn active" onclick="filterSbsRows('all', this)">Tất cả 17 hàng (41 hình)</button>
+          <button type="button" class="filter-btn" onclick="filterSbsRows('linear', this)">Công trường Mở dạng Tuyến (L1–L8)</button>
+          <button type="button" class="filter-btn" onclick="filterSbsRows('reid', this)">Hạ tầng &amp; Định danh 3D ReID</button>
+          <button type="button" class="filter-btn" onclick="filterSbsRows('gd1', this)">Giai đoạn 1: An ninh &amp; Cổng xe</button>
+          <button type="button" class="filter-btn" onclick="filterSbsRows('gd2', this)">Giai đoạn 2: Trạm cân LiDAR &amp; BIM</button>
+          <button type="button" class="filter-btn" onclick="filterSbsRows('gd3', this)">Giai đoạn 3: Robot &amp; Cẩu tháp AI</button>
+          <button type="button" class="filter-btn" onclick="filterSbsRows('v2030', this)">Tầm nhìn 2030: Đa tác tử &amp; Hợp đồng số</button>
+        </span>
+      </nav>
+
+      
+      <article class="sbs-band" data-cat="linear" id="sbs-L12">
+        <span id="pair-for-34"></span><span id="pair-for-35"></span>
+        <header class="sbs-band-head">
+          <h3 class="sbs-band-title"><span class="sbs-phase-label">Chuyên đề Công trường Mở (Tuyến cầu đường) · Điểm chạm L1 và L2</span>TTM số kiểm tra tổ chức giao thông (QCVN 41:2024) và Giấy phép mặt trận số theo đoạn Km</h3>
+          <p class="sbs-band-summary">Chụp ảnh nghiệm thu biển báo/rào chắn đầu ca · Quét thẻ QR/NFC tổ đội · Khóa vùng Geofence từ Km 8+200 đến Km 9+000</p>
+        </header>
+        <div class="sbs-pair-grid">
+          <div class="sbs-col" aria-label="Cột trái sbs-L12">
+          <figure class="visual-unit" id="item-34" data-id="34">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 34</span>34. Tuyến L1: TTM số và kiểm tra tổ chức giao thông</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('34')">
+                <span>Phóng to 34</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('34')" aria-label="Phóng to hình 34 Tuyến L1: TTM số và kiểm tra tổ chức giao thông">
+              <img
+                src="./34b_GD_Tuyen_L1_TTM_So_Kiem_Tra_To_Chuc_Giao_Thong_HUD.jpg"
+                alt="34. Tuyến L1: TTM số và kiểm tra tổ chức giao thông"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Chuẩn QCVN 41:2024</span><span class="metric-tag">Checklist tọa độ GPS</span><span class="metric-tag">Khóa mở ca nếu thiếu biển</span></span>
+            </p>
+          </figure></div>
+          <div class="sbs-col" aria-label="Cột phải sbs-L12">
+          <figure class="visual-unit" id="item-35" data-id="35">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 35</span>35. Tuyến L2: Giấy phép mặt trận số và chỉ huy ca</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('35')">
+                <span>Phóng to 35</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('35')" aria-label="Phóng to hình 35 Tuyến L2: Giấy phép mặt trận số và chỉ huy ca">
+              <img
+                src="./35b_GD_Tuyen_L2_Giay_Phep_Mat_Tran_So_Chi_Huy_Ca_HUD.jpg"
+                alt="35. Tuyến L2: Giấy phép mặt trận số và chỉ huy ca"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Quét QR/NFC đầu ca</span><span class="metric-tag">Geofence Km 8+200 – 9+000</span><span class="metric-tag">Chạy Offline 100%</span></span>
+            </p>
+          </figure></div>
+        </div>
+      </article>
+
+      <article class="sbs-band" data-cat="linear" id="sbs-L34">
+        <span id="pair-for-36"></span><span id="pair-for-37"></span>
+        <header class="sbs-band-head">
+          <h3 class="sbs-band-title"><span class="sbs-phase-label">Chuyên đề Công trường Mở (Tuyến cầu đường) · Điểm chạm L3 và L4</span>Phiếu điện tử e-Ticket tại vùng Geofence điểm đổ và Cảnh báo xe xâm nhập làn 250m</h3>
+          <p class="sbs-band-summary">Cân 1 lần tại mỏ/trạm trộn và tự ghi nhận khi xe vào điểm đổ · Camera AI quét ngược dòng xe 250m báo rung cổ tay trong 6 giây</p>
+        </header>
+        <div class="sbs-pair-grid">
+          <div class="sbs-col" aria-label="Cột trái sbs-L34">
+          <figure class="visual-unit" id="item-36" data-id="36">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 36</span>36. Tuyến L3: Phiếu điện tử e-Ticket và Geofence điểm đổ</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('36')">
+                <span>Phóng to 36</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('36')" aria-label="Phóng to hình 36 Tuyến L3: Phiếu điện tử e-Ticket và Geofence điểm đổ">
+              <img
+                src="./36b_GD_Tuyen_L3_E_Ticket_Geofence_Diem_Do_HUD.jpg"
+                alt="36. Tuyến L3: Phiếu điện tử e-Ticket và Geofence điểm đổ"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Cân 18.4 tấn tại nguồn</span><span class="metric-tag">Tự ghi giờ vào vùng đổ</span><span class="metric-tag">Không nhận phiếu trên làn xe</span></span>
+            </p>
+          </figure></div>
+          <div class="sbs-col" aria-label="Cột phải sbs-L34">
+          <figure class="visual-unit" id="item-37" data-id="37">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 37</span>37. Tuyến L4: Cảnh báo xâm nhập làn xe và cuối hàng chờ</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('37')">
+                <span>Phóng to 37</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('37')" aria-label="Phóng to hình 37 Tuyến L4: Cảnh báo xâm nhập làn xe và cuối hàng chờ">
+              <img
+                src="./37b_GD_Tuyen_L4_Canh_Bao_Xam_Nhap_Cuoi_Hang_Cho_HUD.jpg"
+                alt="37. Tuyến L4: Cảnh báo xâm nhập làn xe và cuối hàng chờ"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Quét ngược dòng 250m</span><span class="metric-tag">Còi hú và vòng đeo rung</span><span class="metric-tag">Phản ứng <= 6 giây</span></span>
+            </p>
+          </figure></div>
+        </div>
+      </article>
+
+      <article class="sbs-band" data-cat="linear" id="sbs-L56">
+        <span id="pair-for-38"></span><span id="pair-for-39"></span>
+        <header class="sbs-band-head">
+          <h3 class="sbs-band-title"><span class="sbs-phase-label">Chuyên đề Công trường Mở (Tuyến cầu đường) · Điểm chạm L5 và L6</span>Biểu đồ tiến độ Thời gian – Lý trình (LandXML) và QA lu thông minh IC kèm thanh nhiệt 145°C</h3>
+          <p class="sbs-band-summary">Chỉ rõ đoạn đã giao mặt bằng nhưng thiếu máy · Kiểm soát nhiệt thảm nhựa 145°C, độ chặt K98 và quét LiDAR trên xe bán tải</p>
+        </header>
+        <div class="sbs-pair-grid">
+          <div class="sbs-col" aria-label="Cột trái sbs-L56">
+          <figure class="visual-unit" id="item-38" data-id="38">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 38</span>38. Tuyến L5: Xương sống lý trình và tiến độ Thời gian – Km</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('38')">
+                <span>Phóng to 38</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('38')" aria-label="Phóng to hình 38 Tuyến L5: Xương sống lý trình và tiến độ Thời gian – Km">
+              <img
+                src="./38b_GD_Tuyen_L5_Xuong_Song_Ly_Trinh_Tien_Do_HUD.jpg"
+                alt="38. Tuyến L5: Xương sống lý trình và tiến độ Thời gian – Km"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Trục chuẩn LandXML</span><span class="metric-tag">Phát hiện đoạn thiếu máy</span><span class="metric-tag">Theo dõi từng lớp nền</span></span>
+            </p>
+          </figure></div>
+          <div class="sbs-col" aria-label="Cột phải sbs-L56">
+          <figure class="visual-unit" id="item-39" data-id="39">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 39</span>39. Tuyến L6: QA lu thông minh IC, nhiệt 145°C và xe LiDAR</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('39')">
+                <span>Phóng to 39</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('39')" aria-label="Phóng to hình 39 Tuyến L6: QA lu thông minh IC, nhiệt 145°C và xe LiDAR">
+              <img
+                src="./39b_GD_Tuyen_L6_QA_Lu_Thong_Minh_Nhiet_May_Rai_HUD.jpg"
+                alt="39. Tuyến L6: QA lu thông minh IC, nhiệt 145°C và xe LiDAR"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Thanh nhiệt 145°C</span><span class="metric-tag">Độ chặt nền K98</span><span class="metric-tag">Xe bán tải quét LiDAR</span></span>
+            </p>
+          </figure></div>
+        </div>
+      </article>
+
+      <article class="sbs-band" data-cat="linear" id="sbs-L78">
+        <span id="pair-for-40"></span><span id="pair-for-41"></span>
+        <header class="sbs-band-head">
+          <h3 class="sbs-band-title"><span class="sbs-phase-label">Chuyên đề Công trường Mở (Tuyến cầu đường) · Điểm chạm L7 và L8</span>Bảo vệ người làm đơn độc trên mái taluy cao (Man-down 180s) và Node Cầu số đúc hẫng</h3>
+          <p class="sbs-band-summary">Thẻ định vị GNSS tự báo động khi bất động 180 giây qua trạm Solar LoRa · Quét 3D đốt dầm (0.3mm) và cảm biến độ chín bê tông 42 MPa</p>
+        </header>
+        <div class="sbs-pair-grid">
+          <div class="sbs-col" aria-label="Cột trái sbs-L78">
+          <figure class="visual-unit" id="item-40" data-id="40">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 40</span>40. Tuyến L7: Bảo vệ người làm đơn độc trên mái taluy (Man-down)</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('40')">
+                <span>Phóng to 40</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('40')" aria-label="Phóng to hình 40 Tuyến L7: Bảo vệ người làm đơn độc trên mái taluy (Man-down)">
+              <img
+                src="./40b_GD_Tuyen_L7_Man_Down_Nguoi_Lam_Don_Doc_HUD.jpg"
+                alt="40. Tuyến L7: Bảo vệ người làm đơn độc trên mái taluy (Man-down)"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Thẻ định vị GNSS</span><span class="metric-tag">Cảnh báo bất động 180s</span><span class="metric-tag">Trạm Solar LoRa / 4G</span></span>
+            </p>
+          </figure></div>
+          <div class="sbs-col" aria-label="Cột phải sbs-L78">
+          <figure class="visual-unit" id="item-41" data-id="41">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 41</span>41. Tuyến L8: Node Cầu số, quét 3D đốt dầm và độ chín bê tông</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('41')">
+                <span>Phóng to 41</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('41')" aria-label="Phóng to hình 41 Tuyến L8: Node Cầu số, quét 3D đốt dầm và độ chín bê tông">
+              <img
+                src="./41b_GD_Tuyen_L8_Node_Cau_So_Dot_Dam_Maturity_HUD.jpg"
+                alt="41. Tuyến L8: Node Cầu số, quét 3D đốt dầm và độ chín bê tông"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Sai số đốt dầm 0.3mm</span><span class="metric-tag">Cảm biến độ chín 42 MPa</span><span class="metric-tag">Rút ngắn 5 ngày căng cáp</span></span>
+            </p>
+          </figure></div>
+        </div>
+      </article>
+
+      <article class="sbs-band" data-cat="reid" id="sbs-00">
+        <span id="pair-for-09"></span><span id="pair-for-21"></span>
+        <header class="sbs-band-head">
+          <h3 class="sbs-band-title"><span class="sbs-phase-label">Nền tảng hạ tầng · CC1 Site Backbone</span>Kiến trúc hạ tầng 4 tầng và máy chủ biên CC1 Edge AI Box tại Ban chỉ huy</h3>
+          <p class="sbs-band-summary">Xử lý tại biên dưới 10ms · Hoạt động độc lập khi đứt cáp quang · Nhẹ hơn 1.000 lần so với quét 3D Avatar tĩnh</p>
+        </header>
+        <div class="sbs-pair-grid">
+          <div class="sbs-col" aria-label="Cột trái sbs-00">
+          <figure class="visual-unit" id="item-09" data-id="09">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 09</span>09. Bác bỏ 3D Avatar tĩnh và chọn Edge AI Box</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('09')">
+                <span>Phóng to 09</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('09')" aria-label="Phóng to hình 09 Bác bỏ 3D Avatar tĩnh và chọn Edge AI Box">
+              <img
+                src="./09b_GD1_ReID_Phu_Luc_Bac_Bo_3D_Avatar_vs_Edge_AI_Box_HUD.jpg"
+                alt="09. Bác bỏ 3D Avatar tĩnh và chọn Edge AI Box"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Avatar tĩnh: Lỗi 45%</span><span class="metric-tag">Khung xương 3D: Chuẩn</span><span class="metric-tag">Nhẹ hơn 1.000 lần</span></span>
+            </p>
+          </figure></div>
+          <div class="sbs-col" aria-label="Cột phải sbs-00">
+          <figure class="visual-unit" id="item-21" data-id="21">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Bản vẽ kỹ thuật Isometric · Mã 21</span>21. Bản vẽ: Hạ tầng nền tảng 4 tầng Site Backbone</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('21')">
+                <span>Phóng to 21</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('21')" aria-label="Phóng to hình 21 Bản vẽ: Hạ tầng nền tảng 4 tầng Site Backbone">
+              <img
+                src="./21b_Blueprint_00_Ha_Tang_Nen_Tang_CC1_Site_Backbone_HUD.jpg"
+                alt="21. Bản vẽ: Hạ tầng nền tảng 4 tầng Site Backbone"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">1. Cảm biến</span><span class="metric-tag">2. Mạng và RTK</span><span class="metric-tag">3. Máy chủ biên</span><span class="metric-tag">4. Đám mây CC1</span></span>
+            </p>
+          </figure></div>
+        </div>
+      </article>
+
+      <article class="sbs-band" data-cat="gd1" id="sbs-01">
+        <span id="pair-for-01"></span><span id="pair-for-22"></span>
+        <header class="sbs-band-head">
+          <h3 class="sbs-band-title"><span class="sbs-phase-label">Giai đoạn 1 (Năm 1) · Điểm chạm 1.1</span>Cổng kiểm soát xoay AI: Chấm công khuôn mặt và kiểm tra đủ đồ bảo hộ PPE</h3>
+          <p class="sbs-band-summary">Mở cổng trong 1.5 giây · Tự động khóa cổng nếu thiếu mũ hoặc áo phản quang · Thép SUS304 chuẩn IP65 và lưu điện UPS</p>
+        </header>
+        <div class="sbs-pair-grid">
+          <div class="sbs-col" aria-label="Cột trái sbs-01">
+          <figure class="visual-unit" id="item-01" data-id="01">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 01</span>01. Cổng kiểm soát AI và đồ bảo hộ PPE</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('01')">
+                <span>Phóng to 01</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('01')" aria-label="Phóng to hình 01 Cổng kiểm soát AI và đồ bảo hộ PPE">
+              <img
+                src="./01b_GD1_CP1_Cong_Kiem_Soat_AI_PPE_HUD.jpg"
+                alt="01. Cổng kiểm soát AI và đồ bảo hộ PPE"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Mở cổng 1.5s</span><span class="metric-tag">Face ID + PPE</span><span class="metric-tag">Khóa khi thiếu mũ</span></span>
+            </p>
+          </figure></div>
+          <div class="sbs-col" aria-label="Cột phải sbs-01">
+          <figure class="visual-unit" id="item-22" data-id="22">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Bản vẽ kỹ thuật Isometric · Mã 22</span>22. Bản vẽ: Cổng kiểm soát AI và bảo hộ PPE</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('22')">
+                <span>Phóng to 22</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('22')" aria-label="Phóng to hình 22 Bản vẽ: Cổng kiểm soát AI và bảo hộ PPE">
+              <img
+                src="./22b_Blueprint_GD1_TP1_1_Cong_AI_PPE_Quy_Trinh_BOM_Ha_Tang_HUD.jpg"
+                alt="22. Bản vẽ: Cổng kiểm soát AI và bảo hộ PPE"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">1. Quy trình 1.5s</span><span class="metric-tag">2. AI Khuôn mặt</span><span class="metric-tag">3. Cổng SUS304 IP65</span><span class="metric-tag">4. Mạng PoE+ và UPS</span></span>
+            </p>
+          </figure></div>
+        </div>
+      </article>
+
+      <article class="sbs-band" data-cat="gd1" id="sbs-02">
+        <span id="pair-for-02"></span><span id="pair-for-23"></span>
+        <header class="sbs-band-head">
+          <h3 class="sbs-band-title"><span class="sbs-phase-label">Giai đoạn 1 (Năm 1) · Điểm chạm 1.2</span>Camera AI giám sát an toàn 24/7 trên giàn giáo cao và vùng nguy hiểm dưới cẩu tháp</h3>
+          <p class="sbs-band-summary">Tận dụng 100% camera CCTV hiện hữu · Bộ lọc 3 giây chống báo giả · Truyền sóng không dây CPE 5GHz từ đỉnh cẩu tháp</p>
+        </header>
+        <div class="sbs-pair-grid">
+          <div class="sbs-col" aria-label="Cột trái sbs-02">
+          <figure class="visual-unit" id="item-02" data-id="02">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 02</span>02. Camera AI giám sát an toàn 24/7</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('02')">
+                <span>Phóng to 02</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('02')" aria-label="Phóng to hình 02 Camera AI giám sát an toàn 24/7">
+              <img
+                src="./02b_GD1_CP2_Camera_AI_Giam_Sat_An_Toan_24_7_HUD.jpg"
+                alt="02. Camera AI giám sát an toàn 24/7"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Cảnh báo < 1s</span><span class="metric-tag">Thiếu dây đai</span><span class="metric-tag">Vùng cẩu tháp</span></span>
+            </p>
+          </figure></div>
+          <div class="sbs-col" aria-label="Cột phải sbs-02">
+          <figure class="visual-unit" id="item-23" data-id="23">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Bản vẽ kỹ thuật Isometric · Mã 23</span>23. Bản vẽ: Camera AI 24/7 và cầu sóng 5GHz</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('23')">
+                <span>Phóng to 23</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('23')" aria-label="Phóng to hình 23 Bản vẽ: Camera AI 24/7 và cầu sóng 5GHz">
+              <img
+                src="./23b_Blueprint_GD1_TP1_2_CCTV_AI_24_7_Quy_Trinh_BOM_Ha_Tang_HUD.jpg"
+                alt="23. Bản vẽ: Camera AI 24/7 và cầu sóng 5GHz"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">1. Giám sát 24/7</span><span class="metric-tag">2. Lọc báo giả 3s</span><span class="metric-tag">3. Trụ Camera AI</span><span class="metric-tag">4. Sóng CPE 5GHz</span></span>
+            </p>
+          </figure></div>
+        </div>
+      </article>
+
+      <article class="sbs-band" data-cat="gd1" id="sbs-03">
+        <span id="pair-for-03"></span><span id="pair-for-24"></span>
+        <header class="sbs-band-head">
+          <h3 class="sbs-band-title"><span class="sbs-phase-label">Giai đoạn 1 (Năm 1) · Điểm chạm 1.3</span>Drone RTK bay tự động quét đám mây điểm 3D và đối soát tiến độ BIM 4D</h3>
+          <p class="sbs-band-summary">Khớp tọa độ chuẩn VN2000 sai số dưới 1.5cm · Tự động bóc tách phần trăm khối lượng hoàn thành và sai lệch kết cấu</p>
+        </header>
+        <div class="sbs-pair-grid">
+          <div class="sbs-col" aria-label="Cột trái sbs-03">
+          <figure class="visual-unit" id="item-03" data-id="03">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 03</span>03. Drone RTK quét 3D đối soát BIM 4D</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('03')">
+                <span>Phóng to 03</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('03')" aria-label="Phóng to hình 03 Drone RTK quét 3D đối soát BIM 4D">
+              <img
+                src="./03b_GD1_CP3_Drone_AI_Quet_3D_Doi_Soat_BIM_HUD.jpg"
+                alt="03. Drone RTK quét 3D đối soát BIM 4D"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Sai số < 1.5cm</span><span class="metric-tag">Đám mây điểm 3D</span><span class="metric-tag">Tự bóc khối lượng</span></span>
+            </p>
+          </figure></div>
+          <div class="sbs-col" aria-label="Cột phải sbs-03">
+          <figure class="visual-unit" id="item-24" data-id="24">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Bản vẽ kỹ thuật Isometric · Mã 24</span>24. Bản vẽ: Drone RTK và đối soát BIM 4D</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('24')">
+                <span>Phóng to 24</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('24')" aria-label="Phóng to hình 24 Bản vẽ: Drone RTK và đối soát BIM 4D">
+              <img
+                src="./24b_Blueprint_GD1_TP1_3_Drone_3D_BIM_Quy_Trinh_BOM_Ha_Tang_HUD.jpg"
+                alt="24. Bản vẽ: Drone RTK và đối soát BIM 4D"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">1. Bay tự động</span><span class="metric-tag">2. Khớp BIM 4D</span><span class="metric-tag">3. Drone LiDAR</span><span class="metric-tag">4. Trạm RTK < 1cm</span></span>
+            </p>
+          </figure></div>
+        </div>
+      </article>
+
+      <article class="sbs-band" data-cat="gd1" id="sbs-04">
+        <span id="pair-for-04"></span><span id="pair-for-25"></span>
+        <header class="sbs-band-head">
+          <h3 class="sbs-band-title"><span class="sbs-phase-label">Giai đoạn 1 (Năm 1) · Điểm chạm 1.4</span>Cổng thông minh Smart Gate AI OCR đọc biển số xe bồn, soi thùng xe và rửa lốp</h3>
+          <p class="sbs-band-summary">Xóa sổ ghi tay bảo vệ · Kiểm soát tuổi bê tông tươi dưới 90 phút · Camera đỉnh soi thùng xe rỗng khi rời công trường</p>
+        </header>
+        <div class="sbs-pair-grid">
+          <div class="sbs-col" aria-label="Cột trái sbs-04">
+          <figure class="visual-unit" id="item-04" data-id="04">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 04</span>04. Cổng thông minh AI OCR kiểm soát xe</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('04')">
+                <span>Phóng to 04</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('04')" aria-label="Phóng to hình 04 Cổng thông minh AI OCR kiểm soát xe">
+              <img
+                src="./04b_GD1_CP4_Smart_Gate_AI_OCR_Kiem_Soat_Xe_HUD.jpg"
+                alt="04. Cổng thông minh AI OCR kiểm soát xe"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Biển số 99.4%</span><span class="metric-tag">Soi thùng xe</span><span class="metric-tag">Cầu rửa lốp sạch</span></span>
+            </p>
+          </figure></div>
+          <div class="sbs-col" aria-label="Cột phải sbs-04">
+          <figure class="visual-unit" id="item-25" data-id="25">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Bản vẽ kỹ thuật Isometric · Mã 25</span>25. Bản vẽ: Cổng xe thông minh và rửa lốp</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('25')">
+                <span>Phóng to 25</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('25')" aria-label="Phóng to hình 25 Bản vẽ: Cổng xe thông minh và rửa lốp">
+              <img
+                src="./25b_Blueprint_GD1_TP1_4_Smart_Gate_OCR_Quy_Trinh_BOM_Ha_Tang_HUD.jpg"
+                alt="25. Bản vẽ: Cổng xe thông minh và rửa lốp"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">1. Quét xe ra vào</span><span class="metric-tag">2. AI Đọc biển số</span><span class="metric-tag">3. Cổng và Rửa lốp</span><span class="metric-tag">4. Lưu điện UPS</span></span>
+            </p>
+          </figure></div>
+        </div>
+      </article>
+
+      <article class="sbs-band" data-cat="reid" id="sbs-05">
+        <span id="pair-for-05"></span><span id="pair-for-06"></span><span id="pair-for-07"></span><span id="pair-for-08"></span><span id="pair-for-26"></span>
+        <header class="sbs-band-head">
+          <h3 class="sbs-band-title"><span class="sbs-phase-label">Chuyên đề đặc biệt · Định danh không gian 3D Spatial ReID và chip mũ UWB</span>Giải bài toán Face ID = 0% ngoài công trường khi công nhân bịt mặt hoặc nhìn từ Drone 50m</h3>
+          <p class="sbs-band-summary">Quét khung xương 3D lúc 07:00 sáng (1.5s) · Theo vết dáng đi liên camera (30x80px) · Chip mũ UWB 8g chống tráo mũ điểm danh hộ</p>
+        </header>
+        <div class="sbs-pair-grid">
+          <div class="sbs-col" aria-label="Cột trái sbs-05">
+          <figure class="visual-unit" id="item-05" data-id="05">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 05</span>05. ReID Tầng 1: Quét khung xương 3D tại cổng</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('05')">
+                <span>Phóng to 05</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('05')" aria-label="Phóng to hình 05 ReID Tầng 1: Quét khung xương 3D tại cổng">
+              <img
+                src="./05b_GD1_ReID_Tang1_Passthrough_3D_Skeleton_Gait_Gate_HUD.jpg"
+                alt="05. ReID Tầng 1: Quét khung xương 3D tại cổng"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">07:00 sáng</span><span class="metric-tag">17 khớp xương 3D</span><span class="metric-tag">Vector 4KB / người</span></span>
+            </p>
+          </figure>
+
+          <figure class="visual-unit" id="item-06" data-id="06">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 06</span>06. ReID Tầng 2: Theo vết dáng đi liên camera</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('06')">
+                <span>Phóng to 06</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('06')" aria-label="Phóng to hình 06 ReID Tầng 2: Theo vết dáng đi liên camera">
+              <img
+                src="./06b_GD1_ReID_Tang2_Multi_Camera_3D_Pose_Tracking_HUD.jpg"
+                alt="06. ReID Tầng 2: Theo vết dáng đi liên camera"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Liên camera</span><span class="metric-tag">Cự ly xa 30x80px</span><span class="metric-tag">Không cần thấy mặt</span></span>
+            </p>
+          </figure></div>
+          <div class="sbs-col" aria-label="Cột phải sbs-05">
+          <figure class="visual-unit" id="item-07" data-id="07">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 07</span>07. ReID Tầng 3: Drone 50m và chip mũ UWB</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('07')">
+                <span>Phóng to 07</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('07')" aria-label="Phóng to hình 07 ReID Tầng 3: Drone 50m và chip mũ UWB">
+              <img
+                src="./07b_GD1_ReID_Tang3_Drone_50m_UWB_Helmet_Sensor_Fusion_HUD.jpg"
+                alt="07. ReID Tầng 3: Drone 50m và chip mũ UWB"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Độ cao 50m</span><span class="metric-tag">Chip mũ UWB 8g</span><span class="metric-tag">Chống tráo mũ 100%</span></span>
+            </p>
+          </figure>
+
+          <figure class="visual-unit" id="item-26" data-id="26">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Bản vẽ kỹ thuật Isometric · Mã 26</span>26. Bản vẽ: Định danh 3D và chip mũ bảo hộ UWB</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('26')">
+                <span>Phóng to 26</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('26')" aria-label="Phóng to hình 26 Bản vẽ: Định danh 3D và chip mũ bảo hộ UWB">
+              <img
+                src="./26b_Blueprint_GD1_TP1_5_3D_Spatial_ReID_UWB_Fusion_Chi_Tiet_HUD.jpg"
+                alt="26. Bản vẽ: Định danh 3D và chip mũ bảo hộ UWB"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">1. Quét cổng 3D</span><span class="metric-tag">2. Theo vết dáng đi</span><span class="metric-tag">3. Chip mũ UWB 8g</span><span class="metric-tag">4. Chống tráo mũ</span></span>
+            </p>
+          </figure>
+
+          <figure class="visual-unit" id="item-08" data-id="08">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 08</span>08. Quy trình ReID 4 bước khép kín 07:00 đến 17:00</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('08')">
+                <span>Phóng to 08</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('08')" aria-label="Phóng to hình 08 Quy trình ReID 4 bước khép kín 07:00 đến 17:00">
+              <img
+                src="./08b_GD1_ReID_Quy_Trinh_4_Buoc_Khep_Kin_07h_17h_HUD.jpg"
+                alt="08. Quy trình ReID 4 bước khép kín 07:00 đến 17:00"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Quét cổng 07:00</span><span class="metric-tag">Đồng bộ biên</span><span class="metric-tag">Theo vết 3D</span><span class="metric-tag">Chấm công 17:00</span></span>
+            </p>
+          </figure></div>
+        </div>
+      </article>
+
+      <article class="sbs-band" data-cat="gd2" id="sbs-06">
+        <span id="pair-for-10"></span><span id="pair-for-27"></span>
+        <header class="sbs-band-head">
+          <h3 class="sbs-band-title"><span class="sbs-phase-label">Giai đoạn 2 (Năm 2) · Điểm chạm 2.1</span>Trạm cân điện tử AI và cổng Gantry quét 3D LiDAR đo thể tích vật tư</h3>
+          <p class="sbs-band-summary">Đối chiếu chéo Khối lượng cân chia Thể tích LiDAR (24.5 m3) chặn gian lận bơm nước vào cát đá · Đếm tự động từng bó thép</p>
+        </header>
+        <div class="sbs-pair-grid">
+          <div class="sbs-col" aria-label="Cột trái sbs-06">
+          <figure class="visual-unit" id="item-10" data-id="10">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 10</span>10. Trạm cân AI và cổng quét 3D LiDAR vật tư</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('10')">
+                <span>Phóng to 10</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('10')" aria-label="Phóng to hình 10 Trạm cân AI và cổng quét 3D LiDAR vật tư">
+              <img
+                src="./10b_GD2_CP1_Tram_Can_AI_Quet_3D_LiDAR_Vat_Tu_HUD.jpg"
+                alt="10. Trạm cân AI và cổng quét 3D LiDAR vật tư"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Quét thể tích 3D</span><span class="metric-tag">Đếm bó thép</span><span class="metric-tag">Chống độn nước cát</span></span>
+            </p>
+          </figure></div>
+          <div class="sbs-col" aria-label="Cột phải sbs-06">
+          <figure class="visual-unit" id="item-27" data-id="27">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Bản vẽ kỹ thuật Isometric · Mã 27</span>27. Bản vẽ: Trạm cân AI và cổng 3D LiDAR</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('27')">
+                <span>Phóng to 27</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('27')" aria-label="Phóng to hình 27 Bản vẽ: Trạm cân AI và cổng 3D LiDAR">
+              <img
+                src="./27b_Blueprint_GD2_TP2_1_Tram_Can_3D_LiDAR_Quy_Trinh_BOM_Ha_Tang_HUD.jpg"
+                alt="27. Bản vẽ: Trạm cân AI và cổng 3D LiDAR"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">1. Cân và Quét 3D</span><span class="metric-tag">2. Đo thể tích</span><span class="metric-tag">3. Cổng LiDAR</span><span class="metric-tag">4. Khớp kho ERP</span></span>
+            </p>
+          </figure></div>
+        </div>
+      </article>
+
+      <article class="sbs-band" data-cat="gd2" id="sbs-07">
+        <span id="pair-for-11"></span><span id="pair-for-28"></span>
+        <header class="sbs-band-head">
+          <h3 class="sbs-band-title"><span class="sbs-phase-label">Giai đoạn 2 (Năm 2) · Điểm chạm 2.2</span>Robot tự hành in trực tiếp bản vẽ BIM lên sàn bê tông với sai số dưới 1.5mm</h3>
+          <p class="sbs-band-summary">Máy toàn đạc tự động khóa tia laser 50Hz dẫn đường cho robot in vách tường, hốc cửa và lỗ mở cơ điện nhanh gấp 8 lần búng mực tay</p>
+        </header>
+        <div class="sbs-pair-grid">
+          <div class="sbs-col" aria-label="Cột trái sbs-07">
+          <figure class="visual-unit" id="item-11" data-id="11">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 11</span>11. Robot tự hành in bản vẽ BIM lên sàn</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('11')">
+                <span>Phóng to 11</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('11')" aria-label="Phóng to hình 11 Robot tự hành in bản vẽ BIM lên sàn">
+              <img
+                src="./11b_GD2_CP2_Robot_In_Ban_Ve_BIM_Len_San_FieldPrinter_HUD.jpg"
+                alt="11. Robot tự hành in bản vẽ BIM lên sàn"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Sai số < 1.5mm</span><span class="metric-tag">Nhanh gấp 8 lần</span><span class="metric-tag">In tường và lỗ mở</span></span>
+            </p>
+          </figure></div>
+          <div class="sbs-col" aria-label="Cột phải sbs-07">
+          <figure class="visual-unit" id="item-28" data-id="28">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Bản vẽ kỹ thuật Isometric · Mã 28</span>28. Bản vẽ: Robot in bản vẽ BIM lên sàn</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('28')">
+                <span>Phóng to 28</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('28')" aria-label="Phóng to hình 28 Bản vẽ: Robot in bản vẽ BIM lên sàn">
+              <img
+                src="./28b_Blueprint_GD2_TP2_2_Robot_In_San_BIM_Quy_Trinh_BOM_Ha_Tang_HUD.jpg"
+                alt="28. Bản vẽ: Robot in bản vẽ BIM lên sàn"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">1. Nạp bản vẽ BIM</span><span class="metric-tag">2. Khóa tia Laser</span><span class="metric-tag">3. Robot in sàn</span><span class="metric-tag">4. Sai số < 1.5mm</span></span>
+            </p>
+          </figure></div>
+        </div>
+      </article>
+
+      <article class="sbs-band" data-cat="gd2" id="sbs-08">
+        <span id="pair-for-12"></span><span id="pair-for-29"></span>
+        <header class="sbs-band-head">
+          <h3 class="sbs-band-title"><span class="sbs-phase-label">Giai đoạn 2 (Năm 2) · Điểm chạm 2.3</span>Máy xúc dẫn đường 3D RTK và khóa van thủy lực bán tự động chống đào lố</h3>
+          <p class="sbs-band-summary">Hai ăng ten vệ tinh RTK kết hợp 4 cảm biến góc nghiêng IMU chuẩn IP69K định vị mũi răng gầu xúc (±15mm) ngay trên màn hình cabin</p>
+        </header>
+        <div class="sbs-pair-grid">
+          <div class="sbs-col" aria-label="Cột trái sbs-08">
+          <figure class="visual-unit" id="item-12" data-id="12">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 12</span>12. Máy xúc dẫn đường 3D chống đào lố</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('12')">
+                <span>Phóng to 12</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('12')" aria-label="Phóng to hình 12 Máy xúc dẫn đường 3D chống đào lố">
+              <img
+                src="./12b_GD2_CP3_May_Xuc_Dan_Duong_3D_Machine_Guidance_HUD.jpg"
+                alt="12. Máy xúc dẫn đường 3D chống đào lố"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Định vị Dual RTK</span><span class="metric-tag">Màn hình 3D Cabin</span><span class="metric-tag">Khóa van thủy lực</span></span>
+            </p>
+          </figure></div>
+          <div class="sbs-col" aria-label="Cột phải sbs-08">
+          <figure class="visual-unit" id="item-29" data-id="29">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Bản vẽ kỹ thuật Isometric · Mã 29</span>29. Bản vẽ: Máy xúc dẫn đường 3D RTK</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('29')">
+                <span>Phóng to 29</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('29')" aria-label="Phóng to hình 29 Bản vẽ: Máy xúc dẫn đường 3D RTK">
+              <img
+                src="./29b_Blueprint_GD2_TP2_3_May_Xuc_3D_Guidance_Quy_Trinh_BOM_Ha_Tang_HUD.jpg"
+                alt="29. Bản vẽ: Máy xúc dẫn đường 3D RTK"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">1. Nạp mặt cắt 3D</span><span class="metric-tag">2. Định vị RTK</span><span class="metric-tag">3. Cảm biến cần IMU</span><span class="metric-tag">4. Khóa thủy lực</span></span>
+            </p>
+          </figure></div>
+        </div>
+      </article>
+
+      <article class="sbs-band" data-cat="gd2" id="sbs-09">
+        <span id="pair-for-13"></span><span id="pair-for-30"></span>
+        <header class="sbs-band-head">
+          <h3 class="sbs-band-title"><span class="sbs-phase-label">Giai đoạn 2 (Năm 2) · Điểm chạm 2.4</span>Máy tính bảng AR LiDAR soi xuyên thấu và nghiệm thu hệ thống cơ điện MEP</h3>
+          <p class="sbs-band-summary">Quét mốc tầng trong 5 giây · Chồng khớp tỷ lệ 1:1 mô hình BIM 3D lên trần bê tông thô · Phát hiện lệch ống 45mm trước khi đóng trần</p>
+        </header>
+        <div class="sbs-pair-grid">
+          <div class="sbs-col" aria-label="Cột trái sbs-09">
+          <figure class="visual-unit" id="item-13" data-id="13">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 13</span>13. Máy tính bảng AR LiDAR nghiệm thu MEP</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('13')">
+                <span>Phóng to 13</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('13')" aria-label="Phóng to hình 13 Máy tính bảng AR LiDAR nghiệm thu MEP">
+              <img
+                src="./13b_GD2_CP4_AR_Mobile_BIM_Doi_Chieu_Nghiem_Thu_MEP_HUD.jpg"
+                alt="13. Máy tính bảng AR LiDAR nghiệm thu MEP"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Chồng khớp 1:1</span><span class="metric-tag">Phát hiện lệch 45mm</span><span class="metric-tag">Trước khi đóng trần</span></span>
+            </p>
+          </figure></div>
+          <div class="sbs-col" aria-label="Cột phải sbs-09">
+          <figure class="visual-unit" id="item-30" data-id="30">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Bản vẽ kỹ thuật Isometric · Mã 30</span>30. Bản vẽ: Máy tính bảng AR nghiệm thu MEP</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('30')">
+                <span>Phóng to 30</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('30')" aria-label="Phóng to hình 30 Bản vẽ: Máy tính bảng AR nghiệm thu MEP">
+              <img
+                src="./30b_Blueprint_GD2_TP2_4_iPad_AR_BIM_MEP_Quy_Trinh_BOM_Ha_Tang_HUD.jpg"
+                alt="30. Bản vẽ: Máy tính bảng AR nghiệm thu MEP"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">1. Quét mốc tầng</span><span class="metric-tag">2. Chồng khớp 3D</span><span class="metric-tag">3. Máy tính bảng</span><span class="metric-tag">4. Đồng bộ BIM</span></span>
+            </p>
+          </figure></div>
+        </div>
+      </article>
+
+      <article class="sbs-band" data-cat="gd3" id="sbs-10">
+        <span id="pair-for-14"></span><span id="pair-for-15"></span><span id="pair-for-31"></span>
+        <header class="sbs-band-head">
+          <h3 class="sbs-band-title"><span class="sbs-phase-label">Giai đoạn 3 (Năm 3) · Điểm chạm 3.1 và 3.2</span>Robot bốn chân tuần đêm quét 3D LiDAR và khung xương cơ học trợ lực cho công nhân</h3>
+          <p class="sbs-band-summary">Robot tự leo cầu thang quét độ phẳng sàn và nhiệt PCCC ban đêm · Khung xương Exoskeleton giảm 70% tải lên cột sống L4/L5</p>
+        </header>
+        <div class="sbs-pair-grid">
+          <div class="sbs-col" aria-label="Cột trái sbs-10">
+          <figure class="visual-unit" id="item-14" data-id="14">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 14</span>14. Robot bốn chân tuần đêm quét 3D LiDAR</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('14')">
+                <span>Phóng to 14</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('14')" aria-label="Phóng to hình 14 Robot bốn chân tuần đêm quét 3D LiDAR">
+              <img
+                src="./14b_GD3_CP1_Robot_Bon_Chan_Tuan_Dem_Quet_3D_LiDAR_HUD.jpg"
+                alt="14. Robot bốn chân tuần đêm quét 3D LiDAR"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Ca đêm 22:00</span><span class="metric-tag">Leo cầu thang</span><span class="metric-tag">Quét phẳng sàn và nhiệt</span></span>
+            </p>
+          </figure>
+
+          <figure class="visual-unit" id="item-15" data-id="15">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 15</span>15. Công nhân đeo khung xương trợ lực Exoskeleton</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('15')">
+                <span>Phóng to 15</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('15')" aria-label="Phóng to hình 15 Công nhân đeo khung xương trợ lực Exoskeleton">
+              <img
+                src="./15b_GD3_CP2_Cong_Nhan_Khung_Xuong_Tro_Luc_Exoskeleton_HUD.jpg"
+                alt="15. Công nhân đeo khung xương trợ lực Exoskeleton"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Giảm 70% tải lưng</span><span class="metric-tag">Bảo vệ đốt sống</span><span class="metric-tag">Năng suất gấp đôi</span></span>
+            </p>
+          </figure></div>
+          <div class="sbs-col" aria-label="Cột phải sbs-10">
+          <figure class="visual-unit" id="item-31" data-id="31">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Bản vẽ kỹ thuật Isometric · Mã 31</span>31. Bản vẽ: Robot tuần đêm và khung trợ lực</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('31')">
+                <span>Phóng to 31</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('31')" aria-label="Phóng to hình 31 Bản vẽ: Robot tuần đêm và khung trợ lực">
+              <img
+                src="./31b_Blueprint_GD3_TP3_1_3_2_Robot_Tuan_Dem_va_Exoskeleton_HUD.jpg"
+                alt="31. Bản vẽ: Robot tuần đêm và khung trợ lực"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">1. Robot tuần đêm</span><span class="metric-tag">2. Quét LiDAR 3D</span><span class="metric-tag">3. Khung trợ lực</span><span class="metric-tag">4. Giảm 70% tải</span></span>
+            </p>
+          </figure></div>
+        </div>
+      </article>
+
+      <article class="sbs-band" data-cat="gd3" id="sbs-11">
+        <span id="pair-for-16"></span><span id="pair-for-17"></span><span id="pair-for-32"></span>
+        <header class="sbs-band-head">
+          <h3 class="sbs-band-title"><span class="sbs-phase-label">Giai đoạn 3 (Năm 3) · Điểm chạm 3.3 và 3.4</span>Đội máy công trình tự hành hoàn toàn và cẩu tháp AI tự động khử lắc tải trọng</h3>
+          <p class="sbs-band-summary">Xe lu tự hành gắn radar 77GHz xuyên bụi đo độ chặt nền K98 · Cẩu tháp AI giảm 85% biên độ lắc cáp và tự né giàn giáo</p>
+        </header>
+        <div class="sbs-pair-grid">
+          <div class="sbs-col" aria-label="Cột trái sbs-11">
+          <figure class="visual-unit" id="item-16" data-id="16">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 16</span>16. Đội máy công trình tự hành hoàn toàn</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('16')">
+                <span>Phóng to 16</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('16')" aria-label="Phóng to hình 16 Đội máy công trình tự hành hoàn toàn">
+              <img
+                src="./16b_GD3_CP3_May_Cong_Trinh_Tu_Hanh_Hoan_Toan_HUD.jpg"
+                alt="16. Đội máy công trình tự hành hoàn toàn"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Không người lái</span><span class="metric-tag">Radar 77GHz xuyên bụi</span><span class="metric-tag">Đầm nén chuẩn K98</span></span>
+            </p>
+          </figure>
+
+          <figure class="visual-unit" id="item-17" data-id="17">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 17</span>17. Cẩu tháp tự hành AI và chống lắc tải</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('17')">
+                <span>Phóng to 17</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('17')" aria-label="Phóng to hình 17 Cẩu tháp tự hành AI và chống lắc tải">
+              <img
+                src="./17b_GD3_CP4_Cau_Thap_Tu_Hanh_AI_Tower_Crane_HUD.jpg"
+                alt="17. Cẩu tháp tự hành AI và chống lắc tải"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Khử lắc 85%</span><span class="metric-tag">LiDAR móc cẩu</span><span class="metric-tag">Tự né giàn giáo</span></span>
+            </p>
+          </figure></div>
+          <div class="sbs-col" aria-label="Cột phải sbs-11">
+          <figure class="visual-unit" id="item-32" data-id="32">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Bản vẽ kỹ thuật Isometric · Mã 32</span>32. Bản vẽ: Xe tự hành và cẩu tháp AI</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('32')">
+                <span>Phóng to 32</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('32')" aria-label="Phóng to hình 32 Bản vẽ: Xe tự hành và cẩu tháp AI">
+              <img
+                src="./32b_Blueprint_GD3_TP3_3_3_4_May_Tu_Hanh_va_Cau_Thap_AI_HUD.jpg"
+                alt="32. Bản vẽ: Xe tự hành và cẩu tháp AI"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">1. Đội xe tự hành</span><span class="metric-tag">2. Đầm nén K98</span><span class="metric-tag">3. Cẩu tháp AI</span><span class="metric-tag">4. Khử lắc 85%</span></span>
+            </p>
+          </figure></div>
+        </div>
+      </article>
+
+      <article class="sbs-band" data-cat="v2030" id="sbs-12">
+        <span id="pair-for-18"></span><span id="pair-for-19"></span><span id="pair-for-20"></span><span id="pair-for-33"></span>
+        <header class="sbs-band-head">
+          <h3 class="sbs-band-title"><span class="sbs-phase-label">Giai đoạn 3 và Tầm nhìn 2030 · Điểm chạm 3.5, 4.1 và 4.2</span>Hệ điều hành đa tác tử Site OS, xưởng vi mô Container 40ft và giải ngân hợp đồng số 2 phút</h3>
+          <p class="sbs-band-summary">4 tác tử AI điều phối toàn công trường trong 3 giây · Robot hàn cắt mô đun MEP tại chỗ · Kính AR nghiệm thu 17:00 và giải ngân 17:02</p>
+        </header>
+        <div class="sbs-pair-grid">
+          <div class="sbs-col" aria-label="Cột trái sbs-12">
+          <figure class="visual-unit" id="item-18" data-id="18">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 18</span>18. Hệ điều hành công trường đa tác tử Site OS</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('18')">
+                <span>Phóng to 18</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('18')" aria-label="Phóng to hình 18 Hệ điều hành công trường đa tác tử Site OS">
+              <img
+                src="./18b_GD3_CP5_He_Dieu_Hanh_Da_Tac_Tu_Multi_Agent_Site_OS_HUD.jpg"
+                alt="18. Hệ điều hành công trường đa tác tử Site OS"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">4 tác tử AI</span><span class="metric-tag">Bản sao số 3D</span><span class="metric-tag">Điều phối trong 3 giây</span></span>
+            </p>
+          </figure>
+
+          <figure class="visual-unit" id="item-19" data-id="19">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 19</span>19. Nhà máy vi mô Container 40ft tại chân công trình</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('19')">
+                <span>Phóng to 19</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('19')" aria-label="Phóng to hình 19 Nhà máy vi mô Container 40ft tại chân công trình">
+              <img
+                src="./19b_Vision2030_CP1_Nha_May_Vi_Mo_Container_OnSite_HUD.jpg"
+                alt="19. Nhà máy vi mô Container 40ft tại chân công trình"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Container 40 feet</span><span class="metric-tag">Robot hàn cắt laser</span><span class="metric-tag">Khớp LiDAR từng mm</span></span>
+            </p>
+          </figure></div>
+          <div class="sbs-col" aria-label="Cột phải sbs-12">
+          <figure class="visual-unit" id="item-20" data-id="20">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Phối cảnh thực địa CC1 · Mã 20</span>20. Kính bảo hộ AR và hợp đồng thông minh 2 phút</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('20')">
+                <span>Phóng to 20</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('20')" aria-label="Phóng to hình 20 Kính bảo hộ AR và hợp đồng thông minh 2 phút">
+              <img
+                src="./20b_Vision2030_CP2_Zero_UI_Smart_Contract_Payment_HUD.jpg"
+                alt="20. Kính bảo hộ AR và hợp đồng thông minh 2 phút"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">Kính AR rảnh tay</span><span class="metric-tag">Nghiệm thu 3D 17:00</span><span class="metric-tag">Giải ngân lúc 17:02</span></span>
+            </p>
+          </figure>
+
+          <figure class="visual-unit" id="item-33" data-id="33">
+            <figcaption class="unit-head">
+              <h4 class="unit-title"><span class="unit-role">Bản vẽ kỹ thuật Isometric · Mã 33</span>33. Bản vẽ: Đa tác tử, xưởng Container và hợp đồng số</h4>
+              <button type="button" class="zoom-link-btn" onclick="openLightboxById('33')">
+                <span>Phóng to 33</span>
+                <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><polyline points="168 48 208 48 208 88" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="152" y1="104" x2="208" y2="48" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="88 208 48 208 48 168" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><line x1="104" y1="152" x2="48" y2="208" stroke="currentColor" stroke-width="18" stroke-linecap="round"/></svg>
+              </button>
+            </figcaption>
+            <button type="button" class="media-trigger" onclick="openLightboxById('33')" aria-label="Phóng to hình 33 Bản vẽ: Đa tác tử, xưởng Container và hợp đồng số">
+              <img
+                src="./33b_Blueprint_GD3_2030_SiteOS_MicroFactory_ZeroUI_SmartContract_HUD.jpg"
+                alt="33. Bản vẽ: Đa tác tử, xưởng Container và hợp đồng số"
+                width="1376"
+                height="768"
+                loading="lazy"
+                onerror="this.style.opacity='0.2'"
+              />
+            </button>
+            <p class="unit-foot">
+              <span class="chips-row"><span class="metric-tag">1. Đa tác tử AI</span><span class="metric-tag">2. Xưởng Container</span><span class="metric-tag">3. Kính bảo hộ AR</span><span class="metric-tag">4. Giải ngân 2 phút</span></span>
+            </p>
+          </figure></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="#top" class="brand-link">
+      <img src="./cc1_official_logo.png" alt="Logo CC1" width="60" height="24" class="brand-logo" onerror="this.style.opacity='0.2'" />
+      <span>Tổng Công ty Xây dựng Số 1 (CC1) · Bộ 41 Phối cảnh và Bản vẽ Kỹ thuật</span>
+    </a>
+    <nav class="footer-links" aria-label="Tài liệu kỹ thuật đính kèm">
+      <a href="./README.md" class="footer-link">Tài liệu tổng quan</a>
+      <a href="./CHAPTER_OPEN_LINEAR_SITES_HIGHWAY_BRIDGE.md" class="footer-link">Chuyên đề Công trường Tuyến</a>
+      <a href="./TECHNICAL_ARCHITECTURE_TOUCHPOINTS.md" class="footer-link">Kiến trúc kỹ thuật và BOM</a>
+      <a href="./ART-DIRECTION.md" class="footer-link">Quy chuẩn mỹ thuật</a>
+      <a href="#top" class="footer-link">
+        <span>Lên đầu trang</span>
+        <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><line x1="128" y1="216" x2="128" y2="40" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="56 112 128 40 200 112" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </nav>
+  </footer>
+
+  <!-- Full-screen 16:9 Lightbox -->
+  <aside class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Xem ảnh phóng to 16:9">
+    <img id="lightbox-img" src="./01b_GD1_CP1_Cong_Kiem_Soat_AI_PPE_HUD.jpg" alt="Xem phóng to 16:9" width="1376" height="768" onerror="this.style.opacity='0.2'" />
+    <nav class="lightbox-controls" id="lightbox-controls" aria-label="Điều khiển ảnh phóng to">
+      <button type="button" class="ver-btn" onclick="stepLightbox(-1)">
+        <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><line x1="216" y1="128" x2="40" y2="128" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="112 56 40 128 112 200" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Hình trước</span>
+      </button>
+      <button type="button" class="ver-btn" onclick="stepLightbox(1)">
+        <span>Hình tiếp</span>
+        <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><line x1="40" y1="128" x2="216" y2="128" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button type="button" class="ver-btn" onclick="closeLightbox()" style="color: var(--danger);">Đóng (ESC)</button>
+    </nav>
+  </aside>
+
+  <script>
+    const CATALOG = {"01": {"id": "01", "cat": "gd1", "bp": "22", "short": "01. Cổng kiểm soát AI và đồ bảo hộ PPE", "chips": ["Mở cổng 1.5s", "Face ID + PPE", "Khóa khi thiếu mũ"], "hud": "./01b_GD1_CP1_Cong_Kiem_Soat_AI_PPE_HUD.jpg"}, "02": {"id": "02", "cat": "gd1", "bp": "23", "short": "02. Camera AI giám sát an toàn 24/7", "chips": ["Cảnh báo < 1s", "Thiếu dây đai", "Vùng cẩu tháp"], "hud": "./02b_GD1_CP2_Camera_AI_Giam_Sat_An_Toan_24_7_HUD.jpg"}, "03": {"id": "03", "cat": "gd1", "bp": "24", "short": "03. Drone RTK quét 3D đối soát BIM 4D", "chips": ["Sai số < 1.5cm", "Đám mây điểm 3D", "Tự bóc khối lượng"], "hud": "./03b_GD1_CP3_Drone_AI_Quet_3D_Doi_Soat_BIM_HUD.jpg"}, "04": {"id": "04", "cat": "gd1", "bp": "25", "short": "04. Cổng thông minh AI OCR kiểm soát xe", "chips": ["Biển số 99.4%", "Soi thùng xe", "Cầu rửa lốp sạch"], "hud": "./04b_GD1_CP4_Smart_Gate_AI_OCR_Kiem_Soat_Xe_HUD.jpg"}, "05": {"id": "05", "cat": "reid", "bp": "26", "short": "05. ReID Tầng 1: Quét khung xương 3D tại cổng", "chips": ["07:00 sáng", "17 khớp xương 3D", "Vector 4KB / người"], "hud": "./05b_GD1_ReID_Tang1_Passthrough_3D_Skeleton_Gait_Gate_HUD.jpg"}, "06": {"id": "06", "cat": "reid", "bp": "26", "short": "06. ReID Tầng 2: Theo vết dáng đi liên camera", "chips": ["Liên camera", "Cự ly xa 30x80px", "Không cần thấy mặt"], "hud": "./06b_GD1_ReID_Tang2_Multi_Camera_3D_Pose_Tracking_HUD.jpg"}, "07": {"id": "07", "cat": "reid", "bp": "26", "short": "07. ReID Tầng 3: Drone 50m và chip mũ UWB", "chips": ["Độ cao 50m", "Chip mũ UWB 8g", "Chống tráo mũ 100%"], "hud": "./07b_GD1_ReID_Tang3_Drone_50m_UWB_Helmet_Sensor_Fusion_HUD.jpg"}, "08": {"id": "08", "cat": "reid", "bp": "26", "short": "08. Quy trình ReID 4 bước khép kín 07:00 đến 17:00", "chips": ["Quét cổng 07:00", "Đồng bộ biên", "Theo vết 3D", "Chấm công 17:00"], "hud": "./08b_GD1_ReID_Quy_Trinh_4_Buoc_Khep_Kin_07h_17h_HUD.jpg"}, "09": {"id": "09", "cat": "reid", "bp": "21", "short": "09. Bác bỏ 3D Avatar tĩnh và chọn Edge AI Box", "chips": ["Avatar tĩnh: Lỗi 45%", "Khung xương 3D: Chuẩn", "Nhẹ hơn 1.000 lần"], "hud": "./09b_GD1_ReID_Phu_Luc_Bac_Bo_3D_Avatar_vs_Edge_AI_Box_HUD.jpg"}, "10": {"id": "10", "cat": "gd2", "bp": "27", "short": "10. Trạm cân AI và cổng quét 3D LiDAR vật tư", "chips": ["Quét thể tích 3D", "Đếm bó thép", "Chống độn nước cát"], "hud": "./10b_GD2_CP1_Tram_Can_AI_Quet_3D_LiDAR_Vat_Tu_HUD.jpg"}, "11": {"id": "11", "cat": "gd2", "bp": "28", "short": "11. Robot tự hành in bản vẽ BIM lên sàn", "chips": ["Sai số < 1.5mm", "Nhanh gấp 8 lần", "In tường và lỗ mở"], "hud": "./11b_GD2_CP2_Robot_In_Ban_Ve_BIM_Len_San_FieldPrinter_HUD.jpg"}, "12": {"id": "12", "cat": "gd2", "bp": "29", "short": "12. Máy xúc dẫn đường 3D chống đào lố", "chips": ["Định vị Dual RTK", "Màn hình 3D Cabin", "Khóa van thủy lực"], "hud": "./12b_GD2_CP3_May_Xuc_Dan_Duong_3D_Machine_Guidance_HUD.jpg"}, "13": {"id": "13", "cat": "gd2", "bp": "30", "short": "13. Máy tính bảng AR LiDAR nghiệm thu MEP", "chips": ["Chồng khớp 1:1", "Phát hiện lệch 45mm", "Trước khi đóng trần"], "hud": "./13b_GD2_CP4_AR_Mobile_BIM_Doi_Chieu_Nghiem_Thu_MEP_HUD.jpg"}, "14": {"id": "14", "cat": "gd3", "bp": "31", "short": "14. Robot bốn chân tuần đêm quét 3D LiDAR", "chips": ["Ca đêm 22:00", "Leo cầu thang", "Quét phẳng sàn và nhiệt"], "hud": "./14b_GD3_CP1_Robot_Bon_Chan_Tuan_Dem_Quet_3D_LiDAR_HUD.jpg"}, "15": {"id": "15", "cat": "gd3", "bp": "31", "short": "15. Công nhân đeo khung xương trợ lực Exoskeleton", "chips": ["Giảm 70% tải lưng", "Bảo vệ đốt sống", "Năng suất gấp đôi"], "hud": "./15b_GD3_CP2_Cong_Nhan_Khung_Xuong_Tro_Luc_Exoskeleton_HUD.jpg"}, "16": {"id": "16", "cat": "gd3", "bp": "32", "short": "16. Đội máy công trình tự hành hoàn toàn", "chips": ["Không người lái", "Radar 77GHz xuyên bụi", "Đầm nén chuẩn K98"], "hud": "./16b_GD3_CP3_May_Cong_Trinh_Tu_Hanh_Hoan_Toan_HUD.jpg"}, "17": {"id": "17", "cat": "gd3", "bp": "32", "short": "17. Cẩu tháp tự hành AI và chống lắc tải", "chips": ["Khử lắc 85%", "LiDAR móc cẩu", "Tự né giàn giáo"], "hud": "./17b_GD3_CP4_Cau_Thap_Tu_Hanh_AI_Tower_Crane_HUD.jpg"}, "18": {"id": "18", "cat": "gd3", "bp": "33", "short": "18. Hệ điều hành công trường đa tác tử Site OS", "chips": ["4 tác tử AI", "Bản sao số 3D", "Điều phối trong 3 giây"], "hud": "./18b_GD3_CP5_He_Dieu_Hanh_Da_Tac_Tu_Multi_Agent_Site_OS_HUD.jpg"}, "19": {"id": "19", "cat": "v2030", "bp": "33", "short": "19. Nhà máy vi mô Container 40ft tại chân công trình", "chips": ["Container 40 feet", "Robot hàn cắt laser", "Khớp LiDAR từng mm"], "hud": "./19b_Vision2030_CP1_Nha_May_Vi_Mo_Container_OnSite_HUD.jpg"}, "20": {"id": "20", "cat": "v2030", "bp": "33", "short": "20. Kính bảo hộ AR và hợp đồng thông minh 2 phút", "chips": ["Kính AR rảnh tay", "Nghiệm thu 3D 17:00", "Giải ngân lúc 17:02"], "hud": "./20b_Vision2030_CP2_Zero_UI_Smart_Contract_Payment_HUD.jpg"}, "21": {"id": "21", "cat": "blueprint", "bp": "21", "short": "21. Bản vẽ: Hạ tầng nền tảng 4 tầng Site Backbone", "chips": ["1. Cảm biến", "2. Mạng và RTK", "3. Máy chủ biên", "4. Đám mây CC1"], "hud": "./21b_Blueprint_00_Ha_Tang_Nen_Tang_CC1_Site_Backbone_HUD.jpg"}, "22": {"id": "22", "cat": "blueprint", "bp": "22", "short": "22. Bản vẽ: Cổng kiểm soát AI và bảo hộ PPE", "chips": ["1. Quy trình 1.5s", "2. AI Khuôn mặt", "3. Cổng SUS304 IP65", "4. Mạng PoE+ và UPS"], "hud": "./22b_Blueprint_GD1_TP1_1_Cong_AI_PPE_Quy_Trinh_BOM_Ha_Tang_HUD.jpg"}, "23": {"id": "23", "cat": "blueprint", "bp": "23", "short": "23. Bản vẽ: Camera AI 24/7 và cầu sóng 5GHz", "chips": ["1. Giám sát 24/7", "2. Lọc báo giả 3s", "3. Trụ Camera AI", "4. Sóng CPE 5GHz"], "hud": "./23b_Blueprint_GD1_TP1_2_CCTV_AI_24_7_Quy_Trinh_BOM_Ha_Tang_HUD.jpg"}, "24": {"id": "24", "cat": "blueprint", "bp": "24", "short": "24. Bản vẽ: Drone RTK và đối soát BIM 4D", "chips": ["1. Bay tự động", "2. Khớp BIM 4D", "3. Drone LiDAR", "4. Trạm RTK < 1cm"], "hud": "./24b_Blueprint_GD1_TP1_3_Drone_3D_BIM_Quy_Trinh_BOM_Ha_Tang_HUD.jpg"}, "25": {"id": "25", "cat": "blueprint", "bp": "25", "short": "25. Bản vẽ: Cổng xe thông minh và rửa lốp", "chips": ["1. Quét xe ra vào", "2. AI Đọc biển số", "3. Cổng và Rửa lốp", "4. Lưu điện UPS"], "hud": "./25b_Blueprint_GD1_TP1_4_Smart_Gate_OCR_Quy_Trinh_BOM_Ha_Tang_HUD.jpg"}, "26": {"id": "26", "cat": "blueprint", "bp": "26", "short": "26. Bản vẽ: Định danh 3D và chip mũ bảo hộ UWB", "chips": ["1. Quét cổng 3D", "2. Theo vết dáng đi", "3. Chip mũ UWB 8g", "4. Chống tráo mũ"], "hud": "./26b_Blueprint_GD1_TP1_5_3D_Spatial_ReID_UWB_Fusion_Chi_Tiet_HUD.jpg"}, "27": {"id": "27", "cat": "blueprint", "bp": "27", "short": "27. Bản vẽ: Trạm cân AI và cổng 3D LiDAR", "chips": ["1. Cân và Quét 3D", "2. Đo thể tích", "3. Cổng LiDAR", "4. Khớp kho ERP"], "hud": "./27b_Blueprint_GD2_TP2_1_Tram_Can_3D_LiDAR_Quy_Trinh_BOM_Ha_Tang_HUD.jpg"}, "28": {"id": "28", "cat": "blueprint", "bp": "28", "short": "28. Bản vẽ: Robot in bản vẽ BIM lên sàn", "chips": ["1. Nạp bản vẽ BIM", "2. Khóa tia Laser", "3. Robot in sàn", "4. Sai số < 1.5mm"], "hud": "./28b_Blueprint_GD2_TP2_2_Robot_In_San_BIM_Quy_Trinh_BOM_Ha_Tang_HUD.jpg"}, "29": {"id": "29", "cat": "blueprint", "bp": "29", "short": "29. Bản vẽ: Máy xúc dẫn đường 3D RTK", "chips": ["1. Nạp mặt cắt 3D", "2. Định vị RTK", "3. Cảm biến cần IMU", "4. Khóa thủy lực"], "hud": "./29b_Blueprint_GD2_TP2_3_May_Xuc_3D_Guidance_Quy_Trinh_BOM_Ha_Tang_HUD.jpg"}, "30": {"id": "30", "cat": "blueprint", "bp": "30", "short": "30. Bản vẽ: Máy tính bảng AR nghiệm thu MEP", "chips": ["1. Quét mốc tầng", "2. Chồng khớp 3D", "3. Máy tính bảng", "4. Đồng bộ BIM"], "hud": "./30b_Blueprint_GD2_TP2_4_iPad_AR_BIM_MEP_Quy_Trinh_BOM_Ha_Tang_HUD.jpg"}, "31": {"id": "31", "cat": "blueprint", "bp": "31", "short": "31. Bản vẽ: Robot tuần đêm và khung trợ lực", "chips": ["1. Robot tuần đêm", "2. Quét LiDAR 3D", "3. Khung trợ lực", "4. Giảm 70% tải"], "hud": "./31b_Blueprint_GD3_TP3_1_3_2_Robot_Tuan_Dem_va_Exoskeleton_HUD.jpg"}, "32": {"id": "32", "cat": "blueprint", "bp": "32", "short": "32. Bản vẽ: Xe tự hành và cẩu tháp AI", "chips": ["1. Đội xe tự hành", "2. Đầm nén K98", "3. Cẩu tháp AI", "4. Khử lắc 85%"], "hud": "./32b_Blueprint_GD3_TP3_3_3_4_May_Tu_Hanh_va_Cau_Thap_AI_HUD.jpg"}, "33": {"id": "33", "cat": "blueprint", "bp": "33", "short": "33. Bản vẽ: Đa tác tử, xưởng Container và hợp đồng số", "chips": ["1. Đa tác tử AI", "2. Xưởng Container", "3. Kính bảo hộ AR", "4. Giải ngân 2 phút"], "hud": "./33b_Blueprint_GD3_2030_SiteOS_MicroFactory_ZeroUI_SmartContract_HUD.jpg"}, "34": {"id": "34", "cat": "linear", "bp": "21", "short": "34. Tuyến L1: TTM số và kiểm tra tổ chức giao thông", "chips": ["Chuẩn QCVN 41:2024", "Checklist tọa độ GPS", "Khóa mở ca nếu thiếu biển"], "hud": "./34b_GD_Tuyen_L1_TTM_So_Kiem_Tra_To_Chuc_Giao_Thong_HUD.jpg"}, "35": {"id": "35", "cat": "linear", "bp": "22", "short": "35. Tuyến L2: Giấy phép mặt trận số và chỉ huy ca", "chips": ["Quét QR/NFC đầu ca", "Geofence Km 8+200 – 9+000", "Chạy Offline 100%"], "hud": "./35b_GD_Tuyen_L2_Giay_Phep_Mat_Tran_So_Chi_Huy_Ca_HUD.jpg"}, "36": {"id": "36", "cat": "linear", "bp": "27", "short": "36. Tuyến L3: Phiếu điện tử e-Ticket và Geofence điểm đổ", "chips": ["Cân 18.4 tấn tại nguồn", "Tự ghi giờ vào vùng đổ", "Không nhận phiếu trên làn xe"], "hud": "./36b_GD_Tuyen_L3_E_Ticket_Geofence_Diem_Do_HUD.jpg"}, "37": {"id": "37", "cat": "linear", "bp": "23", "short": "37. Tuyến L4: Cảnh báo xâm nhập làn xe và cuối hàng chờ", "chips": ["Quét ngược dòng 250m", "Còi hú và vòng đeo rung", "Phản ứng <= 6 giây"], "hud": "./37b_GD_Tuyen_L4_Canh_Bao_Xam_Nhap_Cuoi_Hang_Cho_HUD.jpg"}, "38": {"id": "38", "cat": "linear", "bp": "24", "short": "38. Tuyến L5: Xương sống lý trình và tiến độ Thời gian – Km", "chips": ["Trục chuẩn LandXML", "Phát hiện đoạn thiếu máy", "Theo dõi từng lớp nền"], "hud": "./38b_GD_Tuyen_L5_Xuong_Song_Ly_Trinh_Tien_Do_HUD.jpg"}, "39": {"id": "39", "cat": "linear", "bp": "32", "short": "39. Tuyến L6: QA lu thông minh IC, nhiệt 145°C và xe LiDAR", "chips": ["Thanh nhiệt 145°C", "Độ chặt nền K98", "Xe bán tải quét LiDAR"], "hud": "./39b_GD_Tuyen_L6_QA_Lu_Thong_Minh_Nhiet_May_Rai_HUD.jpg"}, "40": {"id": "40", "cat": "linear", "bp": "26", "short": "40. Tuyến L7: Bảo vệ người làm đơn độc trên mái taluy (Man-down)", "chips": ["Thẻ định vị GNSS", "Cảnh báo bất động 180s", "Trạm Solar LoRa / 4G"], "hud": "./40b_GD_Tuyen_L7_Man_Down_Nguoi_Lam_Don_Doc_HUD.jpg"}, "41": {"id": "41", "cat": "linear", "bp": "28", "short": "41. Tuyến L8: Node Cầu số, quét 3D đốt dầm và độ chín bê tông", "chips": ["Sai số đốt dầm 0.3mm", "Cảm biến độ chín 42 MPa", "Rút ngắn 5 ngày căng cáp"], "hud": "./41b_GD_Tuyen_L8_Node_Cau_So_Dot_Dam_Maturity_HUD.jpg"}};
+    let currentHeroId = '01';
+    let currentLbId = '01';
+
+    function selectHeroTouchpoint(cid, btnEl) {
+      currentHeroId = cid;
+      document.querySelectorAll('.tp-thumb-btn').forEach(b => b.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+      renderHeroStage();
+    }
+
+    function renderHeroStage() {
+      const tp = CATALOG[currentHeroId];
+      const bp = CATALOG[tp.bp];
+      document.getElementById('hero-stage-title').textContent = `Đang chọn: ${tp.short} · Đối chiếu ${bp.short}`;
+      document.getElementById('stage-left-label').textContent = `Phối cảnh hiện trường CC1 · Điểm chạm ${tp.id}`;
+      document.getElementById('stage-right-label').textContent = `Bản vẽ kỹ thuật Isometric · Bản vẽ ${bp.id}`;
+      document.getElementById('stage-left-img').src = tp.hud;
+      document.getElementById('stage-right-img').src = bp.hud;
+    }
+
+    function openHeroStageLightbox(side) {
+      const tp = CATALOG[currentHeroId];
+      const item = side === 'right' ? CATALOG[tp.bp] : tp;
+      openLightboxById(item.id);
+    }
+
+    function filterSbsRows(cat, btn) {
+      document.querySelectorAll('.filter-toolbar .filter-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      document.querySelectorAll('.sbs-band').forEach(row => {
+        row.style.display = (cat === 'all' || row.dataset.cat === cat) ? 'block' : 'none';
+      });
+    }
+
+    function openLightboxById(id) {
+      const item = CATALOG[id];
+      if (!item) return;
+      currentLbId = id;
+      const lbImg = document.getElementById('lightbox-img');
+      lbImg.src = item.hud;
+      lbImg.alt = item.short;
+      document.getElementById('lightbox').classList.add('open');
+    }
+
+    function stepLightbox(delta) {
+      const num = parseInt(currentLbId, 10) || 1;
+      const nextNum = ((num - 1 + delta + 41) % 41) + 1;
+      const nextId = String(nextNum).padStart(2, '0');
+      openLightboxById(nextId);
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const lb = document.getElementById('lightbox');
+      const lbControls = document.getElementById('lightbox-controls');
+      if (lb) {
+        lb.addEventListener('click', e => {
+          if (e.target === lb) closeLightbox();
+        });
+      }
+      if (lbControls) {
+        lbControls.addEventListener('click', e => e.stopPropagation());
+      }
+
+      const sections = ['site-modes', 'touchpoints-panorama', 'sbs-deck'];
+      const navLinks = Array.from(document.querySelectorAll('.floating-nav .nav-link'));
+      const secObs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(l => l.classList.toggle('active', l.dataset.section === entry.target.id));
+          }
+        });
+      }, { rootMargin: '-25% 0px -60% 0px' });
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) secObs.observe(el);
+      });
+    });
+
+    document.addEventListener('keydown', e => {
+      const lb = document.getElementById('lightbox');
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') stepLightbox(1);
+      if (e.key === 'ArrowLeft') stepLightbox(-1);
+    });
+  </script>
+</body>
+</html>

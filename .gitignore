@@ -2,3 +2,7 @@
 ai-nganh-xay-dung/_evidence/*/sources/
 *.lock
 .DS_Store
+
+video/
+.brv/
+.project-agent.md
