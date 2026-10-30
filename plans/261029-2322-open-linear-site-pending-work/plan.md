@@ -81,3 +81,12 @@ Tiêu chí: 12 file mới (43–46 × 3), kiểm như mục 5 của brief gốc;
 - Synthesis: `plans/reports/research-261029-2130-open-linear-site-management-synthesis.md`
 - Nghiên cứu an ninh: `plans/reports/researcher-261029-2250-remote-site-security-world-tech.md`, `plans/reports/researcher-261029-2250-remote-site-security-vietnam-context.md`
 - Bằng chứng render: `plans/reports/evidence/chapter-open-linear-sites.pdf`, `plans/reports/evidence/synthesis-full.pdf`
+
+## G. Số liệu web lệch nguồn — để sau (owner 2026-10-30: "Demo thôi nên lưu lại, sau này làm tiếp thì fix")
+Chưa sửa trên web. Danh sách đầy đủ có dòng và giá trị đúng: `plans/reports/site-audit-261030-numbering-content.md` mục 2a (con số lệch nguồn/HUD), 2b (mục chưa xác minh), 2c (quy ước viết số).
+- [ ] 9 số lệch tài liệu/HUD: "gấp 8 lần"→5–10 lần; "0.3mm"→< 0.8 mm; "< 10ms" (độ lệch đồng bộ, xử lý < 50 ms); cảnh báo "< 1s"→< 2 s; L4 "6 giây" là thời gian phản ứng, báo động < 0.5 s; radar 77 GHz là phanh khẩn, không đo K98.
+- [ ] Tài liệu tự mâu thuẫn: ca đêm 20:00 hay 22:00; khung xương trợ lực "gấp đôi" hay "+200%".
+- [ ] Không nguồn: "99.4%", "Lỗi 45%".
+- [ ] Ảnh 34/34b (bộ ảnh web) còn biển "4 LANES TO 2" + logo VinFast (bản Clean dùng cho phim đã sửa).
+- [ ] Thiếu câu về điều kiện dữ liệu cá nhân NĐ 356/2025.
+- [ ] Quy ước số thập phân: dấu chấm (như HUD) hay "1,5 / 1.000".
