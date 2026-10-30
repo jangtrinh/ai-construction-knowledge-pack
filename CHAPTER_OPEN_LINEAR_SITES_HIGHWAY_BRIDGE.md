@@ -1,8 +1,8 @@
 # PHẦN VI — CÔNG TRƯỜNG TUYẾN (CAO TỐC · CẦU · ĐƯỜNG): MÔ HÌNH "NODE + CORRIDOR"
 
-> Chương bổ sung cho bộ hồ sơ Công trường số CC1. Áp dụng cho dự án **mở, dạng tuyến**: cao tốc, cầu vượt, cầu sông, mở rộng đường đang khai thác.
+> Chương bổ sung cho bộ hồ sơ Công trường số doanh nghiệp. Áp dụng cho dự án **mở, dạng tuyến**: cao tốc, cầu vượt, cầu sông, mở rộng đường đang khai thác.
 > Cơ sở nghiên cứu và nguồn: [`plans/reports/research-261029-2130-open-linear-site-management-synthesis.md`](./plans/reports/research-261029-2130-open-linear-site-management-synthesis.md) (4 nhánh nghiên cứu, mọi số liệu có nhãn bằng chứng).
-> Nhãn: **[F]** nguồn đã kiểm · **[V]** số do nhà cung cấp tự công bố · **[I]** đề xuất/suy luận của nhóm tư vấn.
+> Nhãn: **[F]** nguồn đã kiểm · **[V]** số do nhà cung cấp tự công bố · **[I]** đề xuất/suy luận của nhóm nghiên cứu.
 
 ---
 
@@ -35,7 +35,7 @@ flowchart TB
 
 ---
 
-## VI.2. Xương sống hạ tầng cho corridor (bổ sung "CC1 Site Backbone")
+## VI.2. Xương sống hạ tầng cho corridor (bổ sung "Site Backbone")
 
 | Lớp | Công trường kín (Phần I) | Công trường tuyến |
 |---|---|---|
@@ -78,10 +78,10 @@ flowchart TB
 2. **Hệ thống xử lý:** đối chiếu checklist với phương án; nhận diện ảnh (biển, đèn, rào có mặt/đúng loại theo QCVN 41:2024) [I]; nhật ký bất biến làm bằng chứng khi thanh tra hoặc có tai nạn.
 3. **Thiết bị:** điện thoại/tablet IP67 cho chỉ huy mặt trận; tem QR trên từng biển/rào di động (đếm và truy vết tài sản TTM).
 4. **Hạ tầng:** offline-first; đồng bộ khi có sóng.
-5. **Vì sao trước:** lỗi đang xảy ra ở VN là **lỗi cơ bản** — văn bản Cục Đường bộ VN 2026 thừa nhận biển, rào tạm "chưa bảo đảm theo quy định" [F]. Rẻ nhất, bảo vệ CC1 về pháp lý.
+5. **Vì sao trước:** lỗi đang xảy ra ở VN là **lỗi cơ bản** — văn bản Cục Đường bộ VN 2026 thừa nhận biển, rào tạm "chưa bảo đảm theo quy định" [F]. Rẻ nhất, bảo vệ về pháp lý.
 
 ### L2 — Giấy phép mặt trận số & Chỉ huy mặt trận *(Năm 1)*
-1. **Quy trình:** mỗi ngày, mỗi mặt trận có **một giấy phép số**: đoạn Km từ–đến × khung giờ × danh sách tổ đội × 1 chỉ huy chịu trách nhiệm. Đầu ca, chỉ huy quét thẻ CC1 (QR/NFC) của từng công nhân tại buổi giao ca; hệ thống kiểm chứng chỉ, khám sức khỏe, hạn huấn luyện từ sổ đăng ký trung tâm. Khi nhiều tổ dùng chung một đoạn chặn: một **điều phối viên đoạn** giữ giấy phép, chỉ đóng khi mọi tổ xác nhận rút xong. Sơ tán: mỗi chỉ huy báo quân số tổ mình.
+1. **Quy trình:** mỗi ngày, mỗi mặt trận có **một giấy phép số**: đoạn Km từ–đến × khung giờ × danh sách tổ đội × 1 chỉ huy chịu trách nhiệm. Đầu ca, chỉ huy quét thẻ nhân viên (QR/NFC) của từng công nhân tại buổi giao ca; hệ thống kiểm chứng chỉ, khám sức khỏe, hạn huấn luyện từ sổ đăng ký trung tâm. Khi nhiều tổ dùng chung một đoạn chặn: một **điều phối viên đoạn** giữ giấy phép, chỉ đóng khi mọi tổ xác nhận rút xong. Sơ tán: mỗi chỉ huy báo quân số tổ mình.
 2. **Mô hình tham chiếu:** đường sắt UK — thẻ Sentinel + COSS (người chịu trách nhiệm tổ, đi cùng tổ từ vào đến ra) + Protection Controller [F].
 3. **Hệ thống xử lý:** sổ đăng ký công nhân/thầu phụ; geofence đoạn được phép; cảnh báo vào sớm/ra muộn/ra ngoài đoạn.
 4. **Thiết bị:** thẻ QR/NFC; tablet tổ trưởng làm kiosk khi mất sóng.
@@ -97,11 +97,11 @@ flowchart TB
 1. **Quy trình:** tại điểm thu hẹp làn (ví dụ 4→2 làn) và vùng chặn ban đêm: camera AI gắn xe/trailer nhìn ngược dòng xe; cọc tiêu báo va; còi + đèn chớp tại chỗ + thiết bị rung đeo người; biển radar hiển thị tốc độ; cảnh báo cuối hàng chờ đặt trước điểm thu hẹp.
 2. **Vì sao cảnh báo phải tại chỗ:** xe 80–100 km/h đi 250 m trong 9–11 giây; mục tiêu thời gian phản ứng của công nhân ≤ 6 giây (Oregon DOT) [F] → báo về Zalo Ban chỉ huy là quá chậm.
 3. **Bằng chứng:** cảnh báo cuối hàng chờ Texas **ước tính −44% va chạm** (mẫu nhỏ) [F]; NEXCO Nhật bán camera AI di động từ 5/2026, phát hiện ~250 m, kém hơn ban đêm/mưa [F]. Báo động xâm nhập **chưa có số giảm tai nạn đáng tin**; nhiều DOT bỏ vì báo giả → **ghi log báo giả bắt buộc trong 3 tháng đầu** trước khi nhân rộng.
-4. **Dữ liệu:** mọi lần xâm nhập/near-miss vào **sổ xâm nhập** (lý trình, giờ, đoạn video) trong Site OS. Phạt nguội là việc của CSGT/chủ đầu tư; CC1 cung cấp dữ liệu.
+4. **Dữ liệu:** mọi lần xâm nhập/near-miss vào **sổ xâm nhập** (lý trình, giờ, đoạn video) trong Site OS. Phạt nguội là việc của CSGT/chủ đầu tư; doanh nghiệp cung cấp dữ liệu.
 
 ### L5 — Xương sống dữ liệu lý trình & tiến độ thời gian–lý trình *(Năm 2)*
 1. **Quy trình:** tuyến thiết kế (alignment) nạp một lần (LandXML/CSV); mọi dữ liệu (phiếu, ảnh, kết quả thí nghiệm, máy, sự cố) gắn (Km, offset, lớp). Tiến độ hiển thị dạng **biểu đồ thời gian–lý trình**: mỗi tổ là một đường dốc, giao cắt = xung đột; bản đồ nhiệt "đoạn nào đã đủ mặt bằng nhưng không có máy".
-2. **Định dạng:** Nhật (MLIT) giao nộp mô hình đường bằng J-LandXML, chưa bắt buộc IFC [F] → CC1 dùng LandXML/lý trình trước, IFC 4.3 là đích xuất theo QĐ 258/QĐ-TTg khi CĐT yêu cầu.
+2. **Định dạng:** Nhật (MLIT) giao nộp mô hình đường bằng J-LandXML, chưa bắt buộc IFC [F] → doanh nghiệp dùng LandXML/lý trình trước, IFC 4.3 là đích xuất theo QĐ 258/QĐ-TTg khi CĐT yêu cầu.
 3. **Lưu ý:** không hứa ROI — chưa có số đo độc lập cho phương pháp này.
 
 ### L6 — QA trong quá trình thi công *(Năm 2)*
@@ -116,7 +116,7 @@ flowchart TB
 
 ### L8 — NODE cầu số *(Năm 1–2, tại bãi đúc và trụ cầu)*
 1. **Quy trình:** đo hình học từng đốt dầm đúc so với đường cong đúc (sai 1 phần mm tại bãi → lệch hàng mét cuối nhịp [F]); cảm biến maturity/nhiệt trong mỗi đợt đổ trụ, dầm, mặt cầu → quyết định tháo ván khuôn/căng kéo theo cường độ thực (Idaho: rút 5–10 ngày [V]).
-2. **Vì sao quan trọng với CC1:** danh mục CC1 nặng về cầu (XL03 Hậu Giang–Cà Mau: 12 km + **24 cầu** [F]; cầu Cát Lái, Long Hưng) → đây là nơi "digital twin" có giá trị cao nhất.
+2. **Vì sao quan trọng với doanh nghiệp:** danh mục doanh nghiệp nặng về cầu (XL03 Hậu Giang–Cà Mau: 12 km + **24 cầu** [F]; cầu Cát Lái, Long Hưng) → đây là nơi "digital twin" có giá trị cao nhất.
 
 ### Hoãn (chưa có ROI tại VN)
 Máy rải cọc tiêu tự động, cổng chặn làn tự động (SwiftGate), xe đệm va tự hành (~US$450k/xe [F]), V2X, edge compute di động theo mặt trận.
@@ -141,7 +141,7 @@ Face ID (TP1.1), vector dáng đi (TP1.5) và thẻ GNSS (L2, L7) xử lý dữ 
 - **Dầu Giây – Tân Phú** (~60 km, Đồng Nai): khởi công 19/8/2025, dự kiến cơ bản hoàn thành 2026, khai thác 2027. Kiểm tra hiện trường 9/10/2026: **mới đạt ~5,2% giá trị hợp đồng** dù đã bàn giao 92% mặt bằng; mặt bằng bàn giao **xen kẽ**, di dời hạ tầng kỹ thuật, vào mùa mưa, chuyển mục đích sử dụng rừng chưa xong; Cục Đường bộ nêu **một số vị trí đã đủ điều kiện (đào đắp, cầu vượt ngang) nhưng chưa quyết liệt thi công** [F — VnExpress].
 - **Tân Phú – Bảo Lộc** (~66 km: ~12 km Đồng Nai + ~54 km Lâm Đồng, PPP): đã chọn nhà đầu tư; mục tiêu khởi công đầu 2026 — **chưa xác nhận đã khởi công** [nguồn thứ cấp].
 - **Bảo Lộc – Liên Khương:** chưa có thông tin khởi công đáng tin. **Liên Khương – Prenn:** đã khai thác.
-- **Vai trò CC1 trên tuyến: chưa tìm thấy** → đây là **demo năng lực**, không phải pilot trên gói thầu CC1 đang thi công.
+- **Vai trò doanh nghiệp trên tuyến: chưa tìm thấy** → đây là **demo năng lực**, không phải pilot trên gói thầu doanh nghiệp đang thi công.
 
 **Vì sao tuyến này là demo tốt:** gom đủ mọi đặc thù công trường tuyến trong một hành lang — đồng bằng (Dầu Giây), xuyên rừng, đèo Bảo Lộc (mất sóng, GNSS kém ở mái taluy đào sâu, sạt lở mùa mưa), nút giao nối đường đang khai thác (cao tốc TP.HCM–Long Thành–Dầu Giây, QL20). Và bài toán thật đang diễn ra: **"5,2% sau hơn một năm — chậm ở đâu, đoạn nào?"**
 
@@ -153,11 +153,11 @@ Face ID (TP1.1), vector dáng đi (TP1.5) và thẻ GNSS (L2, L7) xử lý dữ 
 | 2 | Bản đồ nhiệt "đoạn đã đủ mặt bằng × có/không có máy × lớp đang thi công" → trả lời trực tiếp nhận xét của Cục Đường bộ | L5 + L3 (telematics) |
 | 3–4 | Một đoạn mẫu 5 km: giấy phép mặt trận số, e-Ticket đất đắp/BTN, TTM số tại nút giao Dầu Giây | L1, L2, L3 |
 | 5 | Một trụ/mố cầu vượt ngang: cảm biến maturity + đếm người tại điểm thắt | L8 |
-| 6 | Báo cáo trước/sau cho Ban lãnh đạo CC1 | — |
+| 6 | Báo cáo trước/sau cho Ban lãnh đạo doanh nghiệp | — |
 
 **KPI demo:** tỷ lệ km "đủ mặt bằng nhưng không thi công" (giảm); số lỗi TTM/tuần; thời gian điểm danh đầu ca; chênh lệch khối lượng phiếu vs nghiệm thu; số sự cố xâm nhập được ghi nhận.
 
-**Điều kiện cần CC1 xác nhận:** quyền tiếp cận một đoạn tuyến (qua nhà đầu tư/chủ đầu tư hoặc liên danh); nếu không có, demo chạy trên dữ liệu công khai + mô phỏng cho tháng 1–2 và chuyển tháng 3–5 sang một gói CC1 đang thi công.
+**Điều kiện cần doanh nghiệp xác nhận:** quyền tiếp cận một đoạn tuyến (qua nhà đầu tư/chủ đầu tư hoặc liên danh); nếu không có, demo chạy trên dữ liệu công khai + mô phỏng cho tháng 1–2 và chuyển tháng 3–5 sang một gói doanh nghiệp đang thi công.
 
 ---
 
@@ -187,11 +187,11 @@ Face ID (TP1.1), vector dáng đi (TP1.5) và thẻ GNSS (L2, L7) xử lý dữ 
 ### VI.7.3. Bốn touchpoint an ninh mới (L9–L12)
 
 #### L9 — Máy móc & nhiên liệu: sổ đăng ký + tracker kép + khóa máy *(Năm 1)*
-1. **Quy trình:** mỗi máy (kể cả máy thuê) vào sổ đăng ký CC1: số khung, ảnh, đánh dấu ẩn, chủ sở hữu → chia sẻ với công an tỉnh. Gắn **2 đường định vị độc lập**: telematics ISO 15143-3 của hãng + **tracker ẩn** chạy pin, đa mạng. **"Im lặng = báo động"**: thiết bị mất tín hiệu ngoài giờ → cảnh báo (chống phá sóng). Ngoài giờ ca: máy nằm trong vùng đỗ geofence, nổ máy/di chuyển → báo + khóa khởi động tại bãi.
+1. **Quy trình:** mỗi máy (kể cả máy thuê) vào sổ đăng ký doanh nghiệp: số khung, ảnh, đánh dấu ẩn, chủ sở hữu → chia sẻ với công an tỉnh. Gắn **2 đường định vị độc lập**: telematics ISO 15143-3 của hãng + **tracker ẩn** chạy pin, đa mạng. **"Im lặng = báo động"**: thiết bị mất tín hiệu ngoài giờ → cảnh báo (chống phá sóng). Ngoài giờ ca: máy nằm trong vùng đỗ geofence, nổ máy/di chuyển → báo + khóa khởi động tại bãi.
 2. **Nhiên liệu:** cảm biến tiếp cận bồn + cảm biến mức dầu + đồng hồ lưu lượng trên xe bồn; AI đối soát lít cấp ↔ giờ máy ↔ khối lượng làm (L3) → phát hiện "đổ khống". **Đo mức hao hụt nền 1 tháng trước khi đặt mục tiêu.**
 3. **AI:** phát hiện bất thường (máy chạy ngoài ca, tiêu hao lệch so với máy cùng loại).
 4. **Pháp lý:** tự gắn GPS lên máy của mình không thấy bị cấm; **không** thiết kế "dừng máy từ xa" khi máy đang trên đường công cộng — chỉ khóa khởi động tại bãi [I]. Thiết bị giám sát hành trình chỉ bắt buộc cho 4 nhóm xe (NĐ 151/2024) [F thứ cấp].
-5. **Bảo hiểm:** xin báo giá phí/khấu trừ có–không có hệ thống từ nhà bảo hiểm của CC1.
+5. **Bảo hiểm:** xin báo giá phí/khấu trừ có–không có hệ thống từ nhà bảo hiểm của doanh nghiệp.
 
 #### L10 — Vật tư & tài sản tuyến: đánh dấu + cảm biến rẻ + đếm tồn tại NODE *(Năm 1)*
 1. **Tại NODE (kho, bãi thép, bãi cuộn cáp):** đếm/đối soát vật tư vào–ra theo e-Ticket (L3); camera phát hiện người ban đêm; **ghi nhận nội gián** (khớp ca làm, giấy phép mặt trận L2 với giờ vật tư biến mất).

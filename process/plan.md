@@ -1,11 +1,11 @@
 # Plan: Knowledge pack "Ứng dụng AI vào ngành xây dựng"
 
-- Ngày: 2026-10-29 · Controller: Claude (Fable, session CC1) · Tool: design-os-knowledge-builder (UKMC.v2)
+- Ngày: 2026-10-29 · Controller: Claude (Fable, session nghiên cứu) · Tool: design-os-knowledge-builder (UKMC.v2)
 - Pack root: `ai-nganh-xay-dung` · Run: `ai-xay-dung-261029` (budget 400)
 - Researcher runtime: claude-code · Reviewer runtime (R12): gemini/agy (fallback grok) — OWNER 2026-10-29: KHÔNG dùng Codex cho đến khi owner request
 
 ## Mục tiêu
-Pack trả lời: tập đoàn xây dựng (bối cảnh CC1, Việt Nam) nên ứng dụng AI vào đâu, bằng công nghệ gì
+Pack trả lời: tập đoàn xây dựng (bối cảnh giả định, Việt Nam) nên ứng dụng AI vào đâu, bằng công nghệ gì
 (robotics, IoT, LLM, OCR, xe tự hành, công trường số), với bằng chứng triển khai thực tế và hạ tầng cần có.
 Mọi fact có quote verbatim từ nguồn đã freeze; gate dừng theo ledger.
 
@@ -52,7 +52,7 @@ llm-document-ai-construction · digital-construction-site-deployment · enterpri
 2. Chấp nhận vắng McKinsey/Gartner (không freeze được); Eurostat/Fed Richmond/RICS đủ mạnh.
 3. Khoảng trống chưa đo được (CDE/ISO 19650, data lake, MLOps, QC, bảo trì dự đoán): guide ghi thẳng "chưa có bằng chứng đo được"; round 2 thử nhanh backup, không ép.
 4. Số lệch nhau (adoption, quy mô thị trường): tài liệu nêu TẤT CẢ các số kèm định nghĩa/mẫu số; CONTRADICTION F2 resolve bằng giải thích khác mẫu số/khác câu hỏi khảo sát.
-5. FECON (Báo Đầu tư, đã pass quote gate): THÊM thành finding F25 (atom round 1, novel=true) — case VN quý với CC1.
+5. FECON (Báo Đầu tư, đã pass quote gate): THÊM thành finding F25 (atom round 1, novel=true) — case VN quý với doanh nghiệp.
 6. Nguồn gov VN lỗi SSL/403: chấp nhận báo lớn (F17); bỏ lead thuvienphapluat.
 7. Required claim enterprise-ai-construction-corporation: mặc định gán F10 (Skanska Sidekick, >1.000 users/500 dự án); engineer được chọn F11 (VINCI + HEC độc lập) nếu đánh giá evidence tốt hơn, ghi lý do. Corroborate cùng-gốc của F10 giữ nguyên nhưng ghi chú trong claim evidence.
 

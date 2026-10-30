@@ -1,11 +1,11 @@
 # Axis 1 — NO PERIMETER: access, identity, presence, accountability on open linear sites
 
-Date 2026-10-29. Researcher: Sonnet 5.5. Scope: diff vs CC1 closed-site TP1.1 / TP1.4 / TP1.5.
+Date 2026-10-29. Researcher: Sonnet 5.5. Scope: diff vs enterprise closed-site TP1.1 / TP1.4 / TP1.5.
 
 Evidence tiers (strict):
 - **FACT** = page I opened and read this session.
 - **SNIPPET** = URL surfaced by search, content only seen in search summary, page NOT opened. Treat as lead.
-- **INFERENCE** = my reasoning. The whole "CC1 adaptation" column is INFERENCE by nature.
+- **INFERENCE** = my reasoning. The whole "Enterprise adaptation" column is INFERENCE by nature.
 
 ## 1. Executive summary
 
@@ -25,10 +25,10 @@ Evidence tiers (strict):
 
 Legend adaptation: KEEP@node / MODIFY / REPLACE / NEW.  Tier column = evidence tier of the world-practice claim.
 
-| # | Closed-site TP | What breaks on corridor | World practice (who, where) | Source URL | Tier | CC1 adaptation | NODE / CORRIDOR |
+| # | Closed-site TP | What breaks on corridor | World practice (who, where) | Source URL | Tier | Enterprise adaptation | NODE / CORRIDOR |
 |---|---|---|---|---|---|---|---|
 | 1 | TP1.1 turnstile + Face ID + PPE at single entrance | At fixed nodes (casting yard, batching plant, camp, depot) nothing breaks: it IS a closed site. 4S (HK) lists e-access control among required components at fenced sites | HK DEVB 4S: mandatory for capital works >HK$30m since Feb 2023; labelling scheme assesses digital tracking, e-lock, smart worker devices | https://www.digitalpolicy.gov.hk/en/our_work/success_stories/smart_site_safety_system/ (mandate: FACT); component list: https://opengovasia.com/hong-kong-expands-smart-site-safety-system-to-improve-construction-oversight/ (SNIPPET) | FACT (mandate) / SNIPPET (components) | KEEP@node | NODE |
-| 2 | TP1.1 Face ID at gate | No gate at work-front; road km, public access at many points. Identity must be asserted by a person, not a turnstile | Network Rail UK: Sentinel card; COSS checks each group member's Sentinel record before access; swipes cards each shift start (pre-shift, not at a gate) | https://open-exam-prep.com/study-guides/uk-pts-track-safety/safe-systems-of-work-and-safety-roles/trackside-safety-roles ; https://info.railsentinel.co.uk/2020/04/14/swipe-for-your-safety-with-sentinel/ | FACT (study guide = 3rd party; Sentinel post 2020) | REPLACE: "Chỉ huy mặt bằng/work-front controller" scans each worker's CC1 ID (QR/NFC card, face optional) in app at start-of-shift briefing at the work-front, once per shift | CORRIDOR |
+| 2 | TP1.1 Face ID at gate | No gate at work-front; road km, public access at many points. Identity must be asserted by a person, not a turnstile | Network Rail UK: Sentinel card; COSS checks each group member's Sentinel record before access; swipes cards each shift start (pre-shift, not at a gate) | https://open-exam-prep.com/study-guides/uk-pts-track-safety/safe-systems-of-work-and-safety-roles/trackside-safety-roles ; https://info.railsentinel.co.uk/2020/04/14/swipe-for-your-safety-with-sentinel/ | FACT (study guide = 3rd party; Sentinel post 2020) | REPLACE: "Chỉ huy mặt bằng/work-front controller" scans each worker's doanh nghiệp ID (QR/NFC card, face optional) in app at start-of-shift briefing at the work-front, once per shift | CORRIDOR |
 | 3 | TP1.1 attendance | Workers arrive at moving work-front from many points; no fixed clock-in spot | Geofenced QR check-in: QR code on the site boundary + app, geofenced; NSW Gov rail sector, >1,000 short-term worksites/yr, induction 15 min -> <1 min | https://www.sine.co/customers/nsw-gov-rail-sector/ | FACT (vendor case study) | MODIFY: daily work-front polygon (not a static site) defined by controller; QR/geofence check-in + controller countersign | CORRIDOR |
 | 4 | TP1.1 attendance (workers w/o phones, no signal) | Geofence apps fail on weak GPS/cell; GPS location is spoofable; needs smartphone + internet | Offline mode + shared foreman tablet kiosk; flagged out-of-fence punches; MISA (VN vendor) says GPS can be faked, add photo/face proof | https://smartbarrel.io/blog/best-geofence-time-tracking-apps/ ; https://amis.misa.vn/95758/tinh-nang-cham-cong-gps/ | SNIPPET | MODIFY: foreman-kiosk fallback + offline queue + selfie/face proof only for exceptions (limits data-protection exposure) | CORRIDOR |
 | 5 | TP1.1 PPE check at gate | No gate to point a camera at; PPE drifts over the shift | No fetched corridor example of AI-PPE on mobile camera. Rail model puts PPE/competence in the COSS briefing + lookout (human) | https://open-exam-prep.com/study-guides/uk-pts-track-safety/safe-systems-of-work-and-safety-roles/trackside-safety-roles | FACT (human model only); AI-PPE-on-corridor = UNVERIFIED | REPLACE at corridor: PPE check by controller at briefing; AI-PPE camera stays at NODES. Mobile/solar PPE camera = unproven, pilot only | CORRIDOR (node keeps TP1.1 camera) |
@@ -43,14 +43,14 @@ Legend adaptation: KEEP@node / MODIFY / REPLACE / NEW.  Tier column = evidence t
 | 14 | none | No cell coverage on some km (mountain/river sections) | Blackline G7x + G7 Bridge: Iridium satellite, auto cell<->sat, fall + no-motion + scheduled check-in; National Highways 2024 market engagement for lone-worker device (GPS, man down, no-movement, SOS, third-party desk) | https://westech-ind.com/product/blackline-safety-g7x-wireless-gas-monitor/ ; https://www.contractsfinder.service.gov.uk/Notice/2768d1e9-8654-4d22-a6a2-d774e88c5b1a | SNIPPET | NEW: satellite/LoRa fallback for dead zones; cost/benefit per km | CORRIDOR |
 | 15 | TP1.5 closed-loop headcount / muster | No assembly point, no gate count; muster = "everyone in this km" | Morley portal counts (row 10); Network Rail: COSS stays with group from entry to exit = per-group headcount; Triax Spot-r markets auto evacuation + muster but is built for fixed sites with gateways | https://ccsbestpractice.org.uk/?p=94849 ; https://www.triaxtec.com/news/spot-r-construction-dive-tech/ (vendor, FACT as vendor claim) | FACT (vendor claim flagged) | NEW: muster = each controller reports headcount for own work-group; tags at pinch points; GNSS list for rest | CORRIDOR |
 | 16 | none (closed site: whole site is one zone) | "Who is allowed in which segment, at which time" — the daily moving work-front | Network Rail: COSS/Person-in-charge/Protection Controller (PC holds NR3180 for shared line blockage; cannot give it up until every COSS confirms done). Nanchang Railway Bureau (CN): BeiDou RTK geofence -> alert when worker enters track before schedule, fails to leave after, or works outside authorised area (IN DEVELOPMENT, tested Oct 2026, no accuracy published) | https://open-exam-prep.com/study-guides/uk-pts-track-safety/safe-systems-of-work-and-safety-roles/trackside-safety-roles ; https://www.stdaily.com/web/gdxw/2026-10/12/content_594720.html | FACT | NEW: "possession" analogue: daily work-front permit (segment km from–to, time window, crew list, controller) + digital geofence alerts; one Protection Controller where crews share a segment | CORRIDOR |
-| 17 | TP1.1 competence at entry | Certification must be checked at point of work, not once at induction | Sentinel App: check Cardholder's Authority to Work trackside; competence, medical level, fatigue risk monitoring; 2FA added Feb 2024 | https://info.railsentinel.co.uk/resources/getting-started/ (not opened) ; https://info.railsentinel.co.uk/2020/04/14/swipe-for-your-safety-with-sentinel/ (FACT, swipe confirms authority/competence/medical) | FACT (swipe) / SNIPPET (app, fatigue, 2FA) | MODIFY: CC1 central worker register (cert, medical, subcontractor tổ đội, training expiry) queried by controller app | CORRIDOR |
+| 17 | TP1.1 competence at entry | Certification must be checked at point of work, not once at induction | Sentinel App: check Cardholder's Authority to Work trackside; competence, medical level, fatigue risk monitoring; 2FA added Feb 2024 | https://info.railsentinel.co.uk/resources/getting-started/ (not opened) ; https://info.railsentinel.co.uk/2020/04/14/swipe-for-your-safety-with-sentinel/ (FACT, swipe confirms authority/competence/medical) | FACT (swipe) / SNIPPET (app, fatigue, 2FA) | MODIFY: doanh nghiệp central worker register (cert, medical, subcontractor tổ đội, training expiry) queried by controller app | CORRIDOR |
 | 18 | none | Live public traffic entering work zone (closed site has none) | US: NASEM 2025 guide — haptic worker alert maturity 3, auditory 1, visual 2; pneumatic detection 3; "mixed results", cost-effectiveness data lacking, mobile work zones a concern. TTI closed-course: main alarm 100%, worn alarms 97% (misses beyond comms range) | https://www.nationalacademies.org/read/28850/chapter/3 ; https://workzonesafety.org/publication/closed-course-performance-testing-of-a-work-zone-intrusion-alarm-system | FACT | NEW: haptic (vibrating) worn alert > audio siren; pair with row 8 kit | CORRIDOR |
 
 Row count: 18.
 
 ## 3. Notable case studies
 
-1. **Network Rail UK — Sentinel + COSS + possession protection.** Identity, competence and accountability are separated from any gate: central card register, COSS stays with the group, checks each member, positions lookouts; Protection Controller owns a shared line blockage. Best conceptual template for CC1 "work-front controller". Caveat: sources are a 2020 company post and a third-party study guide; rail rules are stricter than highway.
+1. **Network Rail UK — Sentinel + COSS + possession protection.** Identity, competence and accountability are separated from any gate: central card register, COSS stays with the group, checks each member, positions lookouts; Protection Controller owns a shared line blockage. Best conceptual template for the enterprise "work-front controller". Caveat: sources are a 2020 company post and a third-party study guide; rail rules are stricter than highway.
    https://info.railsentinel.co.uk/2020/04/14/swipe-for-your-safety-with-sentinel/ ; https://open-exam-prep.com/study-guides/uk-pts-track-safety/safe-systems-of-work-and-safety-roles/trackside-safety-roles
 2. **Morley Tunnel (TRU West Alliance, UK).** 4-week blockade, ~150 staff/shift; tags + receivers at tunnel ends -> live in/out list; used in a real fire evacuation. Shows the "pinch point" pattern: use a physical choke where one exists.
    https://ccsbestpractice.org.uk/?p=94849
@@ -95,16 +95,16 @@ Row count: 18.
 | Geofence apps: offline mode, kiosk, spoofing | SNIPPET | Vendor marketing + VN vendor |
 | Mobile AI-PPE camera on corridor works | UNVERIFIED | No source found |
 | Gait vector = biometric data under Law 91/2025 | INFERENCE | Art. 4 Decree 356 list not read |
-| All "CC1 adaptation" cells | INFERENCE | My recommendations |
+| All "Enterprise adaptation" cells | INFERENCE | My recommendations |
 | GNSS tags perform acceptably under bridge decks/cuttings | INFERENCE | No data; test needed |
 
 ## 6. Unresolved questions
 
 1. Does Decree 356/2025 sensitive-data list (Art. 4) include gait/skeleton vectors and continuous worker location? Counsel needed before TP1.5 scale-out and any GNSS tagging.
 2. Vietnamese Labour Code / union position on always-on location tracking vs shift-only tracking?
-3. Subcontractor labour (tổ đội, seasonal): do they have smartphones and CC1 IDs? Controls in rows 2–4 assume a registered worker list.
-4. How does real GNSS tag performance degrade under CC1's actual bridge decks / cut slopes / mountain sections? Needs a 1-week field trial with logged fix quality.
-5. Cellular coverage map along CC1's target alignments: where is satellite/LoRa needed (row 14)?
+3. Subcontractor labour (tổ đội, seasonal): do they have smartphones and enterprise IDs? Controls in rows 2–4 assume a registered worker list.
+4. How does real GNSS tag performance degrade under the enterprise's actual bridge decks / cut slopes / mountain sections? Needs a 1-week field trial with logged fix quality.
+5. Cellular coverage map along the enterprise's target alignments: where is satellite/LoRa needed (row 14)?
 6. Any Vietnamese or SE-Asian highway contractor with worker-tracking in production (VEC, Cienco, Vinaconex, Hyundai/Korean JV)? Not found; needs direct enquiry or Vietnamese-language trade press.
 7. Singapore LTA, Japan MLIT/Obayashi/Kajima linear works, HS2, Hilti/Kwant worker wearables: not covered; should a second pass target these?
-8. Who owns the "work-front controller" role in CC1's org (site engineer vs safety officer vs foreman) and how many controllers per km?
+8. Who owns the "work-front controller" role in the enterprise's org (site engineer vs safety officer vs foreman) and how many controllers per km?

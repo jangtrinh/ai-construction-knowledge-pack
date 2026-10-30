@@ -7,7 +7,7 @@ Lưu ý nguồn: vbpl.vn / thuvienphapluat.vn trả stub JS -> dùng mirror (het
 
 - Trộm cắp là chuyện thường xuyên, quy mô nhỏ-vừa, thủ phạm là thanh niên địa phương + người thu mua phế liệu; có cả nội gián (thợ làm thuê Ninh Thuận, 16 tấn sắt/120 triệu, 2022). FACT.
 - Mục tiêu = vật có giá phế liệu: cáp đồng (chiếu sáng/điều khiển), thép, lưới B40/dây thép gai, hộ lan, tấm chống lóa, hộp đen + bảng điều khiển máy xúc. FACT.
-- Mẫu báo chí: trộm dồn vào lúc gần/sau thông xe hoặc "khai thác tạm" (Vân Đồn-Móng Cái 1/9/2022; Biên Hòa-Vũng Tàu 8/2026 lần thứ 3; Vĩnh Hảo-Phan Thiết 2/2024 ~1,5 tỷ) - INF (mẫu 8 vụ). Trong mẫu, thiệt hại được báo chủ yếu ở CORRIDOR (nền đường, nút giao, hàng rào): FACT cho mẫu, nhưng INF cho phân bố thật - mất mát trong bãi nhà thầu (NODE) ít được báo (ca nội gián Ninh Thuận cho thấy có xảy ra). Cần số liệu nội bộ CC1 (xem câu hỏi 1).
+- Mẫu báo chí: trộm dồn vào lúc gần/sau thông xe hoặc "khai thác tạm" (Vân Đồn-Móng Cái 1/9/2022; Biên Hòa-Vũng Tàu 8/2026 lần thứ 3; Vĩnh Hảo-Phan Thiết 2/2024 ~1,5 tỷ) - INF (mẫu 8 vụ). Trong mẫu, thiệt hại được báo chủ yếu ở CORRIDOR (nền đường, nút giao, hàng rào): FACT cho mẫu, nhưng INF cho phân bố thật - mất mát trong bãi nhà thầu (NODE) ít được báo (ca nội gián Ninh Thuận cho thấy có xảy ra). Cần số liệu nội bộ doanh nghiệp (xem câu hỏi 1).
 - Phản ứng hiện tại: văn bản của Ban QLDA -> UBND/công an tỉnh; không thấy tuyến nào dùng camera/AI/drone cho an ninh giai đoạn thi công. Công an đến sau khi mất. FACT (không tìm thấy = UNV).
 - Người dân vào công trường: xe máy/xe đạp/người đi bộ chui rào vào cao tốc sắp xong (Biên Hòa-Vũng Tàu 11/2025, Vạn Ninh-Cam Lộ 7/2025, Hữu Nghị-Chi Lăng 9/2026); chưa thấy ca chết người ở cao tốc trong nguồn tìm được, chỉ "suýt tai nạn". FACT.
 - Trẻ chết đuối: hố nhà thầu đào (thoát nước, trữ nước, hố nước dự án) không rào/biển; nhà thầu và chính quyền đổ qua lại (Bình Định 5/2022, Quảng Bình 2/2022, Phú Thọ 5/2026). Chưa thấy ca khởi tố nhà thầu. FACT.
@@ -53,7 +53,7 @@ Bối cảnh trước 2022 (chỉ để so cơ chế, không tính acceptance): 
 | CSGT (Bộ Công an) - Hà Nội, TP.HCM, Đồng Nai, Bình Dương, Quảng Ninh, Nghệ An | Flycam tuần tra cao tốc, ghi hình vi phạm làn dừng khẩn cấp, làm căn cứ xử phạt; dẫn Thông tư 83/2024/TT-BCA; Vành đai 3 Hà Nội 8/2026 dùng drone tầm xa + AI | Yes (drone, nhà nước) | https://baovanhoa.vn/doi-song/flycam-cong-an-tuan-tra-cao-toc-lan-khan-cap-khong-con-vung-mu-vi-pham-203020.html ; https://news.tuoitre.vn/hanoi-police-use-drones-to-detect-traffic-violations-on-beltway-103260814193957516.htm |
 | Tỉnh Bình Định + PMU 85 (Bắc-Nam) 7/2024 | Quản lý xe ben: phủ bạt, giờ + tuyến cố định, chủ đầu tư sửa đường; công an giữ ANTT | No (không nói GPS) | https://voh.com.vn/xa-hoi/binh-dinh-chi-dao-tang-cuong-giam-sat-xe-cho-vat-lieu-thi-cong-cao-toc-bac-nam-539676.html |
 
-Kết luận bảng B: mô hình thực tế = người (chốt/bảo vệ) + rào + công văn lên chính quyền + công an xử lý sau. Không tìm được ví dụ camera/drone/GPS cho an ninh GIAI ĐOẠN THI CÔNG của VEC, Đèo Cả, Sơn Hải, Cienco4, Vinaconex, Trường Sơn/BQP, CC1 (UNV - không có nghĩa là không có, chỉ là báo chí không đưa).
+Kết luận bảng B: mô hình thực tế = người (chốt/bảo vệ) + rào + công văn lên chính quyền + công an xử lý sau. Không tìm được ví dụ camera/drone/GPS cho an ninh GIAI ĐOẠN THI CÔNG của VEC, Đèo Cả, Sơn Hải, Cienco4, Vinaconex, Trường Sơn/BQP, doanh nghiệp (UNV - không có nghĩa là không có, chỉ là báo chí không đưa).
 
 ## 4. Table C - Legal / infrastructure
 
@@ -75,7 +75,7 @@ Kết luận bảng B: mô hình thực tế = người (chốt/bảo vệ) + r�
 | NĐ 151/2024/NĐ-CP (hiệu lực 1/1/2025) | Chính phủ | Thiết bị giám sát hành trình | Bắt buộc cho 4 nhóm: xe kinh doanh vận tải, đầu kéo, cứu thương, cứu hộ; dữ liệu nối Cục Đường bộ/Sở GTVT. Xe nội bộ công trình, máy xúc/ủi/lu: không thấy bắt buộc (UNV). Tự gắn GPS lên máy của mình: không thấy cấm | https://baolaocai.vn/4-loai-phuong-tien-bat-buoc-lap-thiet-bi-giam-sat-hanh-trinh-post394696.html | Y |
 | Quy định dừng/vô hiệu hóa xe-máy từ xa; đánh dấu pháp y vật tư | - | - | Không tìm thấy văn bản nào cho phép hoặc cấm (UNV). Mặc định INF: áp dụng nguyên tắc tài sản của chính nhà thầu; dừng phương tiện đang lưu thông trên đường công cộng là rủi ro ATGT | - | N |
 
-## 5. Implications for CC1 (INFERENCE)
+## 5. Implications for the enterprise (INFERENCE)
 
 1. Bài toán chính = phát hiện + bằng chứng trước khi vật tư biến thành phế liệu, rồi chuyển cho công an xã. Kẻ trộm là thanh niên địa phương + đầu mối phế liệu; báo ít thấy cảnh sát đến kịp. Thiết kế đầu ra: clip + giờ + tọa độ gói sẵn cho công an xã, không chỉ "báo động".
 2. Chia lớp: NODE (bãi đúc dầm, trạm trộn, kho, bãi máy) = camera/phát hiện người ban đêm + khóa/ghi nhận nội gián (có ca insider 16 tấn); CORRIDOR = hàng rào + cáp + hộ lan, cần cảm biến rẻ (rung/cắt lưới, mở cổng) hơn là camera đầy đủ.
@@ -104,11 +104,11 @@ Kết luận bảng B: mô hình thực tế = người (chốt/bảo vệ) + r�
 - Quy định dừng xe-máy từ xa; đánh dấu pháp y; GPS bắt buộc cho máy thi công.
 - BLDS Đ.601 áp dụng cho hố đào; kết quả xử lý trách nhiệm ở 3 ca chết đuối.
 - Tin Tuổi Trẻ 17/8/2026 (bắt 2 thanh niên cắt dây điện đường dẫn lên Biên Hòa-Vũng Tàu) và 2.500 m cáp: chỉ thấy snippet.
-- Bảo kê vật liệu đắp nền cao tốc 2022-26; hút trộm dầu máy công trình; ca CC1 / VEC / Đèo Cả / Sơn Hải dùng công nghệ an ninh.
+- Bảo kê vật liệu đắp nền cao tốc 2022-26; hút trộm dầu máy công trình; ca doanh nghiệp / VEC / Đèo Cả / Sơn Hải dùng công nghệ an ninh.
 
 **Unresolved questions**
-1. CC1 có số liệu mất mát nội bộ (loại, giá trị, giờ) từ XL03 Hậu Giang-Cà Mau để hiệu chỉnh mô hình đe dọa thay vì dùng báo?
+1. doanh nghiệp có số liệu mất mát nội bộ (loại, giá trị, giờ) từ XL03 Hậu Giang-Cà Mau để hiệu chỉnh mô hình đe dọa thay vì dùng báo?
 2. Demo corridor Dầu Giây-Tân Phú-Bảo Lộc-Liên Khương: đoạn nào nằm trong vùng hạn chế bay (sân bay Liên Khương) và đoạn nào có sóng NB-IoT/LTE-M?
-3. Chủ đầu tư/Ban QLDA có cho phép CC1 gắn camera/cảm biến lên tài sản chưa bàn giao và hộ lan/hàng rào thuộc phạm vi hợp đồng?
+3. Chủ đầu tư/Ban QLDA có cho phép doanh nghiệp gắn camera/cảm biến lên tài sản chưa bàn giao và hộ lan/hàng rào thuộc phạm vi hợp đồng?
 4. Hỏi trực tiếp Cục Tần số vô tuyến điện: LoRa 25-306 mW ERP xin phép mất bao lâu/chi phí?
 5. Hỏi BQP/Cục Tác chiến: có loại phép bay định kỳ cho tuần tra công trình giao thông không?
