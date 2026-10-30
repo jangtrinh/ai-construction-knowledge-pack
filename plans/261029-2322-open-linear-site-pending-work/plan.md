@@ -71,6 +71,12 @@ Tiêu chí: 12 file mới (43–46 × 3), kiểm như mục 5 của brief gốc;
   - Còn lại: cảnh 34 còn chữ tiếng Anh "4 LANES TO 2" và logo VinFast trong ảnh Clean; khung cuối đứng yên lâu với câu thuyết minh dài (tối đa khoảng 12 giây/cảnh).
 - Còn làm: owner duyệt prototype → JSON nhãn cho 46 cảnh → script thuyết minh tiếng Việt theo từng touchpoint (qua kiểm tra calque) → render toàn bộ clip → voice + nhạc → dựng phim.
 
+- 2026-10-30 v2 (owner feedback): film rebuilt — `video/film/cc1-proposal.mp4` 3:26, 1080p60, -16.0 LUFS; preview `cc1-proposal-preview-720p.mp4`; evidence `video/film/qa/film-v2-evidence.jpg`.
+  - Structure: intro → PHẦN 1 Công trường khép kín (01–20) → PHẦN 2 Công trường mở (34–41) → outro. Blueprints 21–33 dropped (owner).
+  - VO: script `video/vo/script.json` (1 câu/cảnh ≤ 6,7 s, linted with design-os-vietnamese: 0 issues), voice Tony Dang (Southern, MU9FiBvipGB47QbhcMfM), "CC1" spoken "C C One". Old VO in `video/vo/v1-long/`.
+  - HUD: vector layer `video/hud-player/hud-vector-shapes.mjs` + `vectors` in `video/hud/NN.json` (28 scenes); brief `video/plans/vector-hud-brief.md`; per-scene compares `video/plans/reports/cmp-NN.jpg`.
+  - Scene 34 Clean fixed (sign → "THU HẸP 2 LÀN", VinFast badge removed) via `video/tools/fix-scene-34-clean-still.py`; original in `video/originals/`. Deck stills 34/34b still show the English sign.
+
 ## Nguồn tham chiếu
 - Synthesis: `plans/reports/research-261029-2130-open-linear-site-management-synthesis.md`
 - Nghiên cứu an ninh: `plans/reports/researcher-261029-2250-remote-site-security-world-tech.md`, `plans/reports/researcher-261029-2250-remote-site-security-vietnam-context.md`

@@ -264,6 +264,28 @@
       background-color: var(--bg-canvas);
     }
 
+    /* Proposal film sits first in the hero: the fastest way to understand both site models. */
+    .hero-film {
+      margin: 0 0 var(--sp-400) 0;
+    }
+
+    .hero-film video {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      background-color: var(--ink-primary);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--r-xl);
+    }
+
+    .hero-film figcaption {
+      margin-top: var(--sp-75);
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--ink-secondary);
+    }
+
     .hero-top-split {
       display: flex;
       align-items: flex-end;
@@ -876,6 +898,13 @@
          PHẦN 1 (ĐẦU TIÊN): GIẢI PHÁP CÔNG TRƯỜNG MỞ (DẠNG TUYẾN) & CÔNG TRƯỜNG KHÉP KÍN
          ======================================================================== -->
     <section class="modes-section" id="site-modes" aria-label="Giải pháp Công trường Mở và Công trường Khép kín">
+      <figure class="hero-film">
+        <video controls playsinline preload="metadata" poster="./media/cc1-proposal-poster.jpg" width="1920" height="1080" aria-label="Phim giới thiệu giải pháp công trường số CC1">
+          <source src="./media/cc1-proposal-web-1080p.mp4" type="video/mp4" />
+          Trình duyệt không phát được video. <a href="./media/cc1-proposal-web-1080p.mp4">Tải phim (MP4)</a>.
+        </video>
+        <figcaption>Phim giới thiệu (3 phút 25 giây): giải pháp công trường số cho công trường khép kín và công trường mở.</figcaption>
+      </figure>
       <header class="hero-top-split">
         <h1 class="hero-heading">
           Giải pháp chuyên biệt cho <span>Công trường Mở</span> (Tuyến cầu đường) và <span>Công trường Khép kín</span>
