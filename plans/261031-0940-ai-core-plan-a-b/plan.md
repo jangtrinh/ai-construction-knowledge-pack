@@ -121,7 +121,7 @@ Chi tiết theo hạng mục: PHẦN VII, mục VII.12.
 ### Ưu điểm
 
 - **Nhanh:** phủ toàn tập đoàn trong khoảng 12 tháng, thay vì 2–3 năm.
-- **Kiểm soát tối đa:** dữ liệu và mô hình thầy không rời hạ tầng CC1; mạnh nhất về chủ quyền dữ liệu.
+- **Kiểm soát tối đa:** dữ liệu và mô hình thầy không rời hạ tầng CC1, chủ quyền dữ liệu cao hơn phương án A.
 - **Lặp nhanh:** CPT, chưng cất, RLVR chạy hằng tuần, không chờ lịch thuê.
 - **Tài sản lâu dài:** mô hình ngành CC1, kho dữ liệu đã gán nhãn, đội AI nội bộ.
 - **Dùng chung GPU:** thị giác máy, point cloud, Digital Twin của các touchpoint cũng chạy trên cụm này.
