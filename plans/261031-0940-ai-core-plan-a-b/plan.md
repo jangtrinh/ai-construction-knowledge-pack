@@ -1,6 +1,6 @@
 # Kế hoạch triển khai lõi AI CC1: Phương án B theo cổng
 
-Ngày lập: 31/10/2026 · Trạng thái: **bản kế hoạch hoàn chỉnh, chờ chủ đầu tư duyệt** · Mốc M0 = tháng phê duyệt (chưa chốt ngày)
+Ngày lập: 31/10/2026 · Trạng thái: **bản kế hoạch hoàn chỉnh, chờ chủ đầu tư duyệt** · Mốc M0 = tháng phê duyệt; ngày cụ thể không nằm trong phạm vi bản kỹ thuật này
 
 ## Quyết định đã chốt (31/10/2026)
 
@@ -56,7 +56,7 @@ Tổng năm 1 khoảng 55–90 tỷ; 3 năm khoảng 105–180 tỷ. Chi tiết:
 
 | Vai trò | Ai | Trách nhiệm |
 |---|---|---|
-| Ban chỉ đạo | Lãnh đạo tập đoàn + Giám đốc kỹ thuật + Giám đốc tài chính (cần chỉ định) | Duyệt ngân sách, duyệt cổng G1–G5, họp tháng |
+| Ban chỉ đạo | Tổng giám đốc (trưởng ban) + Giám đốc kỹ thuật + Giám đốc tài chính | Duyệt ngân sách, duyệt cổng G1–G5, họp tháng |
 | Chủ sở hữu sản phẩm | Cần chỉ định | Ưu tiên tính năng theo nhu cầu chỉ huy trưởng |
 | Trưởng nhóm nghiên cứu AI | Tuyển ở giai đoạn 1 | Kỹ thuật mô hình, hạ tầng, chất lượng |
 | Đại diện dự án | Chỉ huy trưởng + QS mỗi dự án | Viết bộ đề, xác nhận BOQ, phản hồi |
@@ -96,10 +96,10 @@ Nhịp làm việc:
 
 ## Việc còn mở
 
-1. Ngày bắt đầu M0.
-2. Trưởng ban chỉ đạo và chủ sở hữu sản phẩm.
-3. Tên 2 dự án mẫu.
-4. Báo giá thật cho phần cứng, chỗ đặt, lương.
+1. Chủ sở hữu sản phẩm.
+2. Báo giá thật cho phần cứng, chỗ đặt, lương.
+
+Đã chốt 31/10/2026: trưởng ban chỉ đạo là Tổng giám đốc. Bản này là bản kỹ thuật dùng để trình bày (demo): không gắn ngày M0, không nêu tên dự án mẫu; 2 dự án mẫu chọn theo tiêu chí ở giai đoạn 0.
 
 ## Liên kết
 

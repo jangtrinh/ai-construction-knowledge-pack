@@ -1,6 +1,6 @@
 # Giai đoạn 0: Phê duyệt, quản trị, pháp lý
 
-Thời gian: M0–M1 · Phụ thuộc: — · Phụ trách: Ban chỉ đạo; pháp chế (cần chỉ định) · Kế hoạch tổng: [plan.md](./plan.md)
+Thời gian: M0–M1 · Phụ thuộc: — · Phụ trách: Ban chỉ đạo (trưởng ban: Tổng giám đốc); pháp chế (cần chỉ định) · Kế hoạch tổng: [plan.md](./plan.md)
 
 ## Mục tiêu
 
@@ -9,7 +9,7 @@ Có quyết định đầu tư, người chịu trách nhiệm và hồ sơ phá
 ## Việc cần làm
 
 1. Trình và duyệt ngân sách năm 1 theo phương án B (55–90 tỷ, giải ngân theo cổng).
-2. Lập ban chỉ đạo; chỉ định chủ sở hữu sản phẩm; ban hành bảng RACI.
+2. Lập ban chỉ đạo do Tổng giám đốc làm trưởng ban; chỉ định chủ sở hữu sản phẩm; ban hành bảng RACI.
 3. Chọn 2 dự án mẫu: 1 công trường khép kín có BIM, 1 công trình tuyến.
 4. Đánh giá tác động xử lý dữ liệu cá nhân theo Luật 91/2025/QH15 và NĐ 356/2025/NĐ-CP (camera, định danh công nhân).
 5. Rà soát nghĩa vụ theo Luật Trí tuệ nhân tạo 134/2025/QH15 (hiệu lực 1/3/2026): phân loại rủi ro từng tính năng.
