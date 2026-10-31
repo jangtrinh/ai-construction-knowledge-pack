@@ -1,0 +1,115 @@
+mode=ask model=grok-4.7 stop=end_turn turns=2 secs=296
+tokens in=129523 cached=537088 out=18238 session=01a1911f-8a90-73d0-ab7e-184cc65a82c4 full=/Users/jangtrinh/.grok/runs/grok-ask-2026-10-31T08-47-01-437Z.json
+---
+Đọc ngữ cảnh CC1 trước, rồi đối chiếu từng dòng phần cứng với trang nhà sản xuất hoặc reseller (giá và thông số đều phải có URL).Ngữ cảnh đã có: biên là camera, UWB, cổng, OCR. Tiếp theo lấy thông số và giá từ trang nhà sản xuất.Bảng dưới tách **[F]** trang hãng hoặc datasheet, **[S]** reseller/báo giá, **[I]** suy từ số đã kiểm. Số luồng camera là suy từ FPS, chưa đo mô hình PPE của CC1. Giá chưa gồm nhập khẩu, VAT Việt Nam, lắp đặt.
+
+### 1. Máy quét tờ rời (văn phòng công trường và trụ sở)
+
+| Model | Vai trò ở CC1 | Thông số chính | Giá tham khảo | Lý do chọn | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|
+| RICOH fi-8190 (PA03810-B005) | OCR phiếu, biên bản, hóa đơn tại từng ban chỉ huy | ADF 100 tờ; 90 ppm / 180 ipm, màu, A4 dọc, 200/300 dpi; quota ngày 13.000 tờ; USB 3.2 + GbE; giấy 20–465 g/m² **[F]** | 1.783,99 USD (CDW, trang in 24/10/2026; niêm yết 2.195 USD). Nhật: 210.000 JPY chưa thuế **[F]** | Đủ 1 công trường, hai mặt một lượt, có mạng | Canon imageFORMULA DR-S150: 45 ppm / 90 ipm, quota khoảng 4.000 tờ/ngày, khay 60 tờ; Canon USA “as low as 967 USD” (trang không ghi ngày) **[F]** | [Ricoh fi-8190](https://www.pfu.ricoh.com/global/scanners/fi/fi8190/); [CDW](https://www.cdw.com/product/ricoh-fi-8190-document-scanner-desktop-gigabit-lan-usb-3.2-gen-1/6984541); [giá Nhật](https://www.pfu.ricoh.com/fi/products/fi-8190/specifications.html); [DR-S150](https://www.usa.canon.com/shop/p/imageformula-dr-s150-office-document-scanner) |
+| RICOH fi-8950 (PA03830-B005) | Quét tập trung hồ sơ A3/A4 tại trụ sở, dùng chung dưới 30 dự án | 150 ppm / 300 ipm, A4 ngang, 200/300 dpi; khay 750 tờ A4 hoặc 500 tờ A3; quota 130.000 tờ/ngày. Hãng ghi quota tính từ tốc độ và giờ dùng, không bảo hành độ bền **[F]** | 13.259,99 USD (CDW, trang in 29/10/2026; niêm yết 14.790 USD) **[S]** | Một máy trụ sở thay nhiều máy công trường khi gom hồ sơ cũ | fi-8190 ở trên, chỉ tới A4 và 13.000 tờ/ngày | [Ricoh fi-8950](https://www.pfu.ricoh.com/global/scanners/fi/fi8950/); [CDW](https://www.cdw.com/product/ricoh-fi-8950-scanner/7770984) |
+| Canon imageFORMULA DR-G2140 | Phương án sản xuất thay fi-8950 nếu cần khay 500 tờ, khổ ngang tới 12 inch | 140 ppm / 280 ipm màu; khay 500 tờ; quota gợi ý 70.000 tờ/ngày; USB 3.1 **[F]** | 7.806 USD (B&H; trang ghi giao “Tue 11/3”, không in ngày giá) **[S]** | Rẻ hơn fi-8950 trên báo giá Mỹ đã thấy; chậm hơn và quota thấp hơn | fi-8190 nếu không cần A3 | [Canon spec](https://www.usa.canon.com/support/p/imageformula-dr-g2140-usb-production-document-scanner); [B&H](https://www.bhphotovideo.com/c/product/1558686-REG/canon_3149c002_imageformula_drg2140_document_scanner.html) |
+| Epson DS-870 | Bàn quét phòng kỹ thuật, khối lượng vừa | 65 ppm màu, A4, 200/300 dpi; ADF 100 tờ; duty 7.000 trang/ngày; USB 3.0 **[S]** | 12.700 ZAR gồm VAT, ghi hiệu lực 18/10/2026. USD chưa quy đổi | Có ultrasonic chống kẹt; chậm hơn fi-8190 | DR-S150 (967 USD, quota thấp hơn) | [Laptop Direct](https://www.laptopdirect.co.za/Epson-DS-870-p-221169.php) |
+
+### 2. Hồ sơ đóng cuốn và bản vẽ A3/A2/A0
+
+| Model | Vai trò ở CC1 | Thông số chính | Giá tham khảo | Lý do chọn | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|
+| CZUR ET24 Pro | Sổ nhật ký, hợp đồng đóng cuốn, khổ tới A3, tại trụ sở hoặc 1 máy luân chuyển | CMOS 24 MP, 5696×4272, mặc định 320 dpi; vùng tới A3; sách dày khoảng 35 mm (A3) / 50 mm (A4); khoảng 1–1,5 giây/trang; OCR ABBYY, 180+ ngôn ngữ (không phải model PaddleOCR của CC1) **[S]** | 614,61 USD (Amazon, trang ghi 22/10/2026); nguồn 12/2025 ghi 649 USD **[S]** | Rẻ, mang được; đủ sổ công trường, không đủ bản vẽ lưu trữ | ET16 Plus / ET18 Pro cùng hãng, độ phân giải thấp hơn; giá chưa xác minh | [Amazon](https://www.amazon.com/CZUR-Professional-Document-Auto-Flatten-Languages/dp/B0BM92YPHW); [AIVAnet 4/12/2025](https://www.aivanet.com/2025/12/the-czur-et24-pro-isnt-a-perfect-book-scanner-but-those-who-need-one-dont-have-many-choices/) |
+| Zeutschel OS Q2 | Hồ sơ đóng cuốn và bản vẽ cần giữ nếp gấp, khổ A2 | Cảm biến dòng CMOS; tới 600 ppi; vùng giá sách Advanced Plus 635×460 mm; sách dày tới 150 mm dưới kính; khoảng 3 giây/A2 ở 400 ppi, 5 giây ở 600 ppi; Camera Link; 110–240 V, tối đa 440 W **[F]** | chưa xác minh | Chuẩn ảnh lưu trữ (hãng nêu ISO 19264-1 Level A, Metamorfoze, FADGI 4). CZUR không thay được việc này | CZUR ET24 Pro cho sổ thường, không cho A2 lưu trữ | [Zeutschel OS Q2](https://www.zeutschel.de/en/produkte/os-q2-2/); [PDF thông số 22-05-EN](https://zeutschel-store.ru/doc/OS-Q2.pdf) |
+| Colortrac SmartLF Scan 36 (03N001) | Bản vẽ rời A0/A1, cuộn ngắn, mang vali giữa công trường và trụ sở | Khổ quét 36 inch (914 mm); quang học 600 dpi; xám khoảng 11,43 cm/s, màu khoảng 7,62 cm/s; 6 GB; GbE và USB; máy khoảng 7 kg **[S]** | 2.390 EUR chưa VAT 20%, khuyến mại tới hết 31/10/2026 (Áo). USD chưa quy đổi **[S]** | Đúng bản vẽ rời; không quét được tập đóng gáy | CZUR chỉ tới A3 | [Plotterprofi](https://www.plotterprofi.at/Grossformatscanner/SmartLF-36Zoll-Alutrolley) |
+
+OS 12000 là đời cũ (FireWire). Không đưa vào danh sách mua.
+
+### 3. Chụp tại hiện trường (điện thoại / máy tính bảng)
+
+| Model | Vai trò ở CC1 | Thông số chính | Giá tham khảo | Lý do chọn | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|
+| Samsung Galaxy Tab Active5 Pro 5G, SM-X358, 8/256 GB | Máy QS và giám sát: chụp biên bản, xem trợ lý, mạng công trường | 10,1 inch; Snapdragon 7s Gen 3; IP68; MIL-STD-810H; 5G; Knox **[S]** | 1.043,86 USD (Beach Audio, cập nhật tồn 29/10/2026) **[S]** | Máy bảng công nghiệp còn hàng, có 5G khi mất Wi-Fi lán | Điện thoại dưới đây, màn nhỏ hơn | [Beach Audio](https://www.beachaudio.com/samsung-galaxy-tab-active5-pro-5g-enterprise-edition-rugged-tablet-10-1-wuxga-qualcomm-sm7635-snapdragon-7s-gen-3-4-nm-octa-core-8-gb-256-gb-storage-5g-green-sm-x358uzgen14/) |
+| Samsung Galaxy XCover7 Pro (SM-G766) | Tổ trưởng chụp phiếu và ảnh hiện trường | IP68, MIL-STD-810H, rơi 1,5 m; pin tháo được khoảng 4350 mAh; Knox; Android 15 theo bài so sánh 14/08/2026 **[S]** | 599,99 USD, trích Samsung Business US trong bài so sánh 14/08/2026. Chưa mở trang Samsung **[S]** | Quản trị thiết bị doanh nghiệp. CAT S75 có IP69K và vệ tinh nhưng yếu hơn về quản trị máy | CAT S75: giá chính hãng chưa thấy trong lần đối chiếu 14/08/2026 **[S]** | [everyvs 14/08/2026](https://everyvs.com/compare/cat-s75-vs-samsung-galaxy-xcover7-pro) |
+| SDK chụp tài liệu | App CC1 cắt trang, kéo phẳng, rồi đưa ảnh sang PaddleOCR-VL / VietOCR trên cụm trong nước | iOS: VisionKit `VNDocumentCameraViewController`. Android: Google ML Kit Document Scanner. Cả hai là API đóng của hệ điều hành, không phải mã mở. Thư viện bọc: `dariyd/react-native-document-scanner` (iOS 13+, Android API 21+) **[S]** | 0 USD tiền SDK (ML Kit tính theo điều kiện Google; chưa mở bảng giá) | Không gửi ảnh sang cloud OCR nước ngoài | Tự viết bằng OpenCV: chưa chọn repo còn bảo trì và chưa có số đo tiếng Việt | [GitHub wrapper](https://github.com/dariyd/react-native-document-scanner) |
+
+### 4. Camera công trường
+
+| Model | Vai trò ở CC1 | Thông số chính | Giá tham khảo | Lý do chọn | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|
+| Hanwha PNV-A9081R | Camera cố định cổng, hàng rào, sàn: người, mặt, xe, biển số trên thân máy | 3840×2160, 30 fps; AI phân loại person/face/vehicle/license plate; ONVIF S/G/T/M; hãng ghi NDAA compliant **[F]** | chưa xác minh | Analytics trên máy, RTSP về Jetson khi cần PPE chi tiết. Không phụ thuộc cloud hãng | Bullet ONVIF không AI, model chưa chốt, suy luận hết trên Orin | [Hanwha](https://hanwhavisionamerica.com/product/pnv-a9081r/) |
+| Axis Q1656-DLE | Vành đai và cổng đêm: camera + radar, giảm báo chuyển động giả | Cảm biến 1/1,8 inch; màu 0,05 lux; H.264/H.265; AXIS OS 12.11.118, hỗ trợ OS tới 31/12/2033 **[F]** | chưa xác minh | Radar gắn sẵn, hợp hàng rào công trường hơn camera thường | PNV-A9081R nếu chỉ cần phân loại vật thể | [Axis Q1656-DLE](https://www.axis.com/products/axis-q1656-dle/support) |
+| Axis Q6358-LE | PTZ nóc lán, cần trục, bãi thiết bị rộng | 3840×2160; zoom quang 31×; xoay 360° liên tục; Autotracking 2; có DLPU **[F]** | chưa xác minh | Một máy phủ bãi rộng; Q6355-LE cùng series chỉ 1920×1080 | Q6355-LE (1080p, cùng zoom 31×) **[F]** | [Axis Q63 series](https://www.axis.com/products/axis-q63-series) |
+| Trailer solar 4G: 2M Technology (cấu hình 2 tấm pin) hoặc CTS FXT-44 | Điểm nóng tuyến: bãi máy đêm, nút giao, không kéo điện | 2M: pin mặt trời + ắc quy, camera và LTE tính thêm. CTS FXT-44: từ 640 W solar, pin LiFePO4, cột cố định; một triển khai 2026 gắn Axis Q6325-LE + 5G **[S]** | 2M: 18.500–22.000 USD (bài 27/08/2026). CTS FXT-44: từ 59.995 USD **[S]** | Đúng việc “camera di động trên tuyến” trong hồ sơ CC1. Video không bắt buộc về trung tâm; gửi sự kiện | RuralView Solar 4G, từ 159 GBP: 5 MP, AI người/xe, app riêng. Không đủ ca đêm công trường và dễ đẩy hình ra cloud **[S]** | [2M](https://www.2mtechnology.net/mobile-surveillance-trailer-cost/); [CTS](https://www.criticalts.com/solar-surveillance-trailers/); [RuralView](https://ruralview.uk/products/ruralview-solar-battery-4g-camera) |
+| Hikvision, Dahua | Không chọn cho hệ mới | Vẫn bán rộng ở Việt Nam. Section 889 (Mỹ) cấm cơ quan và nhà thầu liên bang Mỹ mua/dùng. FCC: từ 16/07/2026 hạn chế nhập và chào bán thiết bị Covered List đã từng được cấp phép; từ 13/10/2026 siết thêm với hạ tầng trọng yếu. Không cấm công ty tư nhân Việt Nam đang sở hữu máy cũ **[S]** | thường thấp hơn Axis/Hanwha; chưa lấy báo giá VN trong lượt này | Loại vì cloud hãng và firmware khó khóa dữ liệu trong nước, không phải vì một điều luật Việt Nam | Giữ ONVIF không AI + Orin, như dòng Hanwha | [SecureComm 24/10/2026](https://www.securecomm.us/news/hikvision-dahua-ndaa-fcc-2026/); [Monitex 29/10/2026](https://monitexsecurity.com/security-camera-compliance/) |
+
+NDAA là luật mua sắm Mỹ, không phải giấy phép bán tại Việt Nam. Điều kiện CC1: RTSP nội bộ, tắt Hik-Connect và cloud tương đương, vector khuôn mặt chỉ ở biên.
+
+### 5. Máy biên AI
+
+| Model | Vai trò ở CC1 | Thông số chính | Giá tham khảo | Lý do chọn | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|
+| NVIDIA Jetson AGX Orin 64GB, hộp Aetina AIE-KX22 hoặc Advantech MIC-732 | Một hộp tại lán: PPE, người lạ, biển số chậm | Module: 275 TOPS, GPU Ampere 2048 nhân, 64 GB. Dev kit 15–60 W, giá NVIDIA 3.499 USD (trang marketplace, dấu thời gian công cụ 29/07/2026). Geizhals 4.119 EUR, cập nhật 31/10/2026. AIE-KX22: 64 GB, 4 cổng PoE, 10GbE **[F]/[S]** | Dev kit 3.499 USD. Hộp công nghiệp: chưa xác minh | Đủ 1 công trường khép kín. DeepStream hiện hành: PeopleNet 2.6.3 FP16 + tracker 147 FPS trên AGX Orin **[F]** → khoảng 4 luồng 1080p30 nếu mỗi khung suy luận một lần **[I]** | Orin 32 GB, 200 TOPS (AIE-KX12) **[S]**; ít luồng hơn | [NVIDIA dev kit](https://marketplace.nvidia.com/en-us/enterprise/robotics-edge/jetson-agx-orin-developer-kit/); [Geizhals 31/10/2026](https://geizhals.at/nvidia-jetson-agx-orin-developer-kit-945-13730-0055-000-a3288535.html); [Aetina qua ipc2u 08/06/2026](https://ipc2u.com/news/product-news/aetina-aie-kx-series-nvidia-jetson-agx-orin-edge-ai-for-the-smart-factory/); [DeepStream performance](https://docs.nvidia.com/deepstream/text/DS_Performance) |
+| Jetson Thor T5000: Advantech MIC-742-AT-T5000 hoặc Aetina AIE-KT78 | NODE lớn hoặc nhiều camera một chỗ, có VLM nhẹ | T5000: 128 GB LPDDR5X; tới 2070 TFLOPS FP4; QSFP28 4×25GbE; tùy chọn 8 GMSL2. PeopleNet 2.6.3 FP16 + tracker: 349 FPS trên AGX Thor **[F]** → khoảng 11 luồng 1080p30 cùng giả định trên **[I]** | chưa xác minh | Dư so với 1 ha. Hợp bãi đúc, trạm trộn, nhiều luồng | AGX Orin 64GB | [MIC-742](https://things-embedded.com/us/advantech/mic-742-at/mic-742-at-t5000/); [AIE-KT78, EDN 26/10/2026](https://edn.itmedia.co.jp/edn/articles/2610/21/news052.html); [DeepStream](https://docs.nvidia.com/deepstream/text/DS_Performance) |
+| Máy 2U + 1× NVIDIA L4 | Xem lại video tại trụ sở hoặc 1 công trường có cáp quang. Không thay hộp biên trên tuyến | L4: 24 GB GDDR6, 72 W, 1 khe thấp; NVENC/NVDEC/JPEG = 2/4/4; FP8 tensor 485 TFLOPS có sparsity **[F]**. DeepStream 6.4 (12/2023): TrafficCamNet, 82 luồng H.265 1080p30; PeopleNet-ResNet34 INT8 1684 FPS **[F]** → khoảng 50 luồng PeopleNet nếu chia 30 **[I]**. Chưa có bảng luồng L4 trong trang DeepStream đang mở (bảng mới có L40S, không liệt kê L4) | Giá mua L4 và cả máy 2U: chưa xác minh. Thuê đám mây 0,42–1,67 USD/GPU/giờ, bảng 30/10/2026, không phải giá mua **[S]** | Khi đã có đường truyền. Tuyến 10 km không kéo được luồng này về | Một Orin 64GB tại chỗ | [NVIDIA L4](https://www.nvidia.com/en-us/data-center/l4/); [DS 6.4 L4](https://docs.nvidia.com/metropolis/deepstream/6.4/dev-guide/text/DS_Performance.html); [giá thuê](https://cloud-gpus.com/nvidia-l4/) |
+
+Seeed: chưa xác minh SKU Thor hoặc AGX Orin 64GB đang bán ngày 31/10/2026. Advantech REX-52N là Orin Industrial 248 TOPS, −40 đến 75°C, tối đa 8 GMSL2, ra mắt 10/2026; không phải bản 64 GB 275 TOPS. [Advantech REX-52N](https://www.advantech.com/en-eu/resources/news/rex-52n-ultra-rugged-ai-computing-platform-autonomous).
+
+### 6. Vị trí công nhân
+
+| Model | Vai trò ở CC1 | Thông số chính | Giá tham khảo | Lý do chọn | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|
+| Sewio RTLS: Anchor + Tag Leonardo | Vị trí trong nhà kín, sàn, hầm. Không phải tuyến lộ thiên | Neo: trong nhà, 0–50°C, tầm 15–50 m tùy nhìn thẳng; nguồn USB hoặc PoE thụ động, không phải 802.3af **[F]**. Cần ít nhất 4 neo cho tọa độ **[F]**. FAQ hãng: công nghiệp khoảng dưới 1 m, hoặc khoảng 30 cm ở độ tin cậy >R98; 10 cm chỉ ở R70 hoặc nhà thi đấu nhìn thoáng **[F]**. Tag Personal: 300 mAh, không ghi IP. Tag Asset pin CR2477 1000 mAh: hồ sơ RF5, nháy 1 giây, khoảng 2,8 năm (FW ≥ 3.125, phát liên tục) **[F]** | chưa xác minh | Có tài liệu neo, pin, API. Vỏ Personal không phải máy công trường mưa bụi | Chỉ báo “có mặt” bằng 1 neo (kém chính xác) **[F]** | [Anchor 1.4](https://docs.sewio.net/docs/anchor-1-4-3244692.html); [datasheet neo](https://www.sewio.net/wp-content/uploads/2021/09/Anchor-1.3-Datasheet.pdf); [FAQ độ chính xác](https://docs.sewio.net/docs/faq-system-14221353.html); [Leonardo Personal](https://docs.sewio.net/docs/tag-leonardo-personal-30146967.html); [pin](https://docs.sewio.net/docs/tag-battery-lifetime-3244819.html) |
+| Litum (tag mũ, dự án hầm metro) | Người trong hầm, báo sự cố, không thay Sewio cho tọa độ từng mét | Case study: tag trên mũ, neo dọc hầm khoảng mỗi 100 m để báo động; phần mềm Litum. FCC ID 2AW7W-6360000001, tag Li3, hồ sơ 23/12/2024. Độ chính xác mét và pin của SKU đang bán: chưa xác minh trên trang hãng | chưa xác minh | Có ca công trường ngầm. Mật độ 100 m là báo có mặt, không phải lưới 30 cm | Thẻ QR/NFC tại cửa hầm, đúng phương án tuyến trong hồ sơ CC1, không có tọa độ | [Case study PDF](https://litum.com/file/metro-paris-case-study.pdf); [FCC](https://fccid.io/2AW7W-6360000001/Test-Report/RF-UWB-FCC-Part-15F-7923849) |
+| Pozyx, Zebra, Inpixon, nhà tích hợp UWB tại Việt Nam | — | chưa xác minh model, pin, giá tại 31/10/2026 | chưa xác minh | — | — | — |
+| Blackline G7c | Người làm một mình trên tuyến: ngã, không cử động, SOS, vị trí thô | 4G; GNSS 72 kênh; GPS 5 m CEP 50% khi đứng nhìn trời 24 giờ; cập nhật mặc định 5 phút; pin 1100 mAh, khoảng 18 giờ ở 20°C; thiết kế IP67; −20 đến 55°C. Datasheet 05/12/2025, R28 **[F]**. Hãng nói G8 ra tháng 1/2026; thông số G8 chưa mở | chưa xác minh | Đúng L7 hồ sơ CC1. 5 m và chu kỳ 5 phút không dùng để định vị trong nhà | Điện thoại công trường + GNSS. Không có chứng nhận man-down của máy này | [Datasheet PDF](https://support.blacklinesafety.com/hubfs/Datasheet_G7c/2025-12-05-G7c%20Datasheet-R28-EN.pdf?hsLang=en); [G8](https://www.blacklinesafety.com/solutions/lone-worker/g7-lone-worker) |
+
+Mật độ neo Sewio: hãng không cho công thức “X m²/neo”. Suy ra: lưới nhìn thẳng trong tầm 15–50 m và tối thiểu 4 neo mỗi vùng **[I]**. Công trường có thép và bê tông sẽ kém hơn con số FAQ.
+
+### 7. Cổng: mặt, cổng xoay, biển số
+
+| Model | Vai trò ở CC1 | Thông số chính | Giá tham khảo | Lý do chọn | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|
+| Suprema FaceStation F2, FSF2-ODB | Cổng người, đối soát thầu phụ, lưu tại máy | 100.000 user; mặt 1:N 50.000; vân tay 1:N 100.000 (bản ODB); IP65; −20 đến 50°C; Ethernet 100 Mbps; camera IR + ảnh 2 MP. Hãng nêu FAR 1/10 tỷ **[F]/[V]** | 62.000.000 VND tại một cửa hàng VN; trang không ghi ngày **[S]**. USD chưa quy đổi | Dung lượng và IP65 cao hơn máy chấm công phổ thông. Vector nằm ở cổng | ZKTeco SpeedFace-V5L bên dưới | [Suprema spec](https://docs.supremainc.com/en/device/facestation_f2/product-specifications); [trang hãng](https://www.supremainc.com/en/hardware/fusion-multimodal-terminal-facestation-f2.asp?iHARDWARE_NO=230&iPage=1&iPageSize=20); [giá VN](https://kiemsoatanninh.com/products/suprema-facestation-f2-may-cham-cong-khuon-mat-tich-hop-do-than-nhiet.html) |
+| ZKTeco SpeedFace-V5L | Cổng phụ, chấm công ca, nơi không cần 50.000 mặt | Hai reseller lệch nhau: Tân Phát ghi 6.000 mặt / 6.000 vân tay, TCP/IP, Wi-Fi, Wiegand, RS485. FPT Camera ghi 10.000 user, màn 5 inch, camera 2 MP. Chưa mở datasheet hãng | Tân Phát: 6.645.000 VND, sau thuế trang ghi 7.176.600 VND. FPT Camera: 10.699.000 VND đã VAT. Cả hai trang không ghi ngày **[S]** | Giá thấp, hàng có tại Việt Nam. Không dùng làm kho mặt toàn công ty | Chưa thấy model thấp hơn còn đủ Wiegand ra cổng xoay | [Tân Phát](https://tanphat.com.vn/may-cham-cong-zk-teco-speedface-v5l-id-van-tay-khuon-mat-ban-tay.html); [FPT Camera](https://fptcamera.com.vn/san-pham/may-cham-cong-va-kiem-soat-ra-vao-bang-khuon-mat-zkteco-speedface-v5l) |
+| Cổng xoay (turnstile) gắn Wiegand | Làn người sau máy mặt | chưa xác minh model và giá tháng 10/2026 | chưa xác minh | Cần tiếp điểm khô hoặc Wiegand từ máy mặt | Barie làn xe, không thay cổng người | — |
+| ANPR làn xe tải | Cổng vật tư, đối biển với e-ticket | Camera vòm AI (PNV-A9081R) có lớp “license plate”, chưa phải ANPR tốc độ cao. SKU ANPR (shutter nhanh, LED, làn xe chạy) và giá VN: chưa xác minh | chưa xác minh | Tách khỏi camera PPE. Xe chạy không dùng camera nhận mặt | Camera AI có lớp biển số, chỉ cho xe đi chậm tại barie | [Hanwha, dòng analytics](https://hanwhavisionamerica.com/product/pnv-a9081r/) |
+
+### 8. Vật tư phác thảo một công trường
+
+Số lượng là **[I]**. Chỉ nhân những dòng đã có đơn giá. Phần chưa có giá để trống.
+
+**(A) Công trường nhà kín khoảng 1 ha** (ước một hình vuông cạnh 100 m, một cổng, một lán).
+
+| Hạng mục | Số lượng [I] | Đơn giá đã có | Thành tiền đã có |
+|---|---|---|---|
+| fi-8190 tại lán | 1 | 1.784 USD | 1.784 USD |
+| Tab Active5 Pro | 4 | 1.044 USD | 4.176 USD |
+| Dome AI PNV-A9081R (cổng, sàn, hàng rào) | 8 | chưa có | — |
+| PTZ Q6358-LE trên nóc | 1 | chưa có | — |
+| Hộp AGX Orin 64GB (lấy giá dev kit, hộp công nghiệp cao hơn) | 1 | 3.499 USD | 3.499 USD |
+| FaceStation F2 hoặc SpeedFace, 2 làn | 2 | 62 triệu hoặc khoảng 7–11 triệu VND/máy | chưa quy USD |
+| Cổng xoay | 2 | chưa có | — |
+| ANPR + barie 1 làn | 1 | chưa có | — |
+| Sewio, sàn kín khoảng 3.000 m², lưới thưa | khoảng 16 neo + tag theo đầu người | chưa có | — |
+| **Phần đã có đơn giá** | | | **khoảng 9.500 USD** |
+
+fi-8950, Zeutschel, Colortrac đặt ở trụ sở, không nhân theo công trường. 1 ha không cần Thor.
+
+**(B) Đoạn cao tốc khoảng 10 km** (lán + vài điểm nóng, không camera suốt tuyến).
+
+| Hạng mục | Số lượng [I] | Đơn giá đã có | Thành tiền đã có |
+|---|---|---|---|
+| Lán: fi-8190, 2 tablet, 1 Orin 64GB, 2 máy mặt, 1 làn ANPR | 1 cụm | scanner + tablet + dev kit = 1.784 + 2.088 + 3.499 | 7.371 USD, chưa cổng |
+| Trailer solar tại nút (trạm, bãi máy, hai điểm nóng) | 4 | 18.500–22.000 USD (2M, chưa camera) | 74.000–88.000 USD |
+| G7c tổ trưởng / người đơn độc | 15 | chưa có | — |
+| UWB dọc 10 km | 0 | — | không dùng |
+| Dome/PTZ chỉ trong lán và NODE | 4–6 | chưa có | — |
+| **Phần đã có đơn giá** | | | **khoảng 81.000–95.000 USD** |
+
+Bốn trailer chiếm gần hết tiền đã tính được. Phương án thấp hơn: 2 trailer (khoảng 37.000–44.000 USD) và camera sự kiện 4G tại điểm còn lại. Không kéo 10 km video về máy L4.
+
+### Nguồn
+
+Đã gắn trong bảng. Trang chính: Ricoh PFU fi-8190 và fi-8950; CDW (24/10 và 29/10/2026); Canon USA DR-S150 và DR-G2140; B&H DR-G2140; Epson DS-870 qua Laptop Direct (18/10/2026); CZUR trên Amazon; Zeutschel OS Q2; Colortrac qua Plotterprofi (hết hạn giá 31/10/2026); Beach Audio Tab Active5 Pro (29/10/2026); Hanwha PNV-A9081R; Axis Q1656-DLE và Q63; NVIDIA Jetson AGX Orin marketplace; Geizhals 31/10/2026; NVIDIA L4; DeepStream performance hiện hành và DeepStream 6.4 mục L4; Sewio docs; Blackline G7c datasheet R28 (05/12/2025); Suprema FaceStation F2 docs; bài NDAA/FCC 24/10 và 29/10/2026.
+
+Status: DONE_WITH_CONCERNS
+Summary: Đã chốt được máy quét tờ (fi-8190 công trường, fi-8950 trụ sở), CZUR cho sổ, Colortrac cho bản vẽ rời, Orin 64GB khoảng 4 luồng PeopleNet 1080p30, và hướng camera Axis/Hanwha thay Hikvision/Dahua. Còn trống giá: Zeutschel, hộp Thor, L4 nguyên máy, neo Sewio, G7c, PTZ, dome, cổng xoay, ANPR; thông số SpeedFace-V5L lệch giữa hai cửa hàng Việt Nam.
+EXIT=0

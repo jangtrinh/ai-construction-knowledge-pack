@@ -1,0 +1,156 @@
+mode=ask model=grok-4.7 stop=end_turn turns=2 secs=257
+tokens in=138056 cached=454912 out=16904 session=01a1911f-96c5-7530-a7f6-d7aabeee9050 full=/Users/jangtrinh/.grok/runs/grok-ask-2026-10-31T08-46-25-710Z.json
+---
+Đọc hai báo cáo ngữ cảnh trước, rồi đối chiếu phiên bản và giấy phép trên nguồn chính thức (tháng 10/2026).Báo cáo 0917 còn nhiều nguồn tổng hợp. Đang kiểm model card và trang chính thức cho từng thành phần.### Ledger
+FACT: model card, LICENSE, issue GitHub, trang nhà phát triển đã mở trong lượt này. INFERENCE: số mẫu gán nhãn, trang/giờ suy ra từ độ trễ, và lựa chọn cho CC1. Không có điểm CER tiếng Việt trên biểu mẫu CC1. Giá phần mềm tự host = 0 USD; không thấy bảng giá VND.
+
+## 1. OCR và Document AI
+
+| Thành phần | Phần mềm / mô hình (phiên bản) | Giấy phép | Chạy ở đâu | Dùng nguyên hay tinh chỉnh | Lý do | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|---|
+| PDF đã có lớp chữ | Docling 2.145.0 (29/10/2026) | MIT (mã). Model đi kèm theo giấy phép từng gói | Cụm suy luận, CPU | Nguyên | Không tốn GPU với PDF số | Giữ lớp chữ của PDF, bỏ OCR | https://github.com/docling-project/docling/tags |
+| Scan, bảng, dấu, công thức | PaddleOCR-VL-1.6-0.9B (28/05/2026), toolkit PaddleOCR 3.7.0 (11/06/2026) | Apache-2.0 | Cụm suy luận, 1 GPU. Không đặt ở biên | Nguyên. LoRA chỉ sau khi CER trên 200 trang CC1 thấp | 0,9B; OmniDocBench v1.6 96,3% [V]; có nhận dấu. Chưa có CER tiếng Việt | Docling khi file là PDF số | https://github.com/PaddlePaddle/PaddleOCR |
+| Tọa độ ô bảng | PP-StructureV3 (trong PaddleOCR 3.x) | Apache-2.0 | Cụm suy luận, CPU hoặc GPU | Nguyên | Có tọa độ ô; PaddleOCR-VL không thay việc này | Chỉ lấy Markdown từ PaddleOCR-VL | https://github.com/PaddlePaddle/PaddleOCR/blob/main/docs/index.en.md |
+| Dòng chữ in tiếng Việt | PP-OCRv5 + `vi_dict.txt` (file trên `main` đã có ạ, ả, ấ, ơ, ư) | Apache-2.0 | Cụm suy luận hoặc CPU | Nguyên trước. Tinh chỉnh đầu nhận dạng nếu CER dấu còn cao: 300–1.000 trang phiếu / loại [I] | Bộ từ điển riêng cho tiếng Việt. Model nào đang nạp từ điển này: chưa xác minh | PaddleOCR-VL-1.6 | https://github.com/PaddlePaddle/PaddleOCR/blob/main/ppocr/utils/dict/vi_dict.txt |
+| Không dùng cho hồ sơ tiếng Việt | PP-OCRv6 tiny/small/medium, 1,5–34,5M (11/06/2026) | Apache-2.0 | — | Không đưa vào đường chính | Docs ghi có tiếng Việt. Issue #18254: từ điển thiếu nguyên âm có dấu U+1EA0–U+1EF9. Maintainer (16/07/2026): sửa ở bản sau, không vá bằng cách đổi file từ điển. Đóng 21/07/2026 | PP-OCRv5 + `vi_dict.txt` | https://github.com/PaddlePaddle/PaddleOCR/issues/18254 |
+| Nhật ký viết tay | VietOCR 0.3.6 (tag v0.36) | Apache-2.0 | Cụm suy luận, 1 GPU nhỏ hoặc CPU theo lô | Tinh chỉnh. Khoảng 2.000–5.000 dòng đã cắt (cỡ 200–500 trang nhật ký) [I] | Model chữ viết tay tiếng Việt. Tác giả khuyên train lại trên dữ liệu mới | PaddleOCR-VL-1.6 đọc cả trang, người duyệt chỗ viết tay | https://github.com/pbcquoc/vietocr |
+| Trích trường ra JSON | Qwen3-VL-8B-Instruct (phát hành 15/10/2025). Họ còn 4B, 32B, 30B-A3B, 235B-A22B | Apache-2.0 | Cụm suy luận | Nguyên. LoRA khi JSON sai: 1.000–5.000 trang đã gán ô [I], cùng khoảng 2–5 nghìn trang trong báo cáo 0917 | OCR 32 ngôn ngữ [V]. Đắt hơn 0,9B nên chỉ chạy trang có trường cần điền | Chính Qwen3.6-27B (đã có vision, xem mục LLM) | https://github.com/QwenLM/Qwen3-VL |
+| Đối chứng tiếng Việt | Vintern-1B (InternVL2-1B + Qwen2-0.5B, báo cáo 08/2024) | Apache-2.0 trên bản GGUF cộng đồng; card gốc 5CD-AI chưa mở lại | Không chạy sản xuất | Không tinh chỉnh | Quá cũ so với Qwen3-VL. InternVL bản 2026: chưa xác minh | Qwen3-VL-8B | https://arxiv.org/html/2408.12480v2 |
+| Không chọn | Surya 2.5, 689M (29/10/2026); Marker dùng trọng số này | Mã Apache-2.0. Trọng số OpenRAIL-M: miễn phí nếu doanh thu/vốn dưới 5 triệu USD | — | — | CC1 vượt trần. 4,5 trang/giây trên 1 H100 [V] = 16.200 trang/giờ [I] | PaddleOCR-VL-1.6 | https://github.com/datalab-to/surya |
+| Không chọn mặc định | MinerU 4.0.12 (26/10/2026) | Apache-2.0 cộng điều kiện: trên 100 triệu MAU hoặc 20 triệu USD doanh thu/tháng cần giấy phép riêng; dịch vụ trực tuyến phải ghi công | — | — | Điều khoản doanh thu cần luật sư đọc trước | Docling | https://github.com/opendatalab/MinerU |
+| Đối chứng bảng / olmOCR-bench | dots.mocr khoảng 3B (bài 03/2026, 83,9 trên olmOCR-bench [V]) | File thỏa thuận nói MIT thắng khi mâu thuẫn | Cụm suy luận nếu thi đấu thắng | Nguyên | Lớn hơn 0,9B. Chưa có số liệu dấu tiếng Việt | PaddleOCR-VL-1.6 | https://huggingface.co/rednote-hilab/dots.ocr/blame/main/dots.ocr%20LICENSE%20AGREEMENT |
+| Không chọn cho tiếng Việt | olmOCR 2, khoảng 7B, tinh chỉnh từ Qwen2.5-VL | Apache-2.0 | — | — | Bộ đo và dữ liệu thiên PDF tiếng Anh. 82,4 olmOCR-bench [S] | PaddleOCR-VL-1.6 | https://github.com/allenai/olmocr |
+
+Dấu tiếng Việt: chưa có bài đo công khai trên biên bản, nhật ký, phiếu cân. Thứ tự đo trên 200 trang CC1: PaddleOCR-VL-1.6, PP-OCRv5+`vi_dict.txt`, VietOCR đã tinh chỉnh. PP-OCRv6 loại khỏi vòng đo cho đến khi có model train lại từ điển.
+
+## 2. Hậu phương OCR
+
+| Thành phần | Phần mềm | Giấy phép | Chạy ở đâu | Dùng nguyên hay tinh chỉnh | Lý do | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|---|
+| API nhận file | FastAPI. Phiên bản chưa khóa | MIT | Cụm suy luận | Nguyên | Một dịch vụ HTTP nội bộ | Khung khác cùng Python | chưa xác minh tag PyPI trong lượt này |
+| Kho file | Garage (Deuxfleurs). Phiên bản chưa khóa | AGPL-3.0 | Cụm suy luận, trong DC Việt Nam | Nguyên | MinIO Community đã archive 25/04/2026, mã AGPL-3.0 nhưng không còn bản vá | SeaweedFS — giấy phép chưa mở trong lượt này | https://stormdevelopments.ca/blog/minio-s-community-edition-is-archived-what-still-runs-in-2026/ |
+| Hàng đợi sự kiện công trường | Apache Kafka. Phiên bản chưa khóa | Apache-2.0 | Cụm suy luận | Nguyên | Đúng tầng 2 của chương VII (MQTT vào Kafka) | Hàng đợi OCR bằng `SKIP LOCKED` trên PostgreSQL, không thêm broker | kiến trúc trong `CHAPTER_AI_CORE_OPERATING_PLATFORM.md` |
+| Việc OCR có bước người duyệt | Temporal Server. Phiên bản chưa khóa | MIT | Cụm suy luận | Nguyên | Việc dài, thử lại, chờ người duyệt | PostgreSQL + worker | https://www.workflowbuilder.io/blog/open-source-workflow-engine-stack-map |
+| GPU worker | PaddleOCR genai server trên vLLM, model PaddleOCR-VL-1.6-0.9B. vLLM yêu cầu ≥ 0.11.1 trên recipe; bản vLLM hiện tại 0.32.0 (18/10/2026) | Apache-2.0 | 1 GPU trong cụm suy luận, lô đêm | Nguyên | 0,9B vừa một GPU 96 GB cùng embedding | Docling trên CPU cho PDF số | https://recipes.vllm.ai/PaddlePaddle/PaddleOCR-VL-1.6 ; https://github.com/vllm-project/vllm |
+| Màn hình gán nhãn / duyệt | Label Studio (HumanSignal). Tag chưa khóa | Apache-2.0 | Cụm suy luận | Nguyên | Duyệt trang, ô, chữ viết tay | CVAT khi chỉ cần hộp ảnh. Giấy phép CVAT chưa mở trong lượt này | https://raw.githubusercontent.com/HumanSignal/label-studio/develop/README.md |
+| Gán cặp câu cho DPO | Argilla. Tag chưa khóa | Apache-2.0 (header distilabel; sản phẩm Argilla cùng họ) | Cụm suy luận | Nguyên | Người chọn câu trả lời tốt hơn | Lưu cặp ngay trong UI trợ lý | https://github.com/argilla-io/distilabel/blob/main/LICENSE_HEADER |
+| Kiểm JSON | JSON Schema + Pydantic. Tag chưa khóa | MIT | Cùng API | Nguyên | Sai schema thì không ghi PostgreSQL | `jsonschema` thuần | chưa xác minh tag |
+| Ghi nghiệp vụ | PostgreSQL + PostGIS + TimescaleDB, như chương VII | PostgreSQL License | Cụm suy luận | Nguyên | Một cơ sở dữ liệu cho hồ sơ, vector, hàng đợi | Không thêm kho thứ hai ở giai đoạn này | chương VII |
+
+Thông lượng, một GPU, chưa đo trên biểu mẫu CC1:
+
+| Model | Số đã thấy | Trang/giờ | Nhãn |
+|---|---|---|---|
+| PP-OCRv6 medium | 0,13 giây/ảnh trên A100 | khoảng 27.700 ảnh/giờ nếu 0,13 giây là cả trang và không gồm bảng | Độ trễ [V]. Trang/giờ [I]. Không dùng cho tiếng Việt có dấu |
+| Surya 2.5 | 4,5 trang/giây trên 1 H100 | 16.200 | [V] blog Datalab 29/10/2026. Giấy phép không hợp CC1 |
+| Docling | 2,1 trang/giây trong harness bên thứ ba | khoảng 7.600 | [S], không phải số IBM, không đưa vào SLA |
+| PaddleOCR-VL-1.6 | Chưa thấy trang/giờ trên trang chính thức | chưa xác minh | Đo trên GPU 96 GB trước khi cam kết |
+
+## 3. RAG
+
+| Thành phần | Phần mềm / mô hình | Giấy phép | Chạy ở đâu | Dùng nguyên hay tinh chỉnh | Lý do | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|---|
+| Embedding | Qwen3-Embedding-4B (dòng 0,6B / 4B / 8B, 05/06/2025) | Apache-2.0 | Cụm suy luận, chung 1 GPU với reranker | Nguyên, rồi tinh chỉnh tương phản trên 20–50 nghìn cặp hỏi–đoạn hồ sơ [I, báo cáo 0917] | 32K token, hơn 100 ngôn ngữ, có tiếng Việt [V] | bge-m3, 1024 chiều, 8192 token | https://qwenlm.github.io/blog/qwen3-embedding/ ; https://huggingface.co/BAAI/bge-m3 |
+| Reranker | Qwen3-Reranker-0,6B để bắt đầu; lên 4B nếu top-5 trên bộ đề không tăng | Apache-2.0 | Cùng GPU embedding | Nguyên. Tinh chỉnh cùng tập cặp trên | 0,6B đã cao hơn BGE-reranker-v2-m3 trên MMTEB-R (66,36 so với 58,36) [V] | bge-reranker-v2-m3 | https://qwenlm.github.io/blog/qwen3-embedding/ |
+| Đối chứng embedding | multilingual-e5-large-instruct, khoảng 0,6B | chưa mở file LICENSE trong lượt này | Chỉ khi thi đấu | Nguyên | Mốc cũ trong bài Qwen | bge-m3 | https://qwenlm.github.io/blog/qwen3-embedding/ |
+| Tách từ cho BM25 | underthesea (repo ghi Apache-2.0; từ v9.3.0 thành bộ agent, vẫn có `word_tokenize`) | Apache-2.0 trên badge GitHub | Cụm suy luận, CPU | Nguyên | Tách từ trước khi đưa vào BM25 | Không tách từ, để OpenSearch phân tích ký tự. pyvi: chưa xác minh giấy phép | https://github.com/undertheseanlp/underthesea |
+| Vector | pgvector 0.8.7 (01/10/2026) trong PostgreSQL | PostgreSQL License | Cụm suy luận | Nguyên | Dưới vài triệu đoạn thì không cần kho riêng. Lọc theo dự án bằng SQL | Qdrant 1.19.2 (05/10/2026), Apache-2.0, khi lọc payload nặng. Milvus 3.0.2 chỉ khi hàng trăm triệu vector | https://vdf.ai/blog/best-vector-database-for-rag/ |
+| BM25 | OpenSearch. Tag chưa khóa | Apache-2.0 | Cụm suy luận | Nguyên | Một chỗ cho từ khóa mã định mức, số hiệu TCVN | Full-text của PostgreSQL | https://vdf.ai/blog/best-vector-database-for-rag/ |
+| Ghép truy xuất | Mã tự viết: lọc quyền, BM25, vector, rerank. Không thêm LlamaIndex hay Haystack ở đợt 1 | — | Cụm suy luận | — | Dưới 30 dự án, một đường truy xuất đọc được | LlamaIndex hoặc Haystack nếu đường này phình ra. Giấy phép từng gói chưa mở trong lượt này | quyết định kiến trúc [I] |
+| Phục vụ LLM | vLLM 0.32.0 (18/10/2026) | Apache-2.0 | Cụm suy luận | Nguyên | Nhiều LoRA, Qwen và Gemma | SGLang 0.5.23 (30/10/2026), Apache-2.0, nếu đo token/giây cao hơn trên đúng GPU | https://github.com/vllm-project/vllm ; https://pypi.org/project/sglang/ |
+| Mặt người dùng | Web nội bộ + webhook Zalo OA. Giá gói OA: chưa xác minh | Điều khoản Zalo | Biên là máy tính bảng / điện thoại. Suy luận ở cụm | Nguyên | Đúng kênh chương VII. Không nhét mô hình vào máy người dùng | Chỉ web nội bộ | chương VII; giá OA chưa xác minh |
+
+## 4. Ontology và đồ thị
+
+| Thành phần | Phần mềm | Giấy phép | Chạy ở đâu | Dùng nguyên hay tinh chỉnh | Lý do | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|---|
+| Lược đồ | LinkML. Tag chưa khóa | chưa mở LICENSE trong lượt này | Cụm suy luận | Viết lược đồ CC1 một lần, sinh JSON Schema | Đúng chương VII | Viết JSON Schema tay | chương VII |
+| Đồ thị | Apache AGE trên PostgreSQL. Tag chưa khóa | Apache-2.0 theo dự án Apache; chưa mở file LICENSE trong lượt này | Cụm suy luận | Nguyên. Dữ liệu là đồ thị CC1, không tinh chỉnh mô hình | Cùng máy chủ với hồ sơ và pgvector | Neo4j Community 2026.10.1 (24/10/2026), GPLv3. Bản Enterprise là giấy phép thương mại, giá chưa xác minh | https://mvnrepository.com/artifact/org.neo4j/neo4j ; https://neo4j.com/licensing/ |
+| IFC 4.3 | IfcOpenShell (nhánh hiện tại; v0.8.0 đã đọc IFC4.3 ADD2) | LGPL-3.0-or-later. Bonsai là GPL-3.0 | Tiến trình riêng trên cụm suy luận | Nguyên | Đổi IFC GUID, cấu kiện, sang bảng và đồ thị. LGPL: phát hành bản sửa thư viện | Thuê bộ chuyển IFC. Giá chưa xác minh | https://github.com/IfcOpenShell/IfcOpenShell |
+| LandXML | Chưa thấy thư viện đang được bảo trì. Đọc XML bằng công cụ chuẩn | — | Cụm suy luận | Tự viết bộ đọc lý trình Km+m | Tuyến đường cần Km+m, không cần đồ họa | Chưa xác minh gói Python chuyên LandXML | chưa xác minh |
+| DWG | ODA File Converter, bản cài trên máy chuyển file | Độc quyền. Điều khoản redistrib: chưa mở trang trong lượt này | Máy chuyển file trong DC, không phát hành kèm sản phẩm | Nguyên, chỉ DWG sang DXF | ezdxf không đọc DWG | Yêu cầu nhà thiết kế nộp DXF hoặc IFC | chưa xác minh URL điều khoản ODA |
+| DXF | ezdxf. Tag và LICENSE chưa mở | chưa xác minh | Cụm suy luận | Nguyên | Đọc hình học 2D sau khi đã có DXF | Chỉ nhận IFC | chưa xác minh |
+| BOQ sang mã định mức | Tra cứu: mã đã biết, rồi BM25 + Qwen3-Embedding, người QS xác nhận | — | Cụm suy luận | Không tinh chỉnh LLM. LoRA chỉ sau khi có 5–20 nghìn dòng QS đã chốt [I, báo cáo 0917] | Đáp án kiểm được bằng mã định mức | Khớp chuỗi mã thủ công | báo cáo 0917, mục 4 |
+
+## 5. Tác tử
+
+| Thành phần | Phần mềm | Giấy phép | Chạy ở đâu | Dùng nguyên hay tinh chỉnh | Lý do | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|---|
+| Khung tác tử | LangGraph 1.2.19 (30/10/2026), thư viện | MIT | Cụm suy luận | Nguyên. SFT LoRA riêng cho gọi công cụ: 5–20 nghìn mẫu [I, báo cáo 0917] | Có điểm dừng chờ người. Checkpoint trên PostgreSQL | Máy trạng thái tự viết nếu chỉ có vài công cụ | https://pypi.org/project/langgraph/ |
+| Không dùng ở sản xuất | LangGraph Agent Server | Elastic License 2.0; tự host sản xuất cần khóa LangSmith [S] | — | — | Giấy phép khác thư viện MIT | Gọi đồ thị từ FastAPI | https://geekflare.com/open-source/langgraph/ |
+| Cổng công cụ | FastAPI, danh sách công cụ cố định, chỉ đọc ERP qua truy vấn đã viết | MIT | Cụm suy luận | Nguyên | Mô hình không được bịa số | MCP chỉ trong mạng kỹ sư, không mở ra công trường | [I] theo chương VII |
+| Phê duyệt | Temporal, tín hiệu người, hoặc một bảng phê duyệt trên PostgreSQL | MIT | Cụm suy luận | Nguyên | Mọi lệnh ghi chờ người | Bảng PostgreSQL nếu chưa triển khai Temporal | chương VII |
+| Nhật ký | Bảng chỉ thêm, không sửa, trên PostgreSQL | PostgreSQL License | Cụm suy luận | Nguyên | Kiểm toán trong cùng kho | Langfuse cho dấu vết LLM, không thay nhật ký nghiệp vụ | [I] |
+
+## 6. Huấn luyện
+
+| Thành phần | Phần mềm (bản đã thấy) | Giấy phép | Chạy ở đâu | Dùng nguyên hay tinh chỉnh | Lý do | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|---|
+| SFT LoRA, DPO | TRL 1.14.2 (06/10/2026) [S] | Apache-2.0 [S] | Thuê GPU trong nước 3 tháng đầu, rồi cụm huấn luyện sau cổng tháng 3–4 | Cấu hình, không sửa framework | Có SFT, DPO, GRPO | Axolotl 0.20.0 (30/09/2026) [S] khi cần file YAML cố định | https://shattered.io/it/unsloth-vs-axolotl-vs-trl-fine-tuning-2026/ |
+| Cho vừa bộ nhớ | Unsloth 2026.10.2 (07/10/2026) [S] | Lõi Apache-2.0. Studio AGPL-3.0. `unsloth_zoo` LGPL-3.0-or-later [S] | Cùng chỗ trên | Chỉ thư viện lõi | Ít VRAM hơn khi thử trên 1 GPU | TRL + QLoRA | https://menuagentic.com/blogs/unsloth-vs-axolotl-vs-trl-vs-llama-factory/ |
+| Giao diện gán tác vụ | LlamaFactory 0.9.5 (30/05/2026) [S]. Repo đổi tên `hiyouga/LlamaFactory` | Apache-2.0 [S] | Cụm huấn luyện | Nguyên | Có Web UI cho đội gán nhãn xem chạy | TRL dòng lệnh | https://menuagentic.com/blogs/unsloth-vs-axolotl-vs-trl-vs-llama-factory/ |
+| GRPO / RLVR | TRL trước. verl khi cần nhiều node | Apache-2.0 [S] | Cụm huấn luyện | Nguyên | Mã định mức và JSON chấm được bằng chương trình | OpenRLHF nếu verl không chạy được trên đúng GPU. Giấy phép chưa mở trong lượt này | https://presenc.ai/research/open-rlhf-finetuning-toolchain-2026 |
+| Khử trùng, xóa PII | Presidio + mẫu tự viết (CCCD, mã số thuế, biển số). Bộ nhận dạng tiếng Việt chính thức: chưa xác minh | MIT theo dự án Microsoft; chưa mở file trong lượt này | Trước khi copy sang cụm huấn luyện | Tự viết bộ nhận dạng | Không đưa PII vào trọng số | Xóa bằng từ điển và regex trước, Presidio sau | báo cáo 0917 mục 9; Presidio tiếng Việt chưa xác minh |
+| Chưng cất | Thầy sinh mẫu, TRL học. 30–50 nghìn mẫu sau khi kỹ sư lọc [I, báo cáo 0917] | Theo giấy phép thầy (DeepSeek-V4-Flash ghi MIT trong báo cáo 0917 [S], không kiểm lại) | Thầy trên GPU thuê. Học trên cụm huấn luyện | Không học từ đầu | — | Bỏ bước này nếu SFT đã qua bộ đề | báo cáo 0917 |
+
+## 7. Đánh giá và vận hành
+
+| Thành phần | Phần mềm | Giấy phép | Chạy ở đâu | Dùng nguyên hay tinh chỉnh | Lý do | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|---|
+| Bộ đề mô hình | lm-evaluation-harness 0.4.13 (31/08/2026) [S] | MIT [S] | Cụm suy luận và cụm huấn luyện | Thêm tác vụ CC1, không sửa harness | Chấm đúng/sai có đáp án | Script chấm JSON tự viết | https://vdf.ai/blog/llm-evaluation-tools/ |
+| So prompt | promptfoo 0.124.0 (06/10/2026) [S]. OpenAI mua, bài 09/03/2026 [S] | MIT [S] | Máy CI nội bộ | Nguyên | So cùng một bộ đề | Script | https://vdf.ai/blog/llm-evaluation-tools/ ; https://www.ciopages.com/state-of-play/llm-observability/2026 |
+| Chỉ số RAG | RAGAS 0.4.3 (13/01/2026) [S]; DeepEval 4.2.8 (02/10/2026) [S] | Apache-2.0 [S] | Cụm suy luận | Nguyên | Đo truy xuất. Không thay người chấm 100 câu | Một metric trong bộ đề | https://vdf.ai/blog/llm-evaluation-tools/ |
+| Dấu vết LLM | Langfuse, lõi MIT. SDK 4.17.0 (05/10/2026) [S]. ClickHouse mua 16/01/2026 | MIT cho lõi. RBAC, SCIM, audit, retention là gói trả phí khi tự host [S] | Cụm suy luận: PostgreSQL, ClickHouse, Redis hoặc Valkey, S3 | Nguyên | Tự host trong nước | MLflow 3.16.1 (16/09/2026), Apache-2.0, mọi tính năng trong bản mở [S] | https://mlflow.org/articles/best-open-source-llm-evaluation-tools-2026/ |
+| Không chọn làm kho chính | Arize Phoenix 20.19.0 (01/10/2026) [S] | Elastic License 2.0 | — | — | Không phải giấy phép OSI. Cấm đưa đi như dịch vụ host | Langfuse hoặc MLflow | https://vdf.ai/blog/llm-evaluation-tools/ |
+| Thí nghiệm | MLflow 3.16.1 [S] | Apache-2.0 | Cụm huấn luyện | Nguyên | Số hiệu bản, quay lại bản cũ | Thư mục file + git | https://mlflow.org/articles/best-open-source-llm-evaluation-tools-2026/ |
+| Máy và GPU | Prometheus + Grafana + NVIDIA DCGM. Tag chưa khóa | Prometheus: chưa mở LICENSE trong lượt này. Grafana thường là AGPL-3.0: chưa mở file. DCGM: chưa xác minh | Cụm suy luận và cụm huấn luyện | Nguyên | Theo dõi GPU trước khi mua cụm thứ hai | Chỉ `nvidia-smi` ghi ra Prometheus | chưa xác minh |
+| Đăng nhập | Keycloak. Tag chưa khóa | Apache-2.0 theo dự án; chưa mở file trong lượt này | Cụm suy luận | Nguyên | Một nơi cấp tài khoản | Tài khoản PostgreSQL chỉ cho nội bộ đợt 1 | chưa xác minh |
+| Quyền theo dự án | OPA. Tag chưa khóa | Apache-2.0 theo dự án; chưa mở file trong lượt này | Trước truy xuất và trước công cụ | Viết policy, không tinh chỉnh | Lọc hồ sơ trước RAG | Cerbos. Giấy phép chưa mở trong lượt này | chưa xác minh |
+
+## LLM — chỉ phần đổi so với báo cáo 0917
+
+| Mô hình | Đã kiểm lại 31/10/2026 | Hệ quả |
+|---|---|---|
+| Qwen3.6-27B | Card Hugging Face: Apache-2.0, kiểu ảnh + chữ, 27B, ngữ cảnh 262.144, có bản FP8. Sửa mục 2.1 của báo cáo 0917: giấy phép không còn là [S] | Vừa là mô hình chat, vừa đọc được ảnh. Vẫn không thay PaddleOCR-VL cho lô hồ sơ |
+| Gemma 4 31B và 26B A4B | Model card Google: Apache-2.0. 31B ngữ cảnh 256K, chữ + ảnh. 26B A4B kích hoạt khoảng 3,8B [V]. Có thêm E2B, E4B, 12B | Giữ trong vòng thi đấu. 31B dày để tinh chỉnh. 26B A4B cho độ trễ |
+| Qwen3.6-35B-A3B | Không mở lại card trong lượt này | Giữ nguyên trạng thái [S] của báo cáo 0917 |
+| Qwen3.8-27B | Không có nguồn mới | Vẫn chưa xác nhận giấy phép |
+
+## Nguồn
+
+1. PaddleOCR 3.7.0, PaddleOCR-VL-1.6, PP-OCRv6, Apache-2.0: https://github.com/PaddlePaddle/PaddleOCR
+2. PP-OCRv6 và tiếng Việt: https://github.com/PaddlePaddle/PaddleOCR/blob/main/docs/version3.x/algorithm/PP-OCRv6/PP-OCRv6.md
+3. Từ điển v6 thiếu dấu: https://github.com/PaddlePaddle/PaddleOCR/issues/18254
+4. `vi_dict.txt`: https://github.com/PaddlePaddle/PaddleOCR/blob/main/ppocr/utils/dict/vi_dict.txt
+5. VietOCR Apache-2.0, v0.36: https://github.com/pbcquoc/vietocr và https://github.com/pbcquoc/vietocr/releases
+6. Docling 2.145.0, MIT: https://github.com/docling-project/docling/tags
+7. Surya 2.5, OpenRAIL-M: https://github.com/datalab-to/surya và https://www.datalab.to/blog/surya-2-5
+8. MinerU điều khoản: https://www.mrtechking.com/mineru-github/ (trang thứ ba, 26/10/2026). Repo: https://github.com/opendatalab/MinerU
+9. olmOCR Apache-2.0: https://github.com/allenai/olmocr
+10. dots.ocr thỏa thuận MIT ưu tiên: https://huggingface.co/rednote-hilab/dots.ocr/blame/main/dots.ocr%20LICENSE%20AGREEMENT
+11. dots.mocr bài báo: https://arxiv.org/html/2603.13032v2
+12. Qwen3-VL Apache-2.0: https://github.com/QwenLM/Qwen3-VL
+13. Qwen3.6-27B Apache-2.0, 262K, có vision: https://huggingface.co/Qwen/Qwen3.6-27B
+14. Gemma 4 Apache-2.0: https://ai.google.dev/gemma/docs/core/model_card_4 và https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/
+15. Qwen3-Embedding / Reranker: https://qwenlm.github.io/blog/qwen3-embedding/
+16. bge-m3: https://huggingface.co/BAAI/bge-m3
+17. underthesea Apache-2.0: https://github.com/undertheseanlp/underthesea
+18. pgvector 0.8.7, Qdrant, Milvus: https://vdf.ai/blog/best-vector-database-for-rag/
+19. vLLM 0.32.0: https://github.com/vllm-project/vllm
+20. SGLang 0.5.23: https://pypi.org/project/sglang/
+21. LangGraph 1.2.19 MIT: https://pypi.org/project/langgraph/
+22. Agent Server Elastic 2.0 [S]: https://geekflare.com/open-source/langgraph/
+23. Temporal MIT [S]: https://www.workflowbuilder.io/blog/open-source-workflow-engine-stack-map
+24. Label Studio Apache-2.0: https://raw.githubusercontent.com/HumanSignal/label-studio/develop/README.md
+25. MinIO archive 25/04/2026: https://stormdevelopments.ca/blog/minio-s-community-edition-is-archived-what-still-runs-in-2026/
+26. Neo4j 2026.10.1 GPL: https://mvnrepository.com/artifact/org.neo4j/neo4j và https://neo4j.com/licensing/
+27. IfcOpenShell LGPL, IFC4.3: https://github.com/IfcOpenShell/IfcOpenShell
+28. Vintern-1B: https://arxiv.org/html/2408.12480v2
+29. PaddleOCR-VL trên vLLM: https://recipes.vllm.ai/PaddlePaddle/PaddleOCR-VL-1.6 và https://huggingface.co/PaddlePaddle/PaddleOCR-VL-1.6
+30. Bộ công cụ đánh giá, Langfuse, Phoenix, MLflow [S]: https://vdf.ai/blog/llm-evaluation-tools/ và https://mlflow.org/articles/best-open-source-llm-evaluation-tools-2026/
+31. Unsloth / TRL / Axolotl / LlamaFactory, bản và giấy phép tách [S]: https://menuagentic.com/blogs/unsloth-vs-axolotl-vs-trl-vs-llama-factory/ và https://shattered.io/it/unsloth-vs-axolotl-vs-trl-fine-tuning-2026/
+32. Ngữ cảnh CC1: `/Users/jangtrinh/Products/cc1/CHAPTER_AI_CORE_OPERATING_PLATFORM.md`, `/Users/jangtrinh/Products/cc1/plans/reports/research-261031-0917-open-llm-selection-training.md`
+
+Status: DONE_WITH_CONCERNS
+Summary: Đường chính là Docling cho PDF số, PaddleOCR-VL-1.6 cho scan và bảng, VietOCR tinh chỉnh cho viết tay, PP-OCRv6 loại vì từ điển thiếu dấu. RAG dùng Qwen3-Embedding-4B, Qwen3-Reranker-0.6B, pgvector, OpenSearch. Đồ thị dùng Apache AGE. Tác tử dùng thư viện LangGraph MIT, không dùng Agent Server. Lo ngại: chưa có CER trên mẫu CC1, thông lượng PaddleOCR-VL chưa có số chính thức, nhiều giấy phép (LinkML, ezdxf, ODA, Keycloak, OPA, Presidio tiếng Việt, Qwen3.6-35B-A3B) chưa mở file trong lượt này.
+EXIT=0

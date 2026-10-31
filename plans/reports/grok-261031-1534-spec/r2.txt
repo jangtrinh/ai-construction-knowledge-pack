@@ -1,0 +1,151 @@
+mode=ask model=grok-4.7 stop=end_turn turns=2 secs=299
+tokens in=150371 cached=688640 out=20343 session=01a1911f-90cd-7791-9334-d2060d91b53e full=/Users/jangtrinh/.grok/runs/grok-ask-2026-10-31T08-47-06-455Z.json
+---
+Đọc tài liệu CC1 và đối chiếu spec/giá công khai (31/10/2026). Không sửa file.Đối chiếu spec chính thức và giá niêm yết. Bắt đầu drone, máy quét, GPU.Nhãn: **[F]** trang hoặc văn bản đã mở · **[V]** số nhà sản xuất tự công bố · **[S]** đại lý hoặc trang tổng hợp · **[I]** suy luận cho CC1. Ô không có nguồn: **chưa xác minh**. Giá là niêm yết công khai, chưa phải báo giá Việt Nam, chưa gồm thuế, vận chuyển, giấy phép bay, kiểm định.
+
+## 1. Drone khảo sát
+
+| Model | Vai trò ở CC1 | Thông số chính | Giá tham khảo (USD, ngày) | Lý do chọn | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|
+| DJI Matrice 4E | Ảnh RTK mặt bằng, đắp, bãi vật liệu trên công trường mở **[I]** | 1.219 g; camera rộng 4/3 inch 20 MP, cửa trập cơ, ảnh mỗi 0,5 s; RTK 1 cm + 1 ppm ngang, 1,5 cm + 1 ppm đứng; bay 49 phút; gió 12 m/s; GNSS GPS+Galileo+BeiDou (+GLONASS khi bật RTK). Không có cấp IP **[V]** | 5.189 USD (Drone Nerds, Global Drone HQ, 10/2026); 5.499 USD (B&H, 31/10/2026); 4.749,99 USD giá gốc USDS **[S]** | Dưới 2 kg, RTK sẵn, đủ orthophoto và khối lượng mặt thoáng | WebODM trên ảnh cùng máy, bỏ license Terra | [enterprise.dji.com/matrice-4-series/specs](https://enterprise.dji.com/matrice-4-series/specs) · [dronenerds.com](https://www.dronenerds.com/products/dji-matrice-4e-flagship-enterprise-drone) · [bhphotovideo.com](https://www.bhphotovideo.com/c/product/1884237-REG/dji_cp_en_00000574_02_matrice_4e_drone.html) |
+| DJI Matrice 400 | Mang LiDAR hành lang, cầu, mái dốc có cây **[I]** | Có pin 9.740±40 g; cất cánh tối đa 15,8 kg; 59 phút với H30T ở 10 m/s; tải L3 tới 2.100 g; IP55; nhận L3, L2, P1, H30/H30T **[V]** | 10.450 USD máy + tay cầm (Drone Nerds / Global Drone HQ, 10/2026). Pin, dock: chưa xác minh **[S]** | Một thân máy cho L2 và L3 | Matrice 4E khi không cần LiDAR | [enterprise.dji.com/matrice-400/specs](https://enterprise.dji.com/matrice-400/specs) · [dronenerds.com M400](https://www.dronenerds.com/collections/dji-matrice-400-series) |
+| Zenmuse L2 | LiDAR tầm gần, đắp và cây thưa **[I]** | 905±5 g; IP54; 250 m @10% / 100 klx; 5 cm ngang / 4 cm đứng @150 m; tới 5 xung; 240.000 điểm/s một xung, 1,2 triệu điểm/s nhiều xung; RGB 4/3 20 MP. Máy: M300 (cần RC Plus), M350, M400 **[S, trích điều kiện thử DJI]** | 14.430 USD (Influential Drones); 15.490 USD (Vertex); từ 13.199 EUR gồm VAT (DroneBase, 20/10/2026) **[S]** | Rẻ hơn L3, xử lý trong Terra | Chỉ ảnh M4E | [influentialdrones.com](https://influentialdrones.com/products/zenmuse-l2) · [store.vertexunmanned.com](https://store.vertexunmanned.com/products/dji-zenmuse-l2) · [shop.dronebase.it](https://shop.dronebase.it/en/product/dji-zenmuse-l2-3d-lidar/) |
+| Zenmuse L3 | LiDAR hành lang dài, xuyên tán **[I]** | Chỉ M400 + giắc L3; 1,60 kg + giắc 145 g; IP54; laser 1535 nm lớp 1; 3 cm đứng / 4 cm ngang RMSE @120 m; 950 m @10% / 100 kHz; tới 16 xung; 64 W điển hình, 100 W tối đa **[V]** | 17.400 USD (Drone Nerds và Global Drone HQ, 10/2026) **[S]** | Tầm và số xung cao hơn L2 khi có cây hoặc cầu dài | L2 | [enterprise.dji.com/zenmuse-l3/specs](https://enterprise.dji.com/zenmuse-l3/specs) · [dronenerds.com L3](https://www.dronenerds.com/collections/dji-matrice-400-series) |
+| DJI Terra | Ghép ảnh và đám mây L2/L3 **[I]** | Bản Windows cho máy DJI Enterprise. Giá bản quyền trên trang DJI: chưa xác minh | Standard 1.680 USD/năm hoặc 4.800 USD vĩnh viễn; Flagship 3.360 USD/năm hoặc 9.610 USD vĩnh viễn (đại lý Mỹ, đối chiếu 9/2026) **[S]** | Một đường xử lý với Pilot 2 và L2/L3 | Metashape hoặc ODM cho ảnh; LiDAR L2/L3 vẫn cần Terra | [dronemapping.ai](https://dronemapping.ai/dji-terra-vs-pix4d) |
+| PIX4Dmatic | Ghép ảnh khi trộn nhiều loại máy bay **[I]** | Máy để bàn: hiệu chỉnh, đám mây, DSM, orthomosaic; gói Pro thêm vector CAD. Giá chưa thuế **[V]** | Năm: Analyst 2.290; Standard 3.990; Pro 4.990 USD (trang giá Pix4D) **[V]** | Không khóa một hãng máy bay | Terra nếu chỉ bay DJI; ODM nếu chấp nhận tự vận hành | [pix4d.com/pricing/pix4dmatic](https://www.pix4d.com/pricing/pix4dmatic/) |
+| Agisoft Metashape Professional | Ghép ảnh, DEM, khối lượng, GCP **[I]** | Giấy phép node-locked không thời hạn; cập nhật miễn phí trong nhánh 2.x; hỗ trợ email 12 tháng **[F]** | 3.499 USD một lần **[S, 10/2026, trang store gốc không hiện số này trong phiên]**. Thuê service-provider 6.736 USD/năm/giấy phép **[F]** | Trả một lần, chạy nội bộ | ODM. Standard 179 USD không xuất orthomosaic/DEM/GCP **[S]** | [agisoft.com/buy](https://www.agisoft.com/buy/) · [agisoft.com service provider](https://www.agisoft.com/buy/saas/service-provider-license) · [dronemapping.ai](https://dronemapping.ai/blog/metashape-vs-reality-capture-pricing) |
+| OpenDroneMap / WebODM | Ghép ảnh nội bộ, không đưa ảnh ra ngoài **[I]** | Phần mềm máy chủ tự chạy. Giấy phép và giá installer Windows: chưa mở repo/trang bán trong phiên này | Gói cloud bên thứ ba: Starter 24 USD/tháng, Pro 35, Business 99 **[S]**. Bản cài đặt tại chỗ: chưa xác minh | Ảnh không rời Việt Nam | Giữ Metashape khi cần hỗ trợ trả phí | [techyorker.com WebODM](https://techyorker.com/compare/agisoft-metashape-vs-webodm/) |
+| Nghị định 288/2025/NĐ-CP | Điều kiện bay mọi dự án **[F]** | Hiệu lực 05/11/2025. Đăng ký: giấy sở hữu; máy nhập khẩu cần giấy phép nhập khẩu và tờ khai hải quan. Bay: giấy đăng ký còn hạn; người lái ≥18 tuổi; ≥0,25 kg cần giấy phép bay trong tầm nhìn; ≥2 kg, hoặc ngoài tầm nhìn, hoặc bay theo chương trình qua trung tâm điều khiển, cần giấy phép quan sát bằng thiết bị hoặc chứng chỉ Bộ Quốc phòng công nhận. Người nước ngoài cần bảo lãnh Việt Nam. Miễn cấp phép bay chỉ cho <0,25 kg, vui chơi, ngoài vùng cấm/hạn chế, trong tầm nhìn **[F]** | Không phải giá thiết bị | M4E 1,219 kg: trong tầm nhìn dùng giấy phép trực quan; hành lang dài ngoài tầm nhìn vẫn cần giấy phép thiết bị. M400 ~9,7 kg: luôn trên ngưỡng 2 kg **[I]** | Không có phương án bỏ giấy phép | [xaydungchinhsach.chinhphu.vn](https://xaydungchinhsach.chinhphu.vn/chinh-phu-quy-dinh-dieu-kien-dang-ky-phuong-tien-bay-khong-nguoi-lai-119251108125349673.htm) · [mst.gov.vn](https://mst.gov.vn/ban-hanh-nghi-dinh-ve-quan-ly-tau-bay-khong-nguoi-lai-va-cac-phuong-tien-bay-khac-197251116100109869.htm) · [thuvienphapluat.vn](https://thuvienphapluat.vn/phap-luat-nha-dat/toan-van-nghi-dinh-2882025ndcp-quy-dinh-ve-quan-ly-tau-bay-khong-nguoi-lai-va-phuong-tien-bay-khac--11079.html) |
+
+Matrice 350: đại lý vẫn ghi L2 chạy trên M350; trang DJI không được mở để xác nhận còn bán. Coi M400 là thân máy hiện tại cho L3.
+
+## 2. Quét laser mặt đất / di động và lệch BIM
+
+| Model | Vai trò ở CC1 | Thông số chính | Giá tham khảo (USD, ngày) | Lý do chọn | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|
+| Leica BLK360 G2 | Phòng, tầng, MEP, lệch thô với BIM **[I]** | 0,5–45 m @78% albedo; 4 mm @10 m; tới 680.000 điểm/s; 4×13 MP; 0,85 kg gồm pin; một vòng <20 s ở 50 mm @10 m **[S, trích tờ spec Leica 02.26]** | Khoảng 28.700 USD kèm 1 năm Reality Cloud Studio (đại lý Mỹ, 10/2026); 19.000 GBP (G2 Survey) **[S]** | Nhẹ, đủ nội thất | Ảnh M4E cho mặt ngoài | [thefuture3d.com BLK360 G2](https://www.thefuture3d.com/equipment/leica-blk360-g2/) · [g2survey.com](https://g2survey.com/3d-laser-scanning/scanners/) |
+| Leica RTC360 | Kết cấu, nhà cao, cầu, lệch dày **[I]** | 0,5–130 m; tới 2 triệu điểm/s; đủ vòm + HDR <2 phút ở 6 mm @10 m; VIS tự ghép trạm; có bản LT 1 triệu điểm/s **[V]** | Từ 82.936 USD; LT từ 71.091 USD (shop Leica, trang còn bán 2026). Đại lý Anh: 39.995 GBP **[V/S]** | Tầm và ghép trạm cho nhà và cầu | BLK360 G2 cho phòng | [shop.leica-geosystems.com/rtc360](https://shop.leica-geosystems.com/laser-scanner/rtc360/overview) |
+| FARO Focus Premium | Quét tĩnh tầm xa, nhà máy và kết cấu **[I]** | Dòng brochure: 2 mm @10 m, 3,5 mm @25 m; tới 2 triệu điểm/s; IP54. Một tờ ghi trắng 90% tới 350 m, đen 2% tới 50 m **[S]**. SKU 70/150/200/350 đang bán: chưa xác minh | Kit mới khoảng 66.000–84.000 USD (tổng hợp đại lý Mỹ, 10/2026) **[S]** | Tầm xa hơn RTC360 | RTC360 khi cần VIS và hệ Leica | [thefuture3d.com Focus Premium](https://www.thefuture3d.com/equipment/faro-focus-premium/) · [skyebrowse.com](https://www.skyebrowse.com/news/posts/faro-vs-leica) |
+| NavVis VLX 3 | Đi bộ tầng hầm, hành lang kỹ thuật **[I]** | 2 LiDAR 32 lớp; 1,28 triệu điểm/s; 5 mm cục bộ (1σ, phòng thử 500 m²); tới 50 m; 8,5 kg; IP42; pin 1,5 giờ/cặp **[S, trích datasheet NavVis v2409]** | Giá máy: chưa xác minh | Nhanh hơn quét từng trạm trong nhà dài | BLK360 G2 | [thefuture3d.com VLX 3](https://www.thefuture3d.com/blog/navvis-vlx3-review-specifications-guide/) |
+| Emesent Hovermap ST-X | Hầm, gầm cầu, khoang không vào được **[I]** | SLAM; 0,5–300 m; ±15 mm môi trường chung, ±10 mm trong nhà/hầm; tới 1,92 triệu điểm/s; 1,57 kg; IP65; xuất LAS/LAZ/PLY/E57. Máy bay ghi trên trang hãng: M300, M350, Freefly. M400: chưa có trên trang đó **[F]** | Giá: chưa xác minh | Cùng một đầu quét cho đi bộ và bay trong hầm | VLX 3 nếu đi bộ được | [knowledge.emesent.com](https://knowledge.emesent.com/articles/hovermap-specifications) |
+| FARO Orbis (dòng GeoSLAM) | SLAM cầm tay trong nhà | Spec và giá hiện hành: chưa xác minh trong phiên này | chưa xác minh | — | Hovermap ST hoặc BLK360 G2 | — |
+| Leica Cyclone REGISTER 360 | Ghép đám mây Leica, đưa sang BIM **[I]** | Bản BLK Edition cho khoảng 500 trạm. Giá bản đầy đủ: trang Leica chưa mở | BLK Edition 2.650 USD/năm **[S, TechYorker nói đã đọc trang hãng]** | Ghép VIS của RTC360/BLK | CloudCompare cho đo lệch | [techyorker.com](https://techyorker.com/compare/leica-cyclone-register-360-plus-vs-open3d/) |
+| Autodesk ReCap | Đưa RCP/RCS vào Revit **[I]** | Giá ReCap Pro 2026: chưa xác minh | chưa xác minh | Định dạng Revit đang dùng | CloudCompare + xuất E57 | — |
+| CloudCompare | Đo lệch đám mây với đám mây / lưới **[I]** | Phần mềm máy để bàn, không phí giấy phép theo bài so sánh 6/2026 **[S]**. Giấy phép repo: chưa mở | 0 | Đo lệch trước khi mua Cyclone | — | [thefuture3d.com so sánh](https://www.thefuture3d.com/equipment/compare/cloudcompare-vs-cyclone-vs-recap/) |
+| PDAL, Open3D | Đường ống LAS/LAZ và lệch tự động trên cụm CC1 **[I]** | Open3D: không có gói trả phí trên trang tổng hợp **[S]**. Giấy phép PDAL: chưa mở | 0 | Nối vào kho đối tượng, không khóa hãng | Cyclone khi cần bản vẽ bàn giao | [open3d.org qua TechYorker](https://techyorker.com/compare/leica-cyclone-register-360-plus-vs-open3d/) |
+
+## 3. Cổng thể tích xe, trạm cân, GNSS
+
+| Model | Vai trò ở CC1 | Thông số chính | Giá tham khảo (USD, ngày) | Lý do chọn | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|
+| Loadscan LVS / MPS | Thể tích thùng xe tại cổng, đối chiếu phiếu cân **[I]** | LiDAR; hãng công bố ±1% sau thử độc lập. Chứng nhận thương mại: MAPPS NZ 1556, NMI Úc 13/1/15, NTEP Mỹ 24-001P. Ngoài NZ/Úc bán dạng giám sát, không phải legal-for-trade. Có RFID, SQL/ODBC **[V]** | Giá bộ cổng: chưa xác minh | Có chứng nhận đo thể tích và cổng xuất dữ liệu | Cân bàn + ảnh thùng; sai số thể tích chưa xác minh | [loadscan.com/faq](https://www.loadscan.com/faq-items/how-accurate-are-loadscan-scanners/) · [loadscan.com/about-us](https://www.loadscan.com/about-us/) |
+| Cân bàn công trường Việt Nam | Khối lượng nhập cát, đá, thép, bê tông **[I]** | Cân kiểm soát tải đường bộ theo QCVN 66:2024/BGTVT (Thông tư 28/2024/TT-BGTVT, hiệu lực 10/9/2024): camera, phần mềm, lưu dữ liệu. Quy chuẩn này là trạm kiểm tra tải trọng xe trên đường bộ, không phải quy chuẩn cân vật tư trong công trường **[F]** | Báo giá Tân Phát, Mettler Toledo VN và hãng khác: chưa xác minh | Cân đã kiểm định đo lường để ra số tấn | Chỉ dùng thể tích LiDAR | [thuvienphapluat.vn TT 28/2024](https://thuvienphapluat.vn/van-ban/Giao-thong-Van-tai/Thong-tu-28-2024-TT-BGTVT-Quy-chuan-ky-thuat-quoc-gia-Tram-kiem-tra-tai-trong-xe-622246.aspx) |
+| VNGEONET | Hiệu chỉnh RTK cho drone, rover, máy thi công **[I]** | Cổng dịch vụ ghi 65+ CORS, 34 tỉnh/thành. Bài Cục Đo đạc (09/2026): 24 trạm khung + 41 trạm NRTK; giai đoạn 2026–2030 dự kiến thêm hơn 100 trạm. Phí thu từ 9/2024 **[F/V]** | 750.000 VND/rover/tháng; 4.280.000 VND/6 tháng; 6.750.000 VND/12 tháng (cổng gddt.vngeonet.vn) | Một thuê bao thay một base mỗi công trường | Base riêng khi vùng chưa phủ hoặc mất mạng | [gddt.vngeonet.vn](https://gddt.vngeonet.vn/) · [dosmvn.mae.gov.vn](https://dosmvn.mae.gov.vn/Pages/chi-tiet-tin-tuc.aspx?ItemID=2177) |
+| Bộ base + rover RTK (Trimble / Leica / CHCNAV) | Mốc VN-2000, kiểm tra máy, GCP **[I]** | Model đang bán tại Việt Nam và giá USD/VND tháng 10/2026: chưa xác minh trong phiên này | chưa xác minh | Cần khi VNGEONET mất sóng hoặc khoảng cách trạm quá xa | Thuê bao VNGEONET 6,75 triệu VND/rover/năm | — |
+
+## 4. Dẫn hướng máy, lu thông minh, cảm biến bê tông
+
+| Model | Vai trò ở CC1 | Thông số chính | Giá tham khảo (USD, ngày) | Lý do chọn | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|
+| Trimble Earthworks | Dẫn gầu, lưỡi ủi, san, lu theo mặt thiết kế; tệp đưa về kho CC1 **[I]** | Màn TD520 12,1 inch hoặc TD510 7 inch; hộp EC520; GNSS MS975/MS995/MS996. Xuất tệp as-built chi tiết: chưa mở tài liệu hãng | Máy 3D mới khoảng 45.000–80.000 USD/máy; hệ 2D 10.000–25.000; base 8.000–20.000 (blog máy cũ, 4/8/2025) **[S]** | Phủ nhiều hãng máy, có đường máy cũ GCS900 | Chế độ chỉ báo 2D, chưa tự điều lưỡi | [munsonedsurvey.com](https://munsonedsurvey.com/blogs/news/best-machine-control-systems-the-complete-trimble-vs-topcon-vs-leica-comparison-guide) |
+| Leica MC1 | Cùng việc, đội đang dùng máy Leica **[I]** | Màn MCP80 10,1 inch; thu iCG80. Giá gói và định dạng xuất: chưa xác minh | Khoảng 45.000–75.000 USD/máy 3D mới **[S, cùng bài]** | Một hệ với rover Leica | Earthworks nếu đội máy hỗn hợp | cùng nguồn trên |
+| Topcon MC-X / MC-Max | Máy xúc và san 3D **[I]** | MC-Max: 2D hoặc 3D, gầu vừa đào vừa lấy điểm. Giá Anh là một cấu hình, không phải mọi máy | 29.750 GBP chưa VAT cho kit máy xúc mẫu (JB Survey) **[S]** | Giá một kit đã niêm yết | Chỉ báo 2D | [jbsurvey.co.uk](https://jbsurvey.co.uk/shop/topcon-mc-max-excavator/) |
+| Komatsu intelligent Machine Control + Smart Construction | Máy Komatsu xuất xưởng đã gắn dẫn hướng **[I]** | Trang marketplace ghi nhận tệp hai chiều với một số máy Komatsu iMC, Topcon và Trimble. Bản giá trên site thử: không dùng làm giá bán | Giá gắn máy: chưa xác minh | Đỡ lắp thêm khi mua máy Komatsu mới | Earthworks lắp lên máy sẵn có | [scmpdevqa.azurewebsites.net](https://scmpdevqa.azurewebsites.net/Products/Detail/d1599ccc-1ddf-4751-8cb7-6d6469aa3b8f) |
+| Giatec SmartRock | Nhiệt độ, độ chín, ước cường độ bê tông theo ASTM C1074 **[I]** | Hai trang hãng lệch nhau: tầm không dây 12 m hoặc 8 m; dải nhiệt tới 85°C hoặc 80°C; đo 15 phút; pin tới 4 tháng; app và đám mây; PDF/CSV trên một trang **[V, mâu thuẫn]** | Trang sản phẩm chỉ có nút hỏi giá. Số USD: chưa xác minh | Không dây, gắn thép trước khi đổ | Command Center, cảm biến có dây | [info.giatecscientific.com/giatec-smartrock](https://info.giatecscientific.com/giatec-smartrock) · [smartrock-concrete-sensor](https://info.giatecscientific.com/smartrock-concrete-sensor) |
+| Command Center (cảm biến độ chín) | Cùng việc, điểm đổ cố định có đầu đọc **[I]** | Cảm biến tự nguồn, nhiều độ dài dây; phần mềm Windows và iOS; xuất dữ liệu qua app. Chu kỳ đo và sai số: chưa mở datasheet | Từ 49 USD/cảm biến (trang giá hãng, bản ghi nhận 02/10/2026) **[V]** | Đơn giá niêm yết thấp | Chờ nén mẫu 28 ngày | [commandcenterconcrete.com/pricing](https://www.commandcenterconcrete.com/pricing/) |
+
+## 5. Máy chủ GPU, chỗ đặt, mạng, lưu trữ
+
+H200 NVL là 141 GB, không phải 96 GB. Bản 96 GB đúng tên là RTX PRO 6000 Blackwell Server Edition. Tám H200 NVL nối NVLink theo cầu 2 hoặc 4 card, không phải một miền NVLink tám card như HGX **[V]**.
+
+| Model | Vai trò ở CC1 | Thông số chính | Giá tham khảo (USD, ngày) | Lý do chọn | Phương án rẻ hơn | Nguồn |
+|---|---|---|---|---|---|---|
+| NVIDIA RTX PRO 6000 Blackwell Server Edition | Suy luận và tinh chỉnh mô hình 26–35B; 2 node × 8 card **[I]** | 96 GB GDDR7 ECC; 1.597 GB/s; 24.064 CUDA; PCIe 5 x16; 400–600 W, chỉnh được; làm mát thụ động; MIG tới 4×24 GB **[V]** | Giá một card và cả máy: chưa xác minh. Thuê quốc tế 8 card từ 10,67 USD/giờ (Vast, 31/10/2026), không đặt tại Việt Nam **[S]** | Đủ 96 GB/card cho mô hình hằng ngày, mua dạng PCIe | Thuê H100/H200 trong nước 3 tháng, chưa mua | [nvidia.com RTX PRO 6000 Server](https://www.nvidia.com/en-us/data-center/rtx-pro-6000-blackwell-server-edition/) · [nvidia.com family](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/) |
+| Supermicro SYS-422GA-NRT, SYS-422GL-NR, AS-4125GS-TNRT / TNRT2 | Vỏ cho 8× RTX PRO 6000 | Tới 8 card 96 GB, 400–600 W; bản Intel Xeon 6900 hoặc AMD EPYC 9004/9005 tùy SKU; RAM tới 6 TB. SYS-422GL-NR cũng nhận 8× H200 NVL **[V]** | Giá cấu hình: chưa xác minh | Có SKU 8 card đã liệt kê | 4 card nếu bài thi đấu chỉ cần một bản sao mô hình | [supermicro.com RTX PRO BSE](https://www.supermicro.com/en/accelerators/nvidia/supermicro-rtx-pro-bse) · [supermicro.com GPU QVL](https://www.supermicro.com/en/support/resources/gpu) |
+| NVIDIA H200 NVL | Phương án PCIe 141 GB thay cho cụm suy luận **[I]** | 141 GB HBM3e; 4,8 TB/s; PCIe; TDP tới 600 W; NVLink cầu 2 hoặc 4 card, 900 GB/s **[V]** | Giá máy 8 card: chưa xác minh. Thuê H200 từ 2,09 USD/GPU-giờ (Beam, 31/10/2026); FPT trên bảng tổng hợp 6,60 USD **[S]** | Băng nhớ cao hơn RTX PRO 6000 khi chạy mô hình thầy | RTX PRO 6000 nếu mỗi bản sao mô hình vừa 96 GB | [nvidia.com/h200](https://www.nvidia.com/en-us/data-center/h200/) |
+| Dell PowerEdge XE9780 | Node huấn luyện 8× Blackwell, làm mát gió | 10U; 2× Xeon 6 tới 86 nhân, TDP CPU tới 350 W; 8× HGX B200 180 GB 1.000 W hoặc 8× HGX B300 NVL8 270 GB 1.100 W; NVLink; tới 4 TB RAM; tới 16× E3.S hoặc 10× U.2 **[V]** | Liên hệ bán hàng. Không có giá niêm yết | Một mã máy có cả B200 và B300, gió, khỏi phụ thuộc nước làm mát | Thuê H200 8 card 3 tháng | [dell.com XE9780](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9780) · [Dell InfoHub 01/10/2026](https://www.dell.com/en-us/infohub/articles/ai-performance-redefined-poweredge-xe9780-with-8x-b200-sxm-gpus-for-mlperf-tm-inference-v6-0) |
+| NVIDIA DGX B200 | Mốc điện và cấu hình 8× B200 | 8× B200, tổng 1.440 GB; 10U; nặng tới 142,4 kg; 6× PSU 3,3 kW; tối đa 14,3 kW @200–240 V; 8 cổng ConnectX-7 tới 400 Gb/s InfiniBand hoặc Ethernet; 8× 3,84 TB NVMe **[F]** | Giá: chưa xác minh | Dùng làm mốc điện, không bắt buộc mua máy NVIDIA | XE9780 hoặc SR680a V3 cùng baseboard | [docs.nvidia.com DGX B200](https://docs.nvidia.com/dgx/dgxb200-user-guide/introduction-to-dgxb200.html) |
+| Lenovo ThinkSystem SR680a V3 (lp2247) | Node 8× B200 | 8U; máy loại 7DM9; 2× Xeon thế hệ 5 tới 64 nhân, 350 W; 8× B200 1.000 W, 180 GB HBM3e; tới 16 SSD NVMe 2,5 inch; tới 4 TB. Trang cấu hình Lenovo khác vẫn ghi SKU này là 8× H100 hoặc 8× H200 **[V, hai trang lệch nhau]**. Ô NVLink 900 GB/s trên bài tóm tắt lệch với 1,8 TB/s của NVIDIA: chưa chốt | Giá: chưa xác minh | Có product guide B200 tháng 9/2026 | XE9780 nếu cần một trang spec thống nhất | [lenovopress.lenovo.com/lp2247](https://lenovopress.lenovo.com/lp2247-thinksystem-sr680a-v3-with-b200) · [pubs.lenovo.com/sr680a-v3](https://pubs.lenovo.com/sr680a-v3/server_specifications_technical) |
+| Supermicro SYS-822GS-NB3RT | Node 8× B300 làm mát bằng chất lỏng trên bo mạch | 8U; 2× Xeon 6700-series tới 86 nhân, 350 W; HGX B300; hãng ghi 288 GB/GPU và 2,3 TB/hệ; NVLink 1,8 TB/s; 8× ConnectX-8 tới 800 Gb/s; 6× PSU 6,6 kW (3+3). Dell ghi B300 270 GB. Chưa gộp hai số này thành một **[V]** | Giá: chưa xác minh. Đại lý ghi công suất tối đa tham chiếu 13.593,6 W **[S]** | Nhiều HBM hơn B200 khi huấn luyện mô hình lớn | XE9780 B200 làm mát gió | [docs.ts.fujitsu.com SYS-822GS](https://docs.ts.fujitsu.com/dl.aspx?id=684d1099-cfe4-4106-bd9f-b1b1ec4b9579) · [serversimply.com](https://www.serversimply.com/en/gpu-superserver-sys-822gs-nb3rt) |
+| HPE ProLiant Compute XD685 | Ứng viên 8× B200 | Bài so sánh đại lý: EPYC 9005, 24 khe RAM, trần 3 TB, PSU 3.000 W, nguồn −48 V DC **[S]**. Trang HPE: chưa mở | chưa xác minh | Chỉ đưa vào báo giá sau khi mở trang HPE | Dell XE9780 | [servnetuk.com](https://www.servnetuk.com/compare/servers/hpe-proliant-xd685-vs-lenovo-thinksystem-sr680a-v3) |
+| Gigabyte | Ứng viên 8× Blackwell | SKU 8 GPU đang bán tháng 10/2026: chưa xác minh | chưa xác minh | — | Dell hoặc Supermicro | — |
+| FPT AI Factory | Thuê GPU 3 tháng, dữ liệu trong nước **[I]** | Có VM và container HGX H100 / H200; 1–8 GPU; tính giây; H200 SXM5 141 GB. Trang container: “từ 2,5 USD/giờ”, không ghi SKU tương ứng **[V]** | Bảng tổng hợp 31/10/2026: H100 2,99 USD/GPU-giờ; H200 6,60 USD. Trang giá FPT chưa mở nên hai số này chưa phải giá chốt **[S]** | Đặt máy và dữ liệu tại Việt Nam | Suy luận trên cụm RTX PRO 6000 vừa mua, chỉ thuê khi cần mô hình thầy | [factory.fpt.ai/gpu-container](https://factory.fpt.ai/gpu-container) · [factory.fpt.ai news 29/01/2026](https://factory.fpt.ai/news/gpu-virtual-machine-is-now-available-with-on-demand-pricing-on-fpt-ai-factory.html) · [gpueconomy.com](https://gpueconomy.com/) |
+| Viettel IDC, chỗ đặt máy | Hai node suy luận, sau đó hai node huấn luyện **[I]** | Gói lẻ công bố: 1U/400 W từ 1.352.000 VND/tháng; 10U/1.500 W từ 7.120.000 VND/tháng; giá chưa VAT **[V]**. Hòa Lạc: báo nhà nước 30 MW, khoảng 2.400 tủ, khai trương 10/4/2024 **[S]** | Giá tủ mật độ cao theo kW: chưa xác minh | Gói 400–1.500 W không chứa node 7–14 kW | FPT hoặc CMC/VNPT, cùng điều kiện hỏi công suất tủ | [viettel-idc.com.vn colocation](https://viettel-idc.com.vn/dich-vu/viettel-colocation.html) · [soha.vn dẫn số Hòa Lạc](https://soha.vn/dung-xay-dung-khan-cap-to-hop-lien-quan-den-ai-cong-suat-gap-21-lan-trung-tam-du-lieu-viettel-hoa-lac-vua-khoi-cong-duoc-8-ngay-198261023104158303.htm) |
+| Mạng cụm | Nối 2 node, rồi 4 node **[I]** | DGX B200: 8× ConnectX-7, InfiniBand hoặc Ethernet tới 400 Gb/s mỗi cổng **[F]**. Switch Quantum-2 và giá cáp: chưa xác minh. RoCE chạy trên chế độ Ethernet của cùng loại NIC | chưa xác minh | Hai node chưa cần switch 64 cổng | Cáp gắn thẳng giữa hai node nếu chỉ có một cặp máy | [docs.nvidia.com DGX B200](https://docs.nvidia.com/dgx/dgxb200-user-guide/introduction-to-dgxb200.html) |
+| MinIO / Ceph | Kho đối tượng LAS, ảnh, hồ sơ, trọng số, trong nước **[I]** | Giá giấy phép MinIO AIStor và cấu hình all-flash: chưa xác minh. Ceph: chưa mở trang giấy phép trong phiên này | chưa xác minh | Để dữ liệu đo và hồ sơ cùng vùng với GPU | Đĩa NVMe trong từng máy chủ cho tập nhỏ | — |
+
+Điện, suy luận từ số đã có: 8× RTX PRO 6000 ở 600 W là 4,8 kW chỉ riêng GPU **[V]**; một phép đo tường của bên thứ ba ngày 20/10/2026 là khoảng 6,5 kW khi đủ tải GPU và 6,96 kW đỉnh **[S]**. DGX B200 tối đa 14,3 kW **[F]**. Hai node suy luận cộng hai node B200 nằm khoảng vài chục kW chỉ riêng phần IT, trước dự phòng nguồn và làm mát **[I]**. Gói colocation lẻ của Viettel IDC không phải gói này.
+
+## Suy luận tách khỏi bảng
+
+- M4E cho đợt khối lượng mặt thoáng; M400 + L3 chỉ cho tuyến có cây, taluy, cầu. Không mua đủ bộ L3 cho dưới 30 công trường.
+- BLK360 G2 cho nhà; RTC360 cho kết cấu và cầu; Hovermap cho chỗ không đứng được. NavVis khi phải đi bộ tầng dài.
+- Cổng Loadscan cộng cân đã kiểm định. Tỷ trọng = tấn cân / m³ quét. QCVN 66 không thay kiểm định cân công trường.
+- Một rover VNGEONET 6,75 triệu VND/năm trước khi mua base mỗi ban chỉ huy. Vùng biên và mất 4G vẫn cần base.
+- Mua dẫn hướng 3D trên máy ủi, xúc, lu của dự án tuyến mẫu. Dự án nhà dùng mốc và rover.
+- SmartRock hoặc Command Center cho bê tông kết cấu. Số cường độ vẫn do phòng thí nghiệm xác nhận cho nghiệm thu; cảm biến để biết lúc tháo cốp pha **[I]**.
+- Mua 2 node 8× RTX PRO 6000 96 GB để suy luận. Thuê H200 trong nước cho mô hình thầy trong 3 tháng. Cổng tháng 3–4 mới đặt 2 node 8× B200 gió nếu phòng máy không có nước làm mát. B300 khi báo giá cho thấy phòng máy nhận được khoảng 15 kW/node và cần nhiều hơn 180 GB/GPU.
+- Hỏi Viettel IDC, FPT, VNPT, CMC một câu: tủ bao nhiêu kW liên tục, điện một pha hay ba pha, có làm mát cửa sau hoặc nước không. Giá U trên web không trả lời câu đó.
+
+## Nguồn
+
+1. https://enterprise.dji.com/matrice-4-series/specs
+2. https://enterprise.dji.com/matrice-400/specs
+3. https://enterprise.dji.com/zenmuse-l3/specs
+4. https://enterprise.dji.com/geospatial/land-survey
+5. https://www.dronenerds.com/products/dji-matrice-4e-flagship-enterprise-drone
+6. https://www.dronenerds.com/collections/dji-matrice-400-series
+7. https://www.bhphotovideo.com/c/product/1884237-REG/dji_cp_en_00000574_02_matrice_4e_drone.html
+8. https://influentialdrones.com/products/zenmuse-l2
+9. https://store.vertexunmanned.com/products/dji-zenmuse-l2
+10. https://shop.dronebase.it/en/product/dji-zenmuse-l2-3d-lidar/
+11. https://globaldronehq.com/products/dji-zenmuse-l3-lidar-camera
+12. https://www.pix4d.com/pricing/pix4dmatic/
+13. https://www.agisoft.com/buy/
+14. https://www.agisoft.com/buy/saas/service-provider-license
+15. https://dronemapping.ai/dji-terra-vs-pix4d
+16. https://dronemapping.ai/blog/metashape-vs-reality-capture-pricing
+17. https://xaydungchinhsach.chinhphu.vn/chinh-phu-quy-dinh-dieu-kien-dang-ky-phuong-tien-bay-khong-nguoi-lai-119251108125349673.htm
+18. https://mst.gov.vn/ban-hanh-nghi-dinh-ve-quan-ly-tau-bay-khong-nguoi-lai-va-cac-phuong-tien-bay-khac-197251116100109869.htm
+19. https://thuvienphapluat.vn/phap-luat-nha-dat/toan-van-nghi-dinh-2882025ndcp-quy-dinh-ve-quan-ly-tau-bay-khong-nguoi-lai-va-phuong-tien-bay-khac--11079.html
+20. https://shop.leica-geosystems.com/laser-scanner/rtc360/overview
+21. https://www.thefuture3d.com/equipment/leica-blk360-g2/
+22. https://www.thefuture3d.com/equipment/faro-focus-premium/
+23. https://g2survey.com/3d-laser-scanning/scanners/
+24. https://knowledge.emesent.com/articles/hovermap-specifications
+25. https://www.thefuture3d.com/blog/navvis-vlx3-review-specifications-guide/
+26. https://www.thefuture3d.com/equipment/compare/cloudcompare-vs-cyclone-vs-recap/
+27. https://techyorker.com/compare/leica-cyclone-register-360-plus-vs-open3d/
+28. https://www.loadscan.com/faq-items/how-accurate-are-loadscan-scanners/
+29. https://www.loadscan.com/about-us/
+30. https://thuvienphapluat.vn/van-ban/Giao-thong-Van-tai/Thong-tu-28-2024-TT-BGTVT-Quy-chuan-ky-thuat-quoc-gia-Tram-kiem-tra-tai-trong-xe-622246.aspx
+31. https://gddt.vngeonet.vn/
+32. https://dosmvn.mae.gov.vn/Pages/chi-tiet-tin-tuc.aspx?ItemID=2177
+33. https://munsonedsurvey.com/blogs/news/best-machine-control-systems-the-complete-trimble-vs-topcon-vs-leica-comparison-guide
+34. https://jbsurvey.co.uk/shop/topcon-mc-max-excavator/
+35. https://info.giatecscientific.com/giatec-smartrock
+36. https://info.giatecscientific.com/smartrock-concrete-sensor
+37. https://www.commandcenterconcrete.com/pricing/
+38. https://www.nvidia.com/en-us/data-center/rtx-pro-6000-blackwell-server-edition/
+39. https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/
+40. https://www.nvidia.com/en-us/data-center/h200/
+41. https://www.nvidia.com/en-us/data-center/products/rtx-pro-server/
+42. https://www.supermicro.com/en/accelerators/nvidia/supermicro-rtx-pro-bse
+43. https://www.supermicro.com/en/support/resources/gpu
+44. https://www.dell.com/en-us/shop/ipovw/poweredge-xe9780
+45. https://docs.nvidia.com/dgx/dgxb200-user-guide/introduction-to-dgxb200.html
+46. https://lenovopress.lenovo.com/lp2247-thinksystem-sr680a-v3-with-b200
+47. https://pubs.lenovo.com/sr680a-v3/server_specifications_technical
+48. https://docs.ts.fujitsu.com/dl.aspx?id=684d1099-cfe4-4106-bd9f-b1b1ec4b9579
+49. https://www.serversimply.com/en/gpu-superserver-sys-822gs-nb3rt
+50. https://factory.fpt.ai/gpu-container
+51. https://factory.fpt.ai/news/gpu-virtual-machine-is-now-available-with-on-demand-pricing-on-fpt-ai-factory.html
+52. https://gpueconomy.com/
+53. https://viettel-idc.com.vn/dich-vu/viettel-colocation.html
+54. https://neoxis.ai/blog/rtx-pro-6000-server-power-temperatures/
+55. https://www.skyebrowse.com/news/posts/faro-vs-leica
+56. https://www.servnetuk.com/compare/servers/hpe-proliant-xd685-vs-lenovo-thinksystem-sr680a-v3
+
+Status: DONE_WITH_CONCERNS
+Summary: Bảng đủ năm nhóm với spec và giá có URL; giá mua server tại Việt Nam, SKU Gigabyte, FARO Orbis, giá FPT trên trang gốc, và công suất tủ mật độ cao của IDC vẫn chưa xác minh.
+EXIT=0

@@ -2,7 +2,8 @@
 
 > Chương bổ sung cho bộ hồ sơ Công trường số CC1. Áp dụng cho mọi dự án của tập đoàn: công trường khép kín (điểm chạm 1.1–4.2) và công trường tuyến (L1–L8).
 > Gộp từ 3 bản brainstorm ngày 31/10/2026 trong `plans/reports/advisory-261031-0821-*.md`.
-> Nhãn: **[F]** nguồn đã kiểm · **[V]** số do nhà cung cấp tự công bố · **[I]** đề xuất/ước lượng của nhóm tư vấn.
+> Nhãn: **[F]** nguồn đã kiểm · **[V]** số do nhà cung cấp tự công bố · **[S]** đại lý hoặc trang tổng hợp · **[I]** đề xuất/ước lượng của nhóm tư vấn.
+> Tên thiết bị, phần mềm, mô hình cụ thể cho từng khối: VII.18.
 > Trạng thái: trang web đăng bản tóm tắt; bản đầy đủ ở file này.
 
 ---
@@ -51,7 +52,7 @@ Thang quyết định (mỗi bậc chỉ mở khi bộ đề chứng minh bậc 
 | Tầng | Vai trò | Công nghệ đề xuất | Liên hệ hồ sơ hiện có |
 |---|---|---|---|
 | 1. Biên | Thiết bị thu tại công trường (camera, drone, trạm cân, cổng LiDAR, chip UWB, GNSS); thị giác máy; chạy khi mất mạng | DeepStream, YOLO, ReID, MQTT, Milvus/FAISS trong RAM | Edge AI Box Jetson AGX Orin 64GB / L4 |
-| 2. Nền dữ liệu | Lưu mọi sự kiện, hồ sơ, mô hình 3D | Kho đối tượng S3 nội bộ; PostgreSQL + PostGIS + TimescaleDB; Kafka nhận từ MQTT | Mới |
+| 2. Nền dữ liệu | Lưu mọi sự kiện, hồ sơ, mô hình 3D | Kho đối tượng S3 nội bộ (Garage hoặc Ceph); PostgreSQL + PostGIS + TimescaleDB; Kafka nhận từ MQTT | Mới |
 | 3. Tri thức | Ontology, đồ thị, chỉ mục hồ sơ | Neo4j hoặc Apache AGE; pgvector hoặc Qdrant; tìm kiếm lai BM25 + vector + rerank | Mới |
 | 4. Suy luận | LLM, tác tử, bộ giải | vLLM/SGLang, định tuyến mô hình nhỏ/lớn, LangGraph, OR-Tools | Site OS 3.5, Command Node 2× L40S |
 | 5. Ứng dụng | Người dùng cuối và thiết bị tại công trường | Phần mềm: Site OS, trợ lý kỹ sư, soạn nháp nhật ký/biên bản, cảnh báo Zalo. Thiết bị: máy tính bảng, màn hình tại cổng, cổng xoay/barie, loa và đèn cảnh báo, vòng tay rung | Điểm chạm 1.1–4.2, L1–L8 |
@@ -73,10 +74,10 @@ Hai kho vector tách biệt:
 |---|---|---|
 | Trả lời, tác tử | LLM mở 8–30B, ưu tiên dạng MoE, xử lý tốt tiếng Việt | Chọn bằng bộ đề của CC1, không bằng bảng xếp hạng quảng cáo |
 | Tác vụ khó, ít gặp | LLM mở lớn hơn, hoặc API thương mại cho dữ liệu không nhạy cảm | Định tuyến theo độ khó và độ nhạy dữ liệu |
-| Embedding | Đa ngôn ngữ (họ bge-m3), tinh chỉnh trên cặp hỏi–đáp ngành | Cải thiện truy xuất nhiều hơn đổi LLM |
-| Đọc scan, bản vẽ | Mô hình thị giác–ngôn ngữ mở (họ Qwen-VL, Vintern) | Trích biên bản, bảng |
+| Embedding | Đa ngôn ngữ (ứng viên Qwen3-Embedding-4B, đối chứng bge-m3), tinh chỉnh trên cặp hỏi–đáp ngành | Cải thiện truy xuất nhiều hơn đổi LLM |
+| Đọc scan, bản vẽ | Mô hình thị giác–ngôn ngữ mở (ứng viên PaddleOCR-VL-1.6, Qwen3-VL-8B) | Trích biên bản, bảng |
 
-Tên mô hình cụ thể chỉ chốt lúc triển khai, sau khi chạy bộ đề.
+Tên mô hình cụ thể chỉ chốt lúc triển khai, sau khi chạy bộ đề. Danh sách ứng viên và giấy phép: VII.18.
 
 #### Hình chi tiết: Huấn luyện mô hình ngành CC1
 
@@ -242,7 +243,7 @@ Lọc theo dự án, nhà thầu, vai trò **trước khi** tìm kiếm. Tài li
 | BOQ, dự toán Excel | Đọc ô trực tiếp |
 | Bản vẽ DWG/DXF | Đọc thực thể vector: text, block, layer, kích thước (ezdxf; DWG qua bộ chuyển ODA) |
 | Mô hình IFC | Đọc thuộc tính và bộ khối lượng `Qto_*` |
-| PDF có lớp chữ | Trích chữ + cấu trúc trang (Docling, Marker) |
+| PDF có lớp chữ | Trích chữ + cấu trúc trang (Docling) |
 | Scan: biên bản, nhật ký, phiếu cân giấy | Quy trình dưới đây |
 | Bản vẽ scan | Nhận diện ký hiệu + OCR số kích thước; chỉ khi không còn bản vector |
 
@@ -251,8 +252,10 @@ Lọc theo dự án, nhà thầu, vai trò **trước khi** tìm kiếm. Tài li
 1. **Tiền xử lý:** chỉnh nghiêng, khử nhiễu, tách dấu đỏ bằng lọc kênh màu để con dấu không đè chữ.
 2. **Phân vùng bố cục:** tiêu đề, bảng, đoạn, chữ ký, con dấu (PP-Structure, DocLayout-YOLO, Docling).
 3. **Nhận dạng chữ:**
-   - chữ in: PaddleOCR hoặc Surya;
-   - viết tay, chữ mờ: VietOCR.
+   - trang scan, bảng, con dấu: PaddleOCR-VL-1.6;
+   - dòng chữ in: PP-OCRv5 với từ điển tiếng Việt;
+   - viết tay, chữ mờ: VietOCR tinh chỉnh trên nhật ký CC1;
+   - không dùng PP-OCRv6 (từ điển thiếu dấu tiếng Việt) và Surya, Marker (giấy phép trọng số giới hạn doanh thu). Chi tiết: VII.18.
 4. **Cấu trúc bảng:** Table Transformer hoặc PP-Structure.
 5. **Trích trường theo lược đồ:** mô hình thị giác–ngôn ngữ đọc ảnh + chữ OCR, trả JSON theo lược đồ sinh từ ontology.
 6. **Kiểm tra chéo hai đường:** OCR cổ điển và mô hình thị giác. Khớp thì qua; lệch thì đưa người duyệt.
@@ -396,6 +399,8 @@ Tiêu chí chấm khi khảo sát:
 
 Tiêu chí 3 là điều kiện loại: không xuất dữ liệu mở thì không nối được vào lõi.
 
+Model cụ thể, thông số và giá niêm yết tham khảo cho từng nhóm: VII.18 mục 6–10.
+
 ## VII.9. Thuật toán trong proposal và độ chín
 
 Độ chín: **Phổ biến** (đã đại trà, mua được) · **Thí điểm** (có dự án thật, chưa đại trà) · **Nghiên cứu** (rủi ro cao tại công trường Việt Nam). **[I]**
@@ -500,6 +505,8 @@ Chỉ số đo:
 | Huấn luyện | Thuê theo giờ node 8× H100/H200 | Không mua (phương án A) |
 | Lưu trữ | Kho đối tượng vài trăm TB | Tăng theo số dự án |
 | Mạng | Chỉ đẩy siêu dữ liệu (metadata) lên tập đoàn, dưới 2 Mbps / công trường | — |
+
+Ứng viên GPU, vỏ máy và điều kiện chỗ đặt cho phương án B: VII.18 mục 11.
 
 GPU trong nước:
 
@@ -610,9 +617,231 @@ Lộ trình theo phương án B, 11 giai đoạn, M0 = tháng phê duyệt. Chi 
 - FPT AI Factory, giá H100: [factory.fpt.ai](https://factory.fpt.ai/ai-insights/h100-cost), [amcompute.com](https://www.amcompute.com/gpu-cloud-prices/h100)
 - Gợi ý mô hình mở cho tiếng Việt (trang nhà cung cấp, bằng chứng yếu): [siliconflow.com](https://www.siliconflow.com/articles/best-open-source-llm-for-vietnamese)
 - Luật 91/2025/QH15, NĐ 356/2025/NĐ-CP: xem PHẦN VI, mục VI.5.
+- PaddleOCR 3.7.0, PaddleOCR-VL-1.6, Apache-2.0: [github.com/PaddlePaddle/PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR), [huggingface.co](https://huggingface.co/PaddlePaddle/PaddleOCR-VL-1.6)
+- PP-OCRv6 thiếu dấu tiếng Việt: [issue #18254](https://github.com/PaddlePaddle/PaddleOCR/issues/18254)
+- Qwen3.6-27B, Apache-2.0, 262.144 token: [huggingface.co](https://huggingface.co/Qwen/Qwen3.6-27B)
+- Surya, giấy phép trọng số: [github.com/datalab-to/surya](https://github.com/datalab-to/surya)
+- MinIO bản cộng đồng đóng kho mã 25/04/2026: [github.com/minio/minio](https://github.com/minio/minio)
+- Ricoh fi-8190: [pfu.ricoh.com](https://www.pfu.ricoh.com/global/scanners/fi/fi8190/); giá: [cdw.com](https://www.cdw.com/product/ricoh-fi-8190-document-scanner-desktop-gigabit-lan-usb-3.2-gen-1/6984541)
+- Ricoh fi-8950: [pfu.ricoh.com](https://www.pfu.ricoh.com/global/scanners/fi/fi8950/)
+- NVIDIA RTX PRO 6000 Blackwell Server Edition: [nvidia.com](https://www.nvidia.com/en-us/data-center/rtx-pro-6000-blackwell-server-edition/)
+- NVIDIA DGX B200, công suất node: [docs.nvidia.com](https://docs.nvidia.com/dgx/dgxb200-user-guide/introduction-to-dgxb200.html)
+- Jetson AGX Orin, DeepStream: [marketplace.nvidia.com](https://marketplace.nvidia.com/en-us/enterprise/robotics-edge/jetson-agx-orin-developer-kit/), [docs.nvidia.com](https://docs.nvidia.com/deepstream/text/DS_Performance)
+- DJI Matrice 4E: [enterprise.dji.com](https://enterprise.dji.com/matrice-4-series/specs); Zenmuse L3: [enterprise.dji.com](https://enterprise.dji.com/zenmuse-l3/specs)
+- VNGEONET, phí thuê bao RTK: [gddt.vngeonet.vn](https://gddt.vngeonet.vn/)
+- Nghị định 288/2025/NĐ-CP về tàu bay không người lái: [thuvienphapluat.vn](https://thuvienphapluat.vn/phap-luat-nha-dat/toan-van-nghi-dinh-2882025ndcp-quy-dinh-ve-quan-ly-tau-bay-khong-nguoi-lai-va-phuong-tien-bay-khac--11079.html)
+- Sewio, độ chính xác UWB: [docs.sewio.net](https://docs.sewio.net/docs/faq-system-14221353.html)
+- Suprema FaceStation F2: [docs.supremainc.com](https://docs.supremainc.com/en/device/facestation_f2/product-specifications)
+- Viettel IDC, gói chỗ đặt: [viettel-idc.com.vn](https://viettel-idc.com.vn/dich-vu/viettel-colocation.html)
+- Toàn bộ bảng nghiên cứu kèm URL từng dòng: `plans/reports/grok-261031-1534-spec/r1.out`, `r2.out`, `r3.out`
 
 ## VII.17. Việc còn mở
 
 1. Gắn tên 2 dự án mẫu đợt 1 theo tiêu chí VII.13.
 2. Lấy báo giá cả danh sách VII.8; thay số ước lượng ở VII.12 bằng báo giá thật.
 3. Rà nghĩa vụ theo Luật Trí tuệ nhân tạo 134/2025/QH15 cho 1.5 và 3.5.
+4. Báo giá tại Việt Nam cho các dòng VII.18 còn "chưa xác minh": camera Hanwha/Axis, hộp Jetson công nghiệp, neo và thẻ Sewio, cổng xoay, ANPR, máy chủ 8 GPU.
+5. Đo tỷ lệ lỗi ký tự trên 200 trang hồ sơ CC1 cho PaddleOCR-VL-1.6, PP-OCRv5 và VietOCR; đo số trang/giờ của PaddleOCR-VL-1.6 trên đúng GPU của cụm.
+6. Hỏi từng trung tâm dữ liệu (Viettel IDC, FPT, VNPT, CMC) công suất tủ liên tục theo kW và cách làm mát. Một node 8 GPU cần khoảng 6,5–14 kW, gói công bố chỉ tới 1.500 W; số "3–6 tỷ chỗ đặt" của giai đoạn 2 chưa kiểm cho tủ mật độ cao.
+
+## VII.18. Đặc tả chi tiết từng thành phần
+
+Bảng dưới gọi tên cụ thể thiết bị, phần mềm và mô hình cho từng khối của lõi. Đây là **danh sách ứng viên để lấy báo giá và đưa vào vòng thi đấu bộ đề**, chưa phải quyết định mua. Mô hình chỉ chốt sau khi chạy bộ đề (VII.3). Giá là giá niêm yết công khai ở nước ngoài, ghi kèm ngày và nguồn; chưa gồm thuế nhập khẩu, VAT, vận chuyển, lắp đặt; không thay số ngân sách ở VII.12. Đối chiếu ngày 31/10/2026.
+
+### Trả lời nhanh: OCR dùng gì
+
+| Câu hỏi | Trả lời |
+|---|---|
+| Chụp tại hiện trường bằng gì? | Máy tính bảng công nghiệp Samsung Galaxy Tab Active5 Pro (QS, giám sát) và điện thoại Galaxy XCover7 Pro (tổ trưởng). App CC1 dùng bộ chụp tài liệu sẵn của hệ điều hành (VisionKit trên iOS, ML Kit Document Scanner trên Android) để cắt trang, kéo phẳng ngay trên máy. Ảnh gửi về cụm trong nước, không qua dịch vụ OCR đám mây nước ngoài. |
+| Máy scan nào? | Ricoh fi-8190 tại mỗi ban chỉ huy (90 trang/phút, khay 100 tờ). Ricoh fi-8950 tại trụ sở để quét tập trung hồ sơ A3/A4. CZUR ET24 Pro cho sổ nhật ký, hợp đồng đóng cuốn. Colortrac SmartLF Scan 36 cho bản vẽ rời khổ A0. |
+| Back end xử lý thế nào? | App hoặc máy scan đẩy file lên API nội bộ (FastAPI) → file vào kho đối tượng trong nước → hàng đợi việc → máy chủ GPU chạy mô hình OCR qua vLLM → kết quả JSON được kiểm theo lược đồ → ô có độ tin thấp vào màn hình duyệt (Label Studio) cho QS → bản đã duyệt ghi vào PostgreSQL và nối vào ontology, BOQ. Toàn bộ chạy trên cụm suy luận đặt tại trung tâm dữ liệu thuê trong nước. |
+| Mô hình nào? | Docling cho PDF đã có lớp chữ. PaddleOCR-VL-1.6 (0,9 tỷ tham số) cho trang scan, bảng, con dấu. PP-OCRv5 với từ điển tiếng Việt cho dòng chữ in. VietOCR cho chữ viết tay. Qwen3-VL-8B để trích trường ra JSON khi biểu mẫu khó. |
+| Huấn luyện hay dùng lại? | Dùng lại mô hình mở, không huấn luyện từ đầu. Bước đầu chạy nguyên bản và đo tỷ lệ lỗi ký tự trên 200 trang hồ sơ CC1. Chỉ tinh chỉnh chỗ lỗi cao: VietOCR với khoảng 2.000–5.000 dòng viết tay đã cắt; LoRA trích trường với khoảng 1.000–5.000 trang đã gán ô **[I]**. Mỗi lần QS sửa một ô thành một mẫu huấn luyện. |
+
+Nhãn trong mục này: **[F]** đã mở trang gốc kiểm tra · **[V]** số nhà sản xuất tự công bố · **[S]** đại lý hoặc trang tổng hợp · **[I]** suy luận của nhóm tư vấn.
+
+### 1. Thu nhận hồ sơ: máy quét và thiết bị chụp
+
+| Thiết bị | Đặt ở đâu | Thông số chính | Giá tham khảo | Ghi chú |
+|---|---|---|---|---|
+| Ricoh fi-8190 | Mỗi ban chỉ huy | 90 trang/phút, 180 mặt/phút, khay 100 tờ, tới 13.000 tờ/ngày, USB + mạng LAN **[F]** | 1.784 USD (CDW, 24/10/2026) **[S]** | Rẻ hơn: Canon DR-S150, 45 trang/phút, từ 967 USD **[V]** |
+| Ricoh fi-8950 | Trụ sở, quét tập trung | 150 trang/phút, khổ A3, khay 750 tờ, tới 130.000 tờ/ngày **[V]** | 13.260 USD (CDW, 29/10/2026) **[S]** | Rẻ hơn: Canon DR-G2140, 140 trang/phút, khoảng 7.806 USD **[S]** |
+| CZUR ET24 Pro | Trụ sở hoặc luân chuyển | Máy quét sách 24 MP, tới A3, khoảng 1–1,5 giây/trang **[S]** | khoảng 615 USD (10/2026) **[S]** | Cho sổ, hợp đồng đóng cuốn. Không đạt chuẩn ảnh lưu trữ |
+| Zeutschel OS Q2 | Trụ sở, chỉ khi cần ảnh chuẩn lưu trữ | Khổ A2, tới 600 ppi, sách dày tới 150 mm **[V]** | chưa xác minh | Chỉ mua nếu số hóa hồ sơ cũ cần chuẩn lưu trữ |
+| Colortrac SmartLF Scan 36 | Trụ sở | Bản vẽ rời rộng 914 mm (A0), 600 dpi, khoảng 7 kg **[S]** | 2.390 EUR chưa VAT (Áo, 10/2026) **[S]** | Không quét được tập đóng gáy |
+| Samsung Galaxy Tab Active5 Pro 5G | QS, giám sát | 10,1 inch, IP68, MIL-STD-810H, 5G **[S]** | khoảng 1.044 USD (29/10/2026) **[S]** | Chụp biên bản, xem trợ lý, nhận cảnh báo |
+| Samsung Galaxy XCover7 Pro | Tổ trưởng | IP68, MIL-STD-810H, pin tháo được **[S]** | khoảng 600 USD (08/2026) **[S]** | Chụp phiếu và ảnh hiện trường |
+
+### 2. OCR và trích trường: phần mềm, mô hình
+
+| Việc | Phần mềm / mô hình | Giấy phép | Dùng nguyên hay tinh chỉnh |
+|---|---|---|---|
+| PDF đã có lớp chữ | Docling | MIT **[F]** | Dùng nguyên, chạy trên CPU |
+| Trang scan, bảng, con dấu | PaddleOCR-VL-1.6, 0,9 tỷ tham số, trong bộ PaddleOCR 3.7.0 (06/2026) | Apache-2.0 **[F]** | Dùng nguyên. LoRA chỉ khi lỗi trên 200 trang CC1 còn cao |
+| Tọa độ ô bảng | PP-StructureV3 (trong PaddleOCR) | Apache-2.0 | Dùng nguyên |
+| Dòng chữ in tiếng Việt | PP-OCRv5 với từ điển `vi_dict.txt` | Apache-2.0 | Có model tiếng Việt sẵn hay phải huấn luyện đầu nhận dạng: chưa xác minh. Nếu phải huấn luyện: 300–1.000 trang mỗi loại phiếu **[I]** |
+| Chữ viết tay (nhật ký) | VietOCR | Apache-2.0 | Tinh chỉnh với 2.000–5.000 dòng viết tay CC1 (khoảng 200–500 trang) **[I]** |
+| Trích trường ra JSON theo lược đồ | Qwen3-VL-8B-Instruct | Apache-2.0 **[S]** | Dùng nguyên; LoRA khi JSON sai, 1.000–5.000 trang đã gán ô **[I]** |
+
+Không chọn:
+
+- **PP-OCRv6:** từ điển nhận dạng thiếu toàn bộ nguyên âm có dấu tiếng Việt (U+1EA0–U+1EF9); nhà phát triển hẹn sửa ở bản sau ([issue #18254](https://github.com/PaddlePaddle/PaddleOCR/issues/18254)) **[F]**.
+- **Surya, Marker:** trọng số mô hình miễn phí chỉ cho tổ chức dưới 5 triệu USD vốn hoặc doanh thu; CC1 phải mua giấy phép thương mại **[F]**.
+- **MinerU:** điều khoản giấy phép gắn với doanh thu, cần pháp chế đọc trước khi dùng **[S]**.
+
+Chưa có số đo công khai nào về độ chính xác dấu tiếng Việt trên biên bản, nhật ký, phiếu cân. Thứ tự đo trên 200 trang CC1: PaddleOCR-VL-1.6, PP-OCRv5 với từ điển tiếng Việt, VietOCR đã tinh chỉnh. Tốc độ (trang/giờ) của PaddleOCR-VL-1.6 cũng phải đo trên đúng GPU của cụm trước khi cam kết thời gian số hóa.
+
+### 3. Back end OCR
+
+| Khâu | Phần mềm | Chạy ở đâu |
+|---|---|---|
+| Nhận file | FastAPI (MIT) | Cụm suy luận |
+| Kho file | Garage (AGPL-3.0) hoặc Ceph. Không dùng MinIO bản cộng đồng: kho mã đã đóng, chỉ đọc từ 25/04/2026 **[F]** | Trung tâm dữ liệu trong nước |
+| Hàng đợi, việc dài có bước người duyệt | Temporal (MIT); hoặc hàng đợi ngay trong PostgreSQL khi tải nhỏ | Cụm suy luận |
+| Máy chạy mô hình | vLLM (Apache-2.0) phục vụ PaddleOCR-VL-1.6; lô lớn chạy ban đêm | 1 GPU của cụm suy luận |
+| Kiểm kết quả | JSON Schema sinh từ ontology + Pydantic; sai lược đồ thì không ghi | Cùng API |
+| Màn hình duyệt và gán nhãn | Label Studio (Apache-2.0) | Cụm suy luận |
+| Ghi nghiệp vụ | PostgreSQL + PostGIS + TimescaleDB | Cụm suy luận |
+
+### 4. Trợ lý hỏi đáp có trích dẫn (RAG)
+
+| Khối | Ứng viên | Giấy phép | Dùng nguyên hay tinh chỉnh |
+|---|---|---|---|
+| Mô hình trả lời | Qwen3.6-27B (đọc được cả ảnh, ngữ cảnh 262.144 token) **[F]**; Gemma 4 31B và 26B A4B **[V]** | Qwen: Apache-2.0 **[F]**; Gemma 4: Apache-2.0 **[S]** | Thi đấu trên bộ đề; bên thắng được tinh chỉnh LoRA (VII.3, giai đoạn 7) |
+| Embedding | Qwen3-Embedding-4B; bge-m3 làm phương án đối chứng | Apache-2.0 / MIT | Dùng nguyên, rồi tinh chỉnh trên 20–50 nghìn cặp hỏi–đoạn hồ sơ **[I]** |
+| Xếp hạng lại | Qwen3-Reranker-0.6B; lên 4B nếu bộ đề không tăng | Apache-2.0 | Dùng nguyên |
+| Tách từ tiếng Việt cho tìm từ khóa | underthesea | Apache-2.0 | Dùng nguyên |
+| Kho vector | pgvector trong PostgreSQL; Qdrant khi lọc nặng | PostgreSQL License / Apache-2.0 | Dưới 30 dự án chưa cần kho vector riêng **[I]** |
+| Tìm từ khóa (mã định mức, số hiệu TCVN) | OpenSearch | Apache-2.0 | Dùng nguyên |
+| Phục vụ mô hình | vLLM; SGLang nếu đo được nhanh hơn trên đúng GPU | Apache-2.0 | Dùng nguyên |
+| Kênh người dùng | Web nội bộ + Zalo OA | — | Mô hình chạy ở cụm, không cài lên điện thoại |
+
+Đường truy xuất tự viết: lọc quyền → tìm từ khóa + vector → xếp hạng lại → trả lời kèm trích dẫn. Số liệu khối lượng, chi phí luôn lấy qua truy vấn ERP, không để mô hình tự sinh.
+
+### 5. Ontology và đồ thị
+
+| Khối | Ứng viên | Ghi chú |
+|---|---|---|
+| Lược đồ | LinkML | Viết lược đồ CC1 một lần, sinh JSON Schema cho OCR và API |
+| Đồ thị | Apache AGE trên PostgreSQL | Cùng máy chủ với hồ sơ và vector. Neo4j Community (GPLv3) là phương án thay |
+| Đọc BIM IFC 4.3 | IfcOpenShell (LGPL-3.0) | Lấy GUID và cấu kiện vào đồ thị |
+| Đọc tuyến LandXML | Bộ đọc tự viết | Chỉ cần lý trình Km+m |
+| Bản vẽ DWG | ODA File Converter sang DXF, rồi ezdxf | Hoặc yêu cầu đơn vị thiết kế nộp DXF/IFC |
+| Ánh xạ BOQ sang mã định mức | Tra mã đã biết → tìm từ khóa + embedding → QS xác nhận | Không tinh chỉnh LLM cho tới khi có 5–20 nghìn dòng QS đã chốt **[I]** |
+
+### 6. Thiết bị đo khối lượng
+
+| Thiết bị | Vai trò | Thông số chính | Giá tham khảo | Ghi chú |
+|---|---|---|---|---|
+| DJI Matrice 4E | Ảnh RTK mặt bằng, đống vật liệu, đắp | 1.219 g, bay 49 phút, RTK 1 cm + 1 ppm ngang **[F]** | 5.189–5.499 USD (10/2026) **[S]** | Dưới 2 kg nhưng vẫn cần giấy phép bay theo Nghị định 288/2025/NĐ-CP |
+| DJI Matrice 400 + Zenmuse L2 hoặc L3 | LiDAR hành lang tuyến, taluy, cầu có cây | M400 IP55, tải tới 2,1 kg; L3 tới 16 xung, 3–4 cm @120 m **[V]** | M400 10.450 USD; L2 khoảng 14.400 USD; L3 17.400 USD **[S]** | Chỉ cho dự án tuyến, không mua cho mọi công trường |
+| DJI Terra / PIX4Dmatic / Agisoft Metashape | Ghép ảnh, đám mây điểm, tính thể tích | — | Terra từ 1.680 USD/năm **[S]**; PIX4Dmatic 2.290–4.990 USD/năm **[V]**; Metashape Pro khoảng 3.499 USD một lần **[S]** | WebODM tự chạy nếu không muốn ảnh rời khỏi máy chủ CC1 |
+| Leica BLK360 G2 | Quét trong nhà, MEP, so lệch BIM | 4 mm @10 m, 680.000 điểm/giây, 0,85 kg **[S]** | khoảng 28.700 USD (10/2026) **[S]** | — |
+| Leica RTC360 | Kết cấu, nhà cao, cầu | Tới 130 m, 2 triệu điểm/giây **[V]** | từ 82.936 USD (shop Leica) **[V]** | FARO Focus Premium là phương án thay |
+| Emesent Hovermap ST-X | Hầm, gầm cầu, chỗ người không đứng được | SLAM, IP65, ±10–15 mm **[V]** | chưa xác minh | — |
+| Loadscan | Thể tích thùng xe tại cổng | LiDAR, hãng công bố ±1%; có chứng nhận đo lường ở Úc, New Zealand, Mỹ **[V]** | chưa xác minh | Tại Việt Nam dùng để giám sát; số tấn vẫn lấy từ cân đã kiểm định |
+| Cân xe công trường | Số tấn vật tư rời | Cân đã kiểm định đo lường | chưa xác minh | Tỷ trọng = tấn cân / m³ quét |
+| VNGEONET | Hiệu chỉnh RTK cho drone, rover, máy thi công | Mạng trạm CORS quốc gia | 750.000 VND/máy thu/tháng; 6.750.000 VND/máy thu/năm **[F]** | Thuê bao trước, chỉ mua trạm base riêng ở vùng mất sóng |
+| CloudCompare, PDAL, Open3D | So lệch đám mây điểm với BIM tự động | Mã mở | 0 | Nối vào kho đối tượng, không khóa hãng |
+
+### 7. Dẫn hướng máy và bê tông
+
+| Thiết bị | Vai trò | Giá tham khảo | Ghi chú |
+|---|---|---|---|
+| Trimble Earthworks / Leica MC1 / Topcon MC-Max | Dẫn hướng 3D máy đào, ủi, san, lu theo mặt thiết kế | khoảng 45.000–80.000 USD/máy 3D **[S]**; Topcon kit máy đào 29.750 GBP **[S]** | Chỉ cho dự án tuyến mẫu; điều kiện là xuất được tệp hoàn công về lõi |
+| Giatec SmartRock | Nhiệt độ, độ chín, ước cường độ bê tông | chưa xác minh | Không dây, gắn vào thép trước khi đổ |
+| Command Center | Cùng việc, có dây | từ 49 USD/cảm biến **[V]** | Cường độ cho nghiệm thu vẫn theo phòng thí nghiệm; cảm biến dùng để quyết định thời điểm tháo ván khuôn |
+
+### 8. Camera và máy tính biên
+
+| Thiết bị | Vai trò | Thông số chính | Giá tham khảo |
+|---|---|---|---|
+| Hanwha PNV-A9081R | Camera cố định: cổng, hàng rào, sàn | 4K 30 fps, AI phân loại người/mặt/xe/biển số trên máy, ONVIF **[V]** | chưa xác minh |
+| Axis Q1656-DLE | Vành đai ban đêm | Camera + radar, giảm báo động giả **[V]** | chưa xác minh |
+| Axis Q6358-LE | PTZ trên nóc lán, bãi rộng | 4K, zoom quang 31×, tự bám mục tiêu **[V]** | chưa xác minh |
+| Trailer camera năng lượng mặt trời 4G | Điểm nóng trên tuyến: bãi máy, nút giao | Pin mặt trời + ắc quy, không cần kéo điện **[S]** | 18.500–22.000 USD chưa gồm camera (08/2026) **[S]** |
+| NVIDIA Jetson AGX Orin 64GB, hộp công nghiệp (Aetina, Advantech) | Máy biên tại lán: bảo hộ lao động, người lạ, biển số | 275 TOPS; khoảng 4 luồng 1080p30 với mô hình phát hiện người PeopleNet **[I]** | Bộ phát triển 3.499 USD **[V]**; hộp công nghiệp chưa xác minh |
+| Jetson Thor T5000 | Bãi đúc, trạm trộn, nhiều camera một chỗ | 128 GB; khoảng 11 luồng cùng giả định **[I]** | chưa xác minh |
+
+Điều kiện chọn camera: luồng RTSP nội bộ, tắt dịch vụ đám mây của hãng, vector khuôn mặt chỉ nằm ở biên. Dòng camera phổ thông có cloud hãng bắt buộc không đưa vào hệ mới.
+
+### 9. Định vị công nhân
+
+| Thiết bị | Vai trò | Thông số chính | Giá tham khảo |
+|---|---|---|---|
+| Sewio RTLS: trạm neo + thẻ Leonardo | Vị trí trong công trường khép kín, sàn, hầm | Tối thiểu 4 neo mỗi vùng, tầm 15–50 m; môi trường công nghiệp khoảng dưới 1 m, khoảng 30 cm ở độ tin cậy cao **[V]** | chưa xác minh |
+| Litum (thẻ gắn mũ) | Có mặt trong hầm, báo sự cố | Neo khoảng mỗi 100 m dọc hầm **[V]** | chưa xác minh |
+| Blackline G7c | Người làm việc đơn độc trên tuyến: ngã, bất động, SOS | 4G, GNSS sai số 5 m, cập nhật mặc định 5 phút, IP67 **[V]** | chưa xác minh |
+
+Số neo phỏng tính cho sàn kín khoảng 3.000 m²: khoảng 16 neo **[I]**. Thép và bê tông làm giảm độ chính xác so với số hãng công bố; phải đo tại công trường mẫu.
+
+### 10. Cổng: khuôn mặt, cổng xoay, biển số
+
+| Thiết bị | Vai trò | Thông số chính | Giá tham khảo |
+|---|---|---|---|
+| Suprema FaceStation F2 | Cổng người chính, đối soát thầu phụ | 50.000 mặt, IP65, −20 đến 50°C **[V]** | 62.000.000 VND (cửa hàng Việt Nam, không ghi ngày) **[S]** |
+| ZKTeco SpeedFace-V5L | Cổng phụ, chấm công ca | 6.000–10.000 người (hai đại lý ghi khác nhau) **[S]** | 6,6–10,7 triệu VND **[S]** |
+| Cổng xoay có cổng Wiegand | Làn người sau máy nhận mặt | — | chưa xác minh |
+| Camera ANPR chuyên dụng | Biển số xe tải tại cổng vật tư | — | chưa xác minh |
+
+### 11. Hạ tầng GPU, chỗ đặt, lưu trữ
+
+| Khối | Ứng viên | Thông số chính | Giá tham khảo |
+|---|---|---|---|
+| Cụm suy luận: 2 node × 8 GPU 96 GB | NVIDIA RTX PRO 6000 Blackwell Server Edition trong vỏ Supermicro 8 GPU | 96 GB GDDR7/GPU, tối đa 600 W/GPU **[F]** | chưa xác minh |
+| Phương án thay cho cụm suy luận | NVIDIA H200 NVL | 141 GB HBM3e/GPU **[V]** | chưa xác minh |
+| Cụm huấn luyện sau cổng G2 | 8× B200 làm mát gió (Dell PowerEdge XE9780, Lenovo SR680a V3) | DGX B200 tham chiếu: tối đa 14,3 kW/node **[V]** | Liên hệ hãng |
+| Thuê GPU 3 tháng đầu | FPT AI Factory, Viettel | H100/H200, dữ liệu ở Việt Nam | VII.11 |
+| Chỗ đặt máy | Viettel IDC, FPT, VNPT, CMC | 1 node 8 GPU tiêu thụ khoảng 6,5–14 kW **[S]/[V]** | Gói công bố của Viettel IDC chỉ tới 1.500 W/10U **[V]**; giá tủ mật độ cao chưa xác minh |
+| Kho đối tượng | Garage hoặc Ceph, ổ NVMe | — | — |
+
+### 12. Huấn luyện
+
+| Khối | Ứng viên | Giấy phép |
+|---|---|---|
+| SFT LoRA, DPO, GRPO | TRL | Apache-2.0 **[S]** |
+| Tiết kiệm bộ nhớ khi thử | Unsloth (chỉ thư viện lõi) | Lõi Apache-2.0; bản Studio AGPL-3.0 **[S]** |
+| Giao diện theo dõi chạy | LlamaFactory | Apache-2.0 **[S]** |
+| Học tăng cường nhiều node | verl | Apache-2.0 **[S]** |
+| Xóa dữ liệu cá nhân trước khi huấn luyện | Presidio + mẫu nhận dạng tự viết (CCCD, mã số thuế, biển số) | MIT **[S]** |
+
+Số mẫu theo từng bước giữ như [giai đoạn 7](./plans/261031-0940-ai-core-plan-a-b/phase-07-model-training-program.md).
+
+### 13. Tác tử
+
+| Khối | Ứng viên | Ghi chú |
+|---|---|---|
+| Khung tác tử | Thư viện LangGraph (MIT) | Không dùng LangGraph Agent Server: giấy phép Elastic 2.0 **[S]** |
+| Công cụ | API FastAPI với danh sách công cụ cố định; đọc ERP qua truy vấn đã viết sẵn | Mô hình không được tự sinh số liệu |
+| Phê duyệt | Temporal hoặc bảng phê duyệt trên PostgreSQL | Mọi lệnh ghi chờ người có quyền |
+| Nhật ký kiểm toán | Bảng chỉ thêm, không sửa, trên PostgreSQL | — |
+| Tinh chỉnh gọi công cụ | LoRA, 5–20 nghìn mẫu **[I]** | Sau cổng G3 |
+
+### 14. Đánh giá, vận hành, phân quyền
+
+| Khối | Ứng viên | Ghi chú |
+|---|---|---|
+| Chấm bộ đề | lm-evaluation-harness, promptfoo | Thêm tác vụ CC1, không sửa công cụ |
+| Đo chất lượng truy xuất | RAGAS, DeepEval | Không thay người chấm |
+| Dấu vết LLM | Langfuse tự host hoặc MLflow | Arize Phoenix không chọn: giấy phép Elastic 2.0 **[S]** |
+| Theo dõi máy, GPU | Prometheus + Grafana + NVIDIA DCGM | — |
+| Đăng nhập | Keycloak | Một nơi cấp tài khoản |
+| Quyền theo dự án, nhà thầu | Open Policy Agent | Lọc trước truy xuất và trước khi gọi công cụ |
+
+### Bộ thiết bị mẫu cho một công trường **[I]**
+
+| Hạng mục | Công trường khép kín khoảng 1 ha | Đoạn tuyến khoảng 10 km |
+|---|---|---|
+| Máy quét fi-8190 | 1 | 1 tại lán |
+| Máy tính bảng / điện thoại công nghiệp | 4 máy tính bảng | 2 máy tính bảng |
+| Camera cố định AI | 8 | 4–6 trong lán và bãi |
+| PTZ | 1 | — |
+| Trailer camera năng lượng mặt trời | — | 2–4 tại nút, bãi máy |
+| Máy biên Jetson AGX Orin 64GB | 1 | 1 tại lán |
+| Máy nhận mặt + cổng xoay | 2 làn | 2 làn tại lán |
+| Làn ANPR + barie | 1 | 1 |
+| UWB | khoảng 16 neo + thẻ theo đầu người | Không dùng |
+| Thiết bị cho người làm việc đơn độc | — | khoảng 15 |
+| Thuê bao VNGEONET | 1 | 1–2 |
+
+Máy quét A3, máy quét sách, máy quét bản vẽ, drone LiDAR và máy quét laser đặt ở trụ sở hoặc luân chuyển, không nhân theo công trường.
