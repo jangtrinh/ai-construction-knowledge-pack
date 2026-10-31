@@ -80,6 +80,8 @@ Tên mô hình cụ thể chỉ chốt lúc triển khai, sau khi chạy bộ đ
 
 ### Bộ đề kiểm thử: làm đầu tiên
 
+![Chỉ huy trưởng và QS cùng nhóm nghiên cứu AI xem kết quả thi đấu 4 mô hình mở trên bộ đề của CC1](./46b_AI_Core_Bo_De_Thi_Dau_Mo_Hinh_HUD.jpg)
+
 - 300–500 câu hỏi thật do chỉ huy trưởng, QS, giám sát viết, kèm đáp án và tài liệu nguồn.
 - Nhóm câu: tra tiêu chuẩn, tra khối lượng, đối chiếu nghiệm thu, an toàn, hợp đồng, công trường tuyến, câu bẫy.
 - Mỗi dự án nạp vào bổ sung 30–50 câu riêng.
@@ -142,6 +144,8 @@ Ontology đạt khi các câu sau trả lời được bằng truy vấn đồ t
 
 ## VII.5. Knowledge RAG
 
+![Chỉ huy trưởng hỏi trợ lý AI trên máy tính bảng ngay tại sàn thi công; câu trả lời kèm trích dẫn tài liệu gốc](./45b_AI_Core_Tro_Ly_Trich_Dan_Chi_Huy_Truong_HUD.jpg)
+
 ### Quy trình
 
 1. **Bóc tách:** OCR và trích bảng (mục VII.6).
@@ -159,6 +163,8 @@ Ontology đạt khi các câu sau trả lời được bằng truy vấn đồ t
 Lọc theo dự án, nhà thầu, vai trò **trước khi** tìm kiếm. Tài liệu dự án A không bao giờ lọt vào câu trả lời cho người dự án B. Mỗi đợt nạp dự án có kiểm thử rò rỉ riêng.
 
 ## VII.6. OCR và đọc hồ sơ
+
+![QS quét hồ sơ giấy có dấu đỏ; màn hình đặt bản scan cạnh bảng đã trích để khớp BOQ](./44b_AI_Core_OCR_Doc_Ho_So_So_Hoa_HUD.jpg)
 
 ### Nguồn có cấu trúc trước, OCR sau cùng
 
@@ -379,6 +385,8 @@ Chỉ số đo:
 ## VII.11. Phần cứng và hạ tầng
 
 Đã chốt phương án B (31/10/2026): mua cụm suy luận 2 node 8× GPU 96 GB ngay; thuê GPU trong nước 3 tháng đầu; sau cổng G2 (M3–M4) mua cụm huấn luyện 2 node Blackwell 8 GPU; máy đặt tại trung tâm dữ liệu thuê. Bảng dưới là cấu hình phương án A, giữ để so sánh. Chi tiết B: [giai đoạn 2](./plans/261031-0940-ai-core-plan-a-b/phase-02-inference-cluster-datacenter.md), [giai đoạn 6](./plans/261031-0940-ai-core-plan-a-b/phase-06-procurement-gate-training-cluster.md).
+
+![Kỹ sư CC1 kiểm tra cụm suy luận và cụm huấn luyện GPU đặt tại trung tâm dữ liệu thuê trong nước](./43b_AI_Core_Cum_GPU_Trung_Tam_Du_Lieu_HUD.jpg)
 
 | Tầng | Cấu hình tham khảo | Số lượng |
 |---|---|---|

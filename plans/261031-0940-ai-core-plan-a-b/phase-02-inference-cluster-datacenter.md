@@ -6,6 +6,8 @@ Thời gian: M0–M2 · Phụ thuộc: Giai đoạn 0 · Phụ trách: Kỹ sư 
 
 Có hạ tầng phục vụ trợ lý cho kỹ sư ngay từ tháng 2, đặt trong trung tâm dữ liệu thuê trong nước.
 
+![Kỹ sư CC1 kiểm tra cụm suy luận và cụm huấn luyện GPU đặt tại trung tâm dữ liệu thuê trong nước](../../43b_AI_Core_Cum_GPU_Trung_Tam_Du_Lieu_HUD.jpg)
+
 ## Việc cần làm
 
 1. Gửi yêu cầu báo giá chỗ đặt (khoảng 40 kW, có dự phòng) tới Viettel IDC và FPT cùng lúc.

@@ -6,6 +6,8 @@ Thời gian: M0–M3 · Phụ thuộc: Giai đoạn 3 (một phần) · Phụ tr
 
 Chọn mô hình nền bằng số đo trên câu hỏi thật của CC1, không bằng bảng xếp hạng chung.
 
+![Chỉ huy trưởng và QS cùng nhóm nghiên cứu AI xem kết quả thi đấu 4 mô hình mở trên bộ đề của CC1](../../46b_AI_Core_Bo_De_Thi_Dau_Mo_Hinh_HUD.jpg)
+
 ## Việc cần làm
 
 1. Thu 300–500 câu hỏi thật từ chỉ huy trưởng, QS, kỹ sư; chia nhóm: tra cứu, tính khối lượng, đối chiếu, câu bẫy.

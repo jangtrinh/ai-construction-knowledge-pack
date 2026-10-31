@@ -6,6 +6,8 @@ Thời gian: M1–M9 · Phụ thuộc: Giai đoạn 3, 4 · Phụ trách: Nhóm 
 
 Nạp toàn bộ dưới 30 dự án đang thi công, 10–15 dự án mỗi quý, mỗi dự án có BOQ đã ánh xạ và đối chiếu khối lượng chạy.
 
+![QS quét hồ sơ giấy có dấu đỏ; màn hình đặt bản scan cạnh bảng đã trích để khớp BOQ](../../44b_AI_Core_OCR_Doc_Ho_So_So_Hoa_HUD.jpg)
+
 ## Việc cần làm
 
 1. Dựng luồng OCR: PaddleOCR-VL cho bố cục và bảng, VietOCR cho chữ viết tay; duyệt người khi độ tin thấp.

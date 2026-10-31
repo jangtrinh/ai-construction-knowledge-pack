@@ -6,6 +6,8 @@ Thời gian: M3–M8 · Phụ thuộc: Giai đoạn 1, 4 · Phụ trách: Ban ch
 
 Chỉ mua cụm huấn luyện khi đã có người, có dữ liệu và mô hình đã chứng minh được giá trị.
 
+![Kỹ sư CC1 kiểm tra cụm suy luận và cụm huấn luyện GPU đặt tại trung tâm dữ liệu thuê trong nước](../../43b_AI_Core_Cum_GPU_Trung_Tam_Du_Lieu_HUD.jpg)
+
 ## Việc cần làm
 
 1. Họp cổng G2 (M3–M4) với 3 điều kiện: bộ đề ≥ 80% nhóm tra cứu, ≥ 50 nghìn mẫu huấn luyện khả dụng, ≥ 10 người.

@@ -6,6 +6,8 @@ Thời gian: M5–M15 · Phụ thuộc: Giai đoạn 2, 5 · Phụ trách: Nhóm
 
 Đưa hồ sơ các dự án đã xong vào lõi để trợ lý tra cứu và học từ hồ sơ các dự án đã xong.
 
+![QS quét hồ sơ giấy có dấu đỏ; màn hình đặt bản scan cạnh bảng đã trích để khớp BOQ](../../44b_AI_Core_OCR_Doc_Ho_So_So_Hoa_HUD.jpg)
+
 ## Việc cần làm
 
 1. Kiểm kê hồ sơ lưu trữ: số thùng, số trang, loại tài liệu.

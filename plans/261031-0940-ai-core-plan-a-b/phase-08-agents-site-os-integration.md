@@ -6,6 +6,8 @@ Thời gian: M4–M12 · Phụ thuộc: Giai đoạn 3, 5, 7 · Phụ trách: K�
 
 Trợ lý làm được việc trong luồng công việc thật, bắt đầu chỉ đọc, chỉ ghi khi đã chứng minh an toàn.
 
+![Chỉ huy trưởng hỏi trợ lý AI trên máy tính bảng ngay tại sàn thi công; câu trả lời kèm trích dẫn tài liệu gốc](../../45b_AI_Core_Tro_Ly_Trich_Dan_Chi_Huy_Truong_HUD.jpg)
+
 ## Việc cần làm
 
 1. Nối trợ lý vào Site OS, ERP, hệ thống hồ sơ qua API có phân quyền.
