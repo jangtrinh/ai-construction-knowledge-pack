@@ -1,6 +1,6 @@
 # Kế hoạch lõi AI CC1: Phương án A và B
 
-Ngày: 31/10/2026 · Trạng thái: chờ chủ đầu tư chọn phương án
+Ngày: 31/10/2026 · Trạng thái: **đã chọn phương án B theo cổng** (31/10/2026)
 
 Liên quan:
 
@@ -167,11 +167,15 @@ Có tiền và phạm vi toàn tập đoàn thì nên chọn B vì tốc độ. 
 
 Nếu cổng tháng 3–4 không đạt (thiếu người hoặc thiếu dữ liệu), dừng ở mức A+: giữ cụm suy luận, tiếp tục thuê GPU, chưa mua cụm huấn luyện. Phần vốn chưa giải ngân không bị mất.
 
-## 7. Câu hỏi cho chủ đầu tư
+## 7. Quyết định của chủ đầu tư (31/10/2026)
 
-1. Chọn phương án nào: A, B, hay B theo cổng?
-2. Số dự án đang thi công của tập đoàn là bao nhiêu (để tính thời gian phủ)?
-3. Có sẵn chỗ đặt máy chủ (phòng máy, điện, làm mát) không, hay thuê trung tâm dữ liệu?
+| Câu hỏi | Chốt |
+|---|---|
+| Phương án | B theo cổng |
+| Số dự án đang thi công | Dưới 30 → với 10–15 dự án mỗi quý, phủ toàn tập đoàn trong khoảng 6–9 tháng |
+| Chỗ đặt máy chủ | Thuê trung tâm dữ liệu (Viettel IDC hoặc FPT), cần báo giá theo kW và làm mát chất lỏng |
+
+Việc kế tiếp: lấy báo giá cụm suy luận, cụm huấn luyện và chỗ đặt; mô tả công việc cho trưởng nhóm nghiên cứu AI; danh sách dự án cho đợt nạp đầu.
 
 ## 8. Nguồn giá
 

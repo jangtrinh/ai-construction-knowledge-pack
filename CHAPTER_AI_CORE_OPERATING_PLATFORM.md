@@ -17,9 +17,10 @@ Quyết định của chủ đầu tư (31/10/2026):
 
 | Vấn đề | Chốt |
 |---|---|
-| Quy mô | Nền tảng chung cho toàn tập đoàn từ năm 1; nạp dữ liệu theo đợt 3–5 dự án mỗi quý |
-| Hạ tầng | Kết hợp: suy luận và dữ liệu nhạy cảm đặt nội bộ; thuê GPU trong nước để huấn luyện |
-| Đội ngũ | Đội lõi 8–9 người; kỹ sư QS của từng dự án kiêm nhiệm xác nhận ánh xạ BOQ |
+| Phương án | **B theo cổng** (chốt 31/10/2026): xem `plans/261031-0940-ai-core-plan-a-b/plan.md` |
+| Quy mô | Toàn tập đoàn, dưới 30 dự án đang thi công; nạp 10–15 dự án mỗi quý, phủ hết trong khoảng 6–9 tháng |
+| Hạ tầng | Mua cụm suy luận ngay; thuê GPU trong nước 3 tháng đầu; đặt mua cụm huấn luyện tại cổng tháng 3–4; đặt máy tại trung tâm dữ liệu thuê (Viettel IDC hoặc FPT) |
+| Đội ngũ | 18–22 người + 10–15 người gán nhãn; kỹ sư QS của từng dự án kiêm nhiệm xác nhận ánh xạ BOQ |
 | Đo đạc | Dùng thiết bị và phần mềm thương mại đã kiểm định thay vì tự chế; khảo sát và lấy báo giá cả danh sách cùng lúc |
 | Dự án mẫu đợt 1 | 1 dự án khép kín có BIM + 1 dự án tuyến (chưa gắn tên) |
 
