@@ -1141,6 +1141,92 @@
       }
     }
 
+
+    .plan-cost {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-75);
+      padding: var(--sp-300);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--r-xl);
+      background-color: var(--bg-canvas);
+      height: 100%;
+    }
+
+    .pc-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-100) var(--sp-300);
+      font-size: 14px;
+      color: var(--ink-secondary);
+      margin-bottom: var(--sp-100);
+    }
+
+    .pc-legend i {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+      margin-right: var(--sp-75);
+      vertical-align: -1px;
+    }
+
+    .pc-legend .muted {
+      color: var(--ink-muted);
+    }
+
+    .pc-row {
+      display: grid;
+      grid-template-columns: 64px 24px 1fr 96px;
+      align-items: center;
+      gap: var(--sp-100);
+      min-height: 30px;
+      font-size: 15px;
+    }
+
+    .pc-row.is-year-end {
+      margin-bottom: var(--sp-200);
+    }
+
+    .pc-lab {
+      font-weight: 700;
+    }
+
+    .pc-tag {
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--ink-secondary);
+    }
+
+    .pc-track {
+      position: relative;
+      height: 16px;
+    }
+
+    .pc-bar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: var(--hi);
+      border-radius: 0 4px 4px 0;
+    }
+
+    .pc-bar.is-a,
+    .pc-legend .is-a {
+      background: linear-gradient(to right, #2F6DB5 0 var(--split, 100%), rgba(47, 109, 181, 0.3) 0);
+    }
+
+    .pc-bar.is-b,
+    .pc-legend .is-b {
+      background: linear-gradient(to right, var(--accent) 0 var(--split, 100%), rgba(13, 106, 56, 0.3) 0);
+    }
+
+    .pc-val {
+      color: var(--ink-secondary);
+      font-variant-numeric: tabular-nums;
+    }
+
     .modes-section.after-core {
       border-top: 1px solid var(--border-hairline);
       padding-top: 64px;
@@ -2724,7 +2810,8 @@
     <section class="core-section is-surface" id="ai-rollout" aria-label="Triển khai lõi vận hành AI">
       <h2 class="section-title">Triển khai lõi AI</h2>
       <p class="section-lead">Nền tảng chung cho toàn tập đoàn, nạp dữ liệu theo đợt. Bản đầy đủ: <a href="https://github.com/jangtrinh/ai-construction-knowledge-pack/blob/main/CHAPTER_AI_CORE_OPERATING_PLATFORM.md">Phần VII, Lõi vận hành AI</a>.</p>
-      <div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Vấn đề</th><th scope="col">Đã chốt (31/10/2026)</th></tr></thead><tbody><tr><td>Quy mô</td><td>Nền tảng chung cho toàn tập đoàn từ năm 1; nạp 3–5 dự án mỗi quý</td></tr><tr><td>Hạ tầng</td><td>Suy luận và dữ liệu nhạy cảm đặt nội bộ; thuê GPU trong nước để huấn luyện</td></tr><tr><td>Đội ngũ</td><td>Đội lõi 8–9 người; QS từng dự án kiêm nhiệm xác nhận ánh xạ BOQ</td></tr><tr><td>Đo đạc</td><td>Thiết bị thương mại đã kiểm định; khảo sát và báo giá cả danh sách cùng lúc</td></tr><tr><td>Dự án mẫu đợt 1</td><td>1 dự án khép kín có BIM + 1 dự án tuyến (chưa gắn tên)</td></tr></tbody></table></div>
+      <div class="core-block plan-ab-block"><h3 class="core-block-title">Phương án A và B</h3><p class="core-note">Chủ đầu tư có ngân sách. Khi tiền không còn là ràng buộc, ràng buộc thật là dữ liệu sẵn sàng, người giỏi và thời gian. Kế hoạch đầy đủ: <a href="https://github.com/jangtrinh/ai-construction-knowledge-pack/blob/main/plans/261031-0940-ai-core-plan-a-b/plan.md">plan A/B</a>. Mọi số tiền là ước lượng thô, phải có báo giá trước khi trình duyệt ngân sách.</p><figure class="core-figure"><img src="./media/ai-core/plan-a-b-compare.png" alt="So sánh phương án A tinh gọn và phương án B đầu tư mạnh, kèm khuyến nghị B giải ngân theo cổng" width="1600" height="710" loading="lazy" /></figure><div class="core-two"><div><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Tiêu chí</th><th scope="col">A · Tinh gọn</th><th scope="col">B · Đầu tư mạnh</th></tr></thead><tbody><tr><td>Phủ toàn tập đoàn</td><td>2–3 năm</td><td>~12 tháng</td></tr><tr><td>Chi phí 3 năm</td><td>17–35 tỷ</td><td>105–180 tỷ</td></tr><tr><td>Phần cứng</td><td>~2 tỷ: 1 cụm suy luận</td><td>~30–44 tỷ: 2 node Blackwell + 2 node suy luận</td></tr><tr><td>Đội ngũ</td><td>8–9 người</td><td>18–22 người + 10–15 gán nhãn</td></tr><tr><td>Kiểm soát dữ liệu</td><td>Tốt (trong nước)</td><td>Tối đa (trong hạ tầng CC1)</td></tr><tr><td>Lặp huấn luyện</td><td>Theo đợt thuê</td><td>Hằng tuần</td></tr><tr><td>Mô hình ngành riêng</td><td>Có thể, chậm</td><td>Có, từ tháng 6</td></tr><tr><td>Rủi ro tuyển người</td><td>Thấp</td><td>Cao</td></tr><tr><td>Rủi ro lãng phí phần cứng</td><td>Thấp</td><td>Trung bình đến cao</td></tr></tbody></table></div></div><div><figure class="plan-cost" aria-label="Chi phí 3 năm theo năm của phương án A và B, tỷ đồng"><figcaption class="core-sub">Chi phí theo năm (tỷ đồng, ước lượng thô)</figcaption><div class="pc-legend"><span><i class="is-a"></i>A · Tinh gọn (3 năm 17–35 tỷ)</span><span><i class="is-b"></i>B · Đầu tư mạnh (3 năm 105–180 tỷ)</span><span class="muted">Phần đậm: mức thấp · phần nhạt: tới mức cao</span></div><div class="pc-row" title="Năm 1, phương án A: 7–13 tỷ đồng"><span class="pc-lab">Năm 1</span><span class="pc-tag is-a">A</span><span class="pc-track"><span class="pc-bar is-a" style="--hi:14.4%;--split:53.8%"></span></span><span class="pc-val">7–13 tỷ</span></div><div class="pc-row is-year-end" title="Năm 1, phương án B: 55–90 tỷ đồng"><span class="pc-lab"></span><span class="pc-tag is-b">B</span><span class="pc-track"><span class="pc-bar is-b" style="--hi:100.0%;--split:61.1%"></span></span><span class="pc-val">55–90 tỷ</span></div><div class="pc-row" title="Năm 2, phương án A: 5–12 tỷ đồng"><span class="pc-lab">Năm 2</span><span class="pc-tag is-a">A</span><span class="pc-track"><span class="pc-bar is-a" style="--hi:13.3%;--split:41.7%"></span></span><span class="pc-val">5–12 tỷ</span></div><div class="pc-row is-year-end" title="Năm 2, phương án B: 23–40 tỷ đồng"><span class="pc-lab"></span><span class="pc-tag is-b">B</span><span class="pc-track"><span class="pc-bar is-b" style="--hi:44.4%;--split:57.5%"></span></span><span class="pc-val">23–40 tỷ</span></div><div class="pc-row" title="Năm 3, phương án A: 5–10 tỷ đồng"><span class="pc-lab">Năm 3</span><span class="pc-tag is-a">A</span><span class="pc-track"><span class="pc-bar is-a" style="--hi:11.1%;--split:50.0%"></span></span><span class="pc-val">5–10 tỷ</span></div><div class="pc-row is-year-end" title="Năm 3, phương án B: 27–48 tỷ đồng"><span class="pc-lab"></span><span class="pc-tag is-b">B</span><span class="pc-track"><span class="pc-bar is-b" style="--hi:53.3%;--split:56.2%"></span></span><span class="pc-val">27–48 tỷ</span></div></figure></div></div><figure class="core-figure"><img src="./media/ai-core/plan-a-b-timeline.png" alt="Lộ trình 24 tháng của phương án A và phương án B theo cổng" width="1600" height="663" loading="lazy" /></figure><h4 class="core-sub">Khuyến nghị: B giải ngân theo cổng</h4><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Mốc</th><th scope="col">Việc</th><th scope="col">Cổng để đi tiếp</th></tr></thead><tbody><tr><td>Tháng 0</td><td>Phê duyệt B; tuyển trưởng nhóm nghiên cứu và 6–8 người đầu; mua cụm suy luận</td><td>—</td></tr><tr><td>Tháng 0–3</td><td>Thuê GPU trong nước: thi đấu mô hình, SFT v1, đo dữ liệu thật; lấy báo giá cụm huấn luyện và chỗ đặt</td><td>Bộ đề đạt mốc; đủ dữ liệu; đã tuyển ≥ 10 người</td></tr><tr><td>Tháng 3–4</td><td>Cổng mua sắm: đặt hàng cụm huấn luyện</td><td>Cả 3 điều kiện trên</td></tr><tr><td>Tháng 6–8</td><td>Cụm huấn luyện vận hành; CPT mô hình ngành CC1, chưng cất quy mô lớn</td><td>Nghiệm thu cụm</td></tr><tr><td>Tháng 6–12</td><td>Nạp 10–15 dự án mỗi quý; số hóa hồ sơ cũ</td><td>Không rò rỉ giữa dự án; kỹ sư dùng hằng ngày</td></tr></tbody></table></div><ul class="core-list"><li>Không đạt cổng tháng 3–4: dừng ở A+ (giữ cụm suy luận, tiếp tục thuê GPU). Vốn chưa giải ngân không mất.</li><li>Cả hai phương án đều không huấn luyện mô hình từ đầu: tiền không giải được bài toán thiếu dữ liệu ngành ở quy mô hàng nghìn tỷ token.</li></ul></div>
+      <div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Vấn đề</th><th scope="col">Đã chốt (31/10/2026, theo phương án A; cập nhật khi chọn phương án)</th></tr></thead><tbody><tr><td>Quy mô</td><td>Nền tảng chung cho toàn tập đoàn từ năm 1; nạp 3–5 dự án mỗi quý</td></tr><tr><td>Hạ tầng</td><td>Suy luận và dữ liệu nhạy cảm đặt nội bộ; thuê GPU trong nước để huấn luyện</td></tr><tr><td>Đội ngũ</td><td>Đội lõi 8–9 người; QS từng dự án kiêm nhiệm xác nhận ánh xạ BOQ</td></tr><tr><td>Đo đạc</td><td>Thiết bị thương mại đã kiểm định; khảo sát và báo giá cả danh sách cùng lúc</td></tr><tr><td>Dự án mẫu đợt 1</td><td>1 dự án khép kín có BIM + 1 dự án tuyến (chưa gắn tên)</td></tr></tbody></table></div>
       <div class="core-block"><h3 class="core-block-title">Lộ trình</h3><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Mốc</th><th scope="col">Lõi AI làm gì</th><th scope="col">Điều kiện qua mốc</th></tr></thead><tbody><tr><td>Tháng 0–3</td><td>2 dự án mẫu, ontology v0, bộ đề 300 câu, RAG trên hồ sơ + TCVN, OCR phiếu cân và hóa đơn</td><td>Đúng ≥ 80% nhóm tra cứu, 100% có trích dẫn</td></tr><tr><td>Tháng 3–9</td><td>Nhận sự kiện từ điểm chạm năm 1; đồ thị tri thức; tác tử chỉ đọc; OCR biên bản và BOQ</td><td>Kỹ sư dùng hằng ngày</td></tr><tr><td>Tháng 9–18</td><td>Tác tử có quyền ghi qua phê duyệt; đối chiếu 6 nguồn khối lượng</td><td>Nhật ký kiểm toán đủ, không rò rỉ giữa dự án</td></tr><tr><td>Năm 3</td><td>Site OS đa tác tử + bộ giải tối ưu</td><td>Theo hồ sơ giai đoạn 3</td></tr></tbody></table></div></div>
       <div class="core-block"><h3 class="core-block-title">Lộ trình huấn luyện mô hình</h3><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Tuần</th><th scope="col">Việc</th><th scope="col">Cổng chất lượng</th></tr></thead><tbody><tr><td>0–4</td><td>Bộ đề, thi đấu mô hình, chọn nền</td><td>1 mô hình chính + 1 dự phòng</td></tr><tr><td>4–8</td><td>Tinh chỉnh embedding, reranker, OCR phiếu cân</td><td>Truy xuất top-5 tăng; OCR đạt ngưỡng đợt 1</td></tr><tr><td>8–14</td><td>SFT LoRA v1 (trích biên bản, gọi công cụ); DPO từ phản hồi kỹ sư</td><td>JSON hợp lệ ≥ 99%; không nhóm nào giảm điểm</td></tr><tr><td>14–20</td><td>RLVR cho ánh xạ BOQ và phép tính khối lượng; chưng cất từ thầy</td><td>Đúng mã định mức top-3 tăng rõ</td></tr><tr><td>Tháng 6+</td><td>Quyết định CPT nếu bộ đề còn hổng thuật ngữ</td><td>Chỉ chạy khi có bằng chứng</td></tr></tbody></table></div></div><div class="core-block"><h3 class="core-block-title">Nạp một dự án (khoảng 2 tuần công)</h3><div class="core-two"><div><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Bước</th><th scope="col">Công</th></tr></thead><tbody><tr><td>Thu hồ sơ, BIM, BOQ; kiểm bảng mã cũ</td><td>2–3 ngày</td></tr><tr><td>Gắn dự án vào ontology: phân khu hoặc đoạn Km, WBS</td><td>2–3 ngày</td></tr><tr><td>Ánh xạ BOQ: máy gợi ý, QS dự án xác nhận</td><td>2–4 ngày / 2.000 dòng</td></tr><tr><td>Nối điểm chạm đang chạy</td><td>1–2 ngày</td></tr><tr><td>Bổ sung 30–50 câu bộ đề riêng</td><td>1 ngày</td></tr><tr><td>Chạy bộ đề, kiểm thử rò rỉ, bàn giao</td><td>1–2 ngày</td></tr></tbody></table></div></div><div><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Tiêu chí dự án mẫu</th><th scope="col">Khép kín</th><th scope="col">Tuyến</th></tr></thead><tbody><tr><td>Dữ liệu số</td><td>BIM xuất IFC, BOQ Excel</td><td>Tim tuyến LandXML, BOQ Excel</td></tr><tr><td>Giai đoạn</td><td>Đang thi công phần thân, còn ≥ 12 tháng</td><td>Đang thi công nền hoặc cầu, còn ≥ 12 tháng</td></tr><tr><td>Điểm chạm quý đầu</td><td>1.1–1.4</td><td>L1–L3, L8</td></tr><tr><td>Con người</td><td>Chỉ huy trưởng, QS viết bộ đề</td><td>Như bên cạnh</td></tr></tbody></table></div></div></div></div>
       <div class="core-block"><h3 class="core-block-title">Đội lõi</h3><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Vai trò</th><th scope="col">Số người</th></tr></thead><tbody><tr><td>Kỹ sư dữ liệu</td><td>2</td></tr><tr><td>Kỹ sư ML / LLM</td><td>2</td></tr><tr><td>Kỹ sư tri thức ngành (kỹ sư xây dựng)</td><td>2</td></tr><tr><td>MLOps / hạ tầng</td><td>1</td></tr><tr><td>Quản lý sản phẩm</td><td>1</td></tr><tr><td>Bảo mật, pháp chế (kiêm nhiệm)</td><td>0,5</td></tr></tbody></table></div></div>
