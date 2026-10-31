@@ -53,7 +53,7 @@ Nhãn: **[F]** đã đọc trên trang chính chủ; **[S]** nguồn thứ ba; *
 
 ## 4. VNX
 
-**Chủ xác nhận là VNX Robotics (31/10/2026).** Phần dưới là những gì tìm được trước khi xác nhận. Tìm "VNX" + IoT + xây dựng không ra công ty khớp. Đơn vị duy nhất có tên VNX:
+**Chủ xác nhận là VNX Robotics (31/10/2026).** Phần dưới là những gì tìm được trước khi xác nhận. Tìm "VNX" + IoT + xây dựng không ra công ty khớp. Đơn vị mang tên VNX tìm được:
 - VNX Robotics JSC, TP.HCM, nhà sáng lập Phạm Thanh Hữu, lập 2025; "VNX" = Vietnam eXcellence **[S]**.
 - Sản phẩm: robot bốn chân VietRover-T5 (tuần tra tự động, camera nhiệt + RGB, LiDAR dựng bản đồ 3D), AMR, robot lễ tân, thiết bị nhúng, ROS 2 **[S]**/**[F]**.
 - Trang chủ nêu các ngành kho vận, nông nghiệp, thiết bị nhúng, hạ tầng công nghiệp, sản xuất; không nêu xây dựng **[F]**.
