@@ -881,6 +881,44 @@
     /* ==========================================================================
        LÕI VẬN HÀNH AI + TRIỂN KHAI
        ========================================================================== */
+
+    .research-notice {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: var(--sp-200) 24px 0 24px;
+    }
+
+    .research-notice p {
+      margin: 0;
+      padding: 0 var(--sp-300);
+      background-color: var(--bg-surface);
+      border-left: 3px solid var(--accent);
+      font-size: 15px;
+      line-height: 24px;
+      color: var(--ink-secondary);
+    }
+
+    .research-notice p:first-child {
+      padding-top: var(--sp-200);
+      border-radius: 0 var(--r-xl) 0 0;
+    }
+
+    .research-notice p:last-child {
+      padding-top: var(--sp-75);
+      padding-bottom: var(--sp-200);
+      border-radius: 0 0 var(--r-xl) 0;
+    }
+
+    .research-notice strong {
+      color: var(--ink-primary);
+      font-weight: 700;
+    }
+
+    .research-notice a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
     .film-section {
       max-width: 1440px;
       margin-left: auto;
@@ -1318,6 +1356,10 @@
     <!-- ========================================================================
          PHẦN 1 (ĐẦU TIÊN): GIẢI PHÁP CÔNG TRƯỜNG MỞ (DẠNG TUYẾN) & CÔNG TRƯỜNG KHÉP KÍN
          ======================================================================== -->
+    <aside class="research-notice" role="note" aria-label="Thông tin về bản đề xuất">
+      <p><strong>Sản phẩm nghiên cứu độc lập của <a href="https://github.com/jangtrinh">Jang Trinh</a></strong> về chủ đề AI deployed engineering: đưa AI vào vận hành thật tại công trường. <strong>CC1 không tài trợ gì cho nghiên cứu này.</strong></p>
+      <p>© 2026 Jang Trinh. Ý tưởng, hình ảnh, phim và trang web của bản đề xuất này thuộc quyền sở hữu trí tuệ của Jang Trinh. Thực hiện trọn vẹn trong <strong>8 giờ</strong>, từ trang trắng đến bản hoàn thiện.</p>
+    </aside>
     <section class="film-section" aria-label="Phim giới thiệu">
       <figure class="hero-film">
         <video controls playsinline preload="metadata" poster="./media/cc1-proposal-poster.jpg" width="1920" height="1080" aria-label="Phim giới thiệu giải pháp công trường số CC1">
@@ -2875,7 +2917,7 @@
         <svg class="ph-icon" viewBox="0 0 256 256" aria-hidden="true"><line x1="128" y1="216" x2="128" y2="40" stroke="currentColor" stroke-width="18" stroke-linecap="round"/><polyline points="56 112 128 40 200 112" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </nav>
-    <p class="footer-credit">© 2026 <a href="https://github.com/jangtrinh">Jang Trinh</a>. Ý tưởng, hình ảnh, phim và trang web của bản đề xuất này thuộc quyền sở hữu trí tuệ của Jang Trinh. Thực hiện trọn vẹn trong <strong>8 giờ</strong>, từ trang trắng đến bản hoàn thiện.</p>
+    <p class="footer-credit">© 2026 <a href="https://github.com/jangtrinh">Jang Trinh</a>. Sản phẩm nghiên cứu độc lập; CC1 không tài trợ.</p>
   </footer>
 
   <!-- Full-screen 16:9 Lightbox -->

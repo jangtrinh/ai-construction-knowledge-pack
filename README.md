@@ -1,5 +1,7 @@
 # Ứng dụng AI vào ngành xây dựng — Knowledge Pack & Báo cáo Trực quan CC1 Digital Construction OS
 
+> **Sản phẩm nghiên cứu độc lập của Jang Trinh** về chủ đề AI deployed engineering: đưa AI vào vận hành thật tại công trường. **CC1 không tài trợ gì cho nghiên cứu này.** Ý tưởng, hình ảnh, phim và trang web thuộc quyền sở hữu trí tuệ của Jang Trinh.
+
 > **🌐 Live Presentation (GitHub Pages):** **[https://jangtrinh.github.io/ai-construction-knowledge-pack/](https://jangtrinh.github.io/ai-construction-knowledge-pack/)**
 >
 > - **Bản trình chiếu Web trực quan (Light Theme, Side-by-Side):** [`index.html`](./index.html) — Giải pháp cho **Công trường Mở (Tuyến cầu đường L1–L8)** & **Công trường Khép kín**, Toàn cảnh **28 điểm chạm hiện trường CC1**, và **17 hàng đối chiếu Side-by-Side** với **13 Bản vẽ kỹ thuật Isometric** (Tổng cộng 41 hình ảnh).
