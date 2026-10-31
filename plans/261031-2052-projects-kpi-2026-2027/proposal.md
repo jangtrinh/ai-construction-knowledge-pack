@@ -63,7 +63,7 @@ M0 = tháng phê duyệt = tháng 12/2026. Quy đổi: M1 = 01/2027, M12 = 12/20
 | P7 | Trợ lý và tác tử trong Site OS, ERP | 8 | Trợ lý làm việc trong luồng thật; chỉ ghi khi đã an toàn | ≥ 70% chỉ huy trưởng và QS dùng ≥ 3 ngày/tuần; 100% lệnh ghi có người duyệt | 04/2027–12/2027 | Trong chi phí đội | 1–3 |
 | P8 | Số hóa hồ sơ cũ | 9 | Hồ sơ dự án đã xong tra cứu được, dùng để huấn luyện | Nhóm hồ sơ ưu tiên số hóa xong; OCR mẫu ≥ 95% chữ in | 05/2027–03/2028 | 3–6 | 1 |
 | P9 | Tích hợp dữ liệu đơn vị đang dùng | Mới; báo cáo đơn vị đang dùng | Dữ liệu SUMO, Autodesk, VNX vào lõi bằng định dạng mở | 3 đơn vị có kết luận về xuất dữ liệu mở; dữ liệu đơn vị đạt tiêu chí chạy trong đối chiếu khối lượng | 11/2026–12/2027 | Không thêm; trong chi phí đội | Do P4 kiêm |
-| P10 | Điểm chạm tại công trường | VII.13, VII.14 | Lắp điểm chạm, dữ liệu chảy về lõi | 2 dự án mẫu chạy 1.1–1.4 hoặc L1–L3, L8; danh sách điểm chạm cho mọi dự án đã nạp được duyệt | 11/2026–12/2027 | **Ngoài tổng**, chờ báo giá (mục 5.3) | Đội công trường; P4 nối dữ liệu |
+| P10 | Điểm chạm tại công trường | VII.13, VII.14 | Lắp điểm chạm, dữ liệu chảy về lõi | 2 dự án mẫu chạy 1.1–1.4 hoặc L1–L3, L8; L9–L11 chạy trên đoạn tuyến mẫu; 0 hố có nước chưa rào; danh sách điểm chạm cho mọi dự án đã nạp được duyệt | 11/2026–12/2027 | **Ngoài tổng**, chờ báo giá (mục 5.3) | Đội công trường; P4 nối dữ liệu |
 
 ## 4. KPI theo chặng
 
@@ -173,9 +173,9 @@ Quy ước: KPI trước M12 chỉ dùng số mà nguồn đã đặt cho mốc 
 |---|---|---|
 | 11/2026 | Gửi yêu cầu báo giá cả danh sách VII.8 cùng lúc, gồm các dòng VII.18 còn "chưa xác minh": camera, hộp Jetson công nghiệp, neo và thẻ UWB, cổng xoay, ANPR | Thư yêu cầu báo giá |
 | 12/2026 | Nhận báo giá; ban chỉ đạo chốt danh sách điểm chạm cho 2 dự án mẫu | Biên bản chốt |
-| Q1/2027 | Chuẩn bị và lắp 1.1–1.4 tại dự án khép kín mẫu; L1–L3 tại dự án tuyến mẫu | Biên bản lắp đặt |
-| Q2–Q3/2027 | 1.1–1.5, L1–L3, L8 chạy và nối vào lõi; 1.5 chỉ bật sau đánh giá tác động; danh sách điểm chạm cho từng dự án đã nạp được ban chỉ đạo duyệt | Dữ liệu điểm chạm trong kho |
-| Q4/2027 | Bắt đầu 2.1–2.4, L4–L7 theo VII.14; tỷ lệ cờ sai trong định danh công nhân theo dõi và giảm theo quý | Báo cáo KPI |
+| Q1/2027 | Chuẩn bị và lắp 1.1–1.4 tại dự án khép kín mẫu; L1–L3 tại dự án tuyến mẫu. An ninh tuyến: lập sổ hố, ao (GNSS) toàn đoạn mẫu; thu số liệu mất mát, hao hụt nội bộ; đo hao hụt dầu nền 1 tháng trước khi đặt mục tiêu | Biên bản lắp đặt; sổ hố, ao; số liệu nền |
+| Q2–Q3/2027 | 1.1–1.5, L1–L3, L8 chạy và nối vào lõi; 1.5 chỉ bật sau đánh giá tác động; danh sách điểm chạm cho từng dự án đã nạp được ban chỉ đạo duyệt. L9 (máy, nhiên liệu) và L11 (hố, lối dân sinh) chạy trên đoạn mẫu; L10 cảm biến trên đường cáp và hàng rào; số hố có nước chưa rào về 0 trước mùa mưa | Dữ liệu điểm chạm trong kho; ảnh rào hằng tuần |
+| Q4/2027 | Bắt đầu 2.1–2.4, L4–L7 theo VII.14; tỷ lệ cờ sai trong định danh công nhân theo dõi và giảm theo quý. L9–L11: báo cáo lít dầu hao hụt trên 100 giờ máy so với mức nền, số cảnh báo trên km mỗi đêm và tỷ lệ xác minh đúng; L12 (trung tâm giám sát từ xa) để năm 2028 | Báo cáo KPI |
 
 ## 5. Ngân sách theo chặng
 
@@ -214,7 +214,7 @@ Thiết bị tại công trường và thiết bị đo **không nằm trong 55�
 - khoảng 4,2–4,3 tỷ cho một bộ dùng chung tại trụ sở;
 - khoảng 1,2–2,1 tỷ mỗi máy dẫn hướng 3D (chỉ dự án tuyến mẫu).
 
-Camera, UWB, cổng xoay, ANPR chưa có giá và có thể lớn hơn phần đã có giá. Ngân sách P10 theo chặng chỉ đặt được sau khi nhận báo giá tháng 12/2026. Nguồn: options-a-b-analysis.md, mục "Ngoài tổng".
+Camera, UWB, cổng xoay, ANPR và thiết bị an ninh tuyến L9–L11 (tracker, cảm biến mức dầu, cảm biến rung, camera phát hiện người) chưa có giá và có thể lớn hơn phần đã có giá. Ngân sách P10 theo chặng chỉ đặt được sau khi nhận báo giá tháng 12/2026. Nguồn: options-a-b-analysis.md, mục "Ngoài tổng".
 
 Hợp đồng hiện có với SUMO, Arotech, VNX do team ứng dụng đang quản lý, không cộng vào lõi. P9 chỉ dùng công của đội lõi.
 
@@ -254,7 +254,7 @@ Ngoài đội lõi:
 - QS kiêm nhiệm thuộc từng dự án;
 - chủ sở hữu sản phẩm do CC1 chỉ định.
 
-Bảng vai trò trong options-a-b-analysis.md §4 cộng ra 17–20, thiếu 1–2 so với 18–22. Giai đoạn 1 và giai đoạn 8 có nhắc kỹ sư backend và kỹ sư tích hợp hệ thống, nên dòng "Kỹ sư tích hợp, backend 1–2" được thêm để khớp tổng. Đây là đề xuất, cần chốt (câu hỏi mở 1).
+Bảng vai trò trong options-a-b-analysis.md §4 cộng ra 17–20, thiếu 1–2 so với 18–22. Giai đoạn 1 và giai đoạn 8 có nhắc kỹ sư backend và kỹ sư tích hợp hệ thống, nên dòng "Kỹ sư tích hợp, backend 1–2" được thêm để khớp tổng (chốt ngày 31/10/2026).
 
 ## 7. Rủi ro
 
@@ -285,12 +285,18 @@ Bảng vai trò trong options-a-b-analysis.md §4 cộng ra 17–20, thiếu 1�
 
 ## 9. Câu hỏi còn mở
 
-1. Thêm vai trò "kỹ sư tích hợp, backend 1–2 người" để bảng vai trò khớp 18–22, hay giữ bảng 17–20 và nâng số người ở vai trò khác?
-2. Số dự án đang thi công chính xác là bao nhiêu? Con số này quyết định nhịp nạp và mốc 100% (R3).
-3. VII.14 xếp 2.1–2.4 và L4–L7 ở M4–M12, còn chương VI ghi L4–L7 là "Năm 2". Bản này theo VII.14 và đặt các điểm chạm đó ở Q4/2027; cần chốt.
-4. Các điểm chạm an ninh tuyến L9–L12 (chương VI.7, L11 ưu tiên an toàn tính mạng) nằm ngoài phạm vi L1–L8 của bản này. Có đưa vào P10 không?
-5. Lãnh đạo tập đoàn giao ai cùng người đề xuất làm các việc tháng 11/2026 (hỏi VNX, Arotech, SUMO; lấy báo giá; chốt dự án mẫu)?
-6. Chủ sở hữu sản phẩm và pháp chế là ai (việc còn mở của plan.md)?
+Đã chốt ngày 31/10/2026:
+
+- Thêm vai trò "kỹ sư tích hợp, backend 1–2 người" để bảng vai trò khớp 18–22.
+- 2.1–2.4 và L4–L7 theo VII.14, bắt đầu Q4/2027. Chương VI đang ghi L4–L7 là "Năm 2", cần sửa cho khớp.
+- L9–L11 đưa vào P10 năm 2027; L12 để năm 2028.
+
+Còn mở:
+
+1. Số dự án đang thi công chính xác là bao nhiêu? Con số này quyết định nhịp nạp và mốc 100% (R3).
+2. Lãnh đạo tập đoàn giao ai cùng người đề xuất làm các việc tháng 11/2026 (hỏi VNX, Arotech, SUMO; lấy báo giá; chốt dự án mẫu)?
+3. Chủ sở hữu sản phẩm và pháp chế là ai (việc còn mở của plan.md)?
+4. Đoạn tuyến mẫu cho L9–L11 là đoạn nào, và có nằm trong vùng hạn chế bay không (VI.7.4)?
 
 ## 10. Nguồn
 
