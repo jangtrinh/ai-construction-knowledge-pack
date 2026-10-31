@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CC1 · Công trường số: 24 điểm chạm, 14 bản vẽ</title>
-  <meta name="description" content="Giải pháp công trường số CC1 cho công trường tuyến (L1–L8) và khép kín: 24 điểm chạm, 28 ảnh hiện trường, 14 bản vẽ kỹ thuật." />
+  <title>CC1 · Công trường số: lõi AI, 24 điểm chạm, 14 bản vẽ</title>
+  <meta name="description" content="Công trường số CC1: lõi vận hành AI dùng chung, 24 điểm chạm cho công trường tuyến (L1–L8) và khép kín, 28 ảnh hiện trường, 14 bản vẽ kỹ thuật." />
   <meta property="og:title" content="CC1 · Công trường số: 24 điểm chạm, 14 bản vẽ" />
-  <meta property="og:description" content="Giải pháp công trường số CC1 cho công trường tuyến (L1–L8) và khép kín: 24 điểm chạm, 28 ảnh hiện trường, 14 bản vẽ kỹ thuật." />
+  <meta property="og:description" content="Công trường số CC1: lõi vận hành AI dùng chung, 24 điểm chạm cho công trường tuyến (L1–L8) và khép kín, 28 ảnh hiện trường, 14 bản vẽ kỹ thuật." />
   <meta property="og:image" content="./01b_GD1_CP1_Cong_Kiem_Soat_AI_PPE_HUD.jpg" />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/png" href="./cc1_official_logo.png" />
@@ -877,6 +877,202 @@
       }
     }
 
+
+    /* ==========================================================================
+       LÕI VẬN HÀNH AI + TRIỂN KHAI
+       ========================================================================== */
+    .film-section {
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 24px 24px 0 24px;
+    }
+
+    .film-section .hero-film {
+      margin-bottom: 0;
+    }
+
+    .core-section {
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 48px 24px 64px 24px;
+      background-color: var(--bg-canvas);
+    }
+
+    .core-section.is-surface {
+      background-color: var(--bg-surface);
+      border-top: 1px solid var(--border-hairline);
+    }
+
+    .core-section a {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .core-principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-400);
+      padding-top: var(--sp-300);
+      border-top: 2px solid var(--ink-primary);
+    }
+
+    .core-principle h3 {
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 700;
+      margin-bottom: var(--sp-75);
+    }
+
+    .core-principle p,
+    .core-list {
+      font-size: 16px;
+      line-height: 26px;
+      color: var(--ink-secondary);
+    }
+
+    .core-block {
+      margin-top: var(--sp-600);
+      padding-top: var(--sp-400);
+      border-top: 1px solid var(--border-hairline);
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-300);
+    }
+
+    .core-block-title {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 700;
+    }
+
+    .core-sub {
+      font-size: 17px;
+      line-height: 24px;
+      font-weight: 700;
+      margin-bottom: var(--sp-100);
+    }
+
+    .core-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-500);
+    }
+
+    .core-list {
+      padding-left: var(--sp-300);
+    }
+
+    .core-list li + li {
+      margin-top: var(--sp-50);
+    }
+
+    .core-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--r-xl);
+      background-color: var(--bg-canvas);
+    }
+
+    .core-note {
+      font-size: 14px;
+      line-height: 22px;
+      color: var(--ink-muted);
+    }
+
+    .core-warning {
+      font-size: 15px;
+      line-height: 22px;
+      color: var(--ink-primary);
+      background-color: var(--accent-soft);
+      border-radius: var(--r-lg);
+      padding: var(--sp-100) var(--sp-200);
+    }
+
+    /* Tables scroll sideways on narrow screens instead of squeezing columns. */
+    .table-scroll {
+      overflow-x: auto;
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--r-xl);
+      background-color: var(--bg-canvas);
+    }
+
+    .core-table {
+      width: 100%;
+      min-width: 640px;
+      border-collapse: collapse;
+      font-size: 15px;
+      line-height: 22px;
+    }
+
+    .core-table th,
+    .core-table td {
+      padding: 10px 14px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .core-table th {
+      background-color: var(--bg-surface);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .core-table td {
+      color: var(--ink-secondary);
+    }
+
+    .core-table td:first-child {
+      color: var(--ink-primary);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .core-table tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .mat-chip {
+      display: inline-block;
+      padding: 0 var(--sp-75);
+      border-radius: var(--r-full);
+      font-size: 13px;
+      line-height: 22px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .mat-chip.is-proven {
+      background-color: var(--accent-soft);
+      color: var(--accent-hover);
+    }
+
+    .mat-chip.is-pilot {
+      background-color: var(--bg-elevated);
+      color: var(--ink-primary);
+    }
+
+    .mat-chip.is-research {
+      border: 1px solid var(--border-strong);
+      color: var(--ink-secondary);
+    }
+
+    .modes-section.after-core {
+      border-top: 1px solid var(--border-hairline);
+      padding-top: 64px;
+    }
+
+    @media (max-width: 768px) {
+      .core-principles,
+      .core-two {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 768px) {
       /* Ensure >=44px touch targets on tablet & mobile viewports */
       .brand-link,
@@ -911,9 +1107,11 @@
         <span>CC1 OS</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#site-modes" class="nav-link active" data-section="site-modes">Hai mô hình</a></li>
+        <li><a href="#ai-core" class="nav-link active" data-section="ai-core">Lõi AI</a></li>
+        <li><a href="#site-modes" class="nav-link" data-section="site-modes">Hai mô hình</a></li>
         <li><a href="#touchpoints-panorama" class="nav-link" data-section="touchpoints-panorama">24 điểm chạm</a></li>
         <li><a href="#sbs-deck" class="nav-link" data-section="sbs-deck">Đối chiếu bản vẽ</a></li>
+        <li><a href="#ai-rollout" class="nav-link" data-section="ai-rollout">Triển khai</a></li>
       </ul>
     </nav>
   </header>
@@ -922,7 +1120,7 @@
     <!-- ========================================================================
          PHẦN 1 (ĐẦU TIÊN): GIẢI PHÁP CÔNG TRƯỜNG MỞ (DẠNG TUYẾN) & CÔNG TRƯỜNG KHÉP KÍN
          ======================================================================== -->
-    <section class="modes-section" id="site-modes" aria-label="Giải pháp cho công trường mở và công trường khép kín">
+    <section class="film-section" aria-label="Phim giới thiệu">
       <figure class="hero-film">
         <video controls playsinline preload="metadata" poster="./media/cc1-proposal-poster.jpg" width="1920" height="1080" aria-label="Phim giới thiệu giải pháp công trường số CC1">
           <source src="./media/cc1-proposal-web-1080p.mp4" type="video/mp4" />
@@ -930,6 +1128,29 @@
         </video>
         <figcaption>Phim giới thiệu (3 phút 25 giây): giải pháp công trường số cho công trường khép kín và công trường mở.</figcaption>
       </figure>
+    </section>
+
+    <!-- ========================================================================
+         LÕI VẬN HÀNH AI (ưu tiên hiển thị ngay sau phim giới thiệu)
+         ======================================================================== -->
+    <section class="core-section" id="ai-core" aria-label="Lõi vận hành AI cho toàn bộ dự án">
+      <h2 class="section-title">Lõi vận hành AI cho toàn bộ dự án</h2>
+      <p class="section-lead">Một lõi dùng chung cho công trường khép kín (1.1–4.2) và công trường tuyến (L1–L8). Phần triển khai, chi phí và lộ trình nằm ở <a href="#ai-rollout">cuối trang</a>.</p>
+      <div class="core-principles">
+        <article class="core-principle"><h3>Không tự huấn luyện LLM từ đầu</h3><p>Tài sản lõi là ontology, đồ thị tri thức, nền dữ liệu và bộ đề kiểm thử. Mô hình ngôn ngữ thay được mỗi 6–12 tháng.</p></article>
+        <article class="core-principle"><h3>Không tự chế thiết bị đo</h3><p>Mỗi phép đo dùng sản phẩm thương mại đã kiểm định. CC1 làm phần nối dữ liệu, đối chiếu và cảnh báo.</p></article>
+        <article class="core-principle"><h3>Giá trị riêng: chuỗi khối lượng</h3><p>Thiết kế → dự toán → nhập về → thi công → nghiệm thu → thanh toán, nối bằng một ontology chung cho cả tập đoàn.</p></article>
+      </div>
+      <div class="core-block" id="core-layers"><h3 class="core-block-title">Kiến trúc 5 tầng</h3><figure class="core-figure"><img src="./media/ai-core/ai-core-five-layers.png" alt="Sơ đồ 5 tầng của lõi vận hành AI: biên, nền dữ liệu, tri thức, suy luận, ứng dụng" width="1600" height="656" loading="lazy" /></figure><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Tầng</th><th scope="col">Vai trò</th><th scope="col">Công nghệ</th></tr></thead><tbody><tr><td>1. Biên</td><td>Thị giác máy, cảm biến, chạy khi mất mạng</td><td>Edge AI Box Jetson Orin / L4, DeepStream, Milvus trong RAM</td></tr><tr><td>2. Nền dữ liệu</td><td>Lưu sự kiện, hồ sơ, mô hình 3D</td><td>Kho đối tượng S3 nội bộ, PostgreSQL + PostGIS + TimescaleDB, Kafka</td></tr><tr><td>3. Tri thức</td><td>Ontology, đồ thị, chỉ mục hồ sơ</td><td>Neo4j hoặc Apache AGE, pgvector hoặc Qdrant, tìm kiếm lai BM25 + vector</td></tr><tr><td>4. Suy luận</td><td>LLM, tác tử, bộ giải</td><td>LLM mở 8–30B (vLLM), LangGraph, OR-Tools, người phê duyệt lệnh ghi</td></tr><tr><td>5. Ứng dụng</td><td>Người dùng cuối</td><td>Site OS, trợ lý kỹ sư, nháp nhật ký và biên bản, cảnh báo Zalo</td></tr></tbody></table></div></div>
+      <div class="core-block"><h3 class="core-block-title">Vì sao không tự huấn luyện mô hình từ đầu</h3><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Lựa chọn</th><th scope="col">Cần gì</th><th scope="col">Kết luận</th></tr></thead><tbody><tr><td>Huấn luyện từ đầu</td><td>Hàng nghìn tỷ token, hàng chục nghìn giờ GPU trở lên</td><td>Không. Tiếng Việt ngành xây dựng chỉ cỡ vài trăm triệu token</td></tr><tr><td>Huấn luyện tiếp trên kho ngành</td><td>0,5–2 tỷ token sạch, vài trăm giờ GPU</td><td>Chỉ khi bộ đề cho thấy hổng thuật ngữ</td></tr><tr><td>Tinh chỉnh hẹp (LoRA)</td><td>Vài nghìn mẫu do kỹ sư gán nhãn</td><td>Có: trích biên bản, BOQ, nhật ký</td></tr><tr><td>RAG + công cụ + ontology</td><td>Nền dữ liệu, chỉ mục, phân quyền</td><td>Bắt buộc, làm trước tiên</td></tr></tbody></table></div><p class="core-note">Số liệu (khối lượng, dòng BOQ, điều khoản TCVN, lý trình) chỉ lấy từ hệ thống gốc và có trích dẫn. Mô hình lo ngôn ngữ, trích xuất và gọi công cụ.</p></div>
+      <div class="core-block"><h3 class="core-block-title">Ontology: chuỗi liên kết khối lượng</h3><figure class="core-figure"><img src="./media/ai-core/ontology-quantity-chain.png" alt="Sơ đồ ontology: không gian, cấu kiện, dòng BOQ, mã định mức, vật tư, biên bản nghiệm thu, sự kiện và phép đo" width="1600" height="748" loading="lazy" /></figure><div class="core-two"><div><h4 class="core-sub">Neo theo chuẩn</h4><ul class="core-list"><li>IFC 4.3 cho cấu kiện, gồm cả đường và cầu</li><li>Lý trình Km+m và LandXML cho công trường tuyến</li><li>ISO 19650 cho đặt tên tài liệu</li><li>Lược đồ định nghĩa một lần (LinkML), sinh ra bảng, đồ thị và lược đồ OCR</li></ul></div><div><h4 class="core-sub">Ontology đạt khi trả lời được</h4><ol class="core-list"><li>Đoạn Km 12+400–13+000: thiết kế, nhập, thi công, nghiệm thu, đã trả bao nhiêu m³ cấp phối?</li><li>Tầng 9: cấu kiện nào đã đổ bê tông mà chưa có biên bản nghiệm thu?</li><li>Nhà cung cấp nào có tỷ trọng cát lệch dải chuẩn quá 3 lần trong tháng?</li><li>Ai đã phê duyệt lệnh lùi lịch xe bồn hôm qua, dựa trên bằng chứng nào?</li></ol></div></div></div>
+      <div class="core-block"><h3 class="core-block-title">Đọc hồ sơ (OCR)</h3><div class="core-two"><div><h4 class="core-sub">Nguồn có cấu trúc trước, OCR sau cùng</h4><ul class="core-list"><li>Hóa đơn điện tử: đọc XML gốc</li><li>BOQ, dự toán: đọc ô Excel trực tiếp</li><li>Bản vẽ DWG/DXF: đọc thực thể vector</li><li>Mô hình IFC: đọc bộ khối lượng Qto_*</li><li>Chỉ OCR khi tài liệu là bản scan</li></ul></div><div><h4 class="core-sub">Quy trình cho bản scan</h4><ol class="core-list"><li>Chỉnh nghiêng, tách dấu đỏ bằng lọc màu</li><li>Phân vùng bố cục: bảng, đoạn, chữ ký, con dấu</li><li>Nhận dạng chữ: PaddleOCR cho chữ in, VietOCR cho viết tay</li><li>Trích bảng: Table Transformer</li><li>Mô hình thị giác–ngôn ngữ trích trường theo lược đồ</li><li>Hai đường đối chiếu; lệch thì người duyệt</li><li>Mỗi lần duyệt thành mẫu huấn luyện</li></ol></div></div><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Bẫy hồ sơ Việt Nam</th><th scope="col">Cách xử lý</th></tr></thead><tbody><tr><td>File cũ dùng bảng mã TCVN3 (.VnTime) hoặc VNI</td><td>Nhận diện bảng mã, chuyển Unicode trước khi nạp</td></tr><tr><td>Unicode dựng sẵn và tổ hợp lẫn lộn</td><td>Chuẩn hóa NFC toàn bộ</td></tr><tr><td>Đơn vị viết nhiều kiểu (m³, khối, chữ hoa)</td><td>Bộ chuẩn hóa đơn vị dùng chung</td></tr><tr><td>Số thập phân dấu phẩy và dấu chấm lẫn nhau</td><td>Suy theo ngữ cảnh cột, kiểm tra phạm vi</td></tr><tr><td>Lý trình viết Km12+400, K12+400, Km 12 + 400</td><td>Bộ phân tích lý trình quy về mét</td></tr></tbody></table></div></div>
+      <div class="core-block"><h3 class="core-block-title">Khối lượng vật tư: sáu nguồn phải khớp</h3><figure class="core-figure"><img src="./media/ai-core/quantity-six-sources.png" alt="Sáu nguồn khối lượng: thiết kế, dự toán, nhập về, thi công thực tế, nghiệm thu, thanh toán" width="1600" height="604" loading="lazy" /></figure><div class="core-two"><div><h4 class="core-sub">Thứ tự tin cậy khi lệch</h4><ol class="core-list"><li>Thiết bị đã kiểm định, cho đúng đại lượng của nó</li><li>Đo đạc độc lập: drone, máy quét</li><li>Chứng từ: phiếu, hóa đơn</li><li>Biên bản nghiệm thu</li></ol><p class="core-note">Thanh toán vẫn theo biên bản nghiệm thu. Lõi AI gắn cờ chênh lệch kèm bằng chứng, không tự sửa số.</p></div><div><h4 class="core-sub">Ánh xạ BOQ về cấu kiện</h4><ol class="core-list"><li>Chuẩn hóa chữ, tách đơn vị và quy cách</li><li>Máy gợi ý 3 mã định mức và nhóm cấu kiện cho mỗi dòng</li><li>QS dự án xác nhận; lần sau tự động</li><li>Nối dòng BOQ với cấu kiện BIM hoặc đoạn lý trình</li></ol></div></div><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Bài toán</th><th scope="col">Thuật toán</th><th scope="col">Đầu ra</th></tr></thead><tbody><tr><td>Đào đắp nền đường</td><td>Hiệu hai mô hình địa hình (TIN–TIN), đối chiếu mặt cắt theo lý trình</td><td>m³ đào/đắp theo đoạn Km</td></tr><tr><td>Tiến độ kết cấu</td><td>RTK, ghép đám mây điểm (ICP), lọc mặt đất (CSF), so BIM (C2M)</td><td>% hoàn thành từng cấu kiện</td></tr><tr><td>Thể tích thùng xe</td><td>Hiệu bản đồ độ cao thùng rỗng và đầy</td><td>m³ thực chở</td></tr><tr><td>Gian lận vật tư rời</td><td>Tỷ trọng = khối lượng cân / thể tích quét</td><td>Cờ cát ướt, chở thiếu</td></tr><tr><td>Bê tông, thép</td><td>Phiếu xe bồn, cân nhập so BIM và định mức hao hụt</td><td>Hao hụt theo hạng mục</td></tr><tr><td>Bất thường</td><td>Luật hao hụt, z-score bền, vật tư so S-curve, EVM</td><td>Cảnh báo kèm bằng chứng</td></tr></tbody></table></div></div>
+      <div class="core-block"><h3 class="core-block-title">Thuật toán trong proposal và độ chín</h3><h4 class="core-sub">Công trường khép kín</h4><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Điểm chạm</th><th scope="col">Thuật toán chính</th><th scope="col">Độ chín</th><th scope="col">Ghi chú</th></tr></thead><tbody><tr><td>1.1</td><td>Nhận diện khuôn mặt (ArcFace) + chống giả mạo; phát hiện PPE (YOLO)</td><td><span class="mat-chip is-proven">Phổ biến</span></td><td>Cần đồng ý theo Luật 91/2025</td></tr><tr><td>1.2</td><td>Phát hiện đối tượng + tư thế + bám vết (ByteTrack); lọc báo giả theo thời gian</td><td><span class="mat-chip is-proven">Phổ biến</span></td><td>Báo giả là vấn đề chính</td></tr><tr><td>1.3</td><td>Dựng 3D từ ảnh (COLMAP, OpenDroneMap), RTK, so BIM</td><td><span class="mat-chip is-proven">Phổ biến</span></td><td>Cần BIM sạch, đúng tọa độ</td></tr><tr><td>1.4</td><td>Nhận dạng biển số Việt Nam 1 dòng và 2 dòng</td><td><span class="mat-chip is-proven">Phổ biến</span></td><td>Đặt camera đúng góc cho biển bẩn</td></tr><tr><td>1.5</td><td>ReID ngoại hình, dáng đi, khung xương 3D, UWB; lọc Kalman + ghép Hungarian</td><td><span class="mat-chip is-research">Nghiên cứu</span></td><td>UWB là nguồn chính, thị giác bổ trợ</td></tr><tr><td>2.1</td><td>Thể tích LiDAR + cân + tỷ trọng</td><td><span class="mat-chip is-pilot">Thí điểm</span></td><td>Hiệu chuẩn theo loại thùng xe</td></tr><tr><td>2.2</td><td>Robot in sàn định vị bằng máy toàn đạc</td><td><span class="mat-chip is-pilot">Thí điểm</span></td><td>Mua sản phẩm thương mại</td></tr><tr><td>2.3</td><td>Dẫn hướng máy xúc GNSS RTK + IMU</td><td><span class="mat-chip is-proven">Phổ biến</span></td><td>Mua bộ của hãng</td></tr><tr><td>2.4</td><td>AR: SLAM LiDAR, đăng ký mô hình BIM</td><td><span class="mat-chip is-pilot">Thí điểm</span></td><td>Sai số đăng ký là rủi ro chính</td></tr><tr><td>3.1</td><td>Robot bốn chân: SLAM LiDAR, ảnh nhiệt</td><td><span class="mat-chip is-pilot">Thí điểm</span></td><td>Mua nền tảng, CC1 làm phân tích</td></tr><tr><td>3.2</td><td>Khung xương trợ lực</td><td><span class="mat-chip is-pilot">Thí điểm</span></td><td>Không phải bài toán AI</td></tr><tr><td>3.3</td><td>Máy tự hành: lập đường phủ kín, tránh va chạm nhiều xe</td><td><span class="mat-chip is-research">Nghiên cứu</span></td><td>Hoãn đến khi có đối tác hãng máy</td></tr><tr><td>3.4</td><td>Chống lắc tải (input shaping, MPC), phát hiện người dưới tải</td><td><span class="mat-chip is-pilot">Thí điểm</span></td><td>Điều khiển cẩu qua hãng cẩu</td></tr><tr><td>3.5</td><td>Tác tử LLM + đường găng (CPM) + bộ giải lập lịch (OR-Tools)</td><td><span class="mat-chip is-pilot">Thí điểm</span></td><td>Bộ giải quyết định, LLM đề xuất</td></tr><tr><td>4.1–4.2</td><td>Nhà máy vi mô, hợp đồng thông minh</td><td><span class="mat-chip is-research">Tầm nhìn</span></td><td>Ngoài lõi năm 1–2</td></tr></tbody></table></div><h4 class="core-sub">Công trường tuyến</h4><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Điểm chạm</th><th scope="col">Thuật toán chính</th><th scope="col">Độ chín</th><th scope="col">Ghi chú</th></tr></thead><tbody><tr><td>L1</td><td>Phát hiện biển báo, rào chắn; đối chiếu danh mục QCVN 41:2024</td><td><span class="mat-chip is-pilot">Thí điểm</span></td><td>Danh mục số hóa là phần chính</td></tr><tr><td>L2</td><td>Geofence theo đoạn Km; điểm danh QR/NFC</td><td><span class="mat-chip is-proven">Phổ biến</span></td><td>Không cần AI</td></tr><tr><td>L3</td><td>Geofence điểm đổ, phiếu điện tử</td><td><span class="mat-chip is-proven">Phổ biến</span></td><td>Không cần AI</td></tr><tr><td>L4</td><td>Bám vết radar + thời gian tới va chạm (TTC)</td><td><span class="mat-chip is-pilot">Thí điểm</span></td><td>Báo giả do xe máy lách</td></tr><tr><td>L5</td><td>Tham chiếu tuyến tính: GPS → lý trình + độ lệch</td><td><span class="mat-chip is-proven">Phổ biến</span></td><td>Xương sống dữ liệu tuyến</td></tr><tr><td>L6</td><td>Lu thông minh (chỉ số CMV), dải nhiệt thảm nhựa</td><td><span class="mat-chip is-proven">Phổ biến</span></td><td>Dữ liệu từ thiết bị hãng</td></tr><tr><td>L7</td><td>Phát hiện bất động, ngã từ gia tốc kế; LoRa/4G</td><td><span class="mat-chip is-proven">Phổ biến</span></td><td>Không cần AI nặng</td></tr><tr><td>L8</td><td>Độ chín bê tông (Nurse-Saul, ASTM C1074); hình học đốt dầm</td><td><span class="mat-chip is-proven">Phổ biến</span></td><td>Hiệu chuẩn theo cấp phối thật</td></tr></tbody></table></div><p class="core-note">Ba chỗ cần thận trọng khi trình bày: 1.5 (công nhân mặc đồng phục giống nhau), 3.3 (máy tự hành), L4 (báo giả do xe máy).</p></div>
+      <div class="core-block"><h3 class="core-block-title">Định danh công nhân: UWB là nguồn chính</h3><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Lớp</th><th scope="col">Công nghệ</th><th scope="col">Vai trò</th></tr></thead><tbody><tr><td>Tại cổng</td><td>Khuôn mặt + chống giả mạo; thẻ cho người không đồng ý sinh trắc</td><td>Xác nhận đầu ca, ghép với chip UWB trên mũ</td></tr><tr><td>Trong ca, khép kín</td><td>UWB: chip trên mũ, trạm neo</td><td>Nguồn định danh và vị trí chính</td></tr><tr><td>Trong ca, tuyến</td><td>Thẻ GNSS + LoRa/4G</td><td>UWB không phủ được hàng chục km</td></tr><tr><td>Thị giác</td><td>Bám vết trong camera, số in trên mũ/áo</td><td>Bổ trợ, phát hiện người không mang chip</td></tr><tr><td>Chống tráo mũ</td><td>So vị trí chip với vệt người trên camera</td><td>Gắn cờ cho người kiểm tra</td></tr></tbody></table></div><ul class="core-list"><li>Khuôn mặt, dáng đi là dữ liệu nhạy cảm theo Luật 91/2025/QH15 và NĐ 356/2025/NĐ-CP: đồng ý rõ ràng, mẫu sinh trắc nằm tại công trường.</li><li>Luật Trí tuệ nhân tạo 134/2025/QH15 có hiệu lực từ 1/3/2026: rà nghĩa vụ trước khi triển khai 1.5 và 3.5.</li><li>Không tự động xử phạt. Mọi cờ phải có người xem bằng chứng trước.</li></ul></div>
+    </section>
+
+    <section class="modes-section after-core" id="site-modes" aria-label="Giải pháp cho công trường mở và công trường khép kín">
       <header class="hero-top-split">
         <h1 class="hero-heading">
           Giải pháp cho <span>công trường mở</span> (tuyến cầu đường) và <span>công trường khép kín</span>
@@ -2396,6 +2617,21 @@
         </div>
       </article>
     </section>
+
+    <!-- ========================================================================
+         TRIỂN KHAI LÕI AI (cuối trang)
+         ======================================================================== -->
+    <section class="core-section is-surface" id="ai-rollout" aria-label="Triển khai lõi vận hành AI">
+      <h2 class="section-title">Triển khai lõi AI</h2>
+      <p class="section-lead">Nền tảng chung cho toàn tập đoàn, nạp dữ liệu theo đợt. Bản đầy đủ: <a href="https://github.com/jangtrinh/ai-construction-knowledge-pack/blob/main/CHAPTER_AI_CORE_OPERATING_PLATFORM.md">Phần VII, Lõi vận hành AI</a>.</p>
+      <div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Vấn đề</th><th scope="col">Đã chốt (31/10/2026)</th></tr></thead><tbody><tr><td>Quy mô</td><td>Nền tảng chung cho toàn tập đoàn từ năm 1; nạp 3–5 dự án mỗi quý</td></tr><tr><td>Hạ tầng</td><td>Suy luận và dữ liệu nhạy cảm đặt nội bộ; thuê GPU trong nước để huấn luyện</td></tr><tr><td>Đội ngũ</td><td>Đội lõi 8–9 người; QS từng dự án kiêm nhiệm xác nhận ánh xạ BOQ</td></tr><tr><td>Đo đạc</td><td>Thiết bị thương mại đã kiểm định; khảo sát và báo giá cả danh sách cùng lúc</td></tr><tr><td>Dự án mẫu đợt 1</td><td>1 dự án khép kín có BIM + 1 dự án tuyến (chưa gắn tên)</td></tr></tbody></table></div>
+      <div class="core-block"><h3 class="core-block-title">Lộ trình</h3><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Mốc</th><th scope="col">Lõi AI làm gì</th><th scope="col">Điều kiện qua mốc</th></tr></thead><tbody><tr><td>Tháng 0–3</td><td>2 dự án mẫu, ontology v0, bộ đề 300 câu, RAG trên hồ sơ + TCVN, OCR phiếu cân và hóa đơn</td><td>Đúng ≥ 80% nhóm tra cứu, 100% có trích dẫn</td></tr><tr><td>Tháng 3–9</td><td>Nhận sự kiện từ điểm chạm năm 1; đồ thị tri thức; tác tử chỉ đọc; OCR biên bản và BOQ</td><td>Kỹ sư dùng hằng ngày</td></tr><tr><td>Tháng 9–18</td><td>Tác tử có quyền ghi qua phê duyệt; đối chiếu 6 nguồn khối lượng</td><td>Nhật ký kiểm toán đủ, không rò rỉ giữa dự án</td></tr><tr><td>Năm 3</td><td>Site OS đa tác tử + bộ giải tối ưu</td><td>Theo hồ sơ giai đoạn 3</td></tr></tbody></table></div></div>
+      <div class="core-block"><h3 class="core-block-title">Nạp một dự án (khoảng 2 tuần công)</h3><div class="core-two"><div><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Bước</th><th scope="col">Công</th></tr></thead><tbody><tr><td>Thu hồ sơ, BIM, BOQ; kiểm bảng mã cũ</td><td>2–3 ngày</td></tr><tr><td>Gắn dự án vào ontology: phân khu hoặc đoạn Km, WBS</td><td>2–3 ngày</td></tr><tr><td>Ánh xạ BOQ: máy gợi ý, QS dự án xác nhận</td><td>2–4 ngày / 2.000 dòng</td></tr><tr><td>Nối điểm chạm đang chạy</td><td>1–2 ngày</td></tr><tr><td>Bổ sung 30–50 câu bộ đề riêng</td><td>1 ngày</td></tr><tr><td>Chạy bộ đề, kiểm thử rò rỉ, bàn giao</td><td>1–2 ngày</td></tr></tbody></table></div></div><div><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Tiêu chí dự án mẫu</th><th scope="col">Khép kín</th><th scope="col">Tuyến</th></tr></thead><tbody><tr><td>Dữ liệu số</td><td>BIM xuất IFC, BOQ Excel</td><td>Tim tuyến LandXML, BOQ Excel</td></tr><tr><td>Giai đoạn</td><td>Đang thi công phần thân, còn ≥ 12 tháng</td><td>Đang thi công nền hoặc cầu, còn ≥ 12 tháng</td></tr><tr><td>Điểm chạm quý đầu</td><td>1.1–1.4</td><td>L1–L3, L8</td></tr><tr><td>Con người</td><td>Chỉ huy trưởng, QS viết bộ đề</td><td>Như bên cạnh</td></tr></tbody></table></div></div></div></div>
+      <div class="core-block"><h3 class="core-block-title">Đội lõi</h3><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Vai trò</th><th scope="col">Số người</th></tr></thead><tbody><tr><td>Kỹ sư dữ liệu</td><td>2</td></tr><tr><td>Kỹ sư ML / LLM</td><td>2</td></tr><tr><td>Kỹ sư tri thức ngành (kỹ sư xây dựng)</td><td>2</td></tr><tr><td>MLOps / hạ tầng</td><td>1</td></tr><tr><td>Quản lý sản phẩm</td><td>1</td></tr><tr><td>Bảo mật, pháp chế (kiêm nhiệm)</td><td>0,5</td></tr></tbody></table></div></div>
+      <div class="core-block"><h3 class="core-block-title">Chi phí 3 năm (ước lượng thô)</h3><p class="core-warning">Ước lượng cấp độ, sai số có thể ±50%. Cần báo giá máy chủ, bảng lương và báo giá phần mềm trước khi trình. Chưa gồm thiết bị điểm chạm tại công trường.</p><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Hạng mục</th><th scope="col">Năm 1</th><th scope="col">Năm 2</th><th scope="col">Năm 3</th></tr></thead><tbody><tr><td>Đội lõi 8–9 người</td><td>4,5–7,5 tỷ</td><td>4,5–7,5 tỷ</td><td>4,5–7,5 tỷ</td></tr><tr><td>Cụm suy luận nội bộ</td><td>1,5–2,5 tỷ</td><td>0–2,5 tỷ</td><td>Bảo trì</td></tr><tr><td>Lưu trữ</td><td>0,5–1,5 tỷ</td><td>0,3–1 tỷ</td><td>0,3–1 tỷ</td></tr><tr><td>Thuê GPU huấn luyện</td><td>&lt; 0,3 tỷ</td><td>&lt; 0,5 tỷ</td><td>&lt; 0,5 tỷ</td></tr><tr><td>API thương mại</td><td>0,1–0,3 tỷ</td><td>0,2–0,5 tỷ</td><td>0,2–0,5 tỷ</td></tr><tr><td>Pháp lý dữ liệu, AI; kiểm thử bảo mật</td><td>0,3–0,6 tỷ</td><td>0,2–0,4 tỷ</td><td>0,2–0,4 tỷ</td></tr><tr><td>Cộng (làm tròn)</td><td>7–13 tỷ</td><td>5–12 tỷ</td><td>5–10 tỷ</td></tr></tbody></table></div><p class="core-note">Con người chiếm khoảng 60–80%. Một lần tinh chỉnh LoRA trên 8 GPU H100 trong 3 ngày khoảng 1.500 USD (giá thuê tại FPT AI Factory).</p></div>
+      <div class="core-block"><h3 class="core-block-title">Thiết bị đo cần khảo sát</h3><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Phép đo</th><th scope="col">Nhóm sản phẩm</th></tr></thead><tbody><tr><td>Cân xe</td><td>Đầu cân, cầu cân đã kiểm định (Mettler Toledo và hãng tương đương)</td></tr><tr><td>Thể tích thùng xe</td><td>Máy quét thể tích tải (ví dụ Loadscan)</td></tr><tr><td>Drone đo vẽ</td><td>DJI Matrice + LiDAR Zenmuse; DJI Terra hoặc Pix4D</td></tr><tr><td>Quét và so BIM</td><td>Leica, Trimble, Faro</td></tr><tr><td>Bóc khối lượng bản vẽ</td><td>Autodesk Takeoff, CostX, Bluebeam</td></tr><tr><td>Dẫn hướng máy</td><td>Trimble Earthworks, Leica iCON, Topcon</td></tr><tr><td>Lu thông minh</td><td>Hệ thống của hãng lu (Bomag, Hamm, Caterpillar)</td></tr><tr><td>Độ chín bê tông</td><td>Giatec SmartRock, Converge</td></tr><tr><td>Định vị UWB</td><td>Pozyx, Sewio và hãng tương đương</td></tr></tbody></table></div><p class="core-note">Điều kiện loại: thiết bị không xuất dữ liệu mở (API, IFC, LAS/E57, LandXML, CSV) thì không nối được vào lõi.</p></div>
+      <div class="core-block"><h3 class="core-block-title">Rủi ro chính</h3><div class="table-scroll" tabindex="0"><table class="core-table"><thead><tr><th scope="col">Rủi ro</th><th scope="col">Cách chặn</th></tr></thead><tbody><tr><td>Mô hình bịa số liệu</td><td>Số liệu chỉ qua truy vấn; trích dẫn bắt buộc; bộ đề có câu bẫy</td></tr><tr><td>Rò rỉ giữa dự án, nhà thầu</td><td>Lọc quyền trước truy xuất; kiểm thử rò rỉ mỗi đợt nạp</td></tr><tr><td>Khóa vào hãng thiết bị hoặc mô hình</td><td>Bắt buộc xuất dữ liệu mở; bộ đề làm thước đo khi đổi</td></tr><tr><td>Mua GPU trước khi có tải thật</td><td>Thuê trước, mua khi đã đo tải</td></tr><tr><td>Công nhân không tin hệ thống</td><td>Không tự động xử phạt; theo dõi tỷ lệ cờ sai</td></tr></tbody></table></div></div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -2407,6 +2643,7 @@
       <a href="./README.md" class="footer-link">Tài liệu tổng quan</a>
       <a href="./CHAPTER_OPEN_LINEAR_SITES_HIGHWAY_BRIDGE.md" class="footer-link">Chuyên đề Công trường Tuyến</a>
       <a href="./TECHNICAL_ARCHITECTURE_TOUCHPOINTS.md" class="footer-link">Kiến trúc kỹ thuật và BOM</a>
+      <a href="https://github.com/jangtrinh/ai-construction-knowledge-pack/blob/main/CHAPTER_AI_CORE_OPERATING_PLATFORM.md" class="footer-link">Lõi vận hành AI</a>
       <a href="./ART-DIRECTION.md" class="footer-link">Quy chuẩn mỹ thuật</a>
       <a href="#top" class="footer-link">
         <span>Lên đầu trang</span>
@@ -2509,7 +2746,7 @@
         lbControls.addEventListener('click', e => e.stopPropagation());
       }
 
-      const sections = ['site-modes', 'touchpoints-panorama', 'sbs-deck'];
+      const sections = ['ai-core', 'site-modes', 'touchpoints-panorama', 'sbs-deck', 'ai-rollout'];
       const navLinks = Array.from(document.querySelectorAll('.floating-nav .nav-link'));
       const secObs = new IntersectionObserver(entries => {
         entries.forEach(entry => {
