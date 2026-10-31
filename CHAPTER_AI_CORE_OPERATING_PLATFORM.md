@@ -633,7 +633,7 @@ Lộ trình theo phương án B, 11 giai đoạn, M0 = tháng phê duyệt. Chi 
 - Sewio, độ chính xác UWB: [docs.sewio.net](https://docs.sewio.net/docs/faq-system-14221353.html)
 - Suprema FaceStation F2: [docs.supremainc.com](https://docs.supremainc.com/en/device/facestation_f2/product-specifications)
 - Viettel IDC, gói chỗ đặt: [viettel-idc.com.vn](https://viettel-idc.com.vn/dich-vu/viettel-colocation.html)
-- Toàn bộ bảng nghiên cứu kèm URL từng dòng: `plans/reports/grok-261031-1534-spec/r1.out`, `r2.out`, `r3.out`
+- Toàn bộ bảng nghiên cứu kèm URL từng dòng: [r1.txt](./plans/reports/grok-261031-1534-spec/r1.txt) (máy quét, camera, biên, UWB, cổng), [r2.txt](./plans/reports/grok-261031-1534-spec/r2.txt) (thiết bị đo, máy chủ GPU), [r3.txt](./plans/reports/grok-261031-1534-spec/r3.txt) (phần mềm, mô hình, giấy phép)
 
 ## VII.17. Việc còn mở
 
