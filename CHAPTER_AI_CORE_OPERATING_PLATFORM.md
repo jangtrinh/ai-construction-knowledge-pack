@@ -78,9 +78,41 @@ Hai kho vector tách biệt:
 
 Tên mô hình cụ thể chỉ chốt lúc triển khai, sau khi chạy bộ đề.
 
+#### Hình chi tiết: Huấn luyện mô hình ngành CC1
+
+![Bản vẽ tách lớp: dữ liệu CC1 ẩn danh hóa, thang huấn luyện SFT LoRA tới RLVR, cổng G4 trước khi phục vụ CC1 v1](./69b_AI_Core_Blueprint_Huan_Luyen_Mo_Hinh_HUD.jpg)
+
+**Bước 1.** Đội 10–15 người gán nhãn; QS kiểm mẫu.
+
+![Đội 10–15 người gán nhãn; QS kiểm mẫu.](./70b_AI_Core_Huan_Luyen_B1_Gan_Nhan_HUD.jpg)
+
+**Bước 2.** Huấn luyện trên cụm CC1; theo dõi sai số giảm qua từng lượt.
+
+![Huấn luyện trên cụm CC1; theo dõi sai số giảm qua từng lượt.](./71b_AI_Core_Huan_Luyen_B2_Chay_Huan_Luyen_HUD.jpg)
+
+**Bước 3.** Cổng G4: CC1 v1 phải hơn mô hình nền ở mọi nhóm câu, không nhóm nào tụt.
+
+![Cổng G4: CC1 v1 phải hơn mô hình nền ở mọi nhóm câu, không nhóm nào tụt.](./72b_AI_Core_Huan_Luyen_B3_Cong_Phat_Hanh_HUD.jpg)
+
 ### Bộ đề kiểm thử: làm đầu tiên
 
 ![Chỉ huy trưởng và QS cùng nhóm nghiên cứu AI xem kết quả thi đấu 4 mô hình mở trên bộ đề của CC1](./46b_AI_Core_Bo_De_Thi_Dau_Mo_Hinh_HUD.jpg)
+
+#### Hình chi tiết: Bộ đề và thi đấu mô hình
+
+![Bản vẽ tách lớp: bộ đề từ 300 câu, 4 nhóm câu có câu bẫy, chấm tự động, cổng G2, bộ đề bị khóa](./60b_AI_Core_Blueprint_Bo_De_Thi_Dau_HUD.jpg)
+
+**Bước 1.** Chỉ huy trưởng viết câu hỏi thật từ công trường.
+
+![Chỉ huy trưởng viết câu hỏi thật từ công trường.](./61b_AI_Core_Bo_De_B1_Thu_Cau_Hoi_That_HUD.jpg)
+
+**Bước 2.** QS viết đáp án chuẩn, có trích dẫn tài liệu.
+
+![QS viết đáp án chuẩn, có trích dẫn tài liệu.](./62b_AI_Core_Bo_De_B2_QS_Viet_Dap_An_HUD.jpg)
+
+**Bước 3.** Chạy 4 mô hình mở trên GPU thuê; mô hình bịa số ở câu bẫy bị loại.
+
+![Chạy 4 mô hình mở trên GPU thuê; mô hình bịa số ở câu bẫy bị loại.](./63b_AI_Core_Bo_De_B3_Chay_Tren_GPU_Thue_HUD.jpg)
 
 - 300–500 câu hỏi thật do chỉ huy trưởng, QS, giám sát viết, kèm đáp án và tài liệu nguồn.
 - Nhóm câu: tra tiêu chuẩn, tra khối lượng, đối chiếu nghiệm thu, an toàn, hợp đồng, công trường tuyến, câu bẫy.
@@ -146,6 +178,22 @@ Ontology đạt khi các câu sau trả lời được bằng truy vấn đồ t
 
 ![Chỉ huy trưởng hỏi trợ lý AI trên máy tính bảng ngay tại sàn thi công; câu trả lời kèm trích dẫn tài liệu gốc](./45b_AI_Core_Tro_Ly_Trich_Dan_Chi_Huy_Truong_HUD.jpg)
 
+#### Hình chi tiết: Trợ lý AI có trích dẫn
+
+![Bản vẽ tách lớp: câu hỏi, kiểm quyền, truy xuất lai, câu trả lời kèm trích dẫn; số liệu lấy qua truy vấn ERP](./51b_AI_Core_Blueprint_Tro_Ly_Trich_Dan_HUD.jpg)
+
+**Bước 1.** Chỉ huy trưởng hỏi bằng giọng nói, tiếng Việt, không cần gõ.
+
+![Chỉ huy trưởng hỏi bằng giọng nói, tiếng Việt, không cần gõ.](./52b_AI_Core_Tro_Ly_B1_Hoi_Giong_Noi_HUD.jpg)
+
+**Bước 2.** Câu trả lời đặt cạnh tài liệu gốc, tô sáng đúng đoạn trích.
+
+![Câu trả lời đặt cạnh tài liệu gốc, tô sáng đúng đoạn trích.](./53b_AI_Core_Tro_Ly_B2_Doc_Nguon_Trich_Dan_HUD.jpg)
+
+**Bước 3.** Số liệu lấy thẳng từ ERP qua truy vấn; mô hình không tự đoán số.
+
+![Số liệu lấy thẳng từ ERP qua truy vấn; mô hình không tự đoán số.](./54b_AI_Core_Tro_Ly_B3_So_Lieu_Tu_ERP_HUD.jpg)
+
 ### Quy trình
 
 1. **Bóc tách:** OCR và trích bảng (mục VII.6).
@@ -165,6 +213,26 @@ Lọc theo dự án, nhà thầu, vai trò **trước khi** tìm kiếm. Tài li
 ## VII.6. OCR và đọc hồ sơ
 
 ![QS quét hồ sơ giấy có dấu đỏ; màn hình đặt bản scan cạnh bảng đã trích để khớp BOQ](./44b_AI_Core_OCR_Doc_Ho_So_So_Hoa_HUD.jpg)
+
+#### Hình chi tiết: Đọc hồ sơ OCR và số hóa hồ sơ cũ
+
+![Bản vẽ tách lớp: quét, phân loại mẫu, trích trường và bảng, QS duyệt; khớp BOQ và kho hồ sơ cũ](./55b_AI_Core_Blueprint_OCR_So_Hoa_HUD.jpg)
+
+**Bước 1.** Phân loại trang scan theo mẫu: biên bản, phiếu nhập kho, nhật ký.
+
+![Phân loại trang scan theo mẫu: biên bản, phiếu nhập kho, nhật ký.](./56b_AI_Core_OCR_B1_Phan_Loai_Mau_HUD.jpg)
+
+**Bước 2.** Trích từng trường, dấu đỏ, chữ viết tay và bảng khối lượng.
+
+![Trích từng trường, dấu đỏ, chữ viết tay và bảng khối lượng.](./57b_AI_Core_OCR_B2_Trich_Truong_Bang_HUD.jpg)
+
+**Bước 3.** Ô có độ tin thấp chuyển cho QS sửa; bản sửa được lưu để mô hình học.
+
+![Ô có độ tin thấp chuyển cho QS sửa; bản sửa được lưu để mô hình học.](./58b_AI_Core_OCR_B3_QS_Duyet_Do_Tin_Thap_HUD.jpg)
+
+**Bước 4.** Số hóa hồ sơ cũ: gắn mã thùng, quét sách, ưu tiên hồ sơ hoàn công.
+
+![Số hóa hồ sơ cũ: gắn mã thùng, quét sách, ưu tiên hồ sơ hoàn công.](./59b_AI_Core_OCR_B4_So_Hoa_Ho_So_Cu_HUD.jpg)
 
 ### Nguồn có cấu trúc trước, OCR sau cùng
 
@@ -224,6 +292,26 @@ Ngưỡng mở đợt kế (đề xuất khởi đầu, đặt lại sau 200 tra
 ## VII.7. Đọc và phân tích khối lượng vật tư
 
 ![Sáu nguồn khối lượng phải khớp nhau](./media/ai-core/quantity-six-sources.png)
+
+#### Hình chi tiết: Ontology và sáu nguồn khối lượng
+
+![Bản vẽ tách lớp: chuỗi cấu kiện, dòng BOQ, vật tư; sáu nguồn khối lượng hội về một điểm đối chiếu, cảnh báo kèm bằng chứng](./64b_AI_Core_Blueprint_Ontology_6_Nguon_HUD.jpg)
+
+**Bước 1.** Xe vật tư rời qua cân và cổng quét thùng; tỷ trọng lệch dải chuẩn thì gắn cờ.
+
+![Xe vật tư rời qua cân và cổng quét thùng; tỷ trọng lệch dải chuẩn thì gắn cờ.](./65b_AI_Core_KL_B1_Can_Quet_Thung_Xe_HUD.jpg)
+
+**Bước 2.** Drone RTK đo thể tích đống vật liệu, so với sổ kho.
+
+![Drone RTK đo thể tích đống vật liệu, so với sổ kho.](./66b_AI_Core_KL_B2_Drone_Do_Bai_Tap_Ket_HUD.jpg)
+
+**Bước 3.** Phiếu xe bồn so với thể tích cấu kiện trong BIM để tính hao hụt bê tông.
+
+![Phiếu xe bồn so với thể tích cấu kiện trong BIM để tính hao hụt bê tông.](./67b_AI_Core_KL_B3_Xe_Bon_So_BIM_HUD.jpg)
+
+**Bước 4.** Cảnh báo chênh lệch kèm phiếu cân, ảnh hiện trạng và dòng BOQ liên quan.
+
+![Cảnh báo chênh lệch kèm phiếu cân, ảnh hiện trạng và dòng BOQ liên quan.](./68b_AI_Core_KL_B4_Canh_Bao_Kem_Bang_Chung_HUD.jpg)
 
 ### Sáu nguồn khối lượng
 
@@ -388,6 +476,22 @@ Chỉ số đo:
 
 ![Kỹ sư CC1 kiểm tra cụm suy luận và cụm huấn luyện GPU đặt tại trung tâm dữ liệu thuê trong nước](./43b_AI_Core_Cum_GPU_Trung_Tam_Du_Lieu_HUD.jpg)
 
+#### Hình chi tiết: Cụm GPU tại trung tâm dữ liệu thuê
+
+![Bản vẽ tách lớp: thuê GPU 3 tháng, cổng G2, cụm suy luận và cụm huấn luyện, dữ liệu nằm tại Việt Nam](./47b_AI_Core_Blueprint_Cum_GPU_TTDL_HUD.jpg)
+
+**Bước 1.** Nhận máy, lắp vào tủ, kiểm đúng cấu hình đặt hàng.
+
+![Nhận máy, lắp vào tủ, kiểm đúng cấu hình đặt hàng.](./48b_AI_Core_GPU_B1_Nhan_May_Lap_Tu_HUD.jpg)
+
+**Bước 2.** Chạy lại một lượt huấn luyện tham chiếu; kết quả phải khớp lượt chạy trên GPU thuê thì mới nghiệm thu cụm.
+
+![Chạy lại một lượt huấn luyện tham chiếu; kết quả phải khớp lượt chạy trên GPU thuê thì mới nghiệm thu cụm.](./49b_AI_Core_GPU_B2_Chay_Kiem_Thu_HUD.jpg)
+
+**Bước 3.** Giám sát 24/7 tải GPU, độ trễ và lỗi; cảnh báo khi có sự cố.
+
+![Giám sát 24/7 tải GPU, độ trễ và lỗi; cảnh báo khi có sự cố.](./50b_AI_Core_GPU_B3_Giam_Sat_Van_Hanh_HUD.jpg)
+
 | Tầng | Cấu hình tham khảo | Số lượng |
 |---|---|---|
 | Biên, mỗi công trường hoặc NODE | Jetson AGX Orin 64GB hoặc server 2U + L4 24GB, NVMe 4TB, UPS | 1 bộ |
@@ -471,6 +575,22 @@ Lộ trình theo phương án B, 11 giai đoạn, M0 = tháng phê duyệt. Chi 
 | M1–M9 | OCR, ánh xạ BOQ, đối chiếu 6 nguồn; nạp 10–15 dự án mỗi quý, phủ dưới 30 dự án; tác tử chỉ đọc | 1.1–1.5, L1–L3, L8 | G3 (M8): 3 tháng chỉ đọc không sự cố → tác tử ghi có duyệt |
 | M4–M12 | Cụm huấn luyện; DPO, RLVR, chưng cất, CPT; số hóa hồ sơ cũ | 2.1–2.4, L4–L7 | G4 (M10): mô hình ngành CC1 v1 thắng mô hình nền; G5 (M12): đánh giá năm 1 |
 | Năm 2–3 | Vận hành, KPI; Site OS đa tác tử + bộ giải tối ưu; thay GPU năm 3 | 3.1–3.5 | Theo hồ sơ giai đoạn 3 |
+
+#### Hình chi tiết: Tác tử AI trong Site OS
+
+![Bản vẽ tách lớp: tác tử chỉ đọc trước, đề xuất lệnh, người duyệt, ghi ERP, nhật ký và cổng G3](./73b_AI_Core_Blueprint_Tac_Tu_Site_OS_HUD.jpg)
+
+**Bước 1.** Giai đoạn chỉ đọc: tác tử soạn nháp nhật ký, kỹ sư sửa.
+
+![Giai đoạn chỉ đọc: tác tử soạn nháp nhật ký, kỹ sư sửa.](./74b_AI_Core_Tac_Tu_B1_Soan_Nhap_Nhat_Ky_HUD.jpg)
+
+**Bước 2.** Sau cổng G3: tác tử đề xuất lệnh, người có quyền bấm duyệt mới tạo phiếu.
+
+![Sau cổng G3: tác tử đề xuất lệnh, người có quyền bấm duyệt mới tạo phiếu.](./75b_AI_Core_Tac_Tu_B2_Nguoi_Duyet_Lenh_HUD.jpg)
+
+**Bước 3.** Nhật ký kiểm toán ghi ai duyệt, lúc nào, dựa trên bằng chứng nào.
+
+![Nhật ký kiểm toán ghi ai duyệt, lúc nào, dựa trên bằng chứng nào.](./76b_AI_Core_Tac_Tu_B3_Nhat_Ky_Kiem_Toan_HUD.jpg)
 
 ## VII.15. Rủi ro chính
 

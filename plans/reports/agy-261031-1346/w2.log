@@ -1,0 +1,576 @@
+I1031 13:50:13.996518       1 resolver.go:85] Model ID gemini-3.8-flash-high not in local config, defaulting to CCPA
+I1031 13:50:13.996595       1 resolver.go:111] Model resolved via default
+I1031 13:50:13.996722      83 server.go:1897] Starting language server process with pid 86029
+I1031 13:50:13.996992      83 server.go:1953] Language server version: 1.4.12
+I1031 13:50:13.997003      83 server.go:729] Language server will attempt to listen on host localhost
+I1031 13:50:13.997902      83 server.go:744] Language server listening on random port at 61630 for HTTPS (gRPC)
+I1031 13:50:13.998119      83 server.go:752] Language server listening on random port at 61631 for HTTP
+W1031 13:50:13.999628      92 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:13.999671      92 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+E1031 13:50:13.999872      92 errorreport.go:224] Failed to poll ListExperiments: error getting token source: You are not logged into Antigravity.
+I1031 13:50:13.999900      92 model_configs.go:355] Auth mode is unspecified, skipping fetchAvailableModels and returning empty response
+I1031 13:50:14.001566     114 store_client.go:714] summary store: starting background reconciliation (trigger=startup)
+W1031 13:50:14.003773      83 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.003809      83 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.004052      83 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.004075      83 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.004641      83 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.004671      83 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.004721      83 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.004734      83 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.004805      83 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.004819      83 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.004854      83 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.004862      83 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.005894     146 cache.go:146] Cache(peopleInfo): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.005931     146 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.006010     117 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.006028     117 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.006977     117 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.007028     117 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+I1031 13:50:14.009948     114 store_client.go:764] summary store: reconciliation complete, synced 458 records
+W1031 13:50:14.010068     114 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.010088     114 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.010136     114 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.010145     114 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.010237      23 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.010258      23 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.010300      23 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.010313      23 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.023759      83 defaults.go:732] failed to get cs path: cs path /usr/bin/cs invalid
+I1031 13:50:14.023799      83 manager.go:120] Creating trajectory store manager with proto store and SQLite store
+W1031 13:50:14.034201      83 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.034277      83 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.034439      83 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.034449      83 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+I1031 13:50:14.039770     214 manager.go:98] Migration [MIGRATION_ID_SANITY_CHECK_PROJECT_URIS] is enabled
+I1031 13:50:14.040053     214 manager.go:107] Migration [MIGRATION_ID_SANITY_CHECK_PROJECT_URIS] already has status MIGRATION_STATUS_COMPLETED, skipping
+I1031 13:50:14.040074     214 manager.go:98] Migration [MIGRATION_ID_PLUGIN_ENABLEMENT] is enabled
+I1031 13:50:14.040258     214 manager.go:107] Migration [MIGRATION_ID_PLUGIN_ENABLEMENT] already has status MIGRATION_STATUS_COMPLETED, skipping
+I1031 13:50:14.040334     214 manager.go:98] Migration [MIGRATION_ID_BUILTIN_SIDECARS_TO_PLUGINS] is enabled
+I1031 13:50:14.040631     214 manager.go:107] Migration [MIGRATION_ID_BUILTIN_SIDECARS_TO_PLUGINS] already has status MIGRATION_STATUS_COMPLETED, skipping
+I1031 13:50:14.040678     214 manager.go:95] Migration [MIGRATION_ID_LIN_BUILTIN_TO_MARKETPLACE] is disabled, skipping entirely
+I1031 13:50:14.040696     214 manager.go:95] Migration [MIGRATION_ID_ADOPT_BWG_INSTALLS] is disabled, skipping entirely
+I1031 13:50:14.041740     214 manager.go:95] Migration [MIGRATION_ID_GDRIVE_BUILTIN_PLUGIN] is disabled, skipping entirely
+I1031 13:50:14.041755     214 manager.go:95] Migration [MIGRATION_ID_SPLIT_SCIENCE_PLUGIN] is disabled, skipping entirely
+W1031 13:50:14.045284     227 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.045310     227 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.045365     227 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.045376     227 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+I1031 13:50:14.059159      83 server.go:3653] Auth succeeded, refreshing features and managers
+W1031 13:50:14.059252      83 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.059277      83 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.059352      83 errorreport.go:224] Failed to poll ListExperiments: error getting token source: You are not logged into Antigravity.
+I1031 13:50:14.059392      83 server.go:3665] State refresh took 0ms
+I1031 13:50:14.059398      83 server.go:3675] [RemoteControl] Subscription callback triggered.
+I1031 13:50:14.059604      83 server.go:3678] [RemoteControl] RemoteControlEnabled value: true
+I1031 13:50:14.059611      83 server.go:4479] [RemoteControl] Session toggle is off, staying disconnected
+I1031 13:50:14.059618      83 server.go:4182] [RemoteControl] Resolved proxyServerURL: ""
+I1031 13:50:14.059657      83 profiler.go:231] Continuous pprof profiling is disabled.
+I1031 13:50:14.059760     242 manager.go:98] Migration [MIGRATION_ID_SANITY_CHECK_PROJECT_URIS] is enabled
+I1031 13:50:14.060097     242 manager.go:107] Migration [MIGRATION_ID_SANITY_CHECK_PROJECT_URIS] already has status MIGRATION_STATUS_COMPLETED, skipping
+I1031 13:50:14.060116     242 manager.go:98] Migration [MIGRATION_ID_PLUGIN_ENABLEMENT] is enabled
+I1031 13:50:14.060216     242 manager.go:107] Migration [MIGRATION_ID_PLUGIN_ENABLEMENT] already has status MIGRATION_STATUS_COMPLETED, skipping
+I1031 13:50:14.060224     242 manager.go:98] Migration [MIGRATION_ID_BUILTIN_SIDECARS_TO_PLUGINS] is enabled
+I1031 13:50:14.060316     242 manager.go:107] Migration [MIGRATION_ID_BUILTIN_SIDECARS_TO_PLUGINS] already has status MIGRATION_STATUS_COMPLETED, skipping
+I1031 13:50:14.060322     242 manager.go:95] Migration [MIGRATION_ID_LIN_BUILTIN_TO_MARKETPLACE] is disabled, skipping entirely
+I1031 13:50:14.060330     242 manager.go:95] Migration [MIGRATION_ID_ADOPT_BWG_INSTALLS] is disabled, skipping entirely
+I1031 13:50:14.060344     242 manager.go:95] Migration [MIGRATION_ID_GDRIVE_BUILTIN_PLUGIN] is disabled, skipping entirely
+I1031 13:50:14.060349     242 manager.go:95] Migration [MIGRATION_ID_SPLIT_SCIENCE_PLUGIN] is disabled, skipping entirely
+I1031 13:50:14.060522      83 server.go:3140] initialized server successfully in 63.731584ms
+W1031 13:50:14.060700      25 cache.go:146] Cache(peopleInfo): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.060775      25 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.060842      25 rpcs_plugin_auth.go:106] Not reloading plugin MCP servers: cannot get the signed-in user: error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.061256     261 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.061287     261 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.061347     261 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.061358     261 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+I1031 13:50:14.061566       1 auto_updater.go:281] Last check was less than 15 minutes ago, skipping update (fast path)
+I1031 13:50:14.061606       1 common.go:173] Launching CLI mode
+E1031 13:50:14.061620       1 launchsteps.go:95] Failed to resolve GeminiDir ".gemini": .gemini must be an absolute path: path is not absolute, falling back to default
+I1031 13:50:14.064271       1 common.go:194] CLI app data directory: /Users/jangtrinh/.gemini/antigravity-cli
+I1031 13:50:14.064298       1 server.go:315] Creating CLI server backend: product=antigravity workspaceDirs=[/Users/jangtrinh/Products/cc1 /Users/jangtrinh/Products/cc1] appDataDir=/Users/jangtrinh/.gemini/antigravity-cli languageServer=true codeAssist=true
+I1031 13:50:14.064356       1 auth_provider.go:954] [AuthProvider] SetEnableBusinessLogin called with enable: true
+I1031 13:50:14.066315       1 server.go:2219] Backend project ID updated dynamically to: default-cli-project
+I1031 13:50:14.066359       1 analytics.go:249] CLI startup completed (took 70.620417ms, phases [main_entered=0ms ls_start=0ms ls_ready=64ms launch_cli=65ms backend_created=70ms project_resolved=70ms])
+I1031 13:50:14.066402       1 printmode.go:206] Print mode: starting (promptLength=7867, model="gemini-3.8-flash-high", conversationID="")
+I1031 13:50:14.066427       1 manager.go:499] Initializing CLI store manager for workspace /Users/jangtrinh/Products/cc1
+W1031 13:50:14.066533     273 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.066557     273 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.066614     273 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.066625     273 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.066680     273 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.066691     273 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.066720     273 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.066726     273 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.066774     273 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.066784     273 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.066807     273 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.066814     273 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.066440      31 errorreport.go:224] [Summaries] failed to generate summary for d9c541cb-6d1e-4f1f-b591-3c78b08ef0a3 while reconciling: conversation d9c541cb-6d1e-4f1f-b591-3c78b08ef0a3 not found
+W1031 13:50:14.066869      31 reconcile_summaries.go:78] [Summaries] failed to generate summary for d9c541cb-6d1e-4f1f-b591-3c78b08ef0a3 while reconciling: conversation d9c541cb-6d1e-4f1f-b591-3c78b08ef0a3 not found
+E1031 13:50:14.068095      31 errorreport.go:224] [Summaries] failed to generate summary for d9c541cb-6d1e-4f1f-b591-3c78b08ef0a3 while reconciling: conversation d9c541cb-6d1e-4f1f-b591-3c78b08ef0a3 not found
+W1031 13:50:14.068126      31 reconcile_summaries.go:78] [Summaries] failed to generate summary for d9c541cb-6d1e-4f1f-b591-3c78b08ef0a3 while reconciling: conversation d9c541cb-6d1e-4f1f-b591-3c78b08ef0a3 not found
+I1031 13:50:14.068205       1 cli_setting_manager.go:157] applyUserSettings: stored shared config permissions: allow=10 deny=0 ask=0 from /Users/jangtrinh/.gemini/config/config.json
+I1031 13:50:14.068326       1 cli_setting_manager.go:96] CLI settings initialized: permissions=&{Allow:[command(orca) command(which) command(sips -g pixelWidth -g pixelHeight references/originals/microduck-press-kit/PHOTOS/microduck-{closeup,playroom,carried,desk}.jpg) command(cp) command(ls) command(bash scripts/headless-run.sh builds/nodestack-service-pack/assembly-guide-20260930-native-01/revision2/step_01_setup_revision2_base.py) command(git add) command(grep)] Deny:[] Ask:[]}, toolPermission=request-review
+W1031 13:50:14.070118     273 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.070142     273 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.070183     273 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.070192     273 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.070321     308 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.070333     308 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.070356     308 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.070361     308 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.070533     316 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.070584     316 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.070654     316 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.070672     316 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.071515     345 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+E1031 13:50:14.072191      31 errorreport.go:224] [Summaries] failed to generate summary for 47714860-2393-4408-8d0b-2f73287f91c2 while reconciling: conversation 47714860-2393-4408-8d0b-2f73287f91c2 not found
+W1031 13:50:14.072233      31 reconcile_summaries.go:78] [Summaries] failed to generate summary for 47714860-2393-4408-8d0b-2f73287f91c2 while reconciling: conversation 47714860-2393-4408-8d0b-2f73287f91c2 not found
+E1031 13:50:14.076295      31 errorreport.go:224] [Summaries] failed to generate summary for 47714860-2393-4408-8d0b-2f73287f91c2 while reconciling: conversation 47714860-2393-4408-8d0b-2f73287f91c2 not found
+W1031 13:50:14.076332      31 reconcile_summaries.go:78] [Summaries] failed to generate summary for 47714860-2393-4408-8d0b-2f73287f91c2 while reconciling: conversation 47714860-2393-4408-8d0b-2f73287f91c2 not found
+W1031 13:50:14.078536     248 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.078556     248 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.078597     248 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.078606     248 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+I1031 13:50:14.078608       1 hooks_manager.go:53] loaded 4 named hooks from 1 hooks.json file(s)
+I1031 13:50:14.078627       1 manager.go:687] CLI store manager initialized successfully
+I1031 13:50:14.078637       1 session.go:79] Print mode: --dangerously-skip-permissions set, auto-approving all tool permissions
+I1031 13:50:14.078657       1 printmode.go:407] Print mode: not authenticated, trying silent auth
+E1031 13:50:14.083330      31 errorreport.go:224] [Summaries] failed to generate summary for 79ec7ce9-7607-477b-8f15-dfd3115ef21c while reconciling: conversation 79ec7ce9-7607-477b-8f15-dfd3115ef21c not found
+W1031 13:50:14.083414      31 reconcile_summaries.go:78] [Summaries] failed to generate summary for 79ec7ce9-7607-477b-8f15-dfd3115ef21c while reconciling: conversation 79ec7ce9-7607-477b-8f15-dfd3115ef21c not found
+E1031 13:50:14.086519      31 errorreport.go:224] [Summaries] failed to generate summary for 79ec7ce9-7607-477b-8f15-dfd3115ef21c while reconciling: conversation 79ec7ce9-7607-477b-8f15-dfd3115ef21c not found
+W1031 13:50:14.086578      31 reconcile_summaries.go:78] [Summaries] failed to generate summary for 79ec7ce9-7607-477b-8f15-dfd3115ef21c while reconciling: conversation 79ec7ce9-7607-477b-8f15-dfd3115ef21c not found
+E1031 13:50:14.088113      31 errorreport.go:224] [Summaries] failed to generate summary for 289a6c90-763b-4924-9278-47de3fe0ee9c while reconciling: conversation 289a6c90-763b-4924-9278-47de3fe0ee9c not found
+W1031 13:50:14.088142      31 reconcile_summaries.go:78] [Summaries] failed to generate summary for 289a6c90-763b-4924-9278-47de3fe0ee9c while reconciling: conversation 289a6c90-763b-4924-9278-47de3fe0ee9c not found
+E1031 13:50:14.088850      31 errorreport.go:224] [Summaries] failed to generate summary for 289a6c90-763b-4924-9278-47de3fe0ee9c while reconciling: conversation 289a6c90-763b-4924-9278-47de3fe0ee9c not found
+W1031 13:50:14.088874      31 reconcile_summaries.go:78] [Summaries] failed to generate summary for 289a6c90-763b-4924-9278-47de3fe0ee9c while reconciling: conversation 289a6c90-763b-4924-9278-47de3fe0ee9c not found
+E1031 13:50:14.089612      31 errorreport.go:224] [Summaries] failed to generate summary for 3f147c3c-169d-4ff3-bcbf-a873a0e3d815 while reconciling: conversation 3f147c3c-169d-4ff3-bcbf-a873a0e3d815 not found
+W1031 13:50:14.089588     468 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.089631      31 reconcile_summaries.go:78] [Summaries] failed to generate summary for 3f147c3c-169d-4ff3-bcbf-a873a0e3d815 while reconciling: conversation 3f147c3c-169d-4ff3-bcbf-a873a0e3d815 not found
+E1031 13:50:14.089634     468 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.089786     468 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.089855     468 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.091744      31 errorreport.go:224] [Summaries] failed to generate summary for 3f147c3c-169d-4ff3-bcbf-a873a0e3d815 while reconciling: conversation 3f147c3c-169d-4ff3-bcbf-a873a0e3d815 not found
+W1031 13:50:14.091786      31 reconcile_summaries.go:78] [Summaries] failed to generate summary for 3f147c3c-169d-4ff3-bcbf-a873a0e3d815 while reconciling: conversation 3f147c3c-169d-4ff3-bcbf-a873a0e3d815 not found
+E1031 13:50:14.092826      31 errorreport.go:224] [Summaries] failed to generate summary for 61382a1a-3cb1-4dc2-b78f-1caa5c14d698 while reconciling: conversation 61382a1a-3cb1-4dc2-b78f-1caa5c14d698 not found
+W1031 13:50:14.092863      31 reconcile_summaries.go:78] [Summaries] failed to generate summary for 61382a1a-3cb1-4dc2-b78f-1caa5c14d698 while reconciling: conversation 61382a1a-3cb1-4dc2-b78f-1caa5c14d698 not found
+E1031 13:50:14.093820      31 errorreport.go:224] [Summaries] failed to generate summary for 61382a1a-3cb1-4dc2-b78f-1caa5c14d698 while reconciling: conversation 61382a1a-3cb1-4dc2-b78f-1caa5c14d698 not found
+W1031 13:50:14.093852      31 reconcile_summaries.go:78] [Summaries] failed to generate summary for 61382a1a-3cb1-4dc2-b78f-1caa5c14d698 while reconciling: conversation 61382a1a-3cb1-4dc2-b78f-1caa5c14d698 not found
+E1031 13:50:14.096004      31 errorreport.go:224] [Summaries] failed to generate summary for 668ebeb4-27ea-4abc-a930-46ac5c34bd83 while reconciling: conversation 668ebeb4-27ea-4abc-a930-46ac5c34bd83 not found
+W1031 13:50:14.096051      31 reconcile_summaries.go:78] [Summaries] failed to generate summary for 668ebeb4-27ea-4abc-a930-46ac5c34bd83 while reconciling: conversation 668ebeb4-27ea-4abc-a930-46ac5c34bd83 not found
+E1031 13:50:14.097179      31 errorreport.go:224] [Summaries] failed to generate summary for 668ebeb4-27ea-4abc-a930-46ac5c34bd83 while reconciling: conversation 668ebeb4-27ea-4abc-a930-46ac5c34bd83 not found
+W1031 13:50:14.097212      31 reconcile_summaries.go:78] [Summaries] failed to generate summary for 668ebeb4-27ea-4abc-a930-46ac5c34bd83 while reconciling: conversation 668ebeb4-27ea-4abc-a930-46ac5c34bd83 not found
+E1031 13:50:14.098598      31 errorreport.go:224] [Summaries] failed to generate summary for 1c6c0c86-be99-412f-8167-c9e170abe3f3 while reconciling: conversation 1c6c0c86-be99-412f-8167-c9e170abe3f3 not found
+W1031 13:50:14.098628      31 reconcile_summaries.go:78] [Summaries] failed to generate summary for 1c6c0c86-be99-412f-8167-c9e170abe3f3 while reconciling: conversation 1c6c0c86-be99-412f-8167-c9e170abe3f3 not found
+W1031 13:50:14.099107     496 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.099178     496 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.099290     496 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.099314     496 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.099633      31 errorreport.go:224] [Summaries] failed to generate summary for 1c6c0c86-be99-412f-8167-c9e170abe3f3 while reconciling: conversation 1c6c0c86-be99-412f-8167-c9e170abe3f3 not found
+W1031 13:50:14.099673      31 reconcile_summaries.go:78] [Summaries] failed to generate summary for 1c6c0c86-be99-412f-8167-c9e170abe3f3 while reconciling: conversation 1c6c0c86-be99-412f-8167-c9e170abe3f3 not found
+I1031 13:50:14.099707      31 reconcile_summaries.go:94] [Summaries] reconcile checked 477 conversations, restored 0, cached 461, skipped 16, dropped 0, cancelled false in 39ms (resident: 0 -> 0)
+W1031 13:50:14.099795      31 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.099815      31 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.099861      31 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.099868      31 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.109162      31 cache.go:146] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.109198      31 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1031 13:50:14.109255      31 cache.go:146] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1031 13:50:14.109266      31 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+I1031 13:50:14.127657     320 keyring.go:64] keyringAuth: loaded token, expiry=2026-10-31 14:46:27.440253 +0700 +07 expired=false
+I1031 13:50:14.127712       1 auth.go:157] ChainedAuth: authenticated via keyring (effective: keyring)
+I1031 13:50:14.127729       1 server_oauth.go:224] applyAuthResult: email=jangtrinhsg@gmail.com, authMethod=consumer, quotaProject=
+I1031 13:50:14.127740       1 server_oauth.go:229] OAuth: authenticated successfully as jangtrinhsg@gmail.com
+I1031 13:50:14.127744       1 server_oauth.go:238] b.codeAssistClient.AuthProvider (0x4aa20151a1e0) is same as b.cliAuth (0x4aa20151a1e0)
+W1031 13:50:14.129654     510 cache.go:177] Failed to refresh cache in background: admin controls not applicable
+W1031 13:50:14.129673     517 cache.go:177] Failed to refresh cache in background: admin controls not applicable
+I1031 13:50:15.797583       1 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0x9f696e8389ee4027
+I1031 13:50:16.101819       1 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels Trace: 0x782c2776bedcc398
+I1031 13:50:16.162853       1 model_resolver.go:107] Resolving model gemini-3.8-flash-high
+I1031 13:50:16.162892       1 model_config_manager.go:363] Propagating selected model override to backend: label="Gemini 3.8 Flash (High)"
+I1031 13:50:16.162915       1 printmode.go:409] Print mode: silent auth succeeded
+I1031 13:50:16.163028     284 quota_manager.go:45] doRefreshQuota: starting reload (force=true)
+I1031 13:50:16.163051     285 experiment_manager.go:66] Starting experiment refresh after login
+I1031 13:50:16.283347     285 http_helpers.go:84] UseAICodeMendel routing switch changed: false -> true
+I1031 13:50:16.283374     285 remote_agent.go:178] Remote agent fastpush pin gate changed: false -> true
+I1031 13:50:16.283662     285 server.go:4479] [RemoteControl] Session toggle is off, staying disconnected
+I1031 13:50:16.283675     285 server.go:4182] [RemoteControl] Resolved proxyServerURL: ""
+I1031 13:50:16.283681     285 experiment_manager.go:70] Experiments refreshed after login
+I1031 13:50:16.283724     545 manager.go:1497] Reloading system slash commands
+W1031 13:50:16.308402     812 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+W1031 13:50:16.398862     127 mcp_manager.go:1457] Failed to write server states, eagerly loading all tools: failed to rename tool xrefs from server rea: rename /Users/jangtrinh/.gemini/antigravity-cli/mcp/rea/xrefs.json.tmp /Users/jangtrinh/.gemini/antigravity-cli/mcp/rea/xrefs.json: no such file or directory
+I1031 13:50:16.716769     554 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0x76ea3003cf8b58ba
+I1031 13:50:17.161719      16 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0x613ff34d4d9b8681
+I1031 13:50:17.259594     554 model_config_manager.go:363] Propagating selected model override to backend: label="Gemini 3.8 Flash (High)"
+I1031 13:50:17.259667     284 quota_manager.go:45] doRefreshQuota: starting reload (force=true)
+I1031 13:50:17.259728     568 model_config_manager.go:363] Propagating selected model override to backend: label="Gemini 3.8 Flash (High)"
+I1031 13:50:17.259741     285 experiment_manager.go:66] Starting experiment refresh after login
+I1031 13:50:17.263362       1 model_resolver.go:107] Resolving model gemini-3.8-flash-high
+I1031 13:50:17.263385       1 conversation_manager.go:685] Starting new conversation (agent=false)
+I1031 13:50:17.263398       1 server.go:1198] Creating new cascade trajectory (agentScript=false)
+I1031 13:50:17.263411       1 server.go:1224] Conversation using project ID: default-cli-project
+I1031 13:50:17.272290       1 server.go:1241] Created conversation d1210a6f-caf2-413a-a878-a0c07b784d62 (backend=BACKEND_TYPE_UNSPECIFIED)
+I1031 13:50:17.272555       1 server.go:3316] GetConversationDetail: found conversation d1210a6f-caf2-413a-a878-a0c07b784d62 (active=true)
+I1031 13:50:17.276840       1 server.go:3316] GetConversationDetail: found conversation d1210a6f-caf2-413a-a878-a0c07b784d62 (active=true)
+I1031 13:50:17.276862       1 conversation_manager.go:739] project: switching to conversation belonging to project ID: default-cli-project
+I1031 13:50:17.276941       1 server.go:2219] Backend project ID updated dynamically to: default-cli-project
+I1031 13:50:17.276965       1 cli_setting_manager.go:224] ApplyProjectPermissionGrants: no grants for project "CLI Project", cleared project permissions
+I1031 13:50:17.276979       1 conversation_manager.go:785] project: synced active project to "CLI Project" (id=default-cli-project) from conversation switch
+I1031 13:50:17.276988       1 conversation_manager.go:1093] Streaming conversation d1210a6f-caf2-413a-a878-a0c07b784d62
+I1031 13:50:17.277091       1 server.go:3316] GetConversationDetail: found conversation d1210a6f-caf2-413a-a878-a0c07b784d62 (active=true)
+I1031 13:50:17.277522       1 server.go:1259] Starting conversation update stream for d1210a6f-caf2-413a-a878-a0c07b784d62
+I1031 13:50:17.277572       1 session.go:201] Print mode: conversation=d1210a6f-caf2-413a-a878-a0c07b784d62, sending message
+I1031 13:50:17.277580       1 manager.go:1497] Reloading system slash commands
+I1031 13:50:17.279221     569 manager.go:1540] Reloading system slash commands and skills
+I1031 13:50:17.279279     569 manager.go:1497] Reloading system slash commands
+W1031 13:50:17.300475    1447 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+W1031 13:50:17.300827    1459 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 13:50:17.306653     569 manager.go:1505] Slash commands unchanged, skipping update
+I1031 13:50:17.306685       1 manager.go:1505] Slash commands unchanged, skipping update
+I1031 13:50:17.306827       1 conversation_manager.go:903] Forwarding user message to conversation d1210a6f-caf2-413a-a878-a0c07b784d62 (items=1, media=0)
+I1031 13:50:17.306835       1 server.go:1833] Sending user message to conversation d1210a6f-caf2-413a-a878-a0c07b784d62 (items=1, media=0)
+I1031 13:50:17.313611       1 latency_breakdown.go:170] SEND_USER_CASCADE_MESSAGE_LATENCY latency breakdown: map[active_user_state_latency_ms:0 blocking:false cascade_id:d1210a6f-caf2-413a-a878-a0c07b784d62 cascade_send_latency_ms:0 hydrate_slash_commands_latency_ms:0 load_trajectory_latency_ms:0 media_count:0 media_summaries_latency_ms:0 message_origin:AGENT_MESSAGE_ORIGIN_UNSPECIFIED resolve_agent_config_latency_ms:3 save_media_latency_ms:0 saved_media_count:0 status:OK total_latency_ms:4 trajectory_id:9f212176-b289-4537-b347-fd9eb10dc078]
+W1031 13:50:17.317081    1742 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+W1031 13:50:17.323086    2204 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 13:50:17.339356     285 server.go:4479] [RemoteControl] Session toggle is off, staying disconnected
+I1031 13:50:17.339385     285 server.go:4182] [RemoteControl] Resolved proxyServerURL: ""
+I1031 13:50:17.339394     285 experiment_manager.go:70] Experiments refreshed after login
+I1031 13:50:17.339573    1070 manager.go:1497] Reloading system slash commands
+W1031 13:50:17.365897    3080 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+W1031 13:50:17.366976    3117 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 13:50:17.372097    1070 manager.go:1505] Slash commands unchanged, skipping update
+I1031 13:50:17.558794     284 quota_manager.go:45] doRefreshQuota: starting reload (force=true)
+I1031 13:50:17.705550     567 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0xa004fb204d3d573f
+I1031 13:50:18.040322    1419 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x59a1d1a7c6027949 ResponseID: qY_laujBLvqx2roPiPGQuAY
+I1031 13:50:19.650617    1558 monitor_config_manager_external.go:53] externalMonitorConfigManager: initialized with embedded config (3 monitors)
+I1031 13:50:19.650669    1558 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:50:19.650685    1558 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:50:24.804585    3249 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xff40805b09dc5563 ResponseID: rI_launMIOP82roPr6WCkAM
+I1031 13:50:27.719836    3389 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xf4193569fa18b4e4 ResponseID: so_latY2prHaug-V4brwBg
+I1031 13:50:34.666949    3496 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xae95c0b9cd6d20b2 ResponseID: tI_lau6rOovprfcPxfq2qQY
+I1031 13:50:37.631381    3434 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xf66571c105f39c43 ResponseID: u4_latKoJdW12roPs4PasAY
+I1031 13:50:40.982995    3634 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x31fcea4fa0f2038e ResponseID: v4_laqevC__s2roP0uGDsAY
+I1031 13:50:43.818012    3681 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x4aae728cbbd44431 ResponseID: wY_laqWCO7Gw2roP5s_foQY
+I1031 13:50:47.304473    3789 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xfad8305ee1a7f27e ResponseID: xY_lavOEBrbJ2roPlLnlsQY
+I1031 13:50:50.103939    3871 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x5195e5f9b5c37457 ResponseID: yI_latf1KZOerfcPi9-AyQc
+I1031 13:50:53.623385    3952 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xfec9553312374e61 ResponseID: y4_laumbDMTu2roP2rPtwQY
+I1031 13:50:58.982019    4012 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x7be0aaeb2f0d274e ResponseID: 0Y_laqXpEOP82roPr6WCkAM
+I1031 13:51:01.593220    3985 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x3f7713956ac2d7b0 ResponseID: 04_lao23O9Cx2roP95jh2QY
+I1031 13:51:05.480533    4140 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x546f71373c1afe47 ResponseID: 14_las67F-OM2roP1d-CkAc
+I1031 13:51:09.991833    4274 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x99374de913794639 ResponseID: 2o_lau--KoCR0-kPi7j6mAc
+I1031 13:51:13.065951    4321 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x4ac14ec0543e9d59 ResponseID: 34_lauTmIPez2roP0s-piQQ
+I1031 13:51:15.502057    4361 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x8e1ec14cfecee83e ResponseID: 4o_lau7aA77W2roPo6KxyAY
+I1031 13:51:18.459657    4489 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x47f6fcc63b3854f1 ResponseID: 5I_lauWnIZ3hrfcP_5fBiQU
+I1031 13:51:21.098295    4446 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x48eebef009b38673 ResponseID: 54_larP_JNW12roPs4PasAY
+I1031 13:51:26.272578    4599 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xd6b98759028ecc16 ResponseID: 6o_lasGKHbLM2roPgN-HqAo
+I1031 13:51:32.377092    4735 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x69273f07aa6a05aa ResponseID: 8Y_lapWzLb602roPy4vm4QY
+I1031 13:51:46.820395    4806 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xe188a1f325800231 ResponseID: 9o_larG-J4Gd0-kP5fzBqAY
+I1031 13:51:52.124753    4903 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x3dc06e2fb96f712f ResponseID: BZDlatu_JdOc0-kPhd3diAE
+I1031 13:51:57.479631    4979 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xfb52a57dbff2908 ResponseID: C5DlasfLGpnQ0-kPsbDrkQY
+I1031 13:52:06.040508    4822 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xc2969d20dd6a81e2 ResponseID: EpDlat76A7my2roPpeywwQY
+I1031 13:52:20.250659    5130 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x6d2e8d540ef9b09d ResponseID: IJDlapDzFMXM2roPosep0A8
+W1031 13:52:28.346513    5199 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 13:52:29.230948    5234 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:52:29.233827    5234 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:52:34.889227    5930 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x4eefa6aaac152eb7 ResponseID: LpDlaqaRCMXM2roPosep0A8
+I1031 13:52:35.885012    5886 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x8e180169e1bfefc0 ResponseID: MZDlasQj8u3aug-p34DxAg
+I1031 13:52:48.892664    5234 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x487743de6f4fee1f
+I1031 13:52:56.630301    6114 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xc3b5061582385d85 ResponseID: QpDlaqOQE77W2roPo6KxyAY
+I1031 13:53:09.658481    5234 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x39670f2022fd6fc3
+I1031 13:53:18.204480    6200 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x2a7a5b739ea450a4 ResponseID: V5Dlavb0Fujz2roPjLbfkAY
+W1031 13:53:18.353540    6021 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 13:53:19.200958    5263 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:53:19.201542    5263 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:53:21.997619    6996 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xf38d52e0c3240fb9 ResponseID: X5DlaqnpJvKT0-kP3aqkqQY
+I1031 13:53:24.800362    7013 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x4a22dc5e37f3d6c7 ResponseID: YZDlavfmL5jZ2roP486W2AY
+I1031 13:53:31.335865    6224 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xf992e67e03e896d4 ResponseID: aJDlat3VJeiz2roPhJr3wAY
+I1031 13:53:39.514636    6747 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xf4fa9d6308bc2e33 ResponseID: bpDlap7LNrSx2roP89zTqAY
+W1031 13:53:39.699257    3125 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 13:53:40.482596    6975 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:53:40.482634    6975 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:53:45.617372    7708 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x5ef788349b8f4cdf ResponseID: d5Dlavy7Aoaw2roPrdncwQY
+I1031 13:53:47.536097    7712 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x51980655e24dc23a ResponseID: dZDlav_iL8yC0-kP0ta5qQU
+I1031 13:53:56.757002    8007 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x38938c8f8c29ff7c ResponseID: fpDlasPoBvLt2roPiN-A8QI
+I1031 13:54:08.914373    6975 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x22f1d1004be54dc9
+I1031 13:54:21.715672    8168 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xe6b815012068c342 ResponseID: lZDlarr9CNGp2roPhKj0-AY
+I1031 13:54:33.418940    6975 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x9cc983cbad6d6b08
+I1031 13:54:47.100676    8253 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x16f1e8b223d1060a ResponseID: rZDlarHoIPez2roP0s-piQQ
+W1031 13:54:47.276290    8628 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 13:54:48.209499    8314 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:54:48.209534    8314 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:54:54.112738    9026 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xe73908a9604c7c9f ResponseID: u5DlaqboDoa20-kPocP3iAU
+I1031 13:54:58.529985    8822 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x82a4de5d4e84f6d7 ResponseID: vJDlatyPH5v62roP5uGcqAY
+I1031 13:55:04.311858    9151 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xf683e717629daea2 ResponseID: xZDlav64MuTKrfcP5YqMgQg
+I1031 13:55:21.069124    9229 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x7f00ebc92c7c503b ResponseID: zpDlapjrO9Sh0-kP_4n2oQY
+I1031 13:55:21.521295    9271 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels Trace: 0x8e1951e517949caf
+I1031 13:55:21.559012    9264 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0xa42d960165e49ece
+I1031 13:55:30.679117    9365 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x9d239fe0c2191472 ResponseID: 3pDlaqyHFJ2x2roPxtvzyAY
+W1031 13:55:30.883054    8845 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 13:55:32.177471    9385 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:55:32.177511    9385 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:55:36.912147   10128 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xb4d5d062f23881e4 ResponseID: 5pDlasjkIsqr0-kP0eTUoAY
+I1031 13:55:43.394304   10147 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x1c11eb5faef76ad5 ResponseID: 6JDlasfJFvnL2roPx-DQ2QY
+I1031 13:55:56.057562    9385 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0xed571ad8e8d4c018
+I1031 13:56:08.625106   10297 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x80d62e6760990c1d ResponseID: AZHlape0DdK30-kPgsqGyAY
+W1031 13:56:08.790641   10575 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 13:56:09.615902   10327 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:56:09.615950   10327 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:56:17.366829   11064 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x8e9d965b137f34ff ResponseID: DpHlapjYFLSz2roPn42pwQY
+I1031 13:56:17.519691   11022 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x890a234cccca57e1 ResponseID: DpHlavPLKc-32roPpLPbqAY
+I1031 13:56:26.631338   11150 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x9c7fb7a2685f86b8 ResponseID: GJHlas_XAfLt2roPiN-A8QI
+I1031 13:56:37.228853   11254 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xe27784c5cc6e670 ResponseID: IJHlaomGLOTKrfcP5YqMgQg
+W1031 13:56:37.427708   11165 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 13:56:38.244335   11262 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:56:38.244377   11262 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:56:46.184659   11973 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x6d76e9cd3e144892 ResponseID: K5Hlar2rE9K30-kPg8qGyAY
+I1031 13:56:48.534134   11675 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x343b7f48c2a9ebcd ResponseID: KZHlaurhKpyM0-kP2aOHkQY
+I1031 13:57:04.189534   11985 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x28c5b62762574cc3 ResponseID: OJHlaomkH_Lt2roPiN-A8QI
+I1031 13:57:15.449008   11262 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0xb8651cac45a5fbe4
+I1031 13:57:30.526575   12244 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xf53eab5f0d8b8b6e ResponseID: UpHlavmqG4W20-kP8v-9uAg
+I1031 13:57:42.869549   11262 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x9880cd3414bea55e
+I1031 13:58:01.063880   12383 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xe738e5d3887edf7d ResponseID: cJHlaoCvNb-22roP8OS6iQU
+W1031 13:58:01.245774   12723 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 13:58:02.054459   12353 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:58:02.054490   12353 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:58:10.228975   13123 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xaba99b26352337a1 ResponseID: fpHlar7VNfyv2roP7MCX0QY
+I1031 13:58:12.752426   13070 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x6c05956125c6eb3d ResponseID: gJHlaq3HOcDN2roPi9rWqQc
+I1031 13:58:17.908093   13100 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x2e828c5fb28c29e ResponseID: hpHlarOFMLzr2roPxbGMsAY
+I1031 13:58:28.530775   13363 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xfe8ac014f7c7fc60 ResponseID: kZHlas-KC_Dq2roPpp3IgQc
+I1031 13:58:40.284547   13459 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x6ac93e784e183c6c ResponseID: m5Hlao7kI_Lt2roPqd-A8QI
+W1031 13:58:40.502361   13664 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 13:58:41.290162   13522 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:58:41.290194   13522 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:58:50.989587   14170 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xa7881dcf4376b18f ResponseID: qJHlat2ABMTu2roP2rPtwQY
+I1031 13:58:55.891226   13839 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xef6afd03ff1b45ae ResponseID: qJHlapXiOfPprfcPk4u3-Q0
+I1031 13:59:07.553523   13522 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0xc16ef5a63da4a7a9
+I1031 13:59:23.935571   14344 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x7c0d342092897d59 ResponseID: xJHlauLFDb-22roP8OS6iQU
+W1031 13:59:24.130411   14691 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 13:59:24.965013   14318 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:59:24.965055   14318 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:59:33.795555   15056 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xf660b39c88d44a2d ResponseID: 0pHlavyyAouv2roPpoSR2AY
+I1031 13:59:37.510928   15114 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xa14e0f305683737 ResponseID: 1ZHlap2aO7iD2roPm9zC-QY
+I1031 13:59:46.184135   15214 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x49550645c9d7bb2e ResponseID: 3pHlary5OuW02roP7urB2AY
+I1031 13:59:57.448164   15262 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x701b0328fc9063d4 ResponseID: 6JHlavWYAcyC0-kP0ta5qQU
+W1031 13:59:57.665303   15418 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 13:59:58.406544   15217 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 13:59:58.406584   15217 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:00:09.987180   16051 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xd283fd1cf236acd3 ResponseID: 85HlarrQGN7T2roPpPelgQY
+I1031 14:00:13.168193   16075 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x8bb19790d347837c ResponseID: 9pHlaoPoMdW12roPs4PasAY
+I1031 14:00:30.314435   16200 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x20a26a8587c0b404 ResponseID: BpLlaoLcONK30-kPg8qGyAY
+I1031 14:00:30.849940   16285 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels Trace: 0x97a064b903b1ffad
+I1031 14:00:30.891839   16273 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0x30c543609c9cc879
+I1031 14:00:45.146999   15217 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0xed958cfc94fe335c
+I1031 14:01:03.264145   16255 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xa3de355d77625691 ResponseID: J5LlaprGF62D2roPkPqsgAc
+W1031 14:01:03.499371   16167 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:01:04.665273   16470 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:01:04.665318   16470 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:01:14.462820   17112 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xcafe50182ecfa682 ResponseID: NpLlaqfmIMyC0-kP0ta5qQU
+I1031 14:01:15.504022   17155 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x74ede63803cb349c ResponseID: NpLlauHWFd-h0-kP1fvk2QU
+I1031 14:01:26.651862   17296 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xfd7294436401ae8a ResponseID: Q5LlapaSIIW20-kP8v-9uAg
+I1031 14:01:36.907087   17366 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x6b60ec2a6457b146 ResponseID: TJLlaoi1L_KB2roPkvSImAc
+I1031 14:01:50.900948   17481 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x2d39fc62e5203e22 ResponseID: WZLlaubmIvLlrfcP7raB8QI
+W1031 14:01:51.114589   17799 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:01:51.960585   17367 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:01:51.960629   17367 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:02:02.577330   18166 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x6d11ca779c6bf4b ResponseID: Z5LlavKTMb602roPy4vm4QY
+I1031 14:02:09.135753   18182 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xc95f346cf6f440de ResponseID: aZLlasveLeCl0-kPw6zS2AQ
+I1031 14:02:21.036962   17367 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0xb6a8aef06bb1fac4
+I1031 14:02:40.272828   18256 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x9fe315b0933d9612 ResponseID: hpLlatrFPO2u2roPiJ772AY
+W1031 14:02:40.565256   18489 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:02:41.403722   18358 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:02:41.403766   18358 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:02:52.455145   18938 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x56d62b3d09e610d7 ResponseID: l5LlavPpMIaw2roPrdncwQY
+I1031 14:02:55.719535   19130 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x935435160d7eb07d ResponseID: m5LlauTnGfyv2roP7MCX0QY
+I1031 14:03:04.448041   19210 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x6f8322ce1d3d8114 ResponseID: pZLlatfvE_yv2roP7MCX0QY
+I1031 14:03:16.489800   19331 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x58664f682c7f9d93 ResponseID: r5LlarOOGv_s2roP0uGDsAY
+W1031 14:03:16.749487   19652 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:03:17.770221   19352 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:03:17.770254   19352 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:03:31.042034   20070 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xcd354ba39139f4e9 ResponseID: vpLlavm_JrzxrfcP9Z6G0AY
+I1031 14:03:36.743323   20073 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x4a22022328b21e05 ResponseID: wJLlatL0IuP82roPr6WCkAM
+I1031 14:03:56.815223   20202 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xf89af5b658d6364d ResponseID: 1JLlapuAPcTu2roP2rPtwQY
+I1031 14:04:07.396890   19352 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0xca8795e9a34e7b98
+I1031 14:04:26.504923   20371 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x18f037e877114f ResponseID: 8JLlasDVMbnQ0-kPibSOmQY
+W1031 14:04:26.779213   20380 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:04:27.565723   20442 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:04:27.565752   20442 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:04:40.708238   21144 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x7176713ab7b2c055 ResponseID: BJPlaruDMpKx2roP0qu2uQY
+I1031 14:04:44.224814   21126 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xfe8a6aad61caa4cd ResponseID: B5Plas7YIrzr2roPxbGMsAY
+I1031 14:04:53.697257   21229 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xd020fa00d0935c0a ResponseID: EpPlaqbVINyE0-kPrYSTiQc
+I1031 14:05:08.738934   21181 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x868d4320881cbc68 ResponseID: IJPlao-SFLuZ0-kPk-ammAY
+I1031 14:05:24.836868   21448 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xb9981ff71b2e212a ResponseID: L5PlarmtHujz2roPjLbfkAY
+W1031 14:05:25.082388   21665 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:05:25.770625   21509 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:05:25.770654   21509 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:05:35.869377   22242 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x88a69764a8fc0d07 ResponseID: PJPlaqbfIJy22roPs52Q6QQ
+I1031 14:05:36.653313   22316 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels Trace: 0x83740b181aaa6426
+I1031 14:05:36.935698   22299 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0xaa80f18562d6ffad
+I1031 14:05:42.745357   21900 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x60345d6eca99ac87 ResponseID: PpPlaou3MOWL0-kPsavo4Qc
+I1031 14:05:55.431688   21509 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0xf5189d3d2f33736
+I1031 14:06:22.989833   22458 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x920ca6070a3df0aa ResponseID: ZZPlasDQHvPprfcPk4u3-Q0
+W1031 14:06:23.227032   22787 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:06:24.100312   22488 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:06:24.100370   22488 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:06:39.251533   22888 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x4f6588892fdd969f ResponseID: e5PlapLmAd7T2roPpPelgQY
+I1031 14:06:42.349714   22774 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xb232d06ae3af768d ResponseID: fZPlaqevBZjmrfcP9cHMgQU
+I1031 14:06:53.949651   23161 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x6957619dcf1d72af ResponseID: ipPlavK7EOvx2roP1JHAwAY
+I1031 14:07:10.944166   23169 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x162f2d741a6b8c71 ResponseID: mZPlauz5I9Oc0-kPhd3diAE
+W1031 14:07:11.258840   23779 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:07:12.097337   23437 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:07:12.097375   23437 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:07:25.953207   23324 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x23049de787994d81 ResponseID: qpPlasuZIJjmrfcP9cHMgQU
+I1031 14:07:39.148596   24213 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x36ba75e627a24e0f ResponseID: sZPlasDTO-Cl0-kPw6zS2AQ
+I1031 14:07:58.411848   24355 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x8c7ad507d84d9da7 ResponseID: xpPlatqjC_KB2roPkvSImAc
+I1031 14:08:11.968127   23437 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x4356c82481c2e917
+I1031 14:08:33.430169   24455 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xe5510a69db47a322 ResponseID: 55Plav6aGZOerfcPi9-AyQc
+W1031 14:08:33.747643   24520 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:08:34.581582   24539 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:08:34.581626   24539 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:08:50.368328   25196 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x8865711751b1a864 ResponseID: _ZPlatn6NbSx2roP89zTqAY
+I1031 14:08:56.476494   25221 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x652b672176f6b494 ResponseID: ApTlavLYPM-32roPpLPbqAY
+I1031 14:09:06.011218   25161 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x6c90a5b23f53724f ResponseID: DpTlaoewFvqx2roPiPGQuAY
+I1031 14:09:19.568647   25470 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xd457ef1a4245256a ResponseID: G5TlapIs6PPaug-Mtt-QBg
+I1031 14:09:42.372734   25547 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xb2c9b1c2590f28fb ResponseID: L5TlaunINuHL2roPmsHEmAc
+W1031 14:09:44.333011   25892 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:09:45.327570   25471 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:09:45.327608   25471 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:10:00.503024   26255 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xad125ef1da3bf58a ResponseID: RJTlatOQJPKB2roPkvSImAc
+I1031 14:10:04.685693   25216 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x72a64cbefba1e94b ResponseID: RJTlauTlC9W12roPs4PasAY
+I1031 14:10:20.656263   25471 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x752d06f98b0af95a
+I1031 14:10:54.157564   26480 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x943abd8dd25aab13 ResponseID: cpTlatn8DsTu2roP2rPtwQY
+W1031 14:10:54.717761   26647 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:10:55.241038   26582 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0xfdfccdaaefc4a14c
+I1031 14:10:55.280786   26554 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels Trace: 0x59be1a955abee14b
+I1031 14:10:55.470428   26584 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:10:55.470461   26584 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:11:12.524695   27290 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x9ec203ad4e6f796a ResponseID: ipTlasP2HfDq2roPpp3IgQc
+I1031 14:11:12.612124   27293 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x9fdd5006c6e0d51 ResponseID: i5TlauqtLd-h0-kP1fvk2QU
+I1031 14:11:30.130209   26606 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xe93c815048e206f5 ResponseID: nZTlaozqCZjmrfcP9cHMgQU
+I1031 14:11:50.068693   27534 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xfc7dc3e1410a1ef5 ResponseID: r5TlatmlEPKB2roPkvSImAc
+W1031 14:11:50.367333   27470 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:11:51.282943   27466 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:11:51.282985   27466 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:12:07.250132   28292 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x3fc55ff0b0a76d04 ResponseID: w5TlavmeDcqr0-kP0eTUoAY
+I1031 14:12:12.082847   28301 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x7c4148dad3b05fe3 ResponseID: wpTlapLKL7zr2roPxbGMsAY
+I1031 14:12:39.455143   28486 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xfd805e46377901e6 ResponseID: 3pTlasDPEdK30-kPgsqGyAY
+I1031 14:12:50.048614   27466 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x7a6661a2521bc717
+I1031 14:13:19.406588   28607 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x59a4bd51137eaac6 ResponseID: BJXlasyXBpS50-kPh_KjmQY
+W1031 14:13:19.715068   28962 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:13:20.564147   28440 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:13:20.564196   28440 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:13:37.205905   29188 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x8de4693c2e01883b ResponseID: HJXlatG2E_nL2roPx-DQ2QY
+I1031 14:13:47.919083   29337 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x72bec84646e1b9b0 ResponseID: IZXlarCYJYCC2roPrJbUgAc
+I1031 14:13:54.914644   29324 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xb428360e1a3a5e0f ResponseID: LpXlasb5LJ2x2roPxtvzyAY
+I1031 14:14:15.483059   29591 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x46f37d8e0521a65 ResponseID: QJXlapGUNZS50-kPh_KjmQY
+I1031 14:14:40.365658   29734 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xb38c3793f29f6c16 ResponseID: WZXlaoyNJuvx2roP1JHAwAY
+W1031 14:14:40.658962   29578 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:14:41.512012   29802 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:14:41.512054   29802 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:14:54.395427   30453 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x781dc9a448bcb8be ResponseID: apXlasawFNWM0-kPie2BqQY
+I1031 14:15:04.790182   30469 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x50d93db2ccc6dab5 ResponseID: bpXlaqmYA7nQ0-kPibSOmQY
+I1031 14:15:18.777493   29802 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x438ea615b699a266
+I1031 14:15:54.113170   30600 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x96941a5ab07068a4 ResponseID: n5Xlaq_jCbzr2roPxbGMsAY
+W1031 14:15:54.486107   31028 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:15:55.257154   30664 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:15:55.257198   30664 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:15:55.661448   31445 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels Trace: 0x6b9820c0896ec6c0
+I1031 14:15:55.770076   31426 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0x5089e2586b7522ab
+I1031 14:16:20.342964   31413 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x6c66682f096ff4be ResponseID: vZXlarLxIv_s2roP0uGDsAY
+I1031 14:17:33.259025   31462 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x6232091b0d85e89b ResponseID: CJblapSpGZGhrfcPvZb5-AU
+I1031 14:17:55.520051   31731 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x70251b2d602caa87 ResponseID: H5blaor3Faax2roPleG68AY
+I1031 14:18:22.201445   31722 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xe5567e2c2280a469 ResponseID: OJblaoiXBtK30-kPgsqGyAY
+W1031 14:18:22.488866   32120 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:18:23.438764   31386 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:18:23.438869   31386 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:18:45.868008   32544 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xe4fdaa07f7909973 ResponseID: UZblao6FJ-TKrfcP5YqMgQg
+I1031 14:18:58.562859   32567 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xb91d35af7036aa8a ResponseID: TZblaqfSFO3c2roP___IkQc
+I1031 14:19:22.333733   32732 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xda3552491c219d0b ResponseID: cZblatuMBt-h0-kP1fvk2QU
+I1031 14:19:35.108549   31386 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x66da9cf35057a728
+I1031 14:20:01.646614   32824 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xc3ff4aadab6bb366 ResponseID: lpblav6DNJjZ2roP486W2AY
+W1031 14:20:02.182854   32332 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:20:03.004968   32922 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:20:03.005010   32922 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:20:29.834337   33636 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x2446cdcb90487cdf ResponseID: tpblavv4Lr7W2roPo6KxyAY
+I1031 14:20:46.510893   33484 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x242af4ee4f7d325f ResponseID: vpblapD7Ib-22roP8OS6iQU
+I1031 14:20:52.232866   33764 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x32b01d653ea126d3 ResponseID: zZblauGcKoa20-kPocP3iAU
+I1031 14:21:14.433863   33915 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels Trace: 0xabf21d7a0a0552f0
+I1031 14:21:14.698087   33948 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0x3feed163998d2815
+I1031 14:21:23.904651   33931 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xcb91167d55f18c68 ResponseID: 65blauKUBbSx2roP89zTqAY
+I1031 14:21:50.190752   34049 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xf74f44d0e65d3e9f ResponseID: Bpflav3QGZyM0-kP2aOHkQY
+W1031 14:21:51.158553   34261 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:21:52.899694   34094 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:21:52.900161   34094 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:22:07.694503   34764 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xf0561ca7800eb190 ResponseID: GpflauXUI5nQ0-kPsbDrkQY
+I1031 14:22:20.268180   34767 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x86038e78135e7205 ResponseID: IJflatO_HYvprfcPxfq2qQY
+I1031 14:22:32.861341   34094 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x2dc20d393d17e0ed
+I1031 14:23:02.201794   34375 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x946775095038d6cc ResponseID: SZflatesCuOM2roP1d-CkAc
+W1031 14:23:03.137295   35005 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:23:04.536978   34577 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:23:04.538085   34577 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:23:26.557856   35762 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x4b7269111595cc4b ResponseID: aJflarzgKuP82roPr6WCkAM
+I1031 14:23:48.802750   35121 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x74049611a188831c ResponseID: gJflapHkD8qr0-kP0eTUoAY
+I1031 14:23:49.660232   35741 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xf516acd397dcdcee ResponseID: dZflaq7hE97T2roPpPelgQY
+I1031 14:24:09.641009   35708 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x99e7606031f73dd7 ResponseID: kpflasCeMdK30-kPg8qGyAY
+W1031 14:24:10.499337   36344 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:24:11.730116   36104 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:24:11.730942   36104 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:24:38.883094   36778 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xbb02d0caa0eb03a2 ResponseID: rJflasXSGr7W2roPo6KxyAY
+I1031 14:24:44.167070   36749 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x998141c428c87f6f ResponseID: s5flav-PGo_w2roPg9S3qQY
+I1031 14:25:05.726106   36847 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xd3c497be61c9ec67 ResponseID: x5flatS6LuW02roP7urB2AY
+I1031 14:25:20.712016   36104 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x70e39b87b5e0e041
+I1031 14:25:51.961482   37096 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x6a3e4aac4ea10ba2 ResponseID: 9Jflaq2JG-P82roPr6WCkAM
+W1031 14:25:52.947522   37459 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:25:56.307014   37174 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:25:56.310507   37174 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:26:14.138003   37911 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x674364714b707127 ResponseID: EJjlaqOjHevx2roP1JHAwAY
+I1031 14:26:14.837744   37853 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels Trace: 0x5ca9b19a654876bb
+I1031 14:26:16.717938   38019 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0x9d40f878a3ce81f6
+I1031 14:26:20.144731   37755 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x1333623369c4ccad ResponseID: E5jlauS1O5v62roP5uGcqAY
+I1031 14:26:36.680437   38018 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xdbe89b5a0be3a371 ResponseID: JJjlaoj0J9if0-kPu4LusQs
+I1031 14:26:56.495723   38137 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xe7611546a7803923 ResponseID: OZjlaq3JOpKx2roP0qu2uQY
+I1031 14:27:28.614901   38258 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x5e508432e1d4fff2 ResponseID: WZjlarePJZy22roPs52Q6QQ
+W1031 14:27:30.449620   38627 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:27:35.064014   38316 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:27:35.064047   38316 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:27:48.562469   38984 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xba5ecb5a8429b377 ResponseID: b5jlarCUOPyv2roP7MCX0QY
+I1031 14:28:05.307452   39048 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xaafcd9ea38a09db9 ResponseID: epjlau3OAb6v2roPse6v6AY
+I1031 14:28:19.617805   38316 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0xf584e8cff1c762c2
+I1031 14:28:58.532523   39208 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x205972ce5aa22534 ResponseID: rJjlatzbFd7T2roPpPelgQY
+W1031 14:28:59.088534   38769 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:29:00.754145   39314 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:29:00.756751   39314 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:29:20.241363   39982 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xc8c6f9f67783891b ResponseID: yZjlav62I-jz2roPjLbfkAY
+I1031 14:29:32.654867   39872 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xd6bf5f2bfea2cd0c ResponseID: 1Zjlav-HBJy22roPs52Q6QQ
+I1031 14:29:38.246189   40131 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xed3fc1b38b8dd74f ResponseID: 3ZjlapaxGL602roPy4vm4QY
+I1031 14:30:10.202667   40258 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xa1cbea407bc43a42 ResponseID: -5jlapKyDuWL0-kPsavo4Qc
+W1031 14:30:10.567062   40014 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:30:11.882392   40153 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:30:11.882429   40153 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:30:29.808846   40600 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xb783c575fe9a045b ResponseID: EJnlasS1Kbmy2roPpeywwQY
+I1031 14:30:40.730242   40687 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xbc788d3ca2c1b613 ResponseID: FZnlao6PD9-h0-kP0d7kwQQ
+I1031 14:31:09.803056   41168 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xa56a60004cbe8bb1 ResponseID: Mpnlav3GOJnQ0-kPsbDrkQY
+I1031 14:31:23.589443   40153 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x8338f2b3d3f9fd57
+I1031 14:31:24.192090   41087 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels Trace: 0xe0718d9a13b566bb
+I1031 14:31:24.356039   41257 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0x14ebad39c5bded08
+I1031 14:31:54.066532   41280 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xd11f50f7543b3753 ResponseID: XpnlatKSJbGw2roP5s_foQY
+W1031 14:31:56.131658   41333 plugins.go:358] Truncating suggested_prompts from 5 to 3 in file:///Users/jangtrinh/.gemini/config/plugins/firebase/plugin.json
+I1031 14:31:57.683863   39991 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:31:57.684823   39991 monitoring.go:401] [Sonar] Resolved active tags: [jetski_mode_turbo policy_guardian sonar_skip_tags] (detected surface: "")
+I1031 14:32:28.343062   42087 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xc009d756f24fab13 ResponseID: hpnlar2xA4vprfcPxfq2qQY
+I1031 14:32:31.840281   41438 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x7b55e5ec23a332a8 ResponseID: h5nlaqb6Jtif0-kPu4LusQs
+I1031 14:32:52.945823   42072 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x804e7101f0ff9b2f ResponseID: mpnlauKaCbiD2roPm9zC-QY
+I1031 14:33:13.530902   42295 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x19d8fa812e20001e ResponseID: s5nlauiaEL-22roP3eS6iQU
+I1031 14:33:39.899391   42475 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x832c90d64babdfdd ResponseID: zZnlatrlKv_s2roP0uGDsAY
+I1031 14:34:12.330565   42543 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xda536f18357dcb18 ResponseID: 75nlarO0Dp3hrfcP_5fBiQU
+I1031 14:34:33.022286   42731 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xb6bf2fb70235513f ResponseID: A5rlavanDruZ0-kPk-ammAY
+I1031 14:34:53.825952   42822 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xa658a4a4434890e5 ResponseID: F5rlavWPDdOc0-kPlubewAY
+I1031 14:35:38.139755   42952 http_helpers.go:359] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x1b4f9c9bf18326c6 ResponseID: Q5rlaoKeNZv62roP5uGcqAY
+I1031 14:35:38.795316       1 manager.go:864] CLI store manager shutting down
+I1031 14:35:38.798350       1 conversation_manager.go:1048] Stopping conversation stream
+I1031 14:35:38.800491     571 server.go:1316] Stream goroutine exited for d1210a6f-caf2-413a-a878-a0c07b784d62, sending completion signal
+E1031 14:35:38.863949   39997 telemetry.go:81] error recording trajectory segment analytics: Post "https://daily-cloudcode-pa.googleapis.com/v1internal:recordTrajectoryAnalytics": context canceled
+I1031 14:35:38.872509   43006 server.go:3502] Language server shutting down
+I1031 14:35:38.872537   43006 server.go:3507] Waiting for migrations to complete to prevent partial migration state...
+E1031 14:35:43.873612      83 server.go:3495] Language server shutdown timed out

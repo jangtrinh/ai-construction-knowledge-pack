@@ -8,6 +8,22 @@ Chọn mô hình nền bằng số đo trên câu hỏi thật của CC1, không
 
 ![Chỉ huy trưởng và QS cùng nhóm nghiên cứu AI xem kết quả thi đấu 4 mô hình mở trên bộ đề của CC1](../../46b_AI_Core_Bo_De_Thi_Dau_Mo_Hinh_HUD.jpg)
 
+### Hình chi tiết: Bộ đề và thi đấu mô hình
+
+![Bản vẽ tách lớp: bộ đề từ 300 câu, 4 nhóm câu có câu bẫy, chấm tự động, cổng G2, bộ đề bị khóa](../../60b_AI_Core_Blueprint_Bo_De_Thi_Dau_HUD.jpg)
+
+**Bước 1.** Chỉ huy trưởng viết câu hỏi thật từ công trường.
+
+![Chỉ huy trưởng viết câu hỏi thật từ công trường.](../../61b_AI_Core_Bo_De_B1_Thu_Cau_Hoi_That_HUD.jpg)
+
+**Bước 2.** QS viết đáp án chuẩn, có trích dẫn tài liệu.
+
+![QS viết đáp án chuẩn, có trích dẫn tài liệu.](../../62b_AI_Core_Bo_De_B2_QS_Viet_Dap_An_HUD.jpg)
+
+**Bước 3.** Chạy 4 mô hình mở trên GPU thuê; mô hình bịa số ở câu bẫy bị loại.
+
+![Chạy 4 mô hình mở trên GPU thuê; mô hình bịa số ở câu bẫy bị loại.](../../63b_AI_Core_Bo_De_B3_Chay_Tren_GPU_Thue_HUD.jpg)
+
 ## Việc cần làm
 
 1. Thu 300–500 câu hỏi thật từ chỉ huy trưởng, QS, kỹ sư; chia nhóm: tra cứu, tính khối lượng, đối chiếu, câu bẫy.

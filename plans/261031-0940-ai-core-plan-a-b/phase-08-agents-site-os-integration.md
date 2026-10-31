@@ -8,6 +8,38 @@ Trợ lý làm được việc trong luồng công việc thật, bắt đầu c
 
 ![Chỉ huy trưởng hỏi trợ lý AI trên máy tính bảng ngay tại sàn thi công; câu trả lời kèm trích dẫn tài liệu gốc](../../45b_AI_Core_Tro_Ly_Trich_Dan_Chi_Huy_Truong_HUD.jpg)
 
+### Hình chi tiết: Trợ lý AI có trích dẫn
+
+![Bản vẽ tách lớp: câu hỏi, kiểm quyền, truy xuất lai, câu trả lời kèm trích dẫn; số liệu lấy qua truy vấn ERP](../../51b_AI_Core_Blueprint_Tro_Ly_Trich_Dan_HUD.jpg)
+
+**Bước 1.** Chỉ huy trưởng hỏi bằng giọng nói, tiếng Việt, không cần gõ.
+
+![Chỉ huy trưởng hỏi bằng giọng nói, tiếng Việt, không cần gõ.](../../52b_AI_Core_Tro_Ly_B1_Hoi_Giong_Noi_HUD.jpg)
+
+**Bước 2.** Câu trả lời đặt cạnh tài liệu gốc, tô sáng đúng đoạn trích.
+
+![Câu trả lời đặt cạnh tài liệu gốc, tô sáng đúng đoạn trích.](../../53b_AI_Core_Tro_Ly_B2_Doc_Nguon_Trich_Dan_HUD.jpg)
+
+**Bước 3.** Số liệu lấy thẳng từ ERP qua truy vấn; mô hình không tự đoán số.
+
+![Số liệu lấy thẳng từ ERP qua truy vấn; mô hình không tự đoán số.](../../54b_AI_Core_Tro_Ly_B3_So_Lieu_Tu_ERP_HUD.jpg)
+
+### Hình chi tiết: Tác tử AI trong Site OS
+
+![Bản vẽ tách lớp: tác tử chỉ đọc trước, đề xuất lệnh, người duyệt, ghi ERP, nhật ký và cổng G3](../../73b_AI_Core_Blueprint_Tac_Tu_Site_OS_HUD.jpg)
+
+**Bước 1.** Giai đoạn chỉ đọc: tác tử soạn nháp nhật ký, kỹ sư sửa.
+
+![Giai đoạn chỉ đọc: tác tử soạn nháp nhật ký, kỹ sư sửa.](../../74b_AI_Core_Tac_Tu_B1_Soan_Nhap_Nhat_Ky_HUD.jpg)
+
+**Bước 2.** Sau cổng G3: tác tử đề xuất lệnh, người có quyền bấm duyệt mới tạo phiếu.
+
+![Sau cổng G3: tác tử đề xuất lệnh, người có quyền bấm duyệt mới tạo phiếu.](../../75b_AI_Core_Tac_Tu_B2_Nguoi_Duyet_Lenh_HUD.jpg)
+
+**Bước 3.** Nhật ký kiểm toán ghi ai duyệt, lúc nào, dựa trên bằng chứng nào.
+
+![Nhật ký kiểm toán ghi ai duyệt, lúc nào, dựa trên bằng chứng nào.](../../76b_AI_Core_Tac_Tu_B3_Nhat_Ky_Kiem_Toan_HUD.jpg)
+
 ## Việc cần làm
 
 1. Nối trợ lý vào Site OS, ERP, hệ thống hồ sơ qua API có phân quyền.

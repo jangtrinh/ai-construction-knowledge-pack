@@ -6,6 +6,26 @@ Thời gian: M0–M4 · Phụ thuộc: Giai đoạn 0, 1 · Phụ trách: Kỹ s
 
 Một nền dữ liệu chung, phân quyền theo dự án, với ontology đủ để nối BOQ, bản vẽ, nhật ký và vật tư.
 
+### Hình chi tiết: Ontology và sáu nguồn khối lượng
+
+![Bản vẽ tách lớp: chuỗi cấu kiện, dòng BOQ, vật tư; sáu nguồn khối lượng hội về một điểm đối chiếu, cảnh báo kèm bằng chứng](../../64b_AI_Core_Blueprint_Ontology_6_Nguon_HUD.jpg)
+
+**Bước 1.** Xe vật tư rời qua cân và cổng quét thùng; tỷ trọng lệch dải chuẩn thì gắn cờ.
+
+![Xe vật tư rời qua cân và cổng quét thùng; tỷ trọng lệch dải chuẩn thì gắn cờ.](../../65b_AI_Core_KL_B1_Can_Quet_Thung_Xe_HUD.jpg)
+
+**Bước 2.** Drone RTK đo thể tích đống vật liệu, so với sổ kho.
+
+![Drone RTK đo thể tích đống vật liệu, so với sổ kho.](../../66b_AI_Core_KL_B2_Drone_Do_Bai_Tap_Ket_HUD.jpg)
+
+**Bước 3.** Phiếu xe bồn so với thể tích cấu kiện trong BIM để tính hao hụt bê tông.
+
+![Phiếu xe bồn so với thể tích cấu kiện trong BIM để tính hao hụt bê tông.](../../67b_AI_Core_KL_B3_Xe_Bon_So_BIM_HUD.jpg)
+
+**Bước 4.** Cảnh báo chênh lệch kèm phiếu cân, ảnh hiện trạng và dòng BOQ liên quan.
+
+![Cảnh báo chênh lệch kèm phiếu cân, ảnh hiện trạng và dòng BOQ liên quan.](../../68b_AI_Core_KL_B4_Canh_Bao_Kem_Bang_Chung_HUD.jpg)
+
 ## Việc cần làm
 
 1. Thiết kế ontology v0: dự án, hạng mục, cấu kiện, vật tư, công tác BOQ, hồ sơ, người, thiết bị.

@@ -6,6 +6,22 @@ Thời gian: M2–M12 · Phụ thuộc: Giai đoạn 4, 5, 6 · Phụ trách: Tr
 
 Có mô hình ngành CC1 v1 thắng mô hình nền trên bộ đề, không huấn luyện từ đầu.
 
+### Hình chi tiết: Huấn luyện mô hình ngành CC1
+
+![Bản vẽ tách lớp: dữ liệu CC1 ẩn danh hóa, thang huấn luyện SFT LoRA tới RLVR, cổng G4 trước khi phục vụ CC1 v1](../../69b_AI_Core_Blueprint_Huan_Luyen_Mo_Hinh_HUD.jpg)
+
+**Bước 1.** Đội 10–15 người gán nhãn; QS kiểm mẫu.
+
+![Đội 10–15 người gán nhãn; QS kiểm mẫu.](../../70b_AI_Core_Huan_Luyen_B1_Gan_Nhan_HUD.jpg)
+
+**Bước 2.** Huấn luyện trên cụm CC1; theo dõi sai số giảm qua từng lượt.
+
+![Huấn luyện trên cụm CC1; theo dõi sai số giảm qua từng lượt.](../../71b_AI_Core_Huan_Luyen_B2_Chay_Huan_Luyen_HUD.jpg)
+
+**Bước 3.** Cổng G4: CC1 v1 phải hơn mô hình nền ở mọi nhóm câu, không nhóm nào tụt.
+
+![Cổng G4: CC1 v1 phải hơn mô hình nền ở mọi nhóm câu, không nhóm nào tụt.](../../72b_AI_Core_Huan_Luyen_B3_Cong_Phat_Hanh_HUD.jpg)
+
 ## Việc cần làm
 
 1. Thang huấn luyện theo thứ tự: RAG → tinh chỉnh embedding và OCR → SFT LoRA → DPO → RLVR (GRPO) cho bài toán có đáp án kiểm được → chưng cất từ mô hình thầy → CPT khi đủ dữ liệu.

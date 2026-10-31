@@ -8,6 +8,46 @@ Nạp toàn bộ dưới 30 dự án đang thi công, 10–15 dự án mỗi qu�
 
 ![QS quét hồ sơ giấy có dấu đỏ; màn hình đặt bản scan cạnh bảng đã trích để khớp BOQ](../../44b_AI_Core_OCR_Doc_Ho_So_So_Hoa_HUD.jpg)
 
+### Hình chi tiết: Đọc hồ sơ OCR và số hóa hồ sơ cũ
+
+![Bản vẽ tách lớp: quét, phân loại mẫu, trích trường và bảng, QS duyệt; khớp BOQ và kho hồ sơ cũ](../../55b_AI_Core_Blueprint_OCR_So_Hoa_HUD.jpg)
+
+**Bước 1.** Phân loại trang scan theo mẫu: biên bản, phiếu nhập kho, nhật ký.
+
+![Phân loại trang scan theo mẫu: biên bản, phiếu nhập kho, nhật ký.](../../56b_AI_Core_OCR_B1_Phan_Loai_Mau_HUD.jpg)
+
+**Bước 2.** Trích từng trường, dấu đỏ, chữ viết tay và bảng khối lượng.
+
+![Trích từng trường, dấu đỏ, chữ viết tay và bảng khối lượng.](../../57b_AI_Core_OCR_B2_Trich_Truong_Bang_HUD.jpg)
+
+**Bước 3.** Ô có độ tin thấp chuyển cho QS sửa; bản sửa được lưu để mô hình học.
+
+![Ô có độ tin thấp chuyển cho QS sửa; bản sửa được lưu để mô hình học.](../../58b_AI_Core_OCR_B3_QS_Duyet_Do_Tin_Thap_HUD.jpg)
+
+**Bước 4.** Số hóa hồ sơ cũ: gắn mã thùng, quét sách, ưu tiên hồ sơ hoàn công.
+
+![Số hóa hồ sơ cũ: gắn mã thùng, quét sách, ưu tiên hồ sơ hoàn công.](../../59b_AI_Core_OCR_B4_So_Hoa_Ho_So_Cu_HUD.jpg)
+
+### Hình chi tiết: Ontology và sáu nguồn khối lượng
+
+![Bản vẽ tách lớp: chuỗi cấu kiện, dòng BOQ, vật tư; sáu nguồn khối lượng hội về một điểm đối chiếu, cảnh báo kèm bằng chứng](../../64b_AI_Core_Blueprint_Ontology_6_Nguon_HUD.jpg)
+
+**Bước 1.** Xe vật tư rời qua cân và cổng quét thùng; tỷ trọng lệch dải chuẩn thì gắn cờ.
+
+![Xe vật tư rời qua cân và cổng quét thùng; tỷ trọng lệch dải chuẩn thì gắn cờ.](../../65b_AI_Core_KL_B1_Can_Quet_Thung_Xe_HUD.jpg)
+
+**Bước 2.** Drone RTK đo thể tích đống vật liệu, so với sổ kho.
+
+![Drone RTK đo thể tích đống vật liệu, so với sổ kho.](../../66b_AI_Core_KL_B2_Drone_Do_Bai_Tap_Ket_HUD.jpg)
+
+**Bước 3.** Phiếu xe bồn so với thể tích cấu kiện trong BIM để tính hao hụt bê tông.
+
+![Phiếu xe bồn so với thể tích cấu kiện trong BIM để tính hao hụt bê tông.](../../67b_AI_Core_KL_B3_Xe_Bon_So_BIM_HUD.jpg)
+
+**Bước 4.** Cảnh báo chênh lệch kèm phiếu cân, ảnh hiện trạng và dòng BOQ liên quan.
+
+![Cảnh báo chênh lệch kèm phiếu cân, ảnh hiện trạng và dòng BOQ liên quan.](../../68b_AI_Core_KL_B4_Canh_Bao_Kem_Bang_Chung_HUD.jpg)
+
 ## Việc cần làm
 
 1. Dựng luồng OCR: PaddleOCR-VL cho bố cục và bảng, VietOCR cho chữ viết tay; duyệt người khi độ tin thấp.
