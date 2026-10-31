@@ -26,7 +26,7 @@ Có hạ tầng phục vụ trợ lý cho kỹ sư ngay từ tháng 2, đặt tr
 
 ## Việc cần làm
 
-1. Gửi yêu cầu báo giá chỗ đặt (khoảng 40 kW, có dự phòng) tới Viettel IDC và FPT cùng lúc.
+1. Gửi yêu cầu báo giá chỗ đặt (khoảng 50 kW: 2 node suy luận khoảng 14 kW, 2 node huấn luyện khoảng 28,6 kW, cộng dự phòng) tới Viettel IDC và FPT cùng lúc.
 2. Gửi yêu cầu báo giá 2 node suy luận 8× GPU 96 GB và cả danh sách thiết bị đo đạc.
 3. Ký hợp đồng chỗ đặt; đặt hàng cụm suy luận.
 4. Lắp đặt, mạng riêng tới văn phòng và công trường, VPN, sao lưu.
@@ -49,14 +49,14 @@ Có hạ tầng phục vụ trợ lý cho kỹ sư ngay từ tháng 2, đặt tr
 
 ## Ngân sách **[I]**
 
-5–8 tỷ máy; chỗ đặt, điện, làm mát 3–6 tỷ năm 1.
+5–8 tỷ máy; chỗ đặt, điện, làm mát 3–6 tỷ năm 1. Ở mức tham chiếu 400 USD/kW/tháng, 50 kW cả năm khoảng 6,2 tỷ: từ năm 2 có thể chạm hoặc vượt nhẹ mức trên 6 tỷ.
 
 ## Rủi ro
 
 | Rủi ro | Cách chặn |
 |---|---|
 | Giao máy chậm | Thuê GPU trong nước làm cầu nối; đặt hàng ngay sau G1 |
-| Chỗ đặt không đủ điện cho cụm huấn luyện sau này | Báo giá luôn phần mở rộng 40 kW ngay từ đầu |
+| Chỗ đặt không đủ điện cho cụm huấn luyện sau này | Báo giá luôn đủ 50 kW ngay từ đầu; hỏi rõ công suất tủ liên tục theo kW, vì gói công bố của Viettel IDC chỉ tới 1.500 W |
 
 ## Nếu không đạt
 

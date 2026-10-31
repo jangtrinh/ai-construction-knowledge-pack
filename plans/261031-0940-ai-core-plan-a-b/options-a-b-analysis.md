@@ -109,7 +109,7 @@ Chi tiết theo hạng mục: PHẦN VII, mục VII.12.
 |---|---|---|---|---|
 | Cụm huấn luyện (2 node Blackwell + mạng + lưu trữ) | 25–36 tỷ | — | — | Node 8 GPU khoảng 400.000–550.000 USD **[S]**, cộng 15–25% mạng và lưu trữ |
 | Cụm suy luận (2 node 8× GPU 96 GB) | 5–8 tỷ | — | — | Node 8× RTX PRO 6000 khoảng 100.000–150.000 USD **[S]** |
-| Chỗ đặt, điện, làm mát (khoảng 40 kW) | 3–6 tỷ | 4–6 tỷ | 4–6 tỷ | Tham chiếu quốc tế khoảng 400 USD/kW/tháng **[S]**; cần báo giá Viettel IDC, FPT |
+| Chỗ đặt, điện, làm mát (khoảng 50 kW) | 3–6 tỷ | 4–6 tỷ | 4–6 tỷ | Tham chiếu quốc tế khoảng 400 USD/kW/tháng **[S]**; cần báo giá Viettel IDC, FPT. Cộng công suất: 2 node suy luận khoảng 14 kW, 2 node huấn luyện khoảng 28,6 kW, tổng khoảng 43 kW, nên hỏi giá 50 kW. Ở mức tham chiếu, 50 kW cả năm khoảng 6,2 tỷ, chạm mức trên của khoảng này |
 | Đội 18–22 người | 14–24 tỷ | 14–24 tỷ | 14–24 tỷ | 60–100 triệu đồng / người / tháng |
 | Chương trình gán nhãn | 3–6 tỷ | 2–4 tỷ | 2–4 tỷ | Kỹ sư kiêm nhiệm hoặc thuê ngoài |
 | Số hóa hồ sơ cũ (quét, OCR, duyệt) | 3–6 tỷ | 1–3 tỷ | — | Tùy khối lượng hồ sơ lưu trữ |
@@ -117,6 +117,19 @@ Chi tiết theo hạng mục: PHẦN VII, mục VII.12.
 | Pháp lý, bảo mật, tư vấn | 1–2 tỷ | 0,5–1 tỷ | 0,5–1 tỷ | Đánh giá độc lập |
 | Dự phòng thay GPU | — | — | 5–10 tỷ | Thế hệ GPU mới sau 2–3 năm |
 | **Cộng (làm tròn)** | **55–90 tỷ** | **23–40 tỷ** | **27–48 tỷ** | **3 năm: khoảng 105–180 tỷ** |
+
+### Ngoài tổng: thiết bị tại công trường và thiết bị đo **[I]**
+
+Chưa cộng vào 55–90 tỷ năm 1 và 105–180 tỷ 3 năm; tổng sẽ tăng khi có báo giá. Giá lấy từ chương VII, mục VII.18. Quy đổi khoảng 26.000 đ/USD và 28.000 đ/EUR; chưa gồm thuế nhập khẩu, VAT, vận chuyển, lắp đặt.
+
+| Bộ | Phần đã có giá | Còn chưa xác minh |
+|---|---|---|
+| Công trường khép kín khoảng 1 ha (mỗi dự án) | khoảng 0,38 tỷ: 1 máy quét fi-8190, 4 máy tính bảng, 1 Jetson AGX Orin (giá bộ phát triển), 2 máy nhận mặt, 1 thuê bao VNGEONET | 8 camera AI, 1 PTZ, khoảng 16 neo UWB và thẻ, cổng xoay, làn ANPR và barie, hộp Jetson công nghiệp |
+| Đoạn tuyến khoảng 10 km | khoảng 1,3–2,6 tỷ: 1 máy quét, 2 máy tính bảng, 1 Jetson, 2 máy nhận mặt, 1–2 thuê bao VNGEONET, 2–4 trailer camera năng lượng mặt trời (chưa gồm camera) | Camera, khoảng 15 thiết bị cho người làm việc đơn độc, ANPR |
+| Dùng chung tại trụ sở hoặc luân chuyển (một bộ) | khoảng 4,2–4,3 tỷ: fi-8950, CZUR ET24 Pro, Colortrac SmartLF Scan 36, DJI Matrice 4E, Matrice 400 với Zenmuse L2 hoặc L3, Leica BLK360 G2, Leica RTC360, một phần mềm ghép ảnh | Hovermap ST-X, Zeutschel (chỉ khi cần ảnh chuẩn lưu trữ), cân xe, Loadscan |
+| Dẫn hướng máy 3D (chỉ dự án tuyến mẫu) | khoảng 1,2–2,1 tỷ mỗi máy | Số máy cần trang bị |
+
+Ví dụ: dưới 30 dự án, nếu đều là công trường khép kín, riêng phần đã có giá khoảng 11 tỷ. Phần chưa xác minh (camera, UWB, cổng) có thể lớn hơn phần này.
 
 ### Ưu điểm
 

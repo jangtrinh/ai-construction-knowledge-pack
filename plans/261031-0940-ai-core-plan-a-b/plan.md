@@ -38,7 +38,7 @@ Ngày lập: 31/10/2026 · Trạng thái: **bản kế hoạch hoàn chỉnh, ch
 | 9 | Số hóa hồ sơ cũ | M5–M15 | 2, 5 | 3–6 tỷ năm 1, 1–3 tỷ năm 2 | [phase-09](./phase-09-archive-digitization.md) |
 | 10 | Vận hành, KPI, đánh giá năm | M6–M24 | Tất cả | Chỗ đặt 4–6 tỷ/năm từ năm 2; thay GPU 5–10 tỷ năm 3 | [phase-10](./phase-10-operations-kpi-review.md) |
 
-Tổng năm 1 khoảng 55–90 tỷ; 3 năm khoảng 105–180 tỷ. Chi tiết: [options-a-b-analysis.md §4](./options-a-b-analysis.md). Mọi số tiền phải thay bằng báo giá trước khi trình ngân sách.
+Tổng năm 1 khoảng 55–90 tỷ; 3 năm khoảng 105–180 tỷ. Chi tiết: [options-a-b-analysis.md §4](./options-a-b-analysis.md). Mọi số tiền phải thay bằng báo giá trước khi trình ngân sách. Thiết bị tại công trường và thiết bị đo nằm ngoài tổng này: xem mục "Ngoài tổng" trong [options-a-b-analysis.md](./options-a-b-analysis.md).
 
 ![Lộ trình theo giai đoạn](../../media/ai-core/plan-b-phases.png)
 

@@ -515,7 +515,7 @@ GPU trong nước:
 
 ## VII.12. Chi phí 3 năm (ước lượng thô)
 
-**Đã chốt phương án B theo cổng (31/10/2026): năm 1 khoảng 55–90 tỷ, 3 năm khoảng 105–180 tỷ.** Bảng chi phí B và ngân sách từng giai đoạn: `plans/261031-0940-ai-core-plan-a-b/options-a-b-analysis.md` và `plans/261031-0940-ai-core-plan-a-b/plan.md`. Bảng dưới là phương án A, giữ để so sánh.
+**Đã chốt phương án B theo cổng (31/10/2026): năm 1 khoảng 55–90 tỷ, 3 năm khoảng 105–180 tỷ.** Bảng chi phí B và ngân sách từng giai đoạn: `plans/261031-0940-ai-core-plan-a-b/options-a-b-analysis.md` và `plans/261031-0940-ai-core-plan-a-b/plan.md`. Thiết bị tại công trường và thiết bị đo nằm ngoài tổng này, ghi thành dòng riêng trong `options-a-b-analysis.md` (mục "Ngoài tổng"): phần đã có giá khoảng 0,38 tỷ mỗi công trường khép kín, khoảng 4,2–4,3 tỷ cho một bộ dùng chung ở trụ sở **[I]**. Bảng dưới là phương án A, giữ để so sánh.
 
 **Ước lượng cấp độ, sai số có thể ±50%. Phải có báo giá OEM, bảng lương và báo giá phần mềm trước khi trình.** **[I]** Tỷ giá tạm: 1 USD ≈ 26.000 đồng.
 
@@ -642,7 +642,7 @@ Lộ trình theo phương án B, 11 giai đoạn, M0 = tháng phê duyệt. Chi 
 3. Rà nghĩa vụ theo Luật Trí tuệ nhân tạo 134/2025/QH15 cho 1.5 và 3.5.
 4. Báo giá tại Việt Nam cho các dòng VII.18 còn "chưa xác minh": camera Hanwha/Axis, hộp Jetson công nghiệp, neo và thẻ Sewio, cổng xoay, ANPR, máy chủ 8 GPU.
 5. Đo tỷ lệ lỗi ký tự trên 200 trang hồ sơ CC1 cho PaddleOCR-VL-1.6, PP-OCRv5 và VietOCR; đo số trang/giờ của PaddleOCR-VL-1.6 trên đúng GPU của cụm.
-6. Hỏi từng trung tâm dữ liệu (Viettel IDC, FPT, VNPT, CMC) công suất tủ liên tục theo kW và cách làm mát. Một node 8 GPU cần khoảng 6,5–14 kW, gói công bố chỉ tới 1.500 W; số "3–6 tỷ chỗ đặt" của giai đoạn 2 chưa kiểm cho tủ mật độ cao.
+6. Hỏi từng trung tâm dữ liệu (Viettel IDC, FPT, VNPT, CMC) công suất tủ liên tục theo kW và cách làm mát. Một node 8 GPU cần khoảng 6,5–14 kW, gói công bố chỉ tới 1.500 W. Giai đoạn 2 đã đổi yêu cầu báo giá sang khoảng 50 kW (cộng công suất 4 node khoảng 43 kW). Số tiền chỗ đặt giữ nguyên; ở 400 USD/kW/tháng, 50 kW cả năm khoảng 6,2 tỷ, chạm mức trên của 4–6 tỷ/năm.
 
 ## VII.18. Đặc tả chi tiết từng thành phần
 

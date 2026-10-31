@@ -72,7 +72,7 @@ Nạp toàn bộ dưới 30 dự án đang thi công, 10–15 dự án mỗi qu�
 
 ## Ngân sách **[I]**
 
-Gán nhãn 3–6 tỷ năm 1, 2–4 tỷ/năm sau đó. Thiết bị đo theo báo giá, chưa tính trong bảng này.
+Gán nhãn 3–6 tỷ năm 1, 2–4 tỷ/năm sau đó. Thiết bị tại công trường và thiết bị đo là dòng riêng ngoài tổng: xem mục "Ngoài tổng" trong [options-a-b-analysis.md](./options-a-b-analysis.md).
 
 ## Rủi ro
 
