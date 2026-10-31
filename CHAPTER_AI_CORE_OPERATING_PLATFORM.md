@@ -3,7 +3,7 @@
 > Chương bổ sung cho bộ hồ sơ Công trường số CC1. Áp dụng cho mọi dự án của tập đoàn: công trường khép kín (điểm chạm 1.1–4.2) và công trường tuyến (L1–L8).
 > Gộp từ 3 bản brainstorm ngày 31/10/2026 trong `plans/reports/advisory-261031-0821-*.md`.
 > Nhãn: **[F]** nguồn đã kiểm · **[V]** số do nhà cung cấp tự công bố · **[I]** đề xuất/ước lượng của nhóm tư vấn.
-> Trạng thái: bản nội bộ, chưa đưa lên trang web.
+> Trạng thái: trang web đăng bản tóm tắt; bản đầy đủ ở file này.
 
 ---
 
@@ -13,7 +13,7 @@
 - **Không tự chế thiết bị đo.** Mỗi phép đo dùng sản phẩm thương mại đã kiểm định. CC1 tự làm phần nối dữ liệu, đối chiếu và cảnh báo.
 - **Giá trị riêng của CC1 nằm ở chuỗi khối lượng:** thiết kế → dự toán → nhập về → thi công → nghiệm thu → thanh toán, nối bằng một ontology chung cho cả tập đoàn.
 
-Quyết định của chủ đầu tư (31/10/2026):
+Quyết định của CC1 (31/10/2026):
 
 | Vấn đề | Chốt |
 |---|---|
@@ -33,7 +33,7 @@ Quyết định của chủ đầu tư (31/10/2026):
 | Tinh chỉnh hẹp (LoRA) | Vài nghìn mẫu do kỹ sư gán nhãn | Có, cho tác vụ hẹp: trích biên bản, BOQ, nhật ký; gọi công cụ đúng định dạng |
 | RAG + công cụ + ontology | Nền dữ liệu, chỉ mục, phân quyền | Bắt buộc, làm trước tiên |
 
-Ngành xây dựng đòi số liệu đúng tuyệt đối: khối lượng, dòng BOQ, điều khoản TCVN, lý trình. Vì vậy:
+Ngành xây dựng đòi số liệu chính xác và truy được nguồn: khối lượng, dòng BOQ, điều khoản TCVN, lý trình. Vì vậy:
 
 - **Sự thật** lấy từ hệ thống gốc: ERP, BIM, BOQ, hồ sơ có trích dẫn, thiết bị đo, bộ giải tối ưu.
 - **Mô hình** chỉ lo ngôn ngữ, trích xuất, định dạng và gọi công cụ.
@@ -71,7 +71,7 @@ Hai kho vector tách biệt:
 
 | Vai trò | Loại | Ghi chú |
 |---|---|---|
-| Trả lời, tác tử | LLM mở 8–30B, ưu tiên dạng MoE, tiếng Việt khá | Chọn bằng bộ đề của CC1, không bằng bảng xếp hạng quảng cáo |
+| Trả lời, tác tử | LLM mở 8–30B, ưu tiên dạng MoE, xử lý tốt tiếng Việt | Chọn bằng bộ đề của CC1, không bằng bảng xếp hạng quảng cáo |
 | Tác vụ khó, ít gặp | LLM mở lớn hơn, hoặc API thương mại cho dữ liệu không nhạy cảm | Định tuyến theo độ khó và độ nhạy dữ liệu |
 | Embedding | Đa ngôn ngữ (họ bge-m3), tinh chỉnh trên cặp hỏi–đáp ngành | Cải thiện truy xuất nhiều hơn đổi LLM |
 | Đọc scan, bản vẽ | Mô hình thị giác–ngôn ngữ mở (họ Qwen-VL, Vintern) | Trích biên bản, bảng |
@@ -201,7 +201,7 @@ Con dấu và chữ ký chỉ kiểm tra có hay không, đúng vị trí. Khôn
 | Đợt | Loại | Vì sao |
 |---|---|---|
 | 1 | Phiếu cân, phiếu giao hàng; hóa đơn điện tử | Số lượng lớn, mẫu đơn giản, nối thẳng vào nguồn khối lượng "nhập về" |
-| 2 | Biên bản nghiệm thu công việc; BOQ Excel | Giá trị cao nhất; điểm nghẽn ánh xạ |
+| 2 | Biên bản nghiệm thu công việc; BOQ Excel | Giá trị cao; điểm nghẽn ánh xạ |
 | 3 | Nhật ký thi công | Nhiều chữ viết tay, phục vụ tra cứu |
 | 4 | Hồ sơ cũ scan, bản vẽ scan | Chỉ khi có yêu cầu cụ thể |
 
@@ -378,14 +378,16 @@ Chỉ số đo:
 
 ## VII.11. Phần cứng và hạ tầng
 
+Đã chốt phương án B (31/10/2026): mua cụm suy luận 2 node 8× GPU 96 GB ngay; thuê GPU trong nước 3 tháng đầu; sau cổng G2 (M3–M4) mua cụm huấn luyện 2 node Blackwell 8 GPU; máy đặt tại trung tâm dữ liệu thuê. Bảng dưới là cấu hình phương án A, giữ để so sánh. Chi tiết B: [giai đoạn 2](./plans/261031-0940-ai-core-plan-a-b/phase-02-inference-cluster-datacenter.md), [giai đoạn 6](./plans/261031-0940-ai-core-plan-a-b/phase-06-procurement-gate-training-cluster.md).
+
 | Tầng | Cấu hình tham khảo | Số lượng |
 |---|---|---|
 | Biên, mỗi công trường hoặc NODE | Jetson AGX Orin 64GB hoặc server 2U + L4 24GB, NVMe 4TB, UPS | 1 bộ |
 | Biên tuyến | Hộp cảm biến năng lượng mặt trời, 4G + Starlink | Theo số đoạn Km |
 | Suy luận tập đoàn | 4 GPU loại 48GB (L40S hoặc tương đương), LLM 8–30B lượng tử hóa | 1 cụm; nhân đôi khi tải tăng |
-| Huấn luyện | Thuê theo giờ node 8× H100/H200 | Không mua |
+| Huấn luyện | Thuê theo giờ node 8× H100/H200 | Không mua (phương án A) |
 | Lưu trữ | Kho đối tượng vài trăm TB | Tăng theo số dự án |
-| Mạng | Chỉ đẩy metadata lên tập đoàn, dưới 2 Mbps / công trường | — |
+| Mạng | Chỉ đẩy siêu dữ liệu (metadata) lên tập đoàn, dưới 2 Mbps / công trường | — |
 
 GPU trong nước:
 
@@ -415,6 +417,8 @@ Chưa gồm thiết bị điểm chạm tại công trường (bảng riêng tro
 
 ## VII.13. Đội ngũ và nạp dự án theo đợt
 
+Phương án B: đội 18–22 người cộng 10–15 người gán nhãn, nạp 10–15 dự án mỗi quý ([giai đoạn 1](./plans/261031-0940-ai-core-plan-a-b/phase-01-team-hiring.md)). Bảng vai trò dưới đây là đội lõi phương án A, giữ để so sánh; quy trình nạp một dự án dùng chung cho cả hai.
+
 | Vai trò | Số người |
 |---|---|
 | Kỹ sư dữ liệu | 2 |
@@ -437,14 +441,14 @@ Kỹ sư xây dựng trong đội là điều kiện tiên quyết. Thiếu họ
 | 5. Bổ sung 30–50 câu bộ đề riêng | Chỉ huy trưởng, QS | 1 ngày |
 | 6. Chạy bộ đề, kiểm thử rò rỉ, bàn giao | Đội lõi | 1–2 ngày |
 
-Mỗi quý nạp 3–5 dự án mà vẫn giữ được việc nền tảng.
+Phương án A nạp 3–5 dự án mỗi quý; phương án B, với đội lớn hơn, nạp 10–15 dự án mỗi quý.
 
 ### Tiêu chí chọn 2 dự án mẫu đợt 1
 
 | Tiêu chí | Dự án khép kín | Dự án tuyến |
 |---|---|---|
 | Dữ liệu số | Có BIM (IFC xuất được), BOQ Excel | Có tim tuyến (LandXML), BOQ Excel |
-| Giai đoạn | Đang thi công phần thân, còn ≥ 12 tháng | Đang thi công nền đường hoặc cầu, còn ≥ 12 tháng |
+| Giai đoạn | Đang thi công phần thân, còn ít nhất 12 tháng thi công | Đang thi công nền đường hoặc cầu, còn ít nhất 12 tháng thi công |
 | Điểm chạm | Có thể lắp 1.1–1.4 trong quý đầu | Có thể lắp L1–L3, L8 trong quý đầu |
 | Con người | Chỉ huy trưởng và QS sẵn sàng viết bộ đề | Như bên cạnh |
 

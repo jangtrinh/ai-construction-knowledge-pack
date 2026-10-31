@@ -1,6 +1,6 @@
 # Giai đoạn 8: Tác tử và tích hợp Site OS, ERP
 
-Thời gian: M4–M12 · Phụ thuộc: Giai đoạn 3, 5, 7 · Phụ trách: Kỹ sư backend; chủ sở hữu sản phẩm · Kế hoạch tổng: [plan.md](./plan.md)
+Thời gian: M4–M12 · Phụ thuộc: Giai đoạn 3, 5, 7 · Phụ trách: Kỹ sư tích hợp hệ thống; chủ sở hữu sản phẩm · Kế hoạch tổng: [plan.md](./plan.md)
 
 ## Mục tiêu
 
@@ -36,7 +36,7 @@ Nằm trong chi phí đội ngũ.
 | Rủi ro | Cách chặn |
 |---|---|
 | Tác tử ghi sai vào hệ thống thật | Cổng G3; duyệt từng lệnh; hoàn tác được |
-| Kỹ sư không dùng | Bắt đầu từ việc họ đang mất thời gian nhất; đo và hỏi hằng tháng |
+| Kỹ sư không dùng | Bắt đầu từ việc họ đang mất nhiều thời gian; đo và hỏi hằng tháng |
 
 ## Nếu không đạt
 

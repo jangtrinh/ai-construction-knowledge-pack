@@ -11,7 +11,7 @@ Chỉ mua cụm huấn luyện khi đã có người, có dữ liệu và mô h�
 1. Họp cổng G2 (M3–M4) với 3 điều kiện: bộ đề ≥ 80% nhóm tra cứu, ≥ 50 nghìn mẫu huấn luyện khả dụng, ≥ 10 người.
 2. Đạt: đặt hàng 2 node Blackwell 8 GPU, mạng tốc độ cao, lưu trữ; mở rộng chỗ đặt.
 3. Lắp đặt, kiểm thử tải 72 giờ, nghiệm thu.
-4. Cài lịch chạy chung cho huấn luyện ngôn ngữ, thị giác, point cloud.
+4. Cài lịch chạy chung cho huấn luyện ngôn ngữ, thị giác, đám mây điểm (point cloud).
 5. Chuyển việc huấn luyện từ GPU thuê sang cụm riêng.
 
 ## Sản phẩm bàn giao

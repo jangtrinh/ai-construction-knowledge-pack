@@ -1,4 +1,4 @@
-# Đề Án Tư Vấn Chiến Lược AI & Công Trường Số — Tổng Công Ty Xây Dựng Số 1 (CC1)
+# Đề Án Tư Vấn Chiến Lược AI & Công Trường Số — Tổng Công ty Xây dựng Số 1 (CC1)
 
 > **Bộ Hồ Sơ Trực Quan 20 Checkpoints / Touchpoints (Lộ Trình 1–3 Năm & Tầm Nhìn 2030 + Kiến Trúc 3D Spatial Re-ID & Sensor Fusion)**
 > Thư mục dự án: `/Users/jangtrinh/Products/cc1`
@@ -8,7 +8,7 @@
 
 ## Danh Mục Toàn Bộ 20 Hình Ảnh Chi Tiết Theo Từng Checkpoint
 
-### PHẦN I — GIAI ĐOẠN 1 (NĂM THỨ NHẤT): SỐ HÓA "TAI MẮT" & AN NINH HIỆN TRƯỜNG (QUICK-WIN)
+### PHẦN I — GIAI ĐOẠN 1 (NĂM THỨ NHẤT): SỐ HÓA "TAI MẮT" & AN NINH HIỆN TRƯỜNG (LÀM TRƯỚC)
 
 #### 01. Checkpoint 1.1 — Cổng Kiểm Soát AI (AI Access Control & PPE Safety Check)
 - **File:** [`01_GD1_CP1_Cong_Kiem_Soat_AI_PPE.jpg`](./01_GD1_CP1_Cong_Kiem_Soat_AI_PPE.jpg)

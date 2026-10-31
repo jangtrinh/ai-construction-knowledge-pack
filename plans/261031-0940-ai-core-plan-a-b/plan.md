@@ -1,6 +1,6 @@
 # Kế hoạch triển khai lõi AI CC1: Phương án B theo cổng
 
-Ngày lập: 31/10/2026 · Trạng thái: **bản kế hoạch hoàn chỉnh, chờ chủ đầu tư duyệt** · Mốc M0 = tháng phê duyệt; ngày cụ thể không nằm trong phạm vi bản kỹ thuật này
+Ngày lập: 31/10/2026 · Trạng thái: **bản kế hoạch hoàn chỉnh, chờ CC1 duyệt** · Mốc M0 = tháng phê duyệt; ngày cụ thể không nằm trong phạm vi bản kỹ thuật này
 
 ## Quyết định đã chốt (31/10/2026)
 

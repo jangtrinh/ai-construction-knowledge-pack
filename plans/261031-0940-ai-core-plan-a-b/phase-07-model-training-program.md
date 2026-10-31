@@ -25,7 +25,7 @@ Có mô hình ngành CC1 v1 thắng mô hình nền trên bộ đề, không hu�
 
 - [ ] Mỗi bản phát hành thắng bản đang chạy trên bộ đề; không nhóm nào giảm
 - [ ] Tỷ lệ câu có trích dẫn giữ 100%
-- [ ] CC1 v1 qua cổng G4 trước M10–M12
+- [ ] CC1 v1 qua cổng G4 tại M10
 - [ ] Chạy lại được mọi lượt huấn luyện từ nhật ký
 
 ## Ngân sách **[I]**

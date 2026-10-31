@@ -4,7 +4,7 @@ Thời gian: M5–M15 · Phụ thuộc: Giai đoạn 2, 5 · Phụ trách: Nhóm
 
 ## Mục tiêu
 
-Đưa hồ sơ các dự án đã xong vào lõi để trợ lý học được kinh nghiệm cũ.
+Đưa hồ sơ các dự án đã xong vào lõi để trợ lý tra cứu và học từ hồ sơ các dự án đã xong.
 
 ## Việc cần làm
 

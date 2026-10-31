@@ -16,7 +16,7 @@ Tỷ giá tạm: 1 USD ≈ 26.000 đồng. **Mọi số tiền phải có báo g
 
 ## 1. Bối cảnh
 
-- Chủ đầu tư có ngân sách và sẵn sàng chi.
+- CC1 có ngân sách và sẵn sàng chi.
 - Phạm vi: toàn tập đoàn, cả công trường khép kín và công trường tuyến.
 - Khi tiền không còn là ràng buộc, các ràng buộc thật là:
   1. **dữ liệu sẵn sàng;**
@@ -62,7 +62,7 @@ Chi tiết theo hạng mục: PHẦN VII, mục VII.12.
 ### Ưu điểm
 
 - Vốn ban đầu thấp. Dễ đổi hướng nếu thị trường mô hình thay đổi.
-- Không gánh rủi ro GPU lỗi thời: mỗi thế hệ GPU chỉ dẫn đầu khoảng 1–2 năm.
+- Không gánh rủi ro GPU lỗi thời: mỗi thế hệ GPU thường bị thế hệ mới thay sau khoảng 1–2 năm.
 - Bắt đầu ngay, không chờ mua sắm, lắp đặt.
 - Học trên dữ liệu thật trước khi cam kết lớn.
 
@@ -121,10 +121,10 @@ Chi tiết theo hạng mục: PHẦN VII, mục VII.12.
 ### Ưu điểm
 
 - **Nhanh:** phủ toàn tập đoàn trong khoảng 6–9 tháng (dưới 30 dự án), thay vì 2–3 năm.
-- **Kiểm soát tối đa:** dữ liệu và mô hình thầy không rời hạ tầng CC1, chủ quyền dữ liệu cao hơn phương án A.
+- **Tự kiểm soát dữ liệu:** dữ liệu và mô hình thầy không rời hạ tầng CC1, chủ quyền dữ liệu cao hơn phương án A.
 - **Lặp nhanh:** CPT, chưng cất, RLVR chạy hằng tuần, không chờ lịch thuê.
 - **Tài sản lâu dài:** mô hình ngành CC1, kho dữ liệu đã gán nhãn, đội AI nội bộ.
-- **Dùng chung GPU:** thị giác máy, point cloud, Digital Twin của các touchpoint cũng chạy trên cụm này.
+- **Dùng chung GPU:** thị giác máy, đám mây điểm (point cloud), bản sao số của các điểm chạm cũng chạy trên cụm này.
 - **Số hóa toàn bộ hồ sơ cũ:** tri thức nhiều năm của tập đoàn tra cứu được.
 
 ### Nhược điểm
@@ -144,7 +144,7 @@ Ngay cả phương án B vẫn **không** huấn luyện mô hình từ đầu. 
 |---|---|---|
 | Phủ toàn tập đoàn | 2–3 năm | khoảng 6–9 tháng (dưới 30 dự án) |
 | Chi phí 3 năm | 17–35 tỷ | 105–180 tỷ |
-| Vốn ban đầu | Thấp (khoảng 2 tỷ phần cứng) | Cao (khoảng 30–45 tỷ phần cứng) |
+| Vốn ban đầu | Thấp (khoảng 2 tỷ phần cứng) | Cao (khoảng 30–44 tỷ phần cứng) |
 | Kiểm soát dữ liệu | Tốt (trong nước) | Tối đa (trong hạ tầng CC1) |
 | Tốc độ lặp huấn luyện | Theo đợt thuê | Hằng tuần |
 | Mô hình ngành riêng | Có thể, chậm | Có, từ tháng 6 |
@@ -167,7 +167,7 @@ Có tiền và phạm vi toàn tập đoàn thì nên chọn B vì tốc độ. 
 
 Nếu cổng tháng 3–4 không đạt (thiếu người hoặc thiếu dữ liệu), dừng ở mức A+: giữ cụm suy luận, tiếp tục thuê GPU, chưa mua cụm huấn luyện. Phần vốn chưa giải ngân không bị mất.
 
-## 7. Quyết định của chủ đầu tư (31/10/2026)
+## 7. Quyết định của CC1 (31/10/2026)
 
 | Câu hỏi | Chốt |
 |---|---|

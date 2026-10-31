@@ -4,7 +4,7 @@
 > Phục vụ trình Hội đồng Kỹ thuật, Ban Quản lý Dự án, Ban CNTT và Ban Tổng Giám đốc **Tổng Công ty Xây dựng Số 1 (CC1)**.  
 > Mỗi Touchpoint được bóc tách chi tiết theo **4 chiều**:  
 > 1. **Quy trình vận hành từng bước (Step-by-Step Operational Flow)**  
-> 2. **Hệ thống xử lý cái gì (AI Pipeline, Thuật toán & Luồng dữ liệu)**  
+> 2. **Hệ thống xử lý cái gì (Luồng xử lý AI, thuật toán & luồng dữ liệu)**  
 > 3. **Danh mục thiết bị phần cứng (Hardware BOM & Thông số công nghiệp)**  
 > 4. **Hạ tầng kỹ thuật tại công trường (Network, Edge Compute, Power, RTK/Cloud)**
 
@@ -407,7 +407,7 @@ sequenceDiagram
 | **Đế sạc tự động** | Đế sạc tiếp xúc tự động `Autonomous Charging Dock` có cổng Ethernet tốc độ cao `1Gbps` để xả dữ liệu nặng hàng chục GB sau mỗi ca tuần đêm. | 1 – 2 đế |
 
 #### 4. Hạ tầng kỹ thuật tại công trường (Infrastructure)
-- **Mốc định vị Fiducial Markers (AprilTags):** Dán các bảng mã `AprilTag` tại đầu cầu thang bộ và các ngóc ngách chuyển tầng để Robot tự xác nhận mốc chuyển tầng chính xác tuyệt đối.
+- **Mốc định vị Fiducial Markers (AprilTags):** Dán các bảng mã `AprilTag` tại đầu cầu thang bộ và các ngóc ngách chuyển tầng để Robot tự xác nhận mốc chuyển tầng chính xác.
 - **Hành lang an toàn:** Cầu thang tạm công trường đảm bảo chiều rộng tối thiểu `0.8m` và có gờ chắn hai bên.
 
 ---

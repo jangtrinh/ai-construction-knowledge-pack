@@ -78,10 +78,10 @@ flowchart TB
 2. **Hệ thống xử lý:** đối chiếu checklist với phương án; nhận diện ảnh (biển, đèn, rào có mặt/đúng loại theo QCVN 41:2024) [I]; nhật ký bất biến làm bằng chứng khi thanh tra hoặc có tai nạn.
 3. **Thiết bị:** điện thoại/tablet IP67 cho chỉ huy mặt trận; tem QR trên từng biển/rào di động (đếm và truy vết tài sản TTM).
 4. **Hạ tầng:** offline-first; đồng bộ khi có sóng.
-5. **Vì sao trước:** lỗi đang xảy ra ở VN là **lỗi cơ bản** — văn bản Cục Đường bộ VN 2026 thừa nhận biển, rào tạm "chưa bảo đảm theo quy định" [F]. Rẻ nhất, bảo vệ CC1 về pháp lý.
+5. **Vì sao trước:** lỗi đang xảy ra ở VN là **lỗi cơ bản** — văn bản Cục Đường bộ VN 2026 thừa nhận biển, rào tạm "chưa bảo đảm theo quy định" [F]. Chi phí thấp, bảo vệ CC1 về pháp lý.
 
 ### L2 — Giấy phép mặt trận số & Chỉ huy mặt trận *(Năm 1)*
-1. **Quy trình:** mỗi ngày, mỗi mặt trận có **một giấy phép số**: đoạn Km từ–đến × khung giờ × danh sách tổ đội × 1 chỉ huy chịu trách nhiệm. Đầu ca, chỉ huy quét thẻ CC1 (QR/NFC) của từng công nhân tại buổi giao ca; hệ thống kiểm chứng chỉ, khám sức khỏe, hạn huấn luyện từ sổ đăng ký trung tâm. Khi nhiều tổ dùng chung một đoạn chặn: một **điều phối viên đoạn** giữ giấy phép, chỉ đóng khi mọi tổ xác nhận rút xong. Sơ tán: mỗi chỉ huy báo quân số tổ mình.
+1. **Quy trình:** mỗi ngày, mỗi mặt trận có **một giấy phép số**: đoạn Km từ–đến × khung giờ × danh sách tổ đội × 1 chỉ huy chịu trách nhiệm. Đầu ca, chỉ huy quét thẻ CC1 (QR/NFC) của từng công nhân tại buổi giao ca; hệ thống kiểm chứng chỉ, khám sức khỏe, hạn huấn luyện từ sổ đăng ký trung tâm. Khi nhiều tổ dùng chung một đoạn chặn: một **điều phối viên đoạn** giữ giấy phép, chỉ đóng khi mọi tổ xác nhận rút xong. Sơ tán: mỗi chỉ huy báo quân số tổ đang phụ trách.
 2. **Mô hình tham chiếu:** đường sắt UK — thẻ Sentinel + COSS (người chịu trách nhiệm tổ, đi cùng tổ từ vào đến ra) + Protection Controller [F].
 3. **Hệ thống xử lý:** sổ đăng ký công nhân/thầu phụ; geofence đoạn được phép; cảnh báo vào sớm/ra muộn/ra ngoài đoạn.
 4. **Thiết bị:** thẻ QR/NFC; tablet tổ trưởng làm kiosk khi mất sóng.
@@ -89,7 +89,7 @@ flowchart TB
 
 ### L3 — e-Ticket vật tư + geofence điểm đổ + telematics hỗn hợp *(Năm 1)*
 1. **Quy trình:** cân **một lần tại nguồn** (trạm trộn/mỏ — giữ TP2.1) → phát phiếu điện tử mang khối lượng, mác, giờ xuất → xe vào vùng geofence của điểm đổ tự ghi giờ đến/đổ/rời → kỹ sư nhận ký số trên app (không đứng trên làn xe nhận phiếu giấy) → đối soát phiếu với khối lượng nghiệm thu theo đoạn lý trình.
-2. **Bằng chứng:** Georgia DOT bắt buộc e-Ticket từ 2021, tiết kiệm ~1 giờ/ngày rải, tới 15.000 phiếu/dự án BTN; lý do số 1 của các DOT là an toàn người nhận phiếu [F]. Nhiều DOT **bỏ** GPS bám xe liên tục, chuyển sang geofence tại nguồn + điểm đổ [F].
+2. **Bằng chứng:** Georgia DOT bắt buộc e-Ticket từ 2021, tiết kiệm ~1 giờ/ngày rải, tới 15.000 phiếu/dự án BTN; lý do chính của các DOT là an toàn người nhận phiếu [F]. Nhiều DOT **bỏ** GPS bám xe liên tục, chuyển sang geofence tại nguồn + điểm đổ [F].
 3. **Máy móc:** nhận dữ liệu chuẩn ISO 15143-3 (vị trí, giờ máy, nhiên liệu) từ máy có hỗ trợ; gắn GPS + cảm biến nhiên liệu cho máy cũ/máy thuê; định danh người lái trên máy.
 4. **Hạ tầng:** API với trạm trộn của nhà cung cấp; QR in trên phiếu giấy làm dự phòng.
 
@@ -190,7 +190,7 @@ Face ID (TP1.1), vector dáng đi (TP1.5) và thẻ GNSS (L2, L7) xử lý dữ 
 1. **Quy trình:** mỗi máy (kể cả máy thuê) vào sổ đăng ký CC1: số khung, ảnh, đánh dấu ẩn, chủ sở hữu → chia sẻ với công an tỉnh. Gắn **2 đường định vị độc lập**: telematics ISO 15143-3 của hãng + **tracker ẩn** chạy pin, đa mạng. **"Im lặng = báo động"**: thiết bị mất tín hiệu ngoài giờ → cảnh báo (chống phá sóng). Ngoài giờ ca: máy nằm trong vùng đỗ geofence, nổ máy/di chuyển → báo + khóa khởi động tại bãi.
 2. **Nhiên liệu:** cảm biến tiếp cận bồn + cảm biến mức dầu + đồng hồ lưu lượng trên xe bồn; AI đối soát lít cấp ↔ giờ máy ↔ khối lượng làm (L3) → phát hiện "đổ khống". **Đo mức hao hụt nền 1 tháng trước khi đặt mục tiêu.**
 3. **AI:** phát hiện bất thường (máy chạy ngoài ca, tiêu hao lệch so với máy cùng loại).
-4. **Pháp lý:** tự gắn GPS lên máy của mình không thấy bị cấm; **không** thiết kế "dừng máy từ xa" khi máy đang trên đường công cộng — chỉ khóa khởi động tại bãi [I]. Thiết bị giám sát hành trình chỉ bắt buộc cho 4 nhóm xe (NĐ 151/2024) [F thứ cấp].
+4. **Pháp lý:** CC1 tự gắn GPS lên máy thuộc sở hữu của CC1 thì chưa thấy quy định cấm; **không** thiết kế "dừng máy từ xa" khi máy đang trên đường công cộng — chỉ khóa khởi động tại bãi [I]. Thiết bị giám sát hành trình chỉ bắt buộc cho 4 nhóm xe (NĐ 151/2024) [F thứ cấp].
 5. **Bảo hiểm:** xin báo giá phí/khấu trừ có–không có hệ thống từ nhà bảo hiểm của CC1.
 
 #### L10 — Vật tư & tài sản tuyến: đánh dấu + cảm biến rẻ + đếm tồn tại NODE *(Năm 1)*

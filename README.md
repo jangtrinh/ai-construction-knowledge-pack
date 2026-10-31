@@ -58,7 +58,7 @@ báo cáo review: [process/independent-review-grok.txt](process/independent-revi
 
 Repo **không** chứa 111 bản sao toàn văn trang nguồn (`_evidence/<run>/sources/`), vì đó là nội dung có bản quyền của
 báo chí, vendor và cơ quan nhà nước. Mỗi claim vẫn giữ quote ngắn (tối đa 40 từ), URL và sha256 của bản đã freeze ngày
-29/10/2026. Vì vậy `verify --claims` chạy trên bản clone sẽ báo thiếu file capture cho tới khi bạn freeze lại nguồn:
+29/10/2026. Vì vậy `verify --claims` chạy trên bản clone sẽ báo thiếu file capture cho tới khi freeze lại nguồn:
 
 ```bash
 python3 -m knowledge_builder.cli ingest --freeze <url> --root ai-nganh-xay-dung --run ai-xay-dung-261029 --stem <stem>
@@ -75,7 +75,7 @@ trong từng source.
 
 ---
 
-# Đề Án Tư Vấn Chiến Lược AI & Công Trường Số — Tổng Công Ty Xây Dựng Số 1 (CC1)
+# Đề Án Tư Vấn Chiến Lược AI & Công Trường Số — Tổng Công ty Xây dựng Số 1 (CC1)
 
 > **Bộ Hồ Sơ Trực Quan 20 Checkpoints / Touchpoints (Lộ Trình 1–3 Năm & Tầm Nhìn 2030 + Kiến Trúc 3D Spatial Re-ID & Sensor Fusion)**
 > Thư mục dự án: `/Users/jangtrinh/Products/cc1`

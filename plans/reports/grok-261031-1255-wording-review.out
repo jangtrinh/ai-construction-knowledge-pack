@@ -1,0 +1,101 @@
+mode=ask model=grok-4.7 stop=end_turn turns=8 secs=312
+tokens in=145568 cached=565760 out=21821 session=01a19088-f1fe-7ad3-a4ef-fddd661a6e4f full=/Users/jangtrinh/.grok/runs/grok-ask-2026-10-31T06-02-46-668Z.json
+---
+Tôi sẽ đọc hồ sơ đã công bố và đối chiếu đúng các quy tắc diễn đạt, không sửa file. Trước hết tôi lấy quy tắc biên tập và toàn bộ văn bản ưu tiên 1.Đã đọc hết nhóm ưu tiên 1. Nhóm ưu tiên 2 chỉ đọc phần mở đầu, nên số lần "tập đoàn" ở các file đó là chưa đủ. FACT là chữ thấy đúng tại dòng. INFERENCE là chỗ chưa đọc hết, hoặc cách một người đọc có thể hiểu nhầm.
+
+| # | file:line | rule (1–8) | severity (must / should / owner decision) | current text (exact, short) | suggested text |
+|---|---|---|---|---|---|
+| 1 | CHAPTER_AI_CORE_OPERATING_PLATFORM.md:386 | 6 | must | Không mua | Đặt mua sau cổng G2 (M3–M4); trước đó thuê GPU trong nước |
+| 2 | CHAPTER_AI_CORE_OPERATING_PLATFORM.md:440 | 6 | must | Mỗi quý nạp 3–5 dự án mà vẫn giữ được việc nền tảng. | Mỗi quý nạp 10–15 dự án. |
+| 3 | index.html:2817 | 3 | must | Chủ đầu tư có ngân sách. | Tổng Công ty có ngân sách. |
+| 4 | CHAPTER_AI_CORE_OPERATING_PLATFORM.md:16 | 3 | must | Quyết định của chủ đầu tư (31/10/2026) | Quyết định của Tổng Công ty (31/10/2026) |
+| 5 | options-a-b-analysis.md:19 | 3 | must | Chủ đầu tư có ngân sách và sẵn sàng chi. | Tổng Công ty có ngân sách và sẵn sàng chi. |
+| 6 | options-a-b-analysis.md:170 | 3 | must | Quyết định của chủ đầu tư (31/10/2026) | Quyết định của Tổng Công ty (31/10/2026) |
+| 7 | plan.md:3 | 3 | must | chờ chủ đầu tư duyệt | chờ Tổng giám đốc duyệt |
+| 8 | CHAPTER_AI_CORE_OPERATING_PLATFORM.md:36 | 2 | must | Ngành xây dựng đòi số liệu đúng tuyệt đối | Ngành xây dựng đòi số liệu lấy từ hệ thống gốc, có trích dẫn |
+| 9 | index.html:2280 | 2 | must | Chống tráo 100% | Gắn cờ khi chip lệch vệt người |
+| 10 | index.html:1721 | 2 | must | Ngoại tuyến 100% | Ghi đệm khi mất sóng, đồng bộ khi có sóng |
+| 11 | index.html:2212 | 2 | must | Face ID = 0% | Nhận diện khuôn mặt không dùng được khi bịt mặt hoặc nhìn từ trên cao |
+| 12 | TECHNICAL_ARCHITECTURE_TOUCHPOINTS.md:61 | 2 | must | Trường hợp ĐẠT 100% | Trường hợp đạt điều kiện mở cổng |
+| 13 | TECHNICAL_ARCHITECTURE_TOUCHPOINTS.md:81 | 2 | must | hoạt động độc lập 100% ngay cả khi đứt cáp quang Internet | vẫn chạy trên mạng nội bộ khi đứt cáp quang Internet |
+| 14 | CC1-README.md:103 | 2 | must | AI ĐỒNG BỘ ERP: HỢP LỆ - MATCHED 100% | AI ĐỒNG BỘ ERP: HỢP LỆ |
+| 15 | index.html:2714 | 1 | must | 4 tác tử AI điều phối công trường trong 3 giây; kính AR nghiệm thu 17:00, giải ngân 17:02 | Tác tử đề xuất điều phối; người duyệt trước khi ghi. Nghiệm thu và giải ngân là việc của quy trình hợp đồng. |
+| 16 | index.html:1316 | 1 | must | Mô hình lo ngôn ngữ, trích xuất và gọi công cụ. | Mô hình đảm nhận ngôn ngữ, trích xuất và gọi công cụ. |
+| 17 | README.md:61 | 1 | must | cho tới khi bạn freeze lại nguồn | cho tới khi chạy lại lệnh freeze nguồn |
+| 18 | README.md:82 | 6 | must | 12 touchpoint L1–L12, demo cao tốc TP.HCM–Đà Lạt | 8 điểm chạm L1–L8; 2 dự án mẫu chưa gắn tên |
+| 19 | CC1-README.md:5 | 6 | must | 12 touchpoint L1–L12, demo cao tốc TP.HCM–Đà Lạt | 8 điểm chạm L1–L8; 2 dự án mẫu chưa gắn tên |
+| 20 | CHAPTER_OPEN_LINEAR_SITES_HIGHWAY_BRIDGE.md:18 | 6 | should | 12 touchpoint mới L1–L12 | 8 điểm chạm L1–L8 trên trang đã công bố; L9–L12 còn trong chương này |
+| 21 | phase-07-model-training-program.md:28 | 6 | must | CC1 v1 qua cổng G4 trước M10–M12 | CC1 v1 qua cổng G4 tại M10 |
+| 22 | index.html:2817 | 6 | should | Có, từ tháng 6 | Có, từ M6 |
+| 23 | index.html:2818 | 6 | should | đặt mua cụm huấn luyện tại cổng tháng 3–4 | đặt mua cụm huấn luyện tại cổng G2 (M3–M4) |
+| 24 | index.html:2817 | 6 | should | Khuyến nghị: B giải ngân theo cổng | Đã chốt: B, giải ngân theo cổng |
+| 25 | options-a-b-analysis.md:147 | 6 | should | Cao (khoảng 30–45 tỷ phần cứng) | Cao (cụm huấn luyện 25–36 tỷ và cụm suy luận 5–8 tỷ) |
+| 26 | index.html:2179 | 2 | should | Biển số 99.4% | Đọc biển số (OCR); tỷ lệ đo tại hiện trường |
+| 27 | index.html:2390 | 2 | should | nhanh gấp 8 lần búng mực tay | in tường, hốc cửa và lỗ mở cơ điện lên sàn; sai số đo lại tại công trường |
+| 28 | index.html:2558 | 2 | should | khung xương giảm 70% tải lên cột sống L4/L5 | khung xương trợ lực; mức giảm tải lấy theo hồ sơ hãng, đo lại khi dùng |
+| 29 | index.html:2525 | 2 | should | Khớp 1:1 | Chồng mô hình BIM lên hiện trường |
+| 30 | index.html:1332 | 2 | should | Chưa có mô hình tiếng Việt mở nào vượt mô hình đa ngôn ngữ mới. | Tới tháng 10/2026, các mô hình tiếng Việt mở đã công bố chưa cho thấy lợi thế rõ trên bộ đề ngành. Chọn bằng thi đấu. |
+| 31 | options-a-b-analysis.md:65 | 2 | should | mỗi thế hệ GPU chỉ dẫn đầu khoảng 1–2 năm | mỗi thế hệ GPU thường bị thay trong khoảng 1–2 năm |
+| 32 | options-a-b-analysis.md:124 | 2 | should | Kiểm soát tối đa | Dữ liệu và mô hình thầy nằm trên hạ tầng CC1 |
+| 33 | CHAPTER_AI_CORE_OPERATING_PLATFORM.md:204 | 2 | should | Giá trị cao nhất | Giá trị cao hơn các đợt sau |
+| 34 | CHAPTER_OPEN_LINEAR_SITES_HIGHWAY_BRIDGE.md:76 | 2 | should | ưu tiên cao nhất | ưu tiên năm 1 |
+| 35 | CHAPTER_OPEN_LINEAR_SITES_HIGHWAY_BRIDGE.md:119 | 2 | should | có giá trị cao nhất | có giá trị cao với danh mục cầu của CC1 |
+| 36 | phase-08-agents-site-os-integration.md:39 | 2 | should | việc họ đang mất thời gian nhất | việc chỉ huy trưởng và QS đang mất nhiều thời gian |
+| 37 | CC1-README.md:48 | 1 | should | điểm mù chết người | trường hợp không thấy mặt |
+| 38 | BRAINSTORMING_AND_FULL_ARCHITECTURE.md:10 | 1 | should | Sự thật phũ phàng | Thực tế vận hành |
+| 39 | index.html:2844 | 1 | should | Thực hiện trọn vẹn trong 8 giờ | Bản đề xuất này do Jang Trinh thực hiện. |
+| 40 | phase-09-archive-digitization.md:7 | 1 | should | để trợ lý học được kinh nghiệm cũ | để truy xuất và huấn luyện trên hồ sơ các dự án đã xong |
+| 41 | index.html:1404 | 4 | should | geofence điểm đổ | vùng định vị điểm đổ |
+| 42 | index.html:1403 | 4 | should | báo động Man-down 180 giây | báo động khi bất động 180 giây |
+| 43 | index.html:1402 | 4 | should | nút (node) kín | nút kín |
+| 44 | index.html:1459 | 4 | should | kỹ sư dùng iPad AR soi ống cơ điện MEP | kỹ sư dùng máy tính bảng AR kiểm tra ống cơ điện |
+| 45 | index.html:1866 | 4 | should | Solar LoRa/4G | pin mặt trời, LoRa/4G |
+| 46 | options-a-b-analysis.md:127 | 4 | should | point cloud, Digital Twin của các touchpoint | đám mây điểm và bản sao số của các điểm chạm |
+| 47 | options-a-b-analysis.md:96 | 4 | should | senior, có thể là chuyên gia Việt kiều | người có kinh nghiệm phụ trách, có thể là chuyên gia Việt kiều |
+| 48 | phase-08-agents-site-os-integration.md:3 | 4 | should | Kỹ sư backend | Kỹ sư tích hợp hệ thống |
+| 49 | phase-06-procurement-gate-training-cluster.md:14 | 4 | should | point cloud | đám mây điểm |
+| 50 | CHAPTER_AI_CORE_OPERATING_PLATFORM.md:388 | 4 | should | Chỉ đẩy metadata lên tập đoàn | Chỉ đẩy siêu dữ liệu lên Tổng Công ty |
+| 51 | CC1-README.md:11 | 4 | must | QUICK-WIN | việc làm trước trong năm 1 |
+| 52 | BRAINSTORMING_AND_FULL_ARCHITECTURE.md:75 | 4 | must | Quick-win | việc làm trước trong năm 1 |
+| 53 | BRAINSTORMING_AND_FULL_ARCHITECTURE.md:16 | 4 | must | Làm lại do sai lệch (Rework) | Làm lại do sai lệch |
+| 54 | BRAINSTORMING_AND_FULL_ARCHITECTURE.md:54 | 4 | must | Edge cases | trường hợp ngoại lệ |
+| 55 | TECHNICAL_ARCHITECTURE_TOUCHPOINTS.md:7 | 4 | must | AI Pipeline | luồng xử lý AI |
+| 56 | TECHNICAL_ARCHITECTURE_TOUCHPOINTS.md:1 | 4 | should | Touchpoints | điểm chạm |
+| 57 | README.md:4 | 4 | should | Side-by-Side | đối chiếu cạnh nhau |
+| 58 | CHAPTER_AI_CORE_OPERATING_PLATFORM.md:74 | 5 | should | tiếng Việt khá | có tiếng Việt |
+| 59 | CHAPTER_AI_CORE_OPERATING_PLATFORM.md:447 | 5 | should | còn ≥ 12 tháng | còn ít nhất 12 tháng thi công |
+| 60 | index.html:2820 | 5 | should | còn ≥ 12 tháng | còn ít nhất 12 tháng thi công |
+| 61 | index.html:1610 | 5 | should | TTM số | tổ chức giao thông tạm (TTM) trên số |
+| 62 | README.md:4 | 5 | should | 28 điểm chạm hiện trường CC1, và 17 hàng đối chiếu | 24 điểm chạm, 28 ảnh hiện trường, 18 hàng đối chiếu, 14 bản vẽ |
+| 63 | CHAPTER_OPEN_LINEAR_SITES_HIGHWAY_BRIDGE.md:77 | 5 | should | Phương án đảm bảo giao thông đã được cấp phép (TT 41/2024/TT-BGTVT) được số hóa thành "bản đồ TTM" theo lý trình: vị trí côn, rào, biển, đèn, người điều tiết, tốc độ hạn chế. | Tách mỗi ý (a)(b)(c)(d) thành một câu. |
+| 64 | CHAPTER_AI_CORE_OPERATING_PLATFORM.md:6 | 6 | should | bản nội bộ, chưa đưa lên trang web | Trang đã công bố tóm tắt chương này và trỏ tới bản đầy đủ. |
+| 65 | README.md:78 | 8 | should | Tổng Công Ty Xây Dựng Số 1 | Tổng Công ty Xây dựng Số 1 |
+| 66 | index.html:1313 | 6 | owner decision | cho cả tập đoàn | cho cả Tổng Công ty |
+| 67 | index.html:2816 | 6 | owner decision | toàn tập đoàn | toàn Tổng Công ty |
+| 68 | index.html:2817 | 6 | owner decision | Phủ toàn tập đoàn | Phủ toàn Tổng Công ty |
+| 69 | index.html:2818 | 6 | owner decision | Toàn tập đoàn, dưới 30 dự án | Toàn Tổng Công ty, dưới 30 dự án |
+| 70 | CHAPTER_AI_CORE_OPERATING_PLATFORM.md:3 | 6 | owner decision | mọi dự án của tập đoàn | mọi dự án của Tổng Công ty |
+| 71 | CHAPTER_AI_CORE_OPERATING_PLATFORM.md:14 | 6 | owner decision | cho cả tập đoàn | cho cả Tổng Công ty |
+| 72 | CHAPTER_AI_CORE_OPERATING_PLATFORM.md:21 | 6 | owner decision | Toàn tập đoàn | Toàn Tổng Công ty |
+| 73 | CHAPTER_AI_CORE_OPERATING_PLATFORM.md:68 | 6 | owner decision | ở tập đoàn | tại Tổng Công ty |
+| 74 | CHAPTER_AI_CORE_OPERATING_PLATFORM.md:385 | 6 | owner decision | Suy luận tập đoàn | Suy luận tại Tổng Công ty |
+| 75 | plan.md:10 | 6 | owner decision | Toàn tập đoàn | Toàn Tổng Công ty |
+| 76 | options-a-b-analysis.md:20 | 6 | owner decision | toàn tập đoàn | toàn Tổng Công ty |
+| 77 | BRAINSTORMING_AND_FULL_ARCHITECTURE.md:72 | 6 | owner decision | TẬP ĐOÀN XÂY DỰNG SỐ 1 | TỔNG CÔNG TY XÂY DỰNG SỐ 1 |
+
+options-a-b-analysis.md còn "tập đoàn" chỉ CC1 tại các dòng 71, 75, 84, 88, 123, 128, 145, 166, 175. Cùng một cách sửa: "Tổng Công ty".
+
+## Nhận xét chung
+
+- FACT: phương án B, cổng G1–G5, M0, Tổng giám đốc, chi phí 55–90 / 23–40 / 27–48 và 105–180, cụm huấn luyện 25–36, cụm suy luận 5–8 đã khớp ở plan.md, options-a-b-analysis.md và khối "Triển khai" của index.html. Không thấy câu "~12 tháng" cho thời gian phủ dự án trong nhóm ưu tiên 1. "sau 12 tháng" và "đủ 12 tháng" là mốc G5 / báo cáo KPI. "còn ≥ 12 tháng" là thời gian thi công còn lại của dự án mẫu.
+- FACT: mâu thuẫn nội bộ nằm ở chương VII. Mục VII.11 vẫn ghi huấn luyện "Không mua". Mục VII.13 vẫn ghi nạp 3–5 dự án mỗi quý. Mục VII.14 đã đúng 10–15 dự án mỗi quý.
+- "Chủ đầu tư" bị dùng cho quyết định nội bộ của CC1. Trong hồ sơ tuyến, "chủ đầu tư" và "CĐT" vẫn chỉ bên giao thầu. Hai cách dùng này đứng cạnh nhau.
+- Trang đã công bố còn khẩu hiệu tuyệt đối ở nhãn ảnh: "100%", "0%", "1:1", "gấp 8 lần", "giảm 70%", "3 giây", "17:02". Các phase 00–10 ít khẩu hiệu hơn và gần giọng hồ sơ kỹ thuật.
+- Tiếng Anh còn trong câu tiếng Việt ở cả trang đã công bố: geofence, Man-down, Face ID, iPad, Solar, node, corridor. README, CC1-README, chương tuyến và hồ sơ kiến trúc lặp touchpoint, checkpoint, quick-win, pipeline. Brainstorm còn rework và edge case.
+- "tập đoàn" chỉ CC1, đã đếm hết file đọc trọn: index.html 4, chương VII 6 (kể cả dòng 388), plan.md 1, options-a-b-analysis.md 10, brainstorm dòng 72 là 1. Tên pháp lý "Số 1" không tính là lời khoe. README còn "Tổng Công Ty" khác cách viết pháp lý "Tổng Công ty".
+- INFERENCE: README và CC1-README (29/10) cũ hơn quyết định 31/10. Chúng còn 20 checkpoint, L1–L12 và tên đường cao tốc mẫu. Chương tuyến cũng còn L9–L12. Chưa đọc hết các file này nên chưa đếm hết "tập đoàn" và tiếng Anh phía sau.
+- FACT về hình thức: m² và m³ trên trang và chương VII dùng mũ. Khoảng tiền dùng gạch ngang dài (55–90). Không thấy "bạn", "mình", "chúng ta" trong chương VII, plan và các phase. Chưa chạy kiểm NFC.
+
+Status: DONE_WITH_CONCERNS
+Summary: Trang và kế hoạch B đã khớp cổng, chi phí và M0, nhưng chương VII còn hai câu trái quyết định 31/10, và trang đã công bố còn khẩu hiệu tuyệt đối cùng từ "chủ đầu tư" và "tập đoàn".
+EXIT=0

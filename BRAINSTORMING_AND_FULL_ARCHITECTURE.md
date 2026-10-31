@@ -1,4 +1,4 @@
-# Toàn Bộ Hồ Sơ Brainstorming Chiến Lược & Kiến Trúc Kỹ Thuật Công Trường Số — Tổng Công Ty Xây Dựng Số 1 (CC1)
+# Toàn Bộ Hồ Sơ Brainstorming Chiến Lược & Kiến Trúc Kỹ Thuật Công Trường Số — Tổng Công ty Xây dựng Số 1 (CC1)
 
 > **Lưu trữ chính thức trong `.brv/context-tree/brainstorming/full_brainstorming_and_architecture.md` và `/Users/jangtrinh/Products/cc1/BRAINSTORMING_AND_FULL_ARCHITECTURE.md`**  
 > Tổng hợp trọn vẹn chuỗi tư duy phản biện, tầm nhìn 2030, lộ trình tư vấn AI 1–3 năm cho CC1, chuyên đề **3D Spatial Re-ID & Sensor Fusion**, cùng đặc tả kỹ thuật phần cứng/hạ tầng và **33 hình ảnh minh họa 16:9**.
@@ -7,13 +7,13 @@
 
 ## PHẦN 1: SỰ THẬT PHŨ PHÀNG VỀ "CÔNG TRƯỜNG SỐ" TRÊN THẾ GIỚI HIỆN NAY
 
-### 1.1. Bức tranh thực tế tại các Tổng thầu hàng đầu thế giới
-Nếu chỉ nhìn vào tài liệu quảng cáo của các hãng phần mềm ConTech, "Công trường số" (Digital Construction Site) tràn ngập hình ảnh công nhân đeo kính thực tế ảo, robot đi lại tấp nập. Nhưng thực tiễn vận hành tại các tổng thầu hàng đầu thế giới (**Acciona** ở Châu Âu, **DPR** và **Turner** ở Mỹ, **Kajima** và **Obayashi** ở Nhật Bản) cho thấy:
+### 1.1. Bức tranh thực tế tại các tổng thầu lớn trên thế giới
+Nếu chỉ nhìn vào tài liệu quảng cáo của các hãng phần mềm ConTech, "Công trường số" (Digital Construction Site) tràn ngập hình ảnh công nhân đeo kính thực tế ảo, robot đi lại tấp nập. Nhưng thực tiễn vận hành tại các tổng thầu lớn trên thế giới (**Acciona** ở Châu Âu, **DPR** và **Turner** ở Mỹ, **Kajima** và **Obayashi** ở Nhật Bản) cho thấy:
 - **90% các công trường tự nhận là "số hóa"** thực chất chỉ đang thay bản vẽ giấy bằng file PDF trên iPad và báo cáo qua nhóm chat (Zalo/WhatsApp).
 - **Chỉ khoảng 10% đại công trường tiên phong** thực sự vận hành "Công trường số" theo nghĩa **khép kín luồng dữ liệu từ thiết kế (BIM) ra hiện trường (Field) và ngược lại**.
 
-Các tổng thầu thực dụng không đầu tư công nghệ để làm truyền thông. Họ dồn tiền vào **4 trụ cột cốt lõi** vì chúng giải quyết trực tiếp **3 "tử huyệt" ngốn biên lợi nhuận lớn nhất ngành xây dựng**:
-1. **Làm lại do sai lệch (Rework)**
+Các tổng thầu thực dụng không đầu tư công nghệ để làm truyền thông. Họ dồn tiền vào **4 trụ cột cốt lõi** vì chúng giải quyết trực tiếp **3 "tử huyệt" ngốn nhiều biên lợi nhuận của ngành xây dựng**:
+1. **Làm lại do sai lệch**
 2. **Tranh chấp / Gian lận khối lượng nghiệm thu**
 3. **Độ trễ thông tin giữa hiện trường với văn phòng**
 
@@ -69,10 +69,10 @@ Các tổng thầu thực dụng không đầu tư công nghệ để làm truy�
 
 ---
 
-## PHẦN 3: LỘ TRÌNH 1–3 NĂM TRIỂN KHAI AI CHO TẬP ĐOÀN XÂY DỰNG SỐ 1 (CC1)
+## PHẦN 3: LỘ TRÌNH 1–3 NĂM TRIỂN KHAI AI CHO TỔNG CÔNG TY XÂY DỰNG SỐ 1 (CC1)
 
 ### 3.1. Cấu trúc 3 Giai đoạn trình Ban lãnh đạo CC1
-- **GIAI ĐOẠN 1 (Năm thứ nhất - Year 1): Số hóa "Tai Mắt" & An ninh hiện trường (Lấy "An Toàn & Kiểm soát Thất thoát" làm Quick-win)**
+- **GIAI ĐOẠN 1 (Năm thứ nhất - Year 1): Số hóa "Tai Mắt" & An ninh hiện trường (Lấy "An toàn & Kiểm soát thất thoát" làm việc làm trước)**
   - Touchpoint 1.1: Cổng kiểm soát AI (AI Access Control & PPE Safety Check)
   - Touchpoint 1.2: Camera AI giám sát hành vi & PPE 24/7 (CCTV AI Vision)
   - Touchpoint 1.3: Drone AI quét 3D & đối soát tiến độ BIM 4D
