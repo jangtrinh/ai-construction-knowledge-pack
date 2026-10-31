@@ -394,6 +394,8 @@ GPU trong nước:
 
 ## VII.12. Chi phí 3 năm (ước lượng thô)
 
+**Đã chốt phương án B theo cổng (31/10/2026): năm 1 khoảng 55–90 tỷ, 3 năm khoảng 105–180 tỷ.** Bảng chi phí B và ngân sách từng giai đoạn: `plans/261031-0940-ai-core-plan-a-b/options-a-b-analysis.md` và `plans/261031-0940-ai-core-plan-a-b/plan.md`. Bảng dưới là phương án A, giữ để so sánh.
+
 **Ước lượng cấp độ, sai số có thể ±50%. Phải có báo giá OEM, bảng lương và báo giá phần mềm trước khi trình.** **[I]** Tỷ giá tạm: 1 USD ≈ 26.000 đồng.
 
 Chưa gồm thiết bị điểm chạm tại công trường (bảng riêng trong hồ sơ kỹ thuật) và giấy phép thiết bị đo ở VII.8.
@@ -448,12 +450,15 @@ Mỗi quý nạp 3–5 dự án mà vẫn giữ được việc nền tảng.
 
 ## VII.14. Lộ trình gắn giai đoạn đã công bố
 
-| Mốc | Lõi AI làm gì | Điểm chạm | Điều kiện qua mốc |
+Lộ trình theo phương án B, 11 giai đoạn, M0 = tháng phê duyệt. Chi tiết từng giai đoạn: `plans/261031-0940-ai-core-plan-a-b/plan.md`.
+
+| Mốc | Lõi AI làm gì | Điểm chạm | Cổng |
 |---|---|---|---|
-| Tháng 0–3 | 2 dự án mẫu; ontology v0; bộ đề 300 câu; RAG trên hồ sơ + TCVN; OCR đợt 1; khảo sát thiết bị đo | Chuẩn bị 1.1–1.4, L1–L3 | Đúng ≥ 80% nhóm tra cứu, 100% có trích dẫn |
-| Tháng 3–9 | Nền dữ liệu nhận sự kiện; đồ thị tri thức; tác tử chỉ đọc (nháp nhật ký, checklist nghiệm thu); OCR đợt 2; nạp 3–5 dự án/quý | 1.1–1.5, L1–L3, L8 | Kỹ sư dùng hằng ngày |
-| Tháng 9–18 | Tác tử có quyền ghi qua phê duyệt; đối chiếu 6 nguồn khối lượng; cân nhắc huấn luyện tiếp nếu bộ đề cho thấy hổng | 2.1–2.4, L4–L7 | Nhật ký kiểm toán đầy đủ, không rò rỉ giữa dự án |
-| Năm 3 | Site OS đa tác tử + bộ giải tối ưu | 3.1–3.5 | Theo hồ sơ giai đoạn 3 |
+| M0–M1 | Phê duyệt, ban chỉ đạo, đánh giá tác động dữ liệu; tuyển trưởng nhóm; báo giá chỗ đặt và máy | — | G1: ngân sách duyệt, có trưởng nhóm |
+| M0–M4 | Cụm suy luận; ontology v0; 2 dự án mẫu; bộ đề 300 câu; thi đấu mô hình trên GPU thuê; SFT v1 | Chuẩn bị 1.1–1.4, L1–L3 | G2 (M3–M4): bộ đề ≥ 80%, ≥ 50 nghìn mẫu, ≥ 10 người → mua cụm huấn luyện |
+| M1–M9 | OCR, ánh xạ BOQ, đối chiếu 6 nguồn; nạp 10–15 dự án mỗi quý, phủ dưới 30 dự án; tác tử chỉ đọc | 1.1–1.5, L1–L3, L8 | G3 (M8): 3 tháng chỉ đọc không sự cố → tác tử ghi có duyệt |
+| M4–M12 | Cụm huấn luyện; DPO, RLVR, chưng cất, CPT; số hóa hồ sơ cũ | 2.1–2.4, L4–L7 | G4 (M10): mô hình ngành CC1 v1 thắng mô hình nền; G5 (M12): đánh giá năm 1 |
+| Năm 2–3 | Vận hành, KPI; Site OS đa tác tử + bộ giải tối ưu; thay GPU năm 3 | 3.1–3.5 | Theo hồ sơ giai đoạn 3 |
 
 ## VII.15. Rủi ro chính
 
@@ -463,7 +468,7 @@ Mỗi quý nạp 3–5 dự án mà vẫn giữ được việc nền tảng.
 | Hồ sơ scan kém | Bắt đầu từ dự án đang chạy có hồ sơ số; số hóa dự án cũ theo yêu cầu |
 | Rò rỉ giữa dự án, nhà thầu | Lọc quyền trước truy xuất; kiểm thử rò rỉ mỗi đợt nạp |
 | Khóa vào hãng thiết bị hoặc mô hình | Bắt buộc xuất dữ liệu mở; giao diện mô hình chuẩn; bộ đề làm thước đo khi đổi |
-| Mua GPU trước khi có tải thật | Thuê trước, mua khi đã đo tải |
+| Mua GPU trước khi có tải thật | Thuê trước; mua cụm huấn luyện chỉ khi qua cổng G2 |
 | Công nhân không tin hệ thống | Không tự động xử phạt; theo dõi tỷ lệ cờ sai |
 
 ## VII.16. Nguồn đã kiểm (31/10/2026)

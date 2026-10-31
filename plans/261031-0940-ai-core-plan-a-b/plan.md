@@ -1,185 +1,108 @@
-# Kế hoạch lõi AI CC1: Phương án A và B
+# Kế hoạch triển khai lõi AI CC1: Phương án B theo cổng
 
-Ngày: 31/10/2026 · Trạng thái: **đã chọn phương án B theo cổng** (31/10/2026)
+Ngày lập: 31/10/2026 · Trạng thái: **bản kế hoạch hoàn chỉnh, chờ chủ đầu tư duyệt** · Mốc M0 = tháng phê duyệt (chưa chốt ngày)
 
-Liên quan:
+## Quyết định đã chốt (31/10/2026)
 
-- `CHAPTER_AI_CORE_OPERATING_PLATFORM.md`
-- `plans/reports/research-261031-0917-open-llm-selection-training.md`
-
-Nhãn:
-
-- **[S]** giá hoặc thông số từ trang tổng hợp hoặc đại lý;
-- **[I]** ước lượng của nhóm tư vấn.
-
-Tỷ giá tạm: 1 USD ≈ 26.000 đồng. **Mọi số tiền phải có báo giá trước khi trình duyệt ngân sách.**
-
-## 1. Bối cảnh
-
-- Chủ đầu tư có ngân sách và sẵn sàng chi.
-- Phạm vi: toàn tập đoàn, cả công trường khép kín và công trường tuyến.
-- Khi tiền không còn là ràng buộc, các ràng buộc thật là:
-  1. **dữ liệu sẵn sàng;**
-  2. **tuyển được người giỏi;**
-  3. **thời gian.**
-
-Hai phương án khác nhau ở tốc độ, quyền kiểm soát và mức cam kết. Phần chung giống nhau.
-
-## 2. Phần chung của cả hai phương án
-
-| Hạng mục | Nội dung |
+| Vấn đề | Chốt |
 |---|---|
-| Bộ đề kiểm thử | 300–500 câu, là thước đo mọi quyết định |
-| Ontology + đồ thị tri thức | Chuỗi khối lượng: thiết kế → dự toán → nhập về → thi công → nghiệm thu → thanh toán |
-| Nền dữ liệu | Kho đối tượng, PostgreSQL, Kafka, phân quyền theo dự án |
-| OCR và ánh xạ BOQ | Theo đợt biểu mẫu, QS dự án xác nhận |
+| Phương án | B theo cổng; phân tích A/B: [options-a-b-analysis.md](./options-a-b-analysis.md) |
+| Phạm vi | Toàn tập đoàn, dưới 30 dự án đang thi công, cả công trường khép kín và tuyến |
+| Hạ tầng | Mua cụm suy luận ngay; thuê GPU trong nước 3 tháng đầu; mua cụm huấn luyện sau cổng M3–M4; đặt máy tại trung tâm dữ liệu thuê |
+| Đội ngũ | 18–22 người + 10–15 người gán nhãn; QS dự án kiêm nhiệm xác nhận BOQ |
+| Đo đạc | Thiết bị thương mại đã kiểm định; báo giá cả danh sách cùng lúc |
 | Mô hình | Nền mở đa ngôn ngữ, chọn bằng thi đấu; không huấn luyện từ đầu |
-| Pháp lý | Luật 91/2025, NĐ 356/2025, Luật Trí tuệ nhân tạo 134/2025 |
-| Người phê duyệt | Mọi lệnh ghi của tác tử, mọi cảnh báo xử phạt |
 
-## 3. Phương án A: Tinh gọn, thuê GPU, mở rộng theo đợt
+## Kết quả cần đạt sau 12 tháng
 
-### Cách làm
+1. 100% dự án đang thi công đã nạp vào lõi: ontology, BOQ đã ánh xạ, điểm chạm đã nối.
+2. Kỹ sư dùng trợ lý hằng ngày: ≥ 70% chỉ huy trưởng và QS dùng ít nhất 3 ngày mỗi tuần.
+3. Bộ đề: đúng ≥ 90% nhóm tra cứu, 100% câu trả lời có trích dẫn, 0 câu bịa số liệu ở nhóm bẫy.
+4. Đối chiếu 6 nguồn khối lượng chạy tự động cho bê tông, thép, vật tư rời, đào đắp.
+5. Mô hình ngành CC1 v1 thắng mô hình nền trên bộ đề, không nhóm nào giảm điểm.
+6. 0 sự cố rò rỉ dữ liệu giữa dự án; hồ sơ pháp lý dữ liệu và AI đầy đủ.
 
-| Hạng mục | Nội dung |
-|---|---|
-| Hạ tầng suy luận | 1 cụm nội bộ 4 GPU 48 GB |
-| Hạ tầng huấn luyện | Thuê node 8× H100/H200 tại FPT AI Factory hoặc Viettel Cloud AI-Native theo từng đợt |
-| Mô hình thầy | Thuê GPU khi cần sinh dữ liệu |
-| Đội ngũ | 8–9 người; QS dự án kiêm nhiệm |
-| Nạp dự án | 3–5 dự án mỗi quý |
-| Mô hình | Nền mở + LoRA theo tác vụ; CPT chỉ khi bộ đề cho thấy hổng |
-| Hồ sơ cũ | Số hóa khi có yêu cầu cụ thể |
+## Giai đoạn
 
-### Chi phí **[I]**
+| # | Giai đoạn | Thời gian | Phụ thuộc | Ngân sách **[I]** | File |
+|---|---|---|---|---|---|
+| 0 | Phê duyệt, quản trị, pháp lý | M0–M1 | — | 1–2 tỷ | [phase-00](./phase-00-approval-governance-legal.md) |
+| 1 | Tuyển đội | M0–M6 | 0 | 14–24 tỷ/năm | [phase-01](./phase-01-team-hiring.md) |
+| 2 | Cụm suy luận + trung tâm dữ liệu | M0–M2 | 0 | 5–8 tỷ máy + 3–6 tỷ chỗ đặt năm 1 | [phase-02](./phase-02-inference-cluster-datacenter.md) |
+| 3 | Nền dữ liệu + ontology v0 | M0–M4 | 0, 1 | 1–3 tỷ lưu trữ năm 1 | [phase-03](./phase-03-data-platform-ontology.md) |
+| 4 | Bộ đề + thi đấu mô hình | M0–M3 | 3 (một phần) | < 0,5 tỷ thuê GPU (nằm trong làm tròn) | [phase-04](./phase-04-golden-set-model-bakeoff.md) |
+| 5 | OCR, ánh xạ BOQ, nạp dự án | M1–M9 | 3, 4 | 3–6 tỷ gán nhãn năm 1 | [phase-05](./phase-05-ocr-boq-project-onboarding.md) |
+| 6 | Cổng mua sắm + cụm huấn luyện | M3–M8 | 1, 4 | 25–36 tỷ | [phase-06](./phase-06-procurement-gate-training-cluster.md) |
+| 7 | Chương trình huấn luyện mô hình | M2–M12 | 4, 5, 6 | Nằm trong cụm của giai đoạn 6 | [phase-07](./phase-07-model-training-program.md) |
+| 8 | Tác tử + tích hợp Site OS, ERP | M4–M12 | 3, 5, 7 | Trong chi phí đội | [phase-08](./phase-08-agents-site-os-integration.md) |
+| 9 | Số hóa hồ sơ cũ | M5–M15 | 2, 5 | 3–6 tỷ năm 1, 1–3 tỷ năm 2 | [phase-09](./phase-09-archive-digitization.md) |
+| 10 | Vận hành, KPI, đánh giá năm | M6–M24 | Tất cả | Chỗ đặt 4–6 tỷ/năm từ năm 2; thay GPU 5–10 tỷ năm 3 | [phase-10](./phase-10-operations-kpi-review.md) |
 
-| | Năm 1 | Năm 2 | Năm 3 | 3 năm |
-|---|---|---|---|---|
-| Tổng | 7–13 tỷ | 5–12 tỷ | 5–10 tỷ | **17–35 tỷ** |
+Tổng năm 1 khoảng 55–90 tỷ; 3 năm khoảng 105–180 tỷ. Chi tiết: [options-a-b-analysis.md §4](./options-a-b-analysis.md). Mọi số tiền phải thay bằng báo giá trước khi trình ngân sách.
 
-Chi tiết theo hạng mục: PHẦN VII, mục VII.12.
+![Lộ trình theo giai đoạn](../../media/ai-core/plan-b-phases.png)
 
-### Ưu điểm
+## Cổng quyết định
 
-- Vốn ban đầu thấp. Dễ đổi hướng nếu thị trường mô hình thay đổi.
-- Không gánh rủi ro GPU lỗi thời: mỗi thế hệ GPU chỉ dẫn đầu khoảng 1–2 năm.
-- Bắt đầu ngay, không chờ mua sắm, lắp đặt.
-- Học trên dữ liệu thật trước khi cam kết lớn.
+| Cổng | Thời điểm | Điều kiện đạt | Không đạt thì |
+|---|---|---|---|
+| G1 · Khởi động | M1 | Ngân sách duyệt; ban chỉ đạo lập; trưởng nhóm nghiên cứu đã nhận việc hoặc đã chốt ứng viên | Lùi M0, không ký mua sắm |
+| G2 · Mua cụm huấn luyện | M3–M4 | Bộ đề ≥ 80% nhóm tra cứu; đo được ≥ 50 nghìn mẫu huấn luyện khả dụng; đã tuyển ≥ 10 người | Dừng ở A+: giữ cụm suy luận, tiếp tục thuê GPU, xét lại sau 3 tháng |
+| G3 · Tác tử có quyền ghi | M8 | 3 tháng chỉ đọc không sự cố; nhật ký kiểm toán đủ; ban chỉ đạo duyệt danh sách lệnh ghi | Giữ chế độ chỉ đọc |
+| G4 · Mô hình ngành CC1 v1 | M10 | Thắng mô hình nền trên bộ đề; không nhóm nào giảm | Phục vụ mô hình nền + LoRA |
+| G5 · Đánh giá năm 1 | M12 | 6 kết quả ở đầu file | Ban chỉ đạo điều chỉnh phạm vi năm 2 |
 
-### Nhược điểm
+## Quản trị
 
-- **Phủ toàn tập đoàn chậm:** 3–5 dự án mỗi quý, phải 2–3 năm mới phủ hết, tùy số dự án đang chạy.
-- Phụ thuộc lịch và giá thuê GPU của nhà cung cấp; không chạy mô hình thầy liên tục được.
-- Ít vòng lặp huấn luyện, ít chưng cất quy mô lớn.
-- Dữ liệu huấn luyện rời hạ tầng CC1, dù vẫn ở trong nước.
-- Năng lực AI nội bộ mỏng; khó thành tài sản riêng của tập đoàn.
-
-## 4. Phương án B: Đầu tư mạnh, hạ tầng riêng, mô hình ngành CC1
-
-### Cách làm
-
-| Hạng mục | Nội dung |
-|---|---|
-| Hạ tầng huấn luyện + thầy | 2 node 8 GPU thế hệ Blackwell (HGX B200/B300), mạng InfiniBand, lưu trữ nhanh |
-| Hạ tầng suy luận | 2 node 8× GPU 96 GB (RTX PRO 6000 Blackwell) phục vụ toàn tập đoàn |
-| Nơi đặt | Thuê chỗ tại trung tâm dữ liệu trong nước có làm mát chất lỏng (Viettel công bố rack tới 60 kW **[S]**) |
-| Mô hình thầy | Chạy nội bộ liên tục; dữ liệu không rời hạ tầng CC1 |
-| Đội ngũ | 18–22 người + chương trình gán nhãn 10–15 kỹ sư kiêm nhiệm hoặc thuê ngoài |
-| Nạp dự án | 10–15 dự án mỗi quý; phủ toàn tập đoàn trong khoảng 12 tháng |
-| Mô hình | "Mô hình ngành CC1": CPT trên nền 27–31B từ tháng 4–6, chưng cất quy mô lớn, cập nhật hằng tháng |
-| Hồ sơ cũ | Số hóa toàn bộ hồ sơ các dự án đã làm, làm kho tri thức và kho huấn luyện |
-| GPU dùng thêm cho | Huấn luyện lại mô hình thị giác (camera, drone), xử lý point cloud, dựng Digital Twin |
-
-### Đội ngũ phương án B
-
-| Vai trò | Số người |
-|---|---|
-| Trưởng nhóm nghiên cứu AI (senior, có thể là chuyên gia Việt kiều) | 1–2 |
-| Kỹ sư ML / LLM | 4 |
-| Kỹ sư dữ liệu | 4 |
-| Kỹ sư tri thức ngành (kỹ sư xây dựng) | 4 |
-| MLOps / vận hành cụm GPU | 2–3 |
-| Quản lý sản phẩm | 1–2 |
-| Bảo mật, pháp chế | 1 |
-| Gán nhãn (kỹ sư kiêm nhiệm hoặc thuê ngoài) | 10–15 |
-
-### Chi phí **[I]**
-
-| Hạng mục | Năm 1 | Năm 2 | Năm 3 | Cơ sở |
-|---|---|---|---|---|
-| Cụm huấn luyện (2 node Blackwell + mạng + lưu trữ) | 25–36 tỷ | — | — | Node 8 GPU khoảng 400.000–550.000 USD **[S]**, cộng 15–25% mạng và lưu trữ |
-| Cụm suy luận (2 node 8× GPU 96 GB) | 5–8 tỷ | — | — | Node 8× RTX PRO 6000 khoảng 100.000–150.000 USD **[S]** |
-| Chỗ đặt, điện, làm mát (khoảng 40 kW) | 3–6 tỷ | 4–6 tỷ | 4–6 tỷ | Tham chiếu quốc tế khoảng 400 USD/kW/tháng **[S]**; cần báo giá Viettel IDC, FPT |
-| Đội 18–22 người | 14–24 tỷ | 14–24 tỷ | 14–24 tỷ | 60–100 triệu đồng / người / tháng |
-| Chương trình gán nhãn | 3–6 tỷ | 2–4 tỷ | 2–4 tỷ | Kỹ sư kiêm nhiệm hoặc thuê ngoài |
-| Số hóa hồ sơ cũ (quét, OCR, duyệt) | 3–6 tỷ | 1–3 tỷ | — | Tùy khối lượng hồ sơ lưu trữ |
-| Lưu trữ quy mô PB | 1–3 tỷ | 1–2 tỷ | 1–2 tỷ | Point cloud, video, hồ sơ số hóa |
-| Pháp lý, bảo mật, tư vấn | 1–2 tỷ | 0,5–1 tỷ | 0,5–1 tỷ | Đánh giá độc lập |
-| Dự phòng thay GPU | — | — | 5–10 tỷ | Thế hệ GPU mới sau 2–3 năm |
-| **Cộng (làm tròn)** | **55–90 tỷ** | **23–40 tỷ** | **27–48 tỷ** | **3 năm: khoảng 105–180 tỷ** |
-
-### Ưu điểm
-
-- **Nhanh:** phủ toàn tập đoàn trong khoảng 12 tháng, thay vì 2–3 năm.
-- **Kiểm soát tối đa:** dữ liệu và mô hình thầy không rời hạ tầng CC1, chủ quyền dữ liệu cao hơn phương án A.
-- **Lặp nhanh:** CPT, chưng cất, RLVR chạy hằng tuần, không chờ lịch thuê.
-- **Tài sản lâu dài:** mô hình ngành CC1, kho dữ liệu đã gán nhãn, đội AI nội bộ.
-- **Dùng chung GPU:** thị giác máy, point cloud, Digital Twin của các touchpoint cũng chạy trên cụm này.
-- **Số hóa toàn bộ hồ sơ cũ:** tri thức nhiều năm của tập đoàn tra cứu được.
-
-### Nhược điểm
-
-- **Vốn lớn:** tổng 3 năm khoảng gấp 5 lần phương án A (so mức giữa hai khoảng).
-- **GPU lỗi thời nhanh:** cần dự phòng thay thế sau 2–3 năm.
-- **Tuyển 20 người giỏi về AI tại Việt Nam là rủi ro lớn nhất:** thiếu người thì cụm GPU nằm không.
-- **Thời gian mua sắm, lắp đặt:** vài tháng; cần chỗ đặt có điện và làm mát đủ.
-- **Áp lực "phải dùng GPU":** dễ huấn luyện trước khi dữ liệu sẵn sàng.
-- **Quản lý phức tạp hơn:** vận hành cụm, bảo trì, an ninh vật lý.
-
-Ngay cả phương án B vẫn **không** huấn luyện mô hình từ đầu. Tiền không giải được bài toán thiếu dữ liệu tiếng Việt ngành xây dựng ở quy mô hàng nghìn tỷ token.
-
-## 5. So sánh
-
-| Tiêu chí | A | B |
+| Vai trò | Ai | Trách nhiệm |
 |---|---|---|
-| Phủ toàn tập đoàn | 2–3 năm | khoảng 12 tháng |
-| Chi phí 3 năm | 17–35 tỷ | 105–180 tỷ |
-| Vốn ban đầu | Thấp (khoảng 2 tỷ phần cứng) | Cao (khoảng 30–45 tỷ phần cứng) |
-| Kiểm soát dữ liệu | Tốt (trong nước) | Tối đa (trong hạ tầng CC1) |
-| Tốc độ lặp huấn luyện | Theo đợt thuê | Hằng tuần |
-| Mô hình ngành riêng | Có thể, chậm | Có, từ tháng 6 |
-| Rủi ro tuyển người | Thấp | Cao |
-| Rủi ro lãng phí phần cứng | Thấp | Trung bình đến cao |
-| Khả năng đổi hướng | Cao | Trung bình |
+| Ban chỉ đạo | Lãnh đạo tập đoàn + Giám đốc kỹ thuật + Giám đốc tài chính (cần chỉ định) | Duyệt ngân sách, duyệt cổng G1–G5, họp tháng |
+| Chủ sở hữu sản phẩm | Cần chỉ định | Ưu tiên tính năng theo nhu cầu chỉ huy trưởng |
+| Trưởng nhóm nghiên cứu AI | Tuyển ở giai đoạn 1 | Kỹ thuật mô hình, hạ tầng, chất lượng |
+| Đại diện dự án | Chỉ huy trưởng + QS mỗi dự án | Viết bộ đề, xác nhận BOQ, phản hồi |
+| Pháp chế, bảo mật | Cần chỉ định | Dữ liệu cá nhân, Luật AI, kiểm thử rò rỉ |
 
-## 6. Khuyến nghị: Phương án B, giải ngân theo cổng
+Nhịp làm việc:
 
-Có tiền và phạm vi toàn tập đoàn thì nên chọn B vì tốc độ. Nhưng không mua cụm huấn luyện trước khi có số đo.
+- báo cáo tuần: tiến độ, điểm bộ đề, rủi ro;
+- họp ban chỉ đạo hằng tháng;
+- duyệt cổng theo bảng trên.
 
-| Mốc | Việc | Cổng để đi tiếp |
-|---|---|---|
-| Tháng 0 | Phê duyệt B; tuyển trưởng nhóm nghiên cứu và 6–8 người đầu; mua cụm suy luận (nhu cầu chắc chắn) | — |
-| Tháng 0–3 | Thuê GPU trong nước: thi đấu mô hình, SFT v1, đo khối lượng dữ liệu thật; khảo sát chỗ đặt, lấy báo giá cụm huấn luyện | Bộ đề đạt mốc; đo được lượng dữ liệu; đã tuyển ≥ 10 người |
-| Tháng 3–4 | **Cổng mua sắm:** đặt hàng cụm huấn luyện | Cả 3 điều kiện trên đạt |
-| Tháng 6–8 | Cụm huấn luyện vận hành; bắt đầu CPT mô hình ngành CC1 và chưng cất quy mô lớn | Nghiệm thu cụm |
-| Tháng 6–12 | Nạp 10–15 dự án mỗi quý; số hóa hồ sơ cũ | Không rò rỉ giữa dự án; kỹ sư dùng hằng ngày |
-| Cuối năm 1 | Đánh giá: phủ toàn tập đoàn, chất lượng mô hình ngành | Quyết định mở rộng hoặc giữ nguyên |
+## KPI theo dõi hằng tháng
 
-Nếu cổng tháng 3–4 không đạt (thiếu người hoặc thiếu dữ liệu), dừng ở mức A+: giữ cụm suy luận, tiếp tục thuê GPU, chưa mua cụm huấn luyện. Phần vốn chưa giải ngân không bị mất.
-
-## 7. Quyết định của chủ đầu tư (31/10/2026)
-
-| Câu hỏi | Chốt |
+| KPI | Mục tiêu M12 |
 |---|---|
-| Phương án | B theo cổng |
-| Số dự án đang thi công | Dưới 30 → với 10–15 dự án mỗi quý, phủ toàn tập đoàn trong khoảng 6–9 tháng |
-| Chỗ đặt máy chủ | Thuê trung tâm dữ liệu (Viettel IDC hoặc FPT), cần báo giá theo kW và làm mát chất lỏng |
+| Số dự án đã nạp / tổng dự án | 100% |
+| Điểm bộ đề nhóm tra cứu | ≥ 90% |
+| Tỷ lệ câu có trích dẫn | 100% |
+| Người dùng hoạt động hằng tuần | ≥ 70% chỉ huy trưởng và QS |
+| Độ chính xác OCR theo trường (tự động) | ≥ 95% chữ in, ≥ 85% viết tay |
+| Tỷ lệ đi thẳng OCR | ≥ 60% |
+| Cảnh báo chênh lệch khối lượng có bằng chứng | 100% |
+| Tỷ lệ cờ sai trong định danh công nhân | Theo dõi, giảm theo quý |
+| Sự cố rò rỉ giữa dự án | 0 |
+| Mức sử dụng GPU cụm huấn luyện | ≥ 50% sau M9 |
 
-Việc kế tiếp: lấy báo giá cụm suy luận, cụm huấn luyện và chỗ đặt; mô tả công việc cho trưởng nhóm nghiên cứu AI; danh sách dự án cho đợt nạp đầu.
+## Rủi ro chính
 
-## 8. Nguồn giá
+| Rủi ro | Mức | Chủ xử lý | Cách chặn |
+|---|---|---|---|
+| Không tuyển được trưởng nhóm và người giỏi | Cao | Ban chỉ đạo | Bắt đầu tuyển ngay M0; lương cạnh tranh; tính phương án chuyên gia Việt kiều; cổng G2 |
+| Dữ liệu dự án không sẵn sàng | Cao | Chủ sở hữu sản phẩm | Dự án mẫu có BIM; đo dữ liệu trước G2 |
+| Mua GPU rồi để không | Trung bình | Trưởng nhóm AI | Cổng G2; dùng chung cho thị giác, point cloud |
+| Mô hình bịa số liệu | Trung bình | Trưởng nhóm AI | Số liệu chỉ qua truy vấn; câu bẫy trong bộ đề |
+| Vi phạm Luật 91/2025, Luật AI 134/2025 | Trung bình | Pháp chế | Đánh giá tác động trước khi bật 1.5 và tác tử ghi |
+| Giấy phép mô hình khác công bố | Thấp | Trưởng nhóm AI | Lưu bản sao LICENSE gốc khi chọn |
 
-- Máy chủ Blackwell 8 GPU: [intuitionlabs.ai](https://intuitionlabs.ai/pdfs/data-center-gpu-prices.pdf), [gpusmith.com](https://gpusmith.com/articles/en/nvidia-dgx-b300-price), [amcompute.com](https://www.amcompute.com/gpu-server-values/b200)
-- HGX H200 và RTX PRO 6000: [intuitionlabs.ai](https://intuitionlabs.ai/articles/data-center-gpu-prices), [amcompute.com](https://www.amcompute.com/gpu-server-values/h200), [tech-insider.org](https://tech-insider.org/nvidia-rtx-pro-6000-blackwell-price-2026/)
-- Trung tâm dữ liệu Việt Nam: [businesswire.com](https://www.businesswire.com/news/home/20251203389344/en/Vietnam-Colocation-Data-Center-Portfolio-Analysis-Report-2025-Detailed-Analysis-of-29-Existing-Data-Centers-20-Upcoming-Data-Centers-and-20-Major-Operatorsinvestors---ResearchAndMarkets.com), [whtop.com (Viettel IDC)](https://www.whtop.com/plans/viettelidc.com.vn/147298)
-- Giá thuê GPU: [factory.fpt.ai](https://factory.fpt.ai/ai-insights/h100-cost)
+## Việc còn mở
+
+1. Ngày bắt đầu M0.
+2. Trưởng ban chỉ đạo và chủ sở hữu sản phẩm.
+3. Tên 2 dự án mẫu.
+4. Báo giá thật cho phần cứng, chỗ đặt, lương.
+
+## Liên kết
+
+- `CHAPTER_AI_CORE_OPERATING_PLATFORM.md`: kiến trúc lõi
+- `plans/reports/research-261031-0917-open-llm-selection-training.md`: chọn mô hình, huấn luyện
+- [options-a-b-analysis.md](./options-a-b-analysis.md): phân tích A/B, chi phí, nguồn giá
