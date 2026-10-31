@@ -1,11 +1,11 @@
 # HUD JSON 02-21 report
 
-Files: `/Users/jangtrinh/Products/cc1/video/hud/{02..21}.json`. All parse; canvas 1376x768 for every scene (sips-checked). Anchors/boxes were checked by overlaying them on gridded copies of the HUD images (scratchpad only, no source image touched). Extra files `22.json..26.json` in that folder belong to another worker, untouched.
+Files: `video/hud/{02..21}.json`. All parse; canvas 1376x768 for every scene (sips-checked). Anchors/boxes were checked by overlaying them on gridded copies of the HUD images (scratchpad only, no source image touched). Extra files `22.json..26.json` in that folder belong to another worker, untouched.
 
 Global notes
 - No obvious typos found in any HUD image; no text corrections made. One diacritic judgement: scene 09 "VECTƠ 3D" (image renders it close to "VECTO"; wrote the Vietnamese form with ơ).
 - Wrapped lines are kept as printed (e.g. 09 "...khi công nhân cúi" / "người"; 11 "... CỬA" / "900mm)").
-- Icon-only items (05 "CC1" logo tile, 18 panel corner art) not included as text.
+- Icon-only items (05 logo tile, 18 panel corner art) not included as text.
 - Not labelled (decorative floor/UI text inside the image): 11 floor-projected "VÁCH TƯỜNG DÀY 200mm", "LỖ MỞ CƠ ĐIỆN 450x450mm", "CỬA ĐI D1...", "ỐNG MEP Ø160"; 12 the in-cabin screen inner panels (only its header kept); 07 "Actual Height vs Profile Height"/"1m74" vertical text; 10 red LED "39.200 kg".
 - `rings` only hold circles; elliptical rings (02 ground mesh, 14 lidar rings, 16 roller ellipse, 17 red danger ring) were skipped. Rings kept: 11 prism lock, 13 red conflict ring, 15 robot target.
 

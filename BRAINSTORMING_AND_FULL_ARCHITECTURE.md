@@ -1,7 +1,7 @@
-# Toàn Bộ Hồ Sơ Brainstorming Chiến Lược & Kiến Trúc Kỹ Thuật Công Trường Số — Tổng Công Ty Xây Dựng Số 1 (CC1)
+# Toàn Bộ Hồ Sơ Brainstorming Chiến Lược & Kiến Trúc Kỹ Thuật Công Trường Số — một tập đoàn xây dựng Việt Nam (bối cảnh giả định)
 
-> **Lưu trữ chính thức trong `.brv/context-tree/brainstorming/full_brainstorming_and_architecture.md` và `/Users/jangtrinh/Products/cc1/BRAINSTORMING_AND_FULL_ARCHITECTURE.md`**  
-> Tổng hợp trọn vẹn chuỗi tư duy phản biện, tầm nhìn 2030, lộ trình tư vấn AI 1–3 năm cho CC1, chuyên đề **3D Spatial Re-ID & Sensor Fusion**, cùng đặc tả kỹ thuật phần cứng/hạ tầng và **33 hình ảnh minh họa 16:9**.
+> **Lưu trữ chính thức trong `.brv/context-tree/brainstorming/full_brainstorming_and_architecture.md` và `BRAINSTORMING_AND_FULL_ARCHITECTURE.md`**  
+> Tổng hợp trọn vẹn chuỗi tư duy phản biện, tầm nhìn 2030, lộ trình AI 1–3 năm cho doanh nghiệp, chuyên đề **3D Spatial Re-ID & Sensor Fusion**, cùng đặc tả kỹ thuật phần cứng/hạ tầng và **33 hình ảnh minh họa 16:9**.
 
 ---
 
@@ -69,9 +69,9 @@ Các tổng thầu thực dụng không đầu tư công nghệ để làm truy�
 
 ---
 
-## PHẦN 3: LỘ TRÌNH 1–3 NĂM TRIỂN KHAI AI CHO TẬP ĐOÀN XÂY DỰNG SỐ 1 (CC1)
+## PHẦN 3: LỘ TRÌNH 1–3 NĂM TRIỂN KHAI AI CHO MỘT TẬP ĐOÀN XÂY DỰNG VIỆT NAM (BỐI CẢNH GIẢ ĐỊNH)
 
-### 3.1. Cấu trúc 3 Giai đoạn trình Ban lãnh đạo CC1
+### 3.1. Cấu trúc 3 Giai đoạn trình Ban lãnh đạo doanh nghiệp
 - **GIAI ĐOẠN 1 (Năm thứ nhất - Year 1): Số hóa "Tai Mắt" & An ninh hiện trường (Lấy "An Toàn & Kiểm soát Thất thoát" làm Quick-win)**
   - Touchpoint 1.1: Cổng kiểm soát AI (AI Access Control & PPE Safety Check)
   - Touchpoint 1.2: Camera AI giám sát hành vi & PPE 24/7 (CCTV AI Vision)
@@ -90,10 +90,10 @@ Các tổng thầu thực dụng không đầu tư công nghệ để làm truy�
   - Touchpoint 3.4: Cẩu tháp tự hành AI (Autonomous AI Tower Crane)
   - Touchpoint 3.5: Hệ thống điều phối Đa tác tử AI (Real-time Multi-Agent Site OS)
 
-### 3.2. Ba (03) Bí quyết thuyết phục Ban lãnh đạo CC1
+### 3.2. Ba (03) Bí quyết thuyết phục Ban lãnh đạo doanh nghiệp
 1. **Không nói về công nghệ, hãy nói về Tiền và Tiến độ:** Giai đoạn 1 giảm bao nhiêu `%` thất thoát vật tư, chấm công khống và chi phí bảo vệ? Giai đoạn 2 giảm bao nhiêu ngày chờ trắc đạc và bao nhiêu khối bê tông phải đập đi làm lại (rework)? Giai đoạn 3 giúp thắng thầu các siêu dự án quốc tế ra sao?
-2. **Nguyên lý "Sóng yên biển lặng" (Silent Integration):** Cam kết AI hoạt động âm thầm dưới nền — công nhân CC1 vẫn đi làm bình thường, không làm xáo trộn bộ máy hiện tại.
-3. **Chiến lược Thử nghiệm (PoC):** Đề xuất áp dụng thử nghiệm Giai đoạn 1 tại **01 dự án trọng điểm của CC1** (cao tốc hoặc tổ hợp cao tầng đang khởi công), đánh giá hiệu quả sau **6 tháng** trước khi nhân rộng toàn tổng công ty.
+2. **Nguyên lý "Sóng yên biển lặng" (Silent Integration):** Cam kết AI hoạt động âm thầm dưới nền — công nhân vẫn đi làm bình thường, không làm xáo trộn bộ máy hiện tại.
+3. **Chiến lược Thử nghiệm (PoC):** Đề xuất áp dụng thử nghiệm Giai đoạn 1 tại **01 dự án trọng điểm của doanh nghiệp** (cao tốc hoặc tổ hợp cao tầng đang khởi công), đánh giá hiệu quả sau **6 tháng** trước khi nhân rộng toàn tổng công ty.
 
 ---
 
@@ -111,25 +111,25 @@ Các tổng thầu thực dụng không đầu tư công nghệ để làm truy�
    - Trong đúng `1.5–2 giây` khi công nhân bước qua cổng xoay Face ID đầu ngày, 2 camera cảm biến chiều sâu (`RGB-D / Stereo`) đặt dọc hành lang cổng âm thầm tạo ra **Daily 3D Re-ID Token** (`< 4KB`, nhẹ hơn Avatar 3D gấp 1.000 lần) gồm:
      - **Tỷ lệ nhân trắc học khung xương 3D (3D Anthropometrics):** Chiều cao thực tế, độ rộng hai đầu vai, tỷ lệ chiều dài chân/lưng (17 điểm khớp xương bất biến dù cúi người hay vác đồ).
      - **Chữ ký dáng đi (3D Gait Recognition):** Tốc độ sải bước, độ nghiêng vai, nhịp vung tay.
-     - **Đặc trưng trang phục trong ngày (Daily Appearance Vector):** Màu quần, màu giày ủng, vết bạc màu trên áo trong đúng ca hôm đó + ghép cặp với **ID Chip Mũ bảo hộ UWB (`#CC1-0842`)**.
+     - **Đặc trưng trang phục trong ngày (Daily Appearance Vector):** Màu quần, màu giày ủng, vết bạc màu trên áo trong đúng ca hôm đó + ghép cặp với **ID Chip Mũ bảo hộ UWB (`#ID-0842`)**.
 2. **Tầng 2 — Theo vết Liên Camera (Multi-Camera Tracking) bằng Computer Vision trên toàn công trường:**
    - Hệ thống CCTV sử dụng thuật toán `Person Re-Identification (Re-ID)` (`ByteTrack + HRNet-3D + GaitGL + OSNet-AIN`) bàn giao (hand-off) mục tiêu từ `CAM 01 -> CAM 04 -> CAM 09` trên khung hình `30x80 pixels` dù công nhân quay lưng hay bịt mặt, định danh chính xác tên công nhân và tổ đội khi vi phạm vùng cấm.
 3. **Tầng 3 — Giải bài toán "Góc nhìn đỉnh đầu của Drone (50m Top-Down View)" bằng Hợp nhất Cảm biến (Vision + Smart Helmet UWB Tag) & Chống Tráo Mũ:**
-   - Gắn con chip định vị băng thông siêu rộng **UWB (Ultra-Wideband) / BLE RTK** siêu mỏng (`< 5mm`, nặng `8g`, pin 2 năm không cần sạc nhờ cảm biến gia tốc tự ngủ, giá chỉ vài USD) vào lòng mũ bảo hộ CC1.
+   - Gắn con chip định vị băng thông siêu rộng **UWB (Ultra-Wideband) / BLE RTK** siêu mỏng (`< 5mm`, nặng `8g`, pin 2 năm không cần sạc nhờ cảm biến gia tốc tự ngủ, giá chỉ vài USD) vào lòng mũ bảo hộ.
    - **Cross-Verification (Đối chiếu chéo 3 chiều):**
      1. *Drone / CCTV (Thị giác):* Nhìn thấy hành vi vật lý tại tọa độ `(X, Y, Z)` (ngủ gật góc khuất tầng 14, leo giàn giáo không móc dây an toàn).
-     2. *Chip UWB trên mũ (Định vị):* Phát tín hiệu định danh chính xác tại tọa độ `(X, Y, Z)` đó là mã `#CC1-0842`.
+     2. *Chip UWB trên mũ (Định vị):* Phát tín hiệu định danh chính xác tại tọa độ `(X, Y, Z)` đó là mã `#ID-0842`.
      3. *Khung xương 3D (Chống gian lận tráo mũ / Anti-Spoofing):* Nếu công nhân A (`1m74`, sải bước dài) đưa mũ cho công nhân B (`1m62`) đội hộ để điểm danh khống, hệ thống CCTV Re-ID lập tức phát hiện độ lệch nhân trắc học (`ΔHeight = 12cm > ngưỡng 3cm`) và báo động đỏ về Ban chỉ huy!
 
 ---
 
 ## PHẦN 4B: CÔNG TRƯỜNG TUYẾN (CAO TỐC · CẦU · ĐƯỜNG) — MÔ HÌNH NODE + CORRIDOR
 
-Dự án tuyến của CC1 không phải "một công trường mở" mà là **chuỗi NODE kín** (bãi đúc dầm, trạm trộn, lán trại, mặt bằng trụ cầu) **nối bằng CORRIDOR mở** có giao thông công cộng. Các touchpoint Phần 3–4 giữ nguyên tại NODE; corridor dùng 12 touchpoint mới L1–L12 (TTM số, giấy phép mặt trận số, e-Ticket + geofence, cảnh báo xâm nhập, xương sống lý trình, QA trong quá trình, man-down, NODE cầu số; an ninh tuyến: máy móc & nhiên liệu, vật tư, người ra vào & hố nguy hiểm, trung tâm giám sát từ xa). Chi tiết: [`CHAPTER_OPEN_LINEAR_SITES_HIGHWAY_BRIDGE.md`](./CHAPTER_OPEN_LINEAR_SITES_HIGHWAY_BRIDGE.md). Nghiên cứu nguồn: [`plans/reports/research-261029-2130-open-linear-site-management-synthesis.md`](./plans/reports/research-261029-2130-open-linear-site-management-synthesis.md).
+Dự án tuyến của doanh nghiệp không phải "một công trường mở" mà là **chuỗi NODE kín** (bãi đúc dầm, trạm trộn, lán trại, mặt bằng trụ cầu) **nối bằng CORRIDOR mở** có giao thông công cộng. Các touchpoint Phần 3–4 giữ nguyên tại NODE; corridor dùng 12 touchpoint mới L1–L12 (TTM số, giấy phép mặt trận số, e-Ticket + geofence, cảnh báo xâm nhập, xương sống lý trình, QA trong quá trình, man-down, NODE cầu số; an ninh tuyến: máy móc & nhiên liệu, vật tư, người ra vào & hố nguy hiểm, trung tâm giám sát từ xa). Chi tiết: [`CHAPTER_OPEN_LINEAR_SITES_HIGHWAY_BRIDGE.md`](./CHAPTER_OPEN_LINEAR_SITES_HIGHWAY_BRIDGE.md). Nghiên cứu nguồn: [`plans/reports/research-261029-2130-open-linear-site-management-synthesis.md`](./plans/reports/research-261029-2130-open-linear-site-management-synthesis.md).
 
 ---
 
-## PHẦN 5: DANH MỤC ĐẦY ĐỦ 33 FILE HÌNH ẢNH & BẢN VẼ KỸ THUẬT TRONG `/Users/jangtrinh/Products/cc1`
+## PHẦN 5: DANH MỤC ĐẦY ĐỦ 33 FILE HÌNH ẢNH & BẢN VẼ KỸ THUẬT TRONG `<project-root>`
 
 ### A. Nhóm 20 Hình Phối Cảnh Quy Trình Chi Tiết Từng Checkpoint (`01` → `20`)
 1. `01_GD1_CP1_Cong_Kiem_Soat_AI_PPE.jpg` — GĐ1 Checkpoint 1.1: Cổng kiểm soát AI & PPE Safety Check
@@ -154,7 +154,7 @@ Dự án tuyến của CC1 không phải "một công trường mở" mà là **
 20. `20_Vision2030_CP2_Zero_UI_Smart_Contract_Payment.jpg` — Tầm nhìn 2030 (2): Kỷ nguyên Zero-UI (Kính HUD) & Hợp đồng thông minh thanh toán tức thời
 
 ### B. Nhóm 13 Bản Vẽ Kỹ Thuật Blueprint Chi Tiết Từng Bước Nhỏ, Xử Lý AI, Thiết Bị BOM & Hạ Tầng (`21` → `33`)
-21. `21_Blueprint_00_Ha_Tang_Nen_Tang_CC1_Site_Backbone.jpg` — Bản vẽ Hạ tầng Nền tảng 4 Tầng dùng chung toàn công trường CC1 (CC1 Site Backbone)
+21. `21_Blueprint_00_Ha_Tang_Nen_Tang_Site_Backbone.jpg` — Bản vẽ Hạ tầng Nền tảng 4 Tầng dùng chung toàn công trường (Site Backbone)
 22. `22_Blueprint_GD1_TP1_1_Cong_AI_PPE_Quy_Trinh_BOM_Ha_Tang.jpg` — Bản vẽ Kỹ thuật Touchpoint 1.1: Cổng kiểm soát AI & PPE (4 bước vi mô, AI, BOM, Hạ tầng)
 23. `23_Blueprint_GD1_TP1_2_CCTV_AI_24_7_Quy_Trinh_BOM_Ha_Tang.jpg` — Bản vẽ Kỹ thuật Touchpoint 1.2: Camera AI 24/7 & Cầu thu phát CPE 5GHz từ Cẩu tháp
 24. `24_Blueprint_GD1_TP1_3_Drone_3D_BIM_Quy_Trinh_BOM_Ha_Tang.jpg` — Bản vẽ Kỹ thuật Touchpoint 1.3: Drone RTK LiDAR & Đối soát Point Cloud - BIM 4D

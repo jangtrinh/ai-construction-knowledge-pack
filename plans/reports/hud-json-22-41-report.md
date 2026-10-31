@@ -1,6 +1,6 @@
 # HUD JSON 22-41 report
 
-Files: /Users/jangtrinh/Products/cc1/video/hud/22.json ... 41.json (20 files, all parse, canvas 1376x768 for all, hudStart 3.3, duration 6).
+Files: video/hud/22.json ... 41.json (20 files, all parse, canvas 1376x768 for all, hudStart 3.3, duration 6).
 Verification: parse loop passes; anchors/boxes overlaid on each HUD image (scratchpad only) and spot-checked on 23, 31, 34, 38.
 
 ## Per scene

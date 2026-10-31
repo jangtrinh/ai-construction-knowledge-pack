@@ -1,6 +1,6 @@
 # Site edit 2026-10-30: numbering + concise copy
 
-Scope: `/Users/jangtrinh/Products/cc1/index.html` only. Not committed. Hero film figure and its CSS byte-identical (checked). Figures untouched except the two decimal separators flagged by the lint (below).
+Scope: `index.html` only. Not committed. Hero film figure and its CSS byte-identical (checked). Figures untouched except the two decimal separators flagged by the lint (below).
 
 Method: copy and data sections regenerated from one data model by a one-off script (scratchpad `build_site.py`, not in the repo). CSS change: one rule `.sbs-pair-grid.is-single` (full-width row for the single blueprint 42).
 
@@ -8,7 +8,7 @@ Method: copy and data sections regenerated from one data model by a one-off scri
 
 | Section | Change |
 |---|---|
-| head | title `CC1 · Công trường số: 24 điểm chạm, 14 bản vẽ`; description and og tags: 24 điểm chạm, 28 ảnh hiện trường, 14 bản vẽ |
+| head | title `doanh nghiệp · Công trường số: 24 điểm chạm, 14 bản vẽ`; description and og tags: 24 điểm chạm, 28 ảnh hiện trường, 14 bản vẽ |
 | nav | "Hai mô hình" / "24 điểm chạm" / "Đối chiếu bản vẽ" (was "1. … 2. 28 Điểm chạm 3. …") |
 | Mô hình A/B | headings "8 điểm chạm L1–L8" and "16 điểm chạm"; "Áp dụng cho" generic (cao tốc, cầu, vành đai / nhà ga, dân dụng, công nghiệp); no project names left; ledgers 4 lines each, shorter; node/corridor defined once ("nút (node)", "hành lang (corridor)"); L1 moved to the L4 line (audit 86) |
 | mosaic + 28-thumb grid | captions use touchpoint codes: 1.1…4.2, `1.5 (Tầng 1/2/3, Quy trình, Phụ lục)`, L1…L8. No image numbers |
@@ -25,11 +25,11 @@ Counts shown: 24 điểm chạm (16 + 8), 28 ảnh hiện trường, 14 bản v�
 | Where | Before | After |
 |---|---|---|
 | lead | "Bấm vào bất kỳ điểm chạm nào trong 28 hình bên dưới (20 điểm chạm nền tảng + 8 …) để đối chiếu tức thời Phối cảnh hiện trường (Bên trái) song song với Bản vẽ kỹ thuật Isometric (Bên phải)." (45 từ) | "Bấm một ảnh để xem cạnh bản vẽ của nó. Gồm 16 điểm chạm khép kín (1.1–4.2) và 8 điểm chạm tuyến (L1–L8)." |
-| h2 | "Đối chiếu trực quan Side by Side: Thực địa CC1 (Trái) và Bản vẽ kỹ thuật (Phải)" | "Đối chiếu ảnh hiện trường và bản vẽ kỹ thuật" |
+| h2 | "Đối chiếu trực quan Side by Side: Thực địa (Trái) và Bản vẽ kỹ thuật (Phải)" | "Đối chiếu ảnh hiện trường và bản vẽ kỹ thuật" |
 | row 1.4 title | "Cổng thông minh Smart Gate AI OCR đọc biển số xe bồn, soi thùng xe và rửa lốp" | "Cổng xe AI đọc biển số, soi thùng, rửa lốp" |
 | row 1.4 summary | "Xóa sổ ghi tay bảo vệ · Kiểm soát tuổi bê tông tươi dưới 90 phút · Camera đỉnh soi thùng xe rỗng khi rời công trường" | "Thay sổ ghi tay; kiểm soát tuổi bê tông tươi dưới 90 phút; camera đỉnh soi thùng xe rỗng khi ra." |
 | row 1.5 title | "Giải bài toán Face ID = 0% ngoài công trường khi công nhân bịt mặt hoặc nhìn từ Drone 50m" | "Định danh 3D (ReID) khi không thấy mặt" + summary keeps "Face ID = 0%" |
-| image caption | "34. Tuyến L1: TTM số và kiểm tra tổ chức giao thông" + label "Phối cảnh thực địa CC1 · Mã 34" + "Phóng to 34" | "L1 · TTM số, kiểm tra tổ chức giao thông" + "Hiện trường" + "Phóng to" |
+| image caption | "34. Tuyến L1: TTM số và kiểm tra tổ chức giao thông" + label "Phối cảnh thực địa · Mã 34" + "Phóng to 34" | "L1 · TTM số, kiểm tra tổ chức giao thông" + "Hiện trường" + "Phóng to" |
 | blueprint | "22. Bản vẽ: Cổng kiểm soát AI và bảo hộ PPE", chips "1. Quy trình 1.5s" … | "Bản vẽ 1.1", chips "Quy trình mở cổng", "AI khuôn mặt", … |
 | chips | "Không nhận phiếu trên làn xe", "Geofence Km 8+200 – 9+000" (5-6 từ) | all <= 4 syllables (about 3 words); long facts moved into the row sentence |
 | Áp dụng cho | "Cầu Cát Lái · Cầu Long Hưng · Vành đai 3 · Cao tốc Dầu Giây đi Tân Phú (60 km) · Hậu Giang đi Cà Mau (24 cầu)" | "cao tốc, cầu, vành đai" |
@@ -49,7 +49,7 @@ js ok                                    # node new Function over every <script>
 
 Image numbers in visible text (`\b(0[1-9]|[1-3][0-9]|4[0-2])\.`): one hit, `Cân 18.4 tấn`, a decimal figure (decision 2), not an image number. Same regex with `(\s|$)` after the dot: none. `Bản vẽ [0-9][0-9]`: none. `Mã NN`, `Phóng to NN`, Isometric, Side by Side, Checklist, Gantry, Exoskeleton, Backbone, project names (Vành đai 3, Dầu Giây, Tân Phú, Hậu Giang, Cà Mau, Cát Lái, Long Hưng, T3, Long Thành, Tân Sơn Nhất, bệnh viện): none.
 
-Vietnamese lint (`validate_copy.py --domain vietnamese-real-estate-construction,tech --register press`, text in scratchpad `site-text.md`): first run 2 errors NUM003 (`99.4%`, `24.5 m³`), fixed to `99,4%` and `24,5 m³`; final: `0 error(s) · 1 warning(s)`. The warning is LAW001 on "Tổng Công ty Xây dựng Số 1", the company's legal name, not a claim.
+Vietnamese lint (`validate_copy.py --domain vietnamese-real-estate-construction,tech --register press`, text in scratchpad `site-text.md`): first run 2 errors NUM003 (`99.4%`, `24.5 m³`), fixed to `99,4%` and `24,5 m³`; final: `0 error(s) · 1 warning(s)`. The warning is LAW001 on "một tập đoàn xây dựng Việt Nam (bối cảnh giả định)", the company's legal name, not a claim.
 
 Figures: every number token of the old visible text still exists in the new text except `60` (removed with the "Dầu Giây–Tân Phú (60 km)" project line, decision 3) and `99.4`/`24.5` (now `99,4`/`24,5`, same value). 28 other tokens (1, 3, 145, 250, K98, 85, …) appear fewer times because duplicates across title, summary and chip were merged; each still appears at least once.
 

@@ -1,4 +1,4 @@
-# Công Trường Mở (Cao tốc · Cầu · Đường) — Thế giới quản lý thế nào & CC1 áp dụng ra sao
+# Công Trường Mở (Cao tốc · Cầu · Đường) — Thế giới quản lý thế nào & doanh nghiệp áp dụng ra sao
 
 > Tổng hợp nghiên cứu 2026-10-29. Controller: Opus 5.5. 4 nhánh nghiên cứu song song (Sonnet 5.5), báo cáo gốc:
 > [axis1 no-perimeter](./researcher-261029-2130-open-site-axis1-no-perimeter-access.md) ·
@@ -6,7 +6,7 @@
 > [axis3 linear data/QA](./researcher-261029-2130-open-site-axis3-linear-data-progress-qa.md) ·
 > [axis4 infra/logistics/VN](./researcher-261029-2130-open-site-axis4-infra-logistics-vietnam.md)
 >
-> Nhãn bằng chứng: **[F]** = trang/PDF đã mở đọc · **[V]** = số liệu do vendor tự công bố · **[I]** = suy luận của nhóm tư vấn · **[U]** = chưa kiểm chứng (KHÔNG đưa cho khách hàng).
+> Nhãn bằng chứng: **[F]** = trang/PDF đã mở đọc · **[V]** = số liệu do vendor tự công bố · **[I]** = suy luận của nhóm nghiên cứu · **[U]** = chưa kiểm chứng (KHÔNG đưa vào đề xuất).
 > JEV: NOT RUN (thiếu `TYPESAFE_API_KEY`). Laya/System One: NOT APPLICABLE (nghiên cứu web, không có artefact chạy được).
 
 ---
@@ -16,8 +16,8 @@
 1. **Dự án tuyến KHÔNG phải "một công trường mở".** Nó là **chuỗi NODE kín nhỏ** (bãi đúc dầm/đốt, trạm trộn, lán trại, kho, mặt bằng trụ/mố, bến sà lan) **nối bằng một CORRIDOR mở** (hàng chục km nền đường, có giao thông công cộng, mặt trận thi công dịch chuyển hằng ngày). → Gần như mọi touchpoint hiện có **vẫn dùng được tại NODE**; thứ vỡ là **corridor**: trong 16 dòng của ma trận §3, trên corridor có **6 REPLACE · 2 DROP · 5 MODIFY · 1 DEFER · 1 n/a · chỉ 1 KEEP** (exoskeleton).
 2. **Lỗ hổng lớn nhất của bộ hồ sơ hiện tại: không có touchpoint nào cho giao diện với giao thông công cộng.** Bằng chứng VN: mở rộng cao tốc Nội Bài–Lào Cai ghi nhận **31 vụ va chạm/TNGT, 6 bị thương, 1 tử vong sau ~3 tháng thi công** [F]. Thế giới đếm "xâm nhập vùng thi công" như KPI (UK ~6.500 vụ/3 năm; NEXCO East 35→53 vụ/năm) [F].
 3. **Thế giới không kiểm soát tuyến bằng cổng — mà bằng NGƯỜI + GIẤY PHÉP SỐ + MÁY.** Mô hình mẫu: đường sắt UK (Sentinel + COSS + Protection Controller): mỗi tổ có 1 người chịu trách nhiệm, quẹt thẻ năng lực đầu ca tại mặt trận, làm việc trong "possession" = giấy phép đoạn km × khung giờ [F].
-4. **Khóa không gian đổi từ "tầng/zone" sang "lý trình Km+m + offset + lớp".** Tiến độ = biểu đồ thời gian–lý trình, không phải BIM 4D theo tầng. Nhật (MLIT) dùng J-LandXML chứ chưa bắt buộc IFC cho đường [F] → CC1 nên LandXML/lý trình trước, IFC 4.3 là đích xuất.
-5. **QA tuyến lấy dữ liệu từ MÁY đang thi công**, không phải quét sau: lu thông minh (IC), thanh nhiệt máy rải (paver thermal), máy đào 3D dùng trạm CORS quốc gia VNGEONET (65 trạm) [F]. Giá trị "BIM/digital twin" mạnh nhất của CC1 nằm ở **NODE cầu** (hình học đốt dầm đúc, cảm biến maturity bê tông).
+4. **Khóa không gian đổi từ "tầng/zone" sang "lý trình Km+m + offset + lớp".** Tiến độ = biểu đồ thời gian–lý trình, không phải BIM 4D theo tầng. Nhật (MLIT) dùng J-LandXML chứ chưa bắt buộc IFC cho đường [F] → doanh nghiệp nên LandXML/lý trình trước, IFC 4.3 là đích xuất.
+5. **QA tuyến lấy dữ liệu từ MÁY đang thi công**, không phải quét sau: lu thông minh (IC), thanh nhiệt máy rải (paver thermal), máy đào 3D dùng trạm CORS quốc gia VNGEONET (65 trạm) [F]. Giá trị "BIM/digital twin" mạnh nhất của doanh nghiệp nằm ở **NODE cầu** (hình học đốt dầm đúc, cảm biến maturity bê tông).
 
 ---
 
@@ -45,7 +45,7 @@ flowchart TB
     C --- N3
 ```
 
-Danh mục CC1 thực tế khớp đúng mô hình này: gói **XL03 Hậu Giang–Cà Mau = 12 km tuyến chính + 24 cầu đường bộ, 34 tháng, 3.334 tỷ** [F] → một chuỗi 24 NODE trụ cầu dọc corridor đất yếu ĐBSCL.
+Danh mục doanh nghiệp thực tế khớp đúng mô hình này: gói **XL03 Hậu Giang–Cà Mau = 12 km tuyến chính + 24 cầu đường bộ, 34 tháng, 3.334 tỷ** [F] → một chuỗi 24 NODE trụ cầu dọc corridor đất yếu ĐBSCL.
 
 ---
 
@@ -69,7 +69,7 @@ Ký hiệu: **KEEP@node** giữ nguyên tại NODE · **MODIFY** sửa · **REPL
 | TP | Tên hiện tại | Tại NODE | Trên CORRIDOR | Thay bằng / sửa thế nào |
 |---|---|---|---|---|
 | Core | Xương sống hạ tầng (cáp quang + edge box + lưới điện + base RTK nóc BCH) | KEEP | REPLACE | Edge tại trạm trộn/lán trại; corridor = 4G dual-SIM + offline-first + Starlink tại mặt bằng cố định (Starlink thương mại tại VN từ **13/8/2026** [F]); điện = skid solar+ắc quy+máy phát; RTK = VNGEONET NRTK (65 trạm) [F], base UHF dự phòng vùng mất sóng |
-| 1.1 | Cổng AI Face ID + PPE | KEEP (lán trại, bãi đúc) | REPLACE | Chỉ huy mặt trận quét thẻ CC1 (QR/NFC) tại buổi giao ca; geofence check-in + kiosk tablet tổ trưởng khi mất sóng; PPE do chỉ huy kiểm tại briefing |
+| 1.1 | Cổng AI Face ID + PPE | KEEP (lán trại, bãi đúc) | REPLACE | Chỉ huy mặt trận quét thẻ nhân viên (QR/NFC) tại buổi giao ca; geofence check-in + kiosk tablet tổ trưởng khi mất sóng; PPE do chỉ huy kiểm tại briefing |
 | 1.2 | CCTV AI 24/7 cố định | KEEP (trạm trộn, bãi đúc, cẩu) | REPLACE | Camera AI **gắn xe/trailer, đi theo mặt trận**; cảnh báo = còi/đèn/rung đeo người tại chỗ; trung tâm chỉ nhận log |
 | 1.3 | Drone quét 3D vs BIM 4D theo tầng | KEEP | MODIFY | % hoàn thành **theo đoạn lý trình × lớp** (nền/móng dưới/móng trên/BTN); bay theo khối 2–5 km; tích hợp quy trình phép bay NĐ 288/2025 (nộp ≥7 ngày; hạn phép 30/180/360 ngày theo loại [F, nguồn thứ cấp]) |
 | 1.4 | Smart Gate ANPR | KEEP (cổng trạm trộn/bãi/mỏ) | REPLACE | Định danh chuyển lên **máy** (operator ID + telematics) và **geofence điểm đổ** + e-Ticket |
@@ -95,8 +95,8 @@ Xếp theo ROI × mức bằng chứng × áp lực pháp lý VN.
 
 | ID | Touchpoint mới | Vì sao trước | Neo pháp lý / bằng chứng |
 |---|---|---|---|
-| **L1** | **TTM số & kiểm tra tuân thủ hằng ngày**: checklist rào/biển/đèn/người điều tiết theo QCVN 41:2024 + TCCS 14:2016, chụp ảnh có GPS-lý trình mỗi ca, đối chiếu phương án đã được cấp phép | Lỗi VN đang thấy là **cơ bản** (biển/rào tạm chưa đúng quy định — chính văn bản Cục ĐBVN 2026 thừa nhận); rẻ nhất, bảo vệ CC1 khi có tai nạn | TT 41/2024/TT-BGTVT Đ5–6 (giấy phép thi công trên đường đang khai thác, phương án đảm bảo GT, biển thông tin ≥5 ngày, báo CSGT) [F]; QCVN 41:2024 (TT 51/2024) [F số hiệu] |
-| **L2** | **Giấy phép mặt trận số + Chỉ huy mặt trận** (bản "possession" cho CC1): đoạn Km từ–đến × khung giờ × danh sách tổ đội × người chịu trách nhiệm; điểm danh đầu ca tại mặt trận; đếm quân số theo tổ khi sơ tán | Thay thế logic cổng xoay; nền cho mọi touchpoint corridor khác | Network Rail [F]; NĐ 06/2021 Đ13 (phương án an toàn tổng thể, vùng nguy hiểm) [F thứ cấp; hiệu lực hiện hành = U, cần kiểm lại vì luật đang thay đổi nhanh] |
+| **L1** | **TTM số & kiểm tra tuân thủ hằng ngày**: checklist rào/biển/đèn/người điều tiết theo QCVN 41:2024 + TCCS 14:2016, chụp ảnh có GPS-lý trình mỗi ca, đối chiếu phương án đã được cấp phép | Lỗi VN đang thấy là **cơ bản** (biển/rào tạm chưa đúng quy định — chính văn bản Cục ĐBVN 2026 thừa nhận); rẻ nhất, bảo vệ khi có tai nạn | TT 41/2024/TT-BGTVT Đ5–6 (giấy phép thi công trên đường đang khai thác, phương án đảm bảo GT, biển thông tin ≥5 ngày, báo CSGT) [F]; QCVN 41:2024 (TT 51/2024) [F số hiệu] |
+| **L2** | **Giấy phép mặt trận số + Chỉ huy mặt trận** (bản "possession" cho doanh nghiệp): đoạn Km từ–đến × khung giờ × danh sách tổ đội × người chịu trách nhiệm; điểm danh đầu ca tại mặt trận; đếm quân số theo tổ khi sơ tán | Thay thế logic cổng xoay; nền cho mọi touchpoint corridor khác | Network Rail [F]; NĐ 06/2021 Đ13 (phương án an toàn tổng thể, vùng nguy hiểm) [F thứ cấp; hiệu lực hiện hành = U, cần kiểm lại vì luật đang thay đổi nhanh] |
 | **L3** | **e-Ticket vật tư + geofence điểm đổ + telematics hỗn hợp (ISO 15143-3)** | Hàng chục điểm đổ, không có cổng; chống thất thoát BTN/BT/đất đắp; an toàn người nhận phiếu đứng trên làn xe | FHWA EDC e-Ticketing, GDOT [F]; phân cách thương hiệu máy → adapter từng OEM + cảm biến GPS/nhiên liệu cho máy cũ |
 
 ### Năm 2
@@ -107,7 +107,7 @@ Xếp theo ROI × mức bằng chứng × áp lực pháp lý VN.
 | **L5** | **Xương sống dữ liệu lý trình + tiến độ thời gian–lý trình** (LandXML/CSV làm nguồn chuẩn, xuất IFC 4.3 sau) | Không hứa ROI (không tìm thấy số đo độc lập cho lập tiến độ tuyến) |
 | **L6** | **QA trong quá trình**: lu IC + thanh nhiệt máy rải + LiDAR gắn xe cho nghiệm thu lớp | Dùng IC để **sàng lọc** điểm yếu; giữ khoan lõi/đo nhân làm nghiệm thu đến khi hiệu chỉnh tương quan tại chỗ và CĐT chấp nhận |
 | **L7** | **Man-down / người làm đơn độc**: GNSS tag, không cử động 180 s → báo; hẹn giờ check-in chạy phía server (mất sóng vẫn báo) | Tarmac UK, Network Rail [F, nguồn cũ] |
-| **L8** | **NODE cầu số**: kiểm soát hình học đốt dầm đúc (sai 1 phần mm tại bãi → lệch hàng mét cuối nhịp, ISARC [F]) + cảm biến maturity bê tông mỗi đợt đổ trụ/dầm (Idaho: rút 5–10 ngày [V]) | Đây là nơi "digital twin" của CC1 có giá trị cao nhất |
+| **L8** | **NODE cầu số**: kiểm soát hình học đốt dầm đúc (sai 1 phần mm tại bãi → lệch hàng mét cuối nhịp, ISARC [F]) + cảm biến maturity bê tông mỗi đợt đổ trụ/dầm (Idaho: rút 5–10 ngày [V]) | Đây là nơi "digital twin" của doanh nghiệp có giá trị cao nhất |
 
 ### Hoãn (chưa ROI tại VN)
 Máy rải cọc tiêu tự động, SwiftGate, xe đệm va tự hành, V2X, edge compute di động theo mặt trận (chưa thấy nhà thầu nào làm). Lý do: kinh tế lao động VN khác UK/US [I]; lỗi đang xảy ra ở VN là lỗi cơ bản.
@@ -130,17 +130,17 @@ Máy rải cọc tiêu tự động, SwiftGate, xe đệm va tự hành, V2X, ed
 
 ## 6. Pilot đề xuất
 
-- **Ứng viên A — gói XL03 Hậu Giang–Cà Mau** (12 km + 24 cầu, ký 14/1/2023, 34 tháng [F]): đúng mô hình NODE+CORRIDOR, nhưng **có thể đã gần hoàn thành** (34 tháng từ 01/2023 ≈ cuối 2025) → **cần CC1 xác nhận trạng thái**.
-- **Ứng viên B — cầu Cát Lái / Long Hưng (PPP, CC1 là nhà đầu tư)** [F]: còn ở giai đoạn đầu → áp dụng từ ngày 1, CC1 có quyền quyết định (không phụ thuộc đối tác liên danh).
-- **Ứng viên C — một gói mở rộng trên đường đang khai thác** (nếu CC1 có): nơi L1 + L4 có tác động lớn nhất (bài học Nội Bài–Lào Cai).
+- **Ứng viên A — gói XL03 Hậu Giang–Cà Mau** (12 km + 24 cầu, ký 14/1/2023, 34 tháng [F]): đúng mô hình NODE+CORRIDOR, nhưng **có thể đã gần hoàn thành** (34 tháng từ 01/2023 ≈ cuối 2025) → **cần doanh nghiệp xác nhận trạng thái**.
+- **Ứng viên B — cầu Cát Lái / Long Hưng (PPP, doanh nghiệp là nhà đầu tư)** [F]: còn ở giai đoạn đầu → áp dụng từ ngày 1, doanh nghiệp có quyền quyết định (không phụ thuộc đối tác liên danh).
+- **Ứng viên C — một gói mở rộng trên đường đang khai thác** (nếu doanh nghiệp có): nơi L1 + L4 có tác động lớn nhất (bài học Nội Bài–Lào Cai).
 
 Gói pilot tối thiểu: L1 + L2 + L3 trên **01 dự án trọng điểm, đánh giá sau 6 tháng** (khớp chiến lược PoC đã chốt trong `BRAINSTORMING_AND_FULL_ARCHITECTURE.md` §3.2), đo trước/sau: số lỗi TTM/tuần, số sự cố xâm nhập, thời gian điểm danh, chênh lệch khối lượng phiếu vs nghiệm thu.
 
 ---
 
-## 7. Giới hạn bằng chứng (đọc trước khi trình khách hàng)
+## 7. Giới hạn bằng chứng (đọc trước khi công bố)
 
-- **Không đưa các số [U] cho CC1**: PennDOT −12%/−23%, Minneapolis −56%, WYDOT 56%, Connecticut −90%, NC AI 92–99%, "GPS thu hồi 90%+", Wyoming IC 54%. Lý do: trang gốc trả 403 hoặc chỉ có snippet.
+- **Không đưa các số [U] cho doanh nghiệp**: PennDOT −12%/−23%, Minneapolis −56%, WYDOT 56%, Connecticut −90%, NC AI 92–99%, "GPS thu hồi 90%+", Wyoming IC 54%. Lý do: trang gốc trả 403 hoặc chỉ có snippet.
 - Số **[V]** (Giatec, LVT, Technoton, Georgiou/Trimble, Sine) phải ghi rõ "theo nhà cung cấp".
 - Báo động xâm nhập & camera AI: **chưa có số giảm tai nạn** nào đáng tin trên thế giới; bán như "giảm thời gian phản ứng", không bán như "giảm X% tai nạn".
 - Phần lớn bằng chứng từ Mỹ/UK/Nhật; **không tìm thấy** nhà thầu đường VN/Đông Nam Á nào đang chạy theo dõi công nhân thời gian thực trên tuyến.
@@ -162,8 +162,8 @@ Gói pilot tối thiểu: L1 + L2 + L3 trên **01 dự án trọng điểm, đá
 1. Áp dụng vào bộ hồ sơ thế nào: chương "Công trường tuyến" riêng hay sửa từng touchpoint?
 2. Có làm hình minh họa 16:9 mới cho các touchpoint L1–L8 (theo ART-DIRECTION hiện có) không?
 3. Pilot: gói nào (XL03 / Cát Lái–Long Hưng / gói mở rộng đường đang khai thác)?
-4. Tỷ trọng km "trên đường đang khai thác" vs "tuyến mới" trong danh mục CC1 → quyết định L1/L4 là 80% hay 20% rủi ro.
-5. CC1 có muốn thuê luật sư rà soát NĐ 356 cho Face ID/gait/GNSS tag trước khi đưa vào đề xuất chính thức?
+4. Tỷ trọng km "trên đường đang khai thác" vs "tuyến mới" trong danh mục doanh nghiệp → quyết định L1/L4 là 80% hay 20% rủi ro.
+5. doanh nghiệp có muốn thuê luật sư rà soát NĐ 356 cho Face ID/gait/GNSS tag trước khi đưa vào đề xuất chính thức?
 
 ### Nguồn tiêu biểu (đã mở)
 - Network Rail Sentinel: https://info.railsentinel.co.uk/2020/04/14/swipe-for-your-safety-with-sentinel/
@@ -181,4 +181,4 @@ Gói pilot tối thiểu: L1 + L2 + L3 trên **01 dự án trọng điểm, đá
 - NĐ 356/2025: https://luatvietnam.vn/dan-su/nghi-dinh-356-2025-nd-cp-quy-dinh-chi-tiet-luat-bao-ve-du-lieu-ca-nhan-422896-d1.html
 - NĐ 288/2025: https://vbpl.vn/TW/Lists/vbpq/Attachments/183413/288.2025.ND-CP.doc
 - Starlink VN: https://vietnamnews.vn/society/1797454/starlink-officially-launches-satellite-internet-service-in-viet-nam.html
-- CC1 XL03: https://www.tinnhanhchungkhoan.vn/cc1-ky-ket-hop-dong-thi-cong-du-an-cao-toc-thanh-phan-hau-giang-ca-mau-post313600.html
+- The enterprise XL03: https://www.tinnhanhchungkhoan.vn/cc1-ky-ket-hop-dong-thi-cong-du-an-cao-toc-thanh-phan-hau-giang-ca-mau-post313600.html

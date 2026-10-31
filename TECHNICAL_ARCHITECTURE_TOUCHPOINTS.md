@@ -1,7 +1,7 @@
-# Hồ Sơ Kiến Trúc Kỹ Thuật Chi Tiết Từng Điểm Tiếp Xúc (Touchpoints) — Công Trường Số CC1
+# Hồ Sơ Kiến Trúc Kỹ Thuật Chi Tiết Từng Điểm Tiếp Xúc (Touchpoints) — Công Trường Số doanh nghiệp
 
 > **Tài liệu Đặc tả Kỹ thuật & Vận hành (Technical & Operational Blueprint)**  
-> Phục vụ trình Hội đồng Kỹ thuật, Ban Quản lý Dự án, Ban CNTT và Ban Tổng Giám đốc **Tổng Công ty Xây dựng Số 1 (CC1)**.  
+> Phục vụ trình Hội đồng Kỹ thuật, Ban Quản lý Dự án, Ban CNTT và Ban Tổng Giám đốc **một tập đoàn xây dựng Việt Nam (bối cảnh giả định)**.  
 > Mỗi Touchpoint được bóc tách chi tiết theo **4 chiều**:  
 > 1. **Quy trình vận hành từng bước (Step-by-Step Operational Flow)**  
 > 2. **Hệ thống xử lý cái gì (AI Pipeline, Thuật toán & Luồng dữ liệu)**  
@@ -10,9 +10,9 @@
 
 ---
 
-## Kiến Trúc Hạ Tầng Nền Tảng Dùng Chung Toàn Công Trường CC1 (Core Site Infrastructure)
+## Kiến Trúc Hạ Tầng Nền Tảng Dùng Chung Toàn Công Trường (Core Site Infrastructure)
 
-Trước khi đi vào từng Touchpoint, toàn bộ công trường CC1 dùng chung một **"Xương sống Hạ tầng Công trường Số" (CC1 Site Backbone)** để tránh đầu tư chồng chéo:
+Trước khi đi vào từng Touchpoint, toàn bộ công trường dùng chung một **"Xương sống Hạ tầng Công trường Số" (Site Backbone)** để tránh đầu tư chồng chéo:
 
 ```mermaid
 flowchart TB
@@ -22,7 +22,7 @@ flowchart TB
         T3["iPad AR LiDAR + Máy xúc 3D RTK + Robot / Crane"]
     end
 
-    subgraph EDGE["TẦNG XỬ LÝ TẠI CHỖ (CC1 ON-SITE EDGE AI BOX - CONTAINER CHỈ HUY)"]
+    subgraph EDGE["TẦNG XỬ LÝ TẠI CHỖ (ON-SITE EDGE AI BOX - CONTAINER CHỈ HUY)"]
         E1["Edge AI Server (2x NVIDIA Jetson AGX Orin 64GB / L4 GPU)"]
         E2["Local NVR & Time-Series Cache (16TB NVMe/HDD RAID1 - Lưu đệm 30 ngày)"]
         E3["UWB/BLE RTK Coordinator & Local MQTT Broker"]
@@ -34,10 +34,10 @@ flowchart TB
         N3["Trạm Base RTK-GNSS Cố Định Trên Nóc Ban Chỉ Huy (Sai số < 1cm)"]
     end
 
-    subgraph CLOUD["TẦNG ĐÁM MÂY & ĐIỀU HÀNH TRUNG TÂM (CC1 HEADQUARTERS)"]
-        C1["CC1 CDE (Common Data Environment - BIM LOD 400 / 4D)"]
-        C2["CC1 ERP (SAP/Oracle - Vật tư, Hợp đồng, Thanh toán)"]
-        C3["CC1 Multi-Agent Site OS & Zalo/App Cảnh Báo Chỉ Huy"]
+    subgraph CLOUD["TẦNG ĐÁM MÂY & ĐIỀU HÀNH TRUNG TÂM (HEADQUARTERS)"]
+        C1["the enterprise CDE (Common Data Environment - BIM LOD 400 / 4D)"]
+        C2["doanh nghiệp ERP (SAP/Oracle - Vật tư, Hợp đồng, Thanh toán)"]
+        C3["Multi-Agent Site OS & Zalo/App Cảnh Báo Chỉ Huy"]
     end
 
     FIELD --> NET --> EDGE --> CLOUD
@@ -53,19 +53,19 @@ flowchart TB
 *Hình minh họa:* [`01_GD1_CP1_Cong_Kiem_Soat_AI_PPE.jpg`](./01_GD1_CP1_Cong_Kiem_Soat_AI_PPE.jpg)
 
 #### 1. Quy trình vận hành từng bước (Step-by-Step)
-1. **Bước 1 (Tiếp cận - 0.0s):** Công nhân CC1 hoặc thầu phụ bước vào làn phân luồng inox dẫn vào cổng xoay (Turnstile). Cảm biến tiệm cận hồng ngoại (IR Sensor) phát hiện người đứng trước vạch quét và kích hoạt cụm camera.
+1. **Bước 1 (Tiếp cận - 0.0s):** Công nhân hoặc thầu phụ bước vào làn phân luồng inox dẫn vào cổng xoay (Turnstile). Cảm biến tiệm cận hồng ngoại (IR Sensor) phát hiện người đứng trước vạch quét và kích hoạt cụm camera.
 2. **Bước 2 (Quét kép Khuôn mặt + PPE - 0.3s → 1.0s):**
    - Camera nhận diện khuôn mặt tầm mắt chụp ảnh RGB + Hồng ngoại (chống giả mạo bằng ảnh/điện thoại).
    - Camera góc rộng phía trên quét toàn thân từ đỉnh đầu xuống chân.
 3. **Bước 3 (Phán quyết tại chỗ - 1.0s → 1.5s):**
-   - **Trường hợp ĐẠT 100%:** Khuôn mặt khớp hồ sơ nhân sự đang còn hạn hợp đồng/bảo hiểm an toàn lao động **VÀ** có đội mũ bảo hộ đúng quy cách + mặc áo phản quang CC1 -> Màn hình LED hiện `"HỢP LỆ (GRANTED)"`, còi bíp xanh, chốt từ Turnstile mở trong 3 giây cho 1 người đi qua.
+   - **Trường hợp ĐẠT 100%:** Khuôn mặt khớp hồ sơ nhân sự đang còn hạn hợp đồng/bảo hiểm an toàn lao động **VÀ** có đội mũ bảo hộ đúng quy cách + mặc áo phản quang -> Màn hình LED hiện `"HỢP LỆ (GRANTED)"`, còi bíp xanh, chốt từ Turnstile mở trong 3 giây cho 1 người đi qua.
    - **Trường hợp KHÔNG ĐẠT:** Thiếu mũ/áo hoặc thẻ nhân sự hết hạn -> Cổng giữ khóa cứng, loa phát giọng nói tiếng Việt chỉ rõ lỗi (*"Vui lòng đội mũ bảo hộ và cài quai trước khi vào công trường"*), đồng thời chụp ảnh log lỗi gửi cho cán bộ HSE (An toàn lao động) tại cổng.
 4. **Bước 4 (Chốt quân số thời gian thực):** Ngay khi trục xoay Turnstile quay đủ 1 vòng (xác nhận vật lý có người đã bước qua), hệ thống cộng `+1` vào bảng quân số trực tuyến theo từng Nhà thầu phụ / Tổ đội.
 
 #### 2. Hệ thống xử lý cái gì (AI & Software Pipeline)
 - **Face Recognition & Liveness Detection:** Mô hình `ArcFace / InsightFace (INT8 TensorRT)` trích xuất vector khuôn mặt 512 chiều, kết hợp `3D IR Liveness` chống gian lận chấm công hộ bằng ảnh/video. Đối chiếu cơ sở dữ liệu 5.000 công nhân trong `< 50ms`.
 - **PPE Object Detection:** Mô hình `YOLOv10s / RT-DETR` tinh chỉnh riêng cho công trường Việt Nam, nhận diện 4 lớp: `Helmet (Mũ bảo hộ)`, `Chin-strap (Quai mũ)`, `Reflective Vest (Áo phản quang)`, `Safety Shoes (Giày/Ủng bảo hộ)`.
-- **Rule Engine & HR Sync:** Kiểm tra chéo trạng thái chứng chỉ an toàn lao động (HSE Certificate) và hợp đồng thầu phụ từ phần mềm HRM/ERP của CC1 trước khi cấp quyền mở relay cổng.
+- **Rule Engine & HR Sync:** Kiểm tra chéo trạng thái chứng chỉ an toàn lao động (HSE Certificate) và hợp đồng thầu phụ từ phần mềm HRM/ERP của doanh nghiệp trước khi cấp quyền mở relay cổng.
 
 #### 3. Danh mục thiết bị phần cứng (Hardware BOM)
 | Nhóm thiết bị | Thiết bị cụ thể & Thông số công nghiệp | Số lượng / Cổng (3 làn) |
@@ -78,7 +78,7 @@ flowchart TB
 #### 4. Hạ tầng kỹ thuật tại công trường (Infrastructure)
 - **Nhà bảo vệ & Mái che cổng:** Khung thép tiền chế có mái tôn chống nắng mưa trực tiếp và tấm chắn sáng nền (backdrop) phía sau lưng công nhân để chống ngược sáng mặt trời lúc 6h30–7h30 sáng.
 - **Điện & Dự phòng:** Nguồn `220V AC` qua bộ đổi nguồn `24V DC` công nghiệp + **UPS `2kVA` lưu điện tối thiểu 4 tiếng**; kết nối tín hiệu báo cháy để tự động xả chốt toàn bộ cổng khi có sự cố khẩn cấp.
-- **Mạng:** Cáp mạng `Cat6A chống nhiễu (FTP)` luồn ống thép IMC từ cổng về Switch PoE+ tại phòng bảo vệ, kết nối thẳng vào **CC1 Edge AI Box** qua mạng nội bộ (hoạt động độc lập 100% ngay cả khi đứt cáp quang Internet).
+- **Mạng:** Cáp mạng `Cat6A chống nhiễu (FTP)` luồn ống thép IMC từ cổng về Switch PoE+ tại phòng bảo vệ, kết nối thẳng vào **Edge AI Box** qua mạng nội bộ (hoạt động độc lập 100% ngay cả khi đứt cáp quang Internet).
 
 ---
 
@@ -86,14 +86,14 @@ flowchart TB
 *Hình minh họa:* [`02_GD1_CP2_Camera_AI_Giam_Sat_An_Toan_24_7.jpg`](./02_GD1_CP2_Camera_AI_Giam_Sat_An_Toan_24_7.jpg)
 
 #### 1. Quy trình vận hành từng bước (Step-by-Step)
-1. **Bước 1 (Quét luồng video liên tục 24/7):** Các camera PTZ và Bullet lắp trên cẩu tháp, trụ đèn và các tầng đang thi công truyền luồng video RTSP về **CC1 Edge AI Box** tại văn phòng Ban chỉ huy.
+1. **Bước 1 (Quét luồng video liên tục 24/7):** Các camera PTZ và Bullet lắp trên cẩu tháp, trụ đèn và các tầng đang thi công truyền luồng video RTSP về **Edge AI Box** tại văn phòng Ban chỉ huy.
 2. **Bước 2 (Phát hiện hành vi nguy hiểm & Vùng cấm):**
    - AI tự động khoanh vùng đa giác ảo (Virtual Geofence) dưới tầm vươn của cẩu tháp, hố đào sâu, mép sàn chưa có lan can và khu vực giàn giáo trên cao.
    - Phát hiện công nhân tháo mũ bảo hộ, không móc dây an toàn khi đứng trên giàn giáo cao `> 2m`, người nằm bất động/trượt ngã, hoặc có khói/lửa bốc lên.
 3. **Bước 3 (Lọc nhiễu chống báo giả - Debounce 3 giây):** Hệ thống theo dõi liên tiếp trong 3 giây (45 frames) để loại bỏ cảnh báo giả (ví dụ công nhân chỉ cúi xuống nhặt đồ hoặc đi ngang qua mép vùng cấm).
 4. **Bước 4 (Cảnh báo đa kênh tức thời < 2 giây):**
    - **Tại hiện trường:** Loa IP phóng thanh gắn ngay trên cột camera phát cảnh báo tự động: *"Cảnh báo an toàn! Khu vực sàn tầng 8 trục B-3 có nhân sự chưa móc dây an toàn!"*
-   - **Về Ban chỉ huy:** Cắt ảnh (snapshot) khoanh đỏ vị trí vi phạm kèm clip 10 giây đẩy tự động vào nhóm **Zalo / Telegram Ban chỉ huy & HSE CC1** và bật popup đỏ trên màn hình trung tâm.
+   - **Về Ban chỉ huy:** Cắt ảnh (snapshot) khoanh đỏ vị trí vi phạm kèm clip 10 giây đẩy tự động vào nhóm **Zalo / Telegram Ban chỉ huy & HSE** và bật popup đỏ trên màn hình trung tâm.
 
 #### 2. Hệ thống xử lý cái gì (AI & Software Pipeline)
 - **Video Decoding & Stream Multiplexing:** Sử dụng `NVIDIA DeepStream SDK` giải mã phần cứng đồng thời 16–32 luồng video `H.265 1080p/4MP @ 15fps` trên 1 Edge AI Box.
@@ -143,7 +143,7 @@ flowchart TB
 
 #### 4. Hạ tầng kỹ thuật tại công trường (Infrastructure)
 - **Bãi đáp / Trạm DJI Dock:** Đặt trên nóc container Ban chỉ huy hoặc vị trí thoáng, có kết nối nguồn `220V`, cáp mạng LAN `1Gbps` và kết nối trực tiếp vào **Trạm Base RTK-GNSS cố định của công trường**.
-- **Pháp lý bay:** Giấy phép bay (Flight Permit) đăng ký định kỳ theo tọa độ ranh giới dự án của CC1 và giới hạn trần bay tự động (Geofence trần 80m–120m).
+- **Pháp lý bay:** Giấy phép bay (Flight Permit) đăng ký định kỳ theo tọa độ ranh giới dự án của doanh nghiệp và giới hạn trần bay tự động (Geofence trần 80m–120m).
 
 ---
 
@@ -155,7 +155,7 @@ flowchart TB
 2. **Bước 2 (Đọc biển số, loại xe & số hiệu bồn):**
    - Trong `0.5 giây`, AI đọc chính xác biển số xe Việt Nam (kể cả biển số bị bùn đất che mờ một phần) + biển số rơ-moóc phía sau + nhận diện loại xe (*Xe bồn bê tông, Xe tải thùng, Xe đầu kéo, Xe đào*).
 3. **Bước 3 (Đối chiếu Lệnh điều xe điện tử):**
-   - Hệ thống tự động tra cứu biển số với danh sách **Lệnh giao hàng / Lệnh điều xe (Delivery Order)** đã được Phòng Vật tư hoặc Trạm trộn bê tông khai báo trước trên hệ thống CC1.
+   - Hệ thống tự động tra cứu biển số với danh sách **Lệnh giao hàng / Lệnh điều xe (Delivery Order)** đã được Phòng Vật tư hoặc Trạm trộn bê tông khai báo trước trên hệ thống doanh nghiệp.
    - **Nếu khớp:** Barrier tự động mở, bảng LED hiển thị `"MỜI XE VÀO - BÊ TÔNG MÁC 400 - ĐỔ SÀN TẦNG 12"`, đồng thời bấm giờ bắt đầu tính **Thời gian lưu xe tại công trường (Turnaround Time)**.
    - **Nếu xe lạ / quá hạn chờ bê tông (> 90 phút từ lúc xuất trạm trộn):** Giữ đóng Barrier, báo động về Chỉ huy vật tư.
 4. **Bước 4 (Kiểm tra khi xe ra cổng):** Khi xe rời công trường, camera trên cao chụp lại thùng xe để xác nhận xe đã đổ hết vật tư (tránh gian lận chở ngược vật tư/thép ra khỏi công trường) rồi mới mở Barrier chiều ra.
@@ -175,7 +175,7 @@ flowchart TB
 
 #### 4. Hạ tầng kỹ thuật tại công trường (Infrastructure)
 - **Mặt bằng cổng xe:** Đổ bê tông cốt thép mặt đường cổng, lắp gờ giảm tốc cách vạch dừng 5m để xe giảm tốc độ xuống `< 15km/h` giúp camera lấy nét tuyệt đối; bố trí cầu rửa xe tự động ngay sau cổng ra.
-- **Kết nối:** Cáp quang luồn ống HDPE ngầm kết nối tủ điều khiển cổng xe về **CC1 Edge AI Box** và đồng bộ thời gian thực (Realtime Webhook) với phân hệ Logistics/ERP của CC1.
+- **Kết nối:** Cáp quang luồn ống HDPE ngầm kết nối tủ điều khiển cổng xe về **Edge AI Box** và đồng bộ thời gian thực (Realtime Webhook) với phân hệ Logistics/ERP của doanh nghiệp.
 
 ---
 
@@ -186,14 +186,14 @@ flowchart TB
 ```mermaid
 sequenceDiagram
     autonumber
-    participant W as Công nhân CC1 (+ Mũ gắn Chip UWB)
+    participant W as Công nhân (+ Mũ gắn Chip UWB)
     participant G as Tầng 1: Cổng Turnstile (Face ID + Stereo 3D)
-    participant E as CC1 On-Site Edge AI Box
+    participant E as On-Site Edge AI Box
     participant C as Tầng 2: Hệ thống CCTV Công trường
     participant D as Tầng 3: Drone 50m + UWB/BLE RTK Gateway
 
     W->>G: 07:00 Bước qua cổng (1.5s Passthrough)
-    G->>E: Face ID + Trích xuất Khung xương 3D (17 khớp) + Chữ ký dáng đi (Gait) + Vector trang phục + Ghép cặp ID Mũ UWB (#CC1-0842)
+    G->>E: Face ID + Trích xuất Khung xương 3D (17 khớp) + Chữ ký dáng đi (Gait) + Vector trang phục + Ghép cặp ID Mũ UWB (#ID-0842)
     E->>C: 07:01 Đẩy "Daily 3D Re-ID Token" xuống mạng lưới CCTV
     W->>C: Trong giờ làm: Di chuyển qua các tầng (Quay lưng / Bịt mặt / Ảnh 30x80px)
     C->>E: Multi-Camera Tracking (Khớp Khung xương 3D + Dáng đi + Trang phục)
@@ -215,13 +215,13 @@ sequenceDiagram
 #### 1. Quy trình vận hành từng bước (4 Bước Khép Kín 07:00 → 17:00)
 1. **Bước 1 — Đăng ký Động học tại Cổng (07:00 sáng, 1.5 giây Passthrough):**
    - Khi công nhân bước tự nhiên qua hành lang cổng xoay (dài 2.2m) và quét Face ID chấm công, 2 camera cảm biến chiều sâu `RGB-D / Stereo` đặt chéo góc dọc hành lang cổng âm thầm quét 45 khung hình 3D liên tiếp mà **không bắt công nhân dừng lại tạo dáng**.
-   - Đầu đọc UWB/BLE tầm gần tại cổng đồng thời bắt tín hiệu mã chip gắn trong lòng mũ bảo hộ của người đó (ví dụ `#CC1-0842`).
+   - Đầu đọc UWB/BLE tầm gần tại cổng đồng thời bắt tín hiệu mã chip gắn trong lòng mũ bảo hộ của người đó (ví dụ `#ID-0842`).
 2. **Bước 2 — Khởi tạo & Đồng bộ "Daily 3D Re-ID Token" (07:01 sáng):**
    - Edge AI Box đóng gói một hồ sơ định danh siêu nhẹ cho ca làm việc hôm đó (`< 4KB/người`, nhẹ hơn Avatar 3D tĩnh gấp 1.000 lần) gồm: `Mã nhân viên + ID Mũ UWB + Tỷ lệ khung xương 3D + Chữ ký dáng đi + Vector màu trang phục ca sáng`, sau đó nạp vào bộ nhớ đệm (In-memory Vector DB) của toàn bộ các luồng CCTV và Drone.
 3. **Bước 3 — Giám sát Xuyên suốt Đa tầng & Chống Tráo Mũ (Trong giờ làm việc):**
    - **Ở Tầng 2 (CCTV tầm trung):** Khi công nhân đi qua các hành lang, sàn thi công (dù bịt kín mặt, quay lưng, ảnh chỉ `30x80 pixels`), thuật toán `Multi-Camera Person Re-ID` bàn giao mục tiêu từ `CAM 01 -> CAM 04 -> CAM 09` dựa trên tỷ lệ đốt xương bất biến và nhịp bước đi để gắn đúng tên từng người trên màn hình giám sát.
    - **Ở Tầng 3 (Drone 50m & Góc khuất):** Khi nhìn thẳng từ đỉnh đầu xuống (công nhân chỉ là chấm tròn chiếc mũ), hệ thống hợp nhất tọa độ `(X, Y, Z)` của **Chip UWB trong mũ** với **Thị giác máy tính của Drone/CCTV**.
-   - **Chốt chặn chống gian lận tráo mũ (Anti-Spoofing):** Nếu công nhân A (cao `1m74`, vai rộng `46cm`, sải bước dài) đưa mũ bảo hộ `#CC1-0842` cho công nhân B (cao `1m62`) đội hộ để điểm danh khống, ngay khi người đội mũ đi qua bất kỳ vùng quét camera 3D nào, hệ thống phát hiện độ lệch nhân trắc học (`ΔHeight = 12cm > ngưỡng 3cm`) và lập tức bắn **Báo động Đỏ gian lận tráo mũ** về Ban chỉ huy.
+   - **Chốt chặn chống gian lận tráo mũ (Anti-Spoofing):** Nếu công nhân A (cao `1m74`, vai rộng `46cm`, sải bước dài) đưa mũ bảo hộ `#ID-0842` cho công nhân B (cao `1m62`) đội hộ để điểm danh khống, ngay khi người đội mũ đi qua bất kỳ vùng quét camera 3D nào, hệ thống phát hiện độ lệch nhân trắc học (`ΔHeight = 12cm > ngưỡng 3cm`) và lập tức bắn **Báo động Đỏ gian lận tráo mũ** về Ban chỉ huy.
 4. **Bước 4 — Nghiệm thu Nhân sự & Chấm công Tự động (17:00 chiều):**
    - Cuối ca, hệ thống tổng hợp **Bản đồ nhiệt thời gian hiện diện thực tế (Work-Zone Presence Heatmap)** của từng công nhân tại đúng khu vực được phân công (ví dụ: Tổ cốt thép 3 phải ở sàn tầng 12 ít nhất 6.5 tiếng/ca), loại bỏ hoàn toàn tình trạng *"quét mặt ở cổng lúc 7h sáng rồi trốn ra quán cà phê hoặc tìm góc khuất ngủ"*, xuất biên bản đối soát nhân công minh bạch để thanh toán cho nhà thầu phụ.
 
@@ -239,13 +239,13 @@ sequenceDiagram
 | Nhóm thiết bị | Thiết bị cụ thể & Thông số công nghiệp | Số lượng / Công trường |
 |---|---|---|
 | **Camera Chiều sâu 3D tại Cổng** | Camera `Intel RealSense D455` hoặc `Orbbec Femto Bolt / Stereolabs ZED 2i` (IP66, Global Shutter Stereo Depth tầm quét 0.5–6m, tích hợp IMU). | 2 chiếc / làn cổng chính |
-| **Thẻ Chip Mũ Thông minh** | Tag định vị kép `UWB (IEEE 802.15.4z) + BLE 5.2` siêu mỏng (`< 5mm`, nặng `8g`) dán cố định bên trong vòm mũ bảo hộ CC1, chuẩn `IP67`, tích hợp cảm biến gia tốc (chỉ phát sóng khi mũ chuyển động để tiết kiệm pin **24 tháng**), giá chỉ `~5–8 USD/tag`. | Cấp theo số lượng công nhân |
+| **Thẻ Chip Mũ Thông minh** | Tag định vị kép `UWB (IEEE 802.15.4z) + BLE 5.2` siêu mỏng (`< 5mm`, nặng `8g`) dán cố định bên trong vòm mũ bảo hộ, chuẩn `IP67`, tích hợp cảm biến gia tốc (chỉ phát sóng khi mũ chuyển động để tiết kiệm pin **24 tháng**), giá chỉ `~5–8 USD/tag`. | Cấp theo số lượng công nhân |
 | **Trạm thu UWB/BLE Anchor** | Trạm thu sóng định vị `Outdoor UWB/BLE AoA Anchor (IP67, cấp nguồn PoE)` lắp tại cổng và các góc sàn tầng đang thi công (mỗi trạm phủ bán kính 40–80m). | 8 – 16 trạm (di dời theo tầng) |
-| **CC1 On-Site Edge AI Box** | Máy chủ biên công nghiệp `NVIDIA Jetson AGX Orin Industrial 64GB` (hoặc Server Rack ngắn `2U` gắn GPU `NVIDIA L4 24GB`), SSD NVMe `4TB` chạy Docker containers (`DeepStream + Milvus + MQTT + FastAPI`). | 1 bộ tại Container Chỉ huy |
+| **On-Site Edge AI Box** | Máy chủ biên công nghiệp `NVIDIA Jetson AGX Orin Industrial 64GB` (hoặc Server Rack ngắn `2U` gắn GPU `NVIDIA L4 24GB`), SSD NVMe `4TB` chạy Docker containers (`DeepStream + Milvus + MQTT + FastAPI`). | 1 bộ tại Container Chỉ huy |
 
 #### 4. Hạ tầng kỹ thuật tại công trường (Infrastructure)
 - **Đồng bộ thời gian chính xác (Precision Time Synchronization):** Toàn bộ Camera IP, Stereo 3D Camera và các trạm thu UWB Anchor được đồng bộ qua giao thức **NTP / PTP (IEEE 1588)** từ Edge AI Box với độ lệch `< 10ms` để thuật toán hợp nhất cảm biến (Sensor Fusion) khớp đúng vị trí từng bước chân.
-- **Băng thông nội bộ:** Toàn bộ luồng video thô được xử lý và trích xuất vector ngay tại **Edge AI Box ở công trường**; chỉ đẩy các gói tin metadata JSON và ảnh chụp vi phạm (chỉ tốn `< 2Mbps` băng thông Internet) lên Cloud của Tập đoàn CC1.
+- **Băng thông nội bộ:** Toàn bộ luồng video thô được xử lý và trích xuất vector ngay tại **Edge AI Box ở công trường**; chỉ đẩy các gói tin metadata JSON và ảnh chụp vi phạm (chỉ tốn `< 2Mbps` băng thông Internet) lên Cloud của Tập đoàn.
 
 ---
 
@@ -265,7 +265,7 @@ sequenceDiagram
 3. **Bước 3 (Đối soát chéo Trọng lượng vs Thể tích vs Đơn hàng ERP):**
    - Hệ thống tự động kiểm tra công thức vật lý: `Khối lượng cân (Tấn) / Thể tích LiDAR (m³) = Tỷ trọng thực tế`. Nếu nhà cung cấp bơm nước vào cát hoặc độn tạp chất/đá tảng bên dưới để ăn gian trọng lượng, hệ thống phát hiện ngay sự bất thường về tỷ trọng hoặc thể tích bị thiếu.
 4. **Bước 4 (Ký nhận điện tử & Đồng bộ ERP):**
-   - Khi khớp 100% với PO (Purchase Order) trên ERP, bảng LED hiện `"AI ĐỒNG BỘ ERP: HỢP LỆ (MATCHED 100%)"`, tự động phát hành Phiếu nhập kho điện tử (e-GRN) trên máy tính bảng của kỹ sư vật tư CC1 mà không cần bất kỳ thao tác ghi sổ tay nào.
+   - Khi khớp 100% với PO (Purchase Order) trên ERP, bảng LED hiện `"AI ĐỒNG BỘ ERP: HỢP LỆ (MATCHED 100%)"`, tự động phát hành Phiếu nhập kho điện tử (e-GRN) trên máy tính bảng của kỹ sư vật tư doanh nghiệp mà không cần bất kỳ thao tác ghi sổ tay nào.
 
 #### 2. Hệ thống xử lý cái gì (AI & Software Pipeline)
 - **3D Volumetric Point Cloud Integration:** Thuật toán nội suy lưới tam giác `Delaunay Triangulation / Voxel Grid Integration` tính thể tích hàng hóa từ đám mây điểm LiDAR với sai số `< 1.5%`, tự động phát hiện thủ thuật xếp rỗng lòng thùng xe.
@@ -282,7 +282,7 @@ sequenceDiagram
 
 #### 4. Hạ tầng kỹ thuật tại công trường (Infrastructure)
 - **Nền móng:** Móng bê tông cốt thép cho bàn cân và trụ Gantry tách biệt để xe tải nặng đi qua không gây rung lắc cảm biến LiDAR trên đỉnh vòm; hệ thống chống sét lan truyền trực tiếp cho Loadcell và LiDAR.
-- **Kết nối dữ liệu:** Kết nối RS485/Modbus TCP từ đầu cân điện tử trực tiếp vào **CC1 Edge AI Box** trong hộp niêm phong kẹp chì (chống can thiệp phần cứng tại trạm cân).
+- **Kết nối dữ liệu:** Kết nối RS485/Modbus TCP từ đầu cân điện tử trực tiếp vào **Edge AI Box** trong hộp niêm phong kẹp chì (chống can thiệp phần cứng tại trạm cân).
 
 ---
 
@@ -290,7 +290,7 @@ sequenceDiagram
 *Hình minh họa:* [`11_GD2_CP2_Robot_In_Ban_Ve_BIM_Len_San_FieldPrinter.jpg`](./11_GD2_CP2_Robot_In_Ban_Ve_BIM_Len_San_FieldPrinter.jpg)
 
 #### 1. Quy trình vận hành từng bước (Step-by-Step)
-1. **Bước 1 (Chuẩn bị file BIM & Mặt sàn):** Bộ phận BIM của CC1 xuất bản vẽ phối hợp tổng hợp (Combined Shop Drawing: Tường xây, Vách thạch cao, Hốc cửa, Ống chờ MEP xuyên sàn) dưới định dạng `.DXF / .CSV` đã khóa tọa độ và nạp vào máy tính bảng điều khiển. Mặt sàn bê tông sau khi tháo cốp-pha được quét sạch bụi/xà bần.
+1. **Bước 1 (Chuẩn bị file BIM & Mặt sàn):** Bộ phận BIM của doanh nghiệp xuất bản vẽ phối hợp tổng hợp (Combined Shop Drawing: Tường xây, Vách thạch cao, Hốc cửa, Ống chờ MEP xuyên sàn) dưới định dạng `.DXF / .CSV` đã khóa tọa độ và nạp vào máy tính bảng điều khiển. Mặt sàn bê tông sau khi tháo cốp-pha được quét sạch bụi/xà bần.
 2. **Bước 2 (Định vị mốc chuẩn với Máy Toàn đạc Tự động - 10 phút):** Kỹ sư trắc đạc đặt **Máy Toàn đạc Tự động (Robotic Total Station)** lên chân máy tại 1 điểm thông thoáng trên sàn, ngắm vào 2 mốc khống chế trắc đạc của tầng (Resection) để xác lập hệ tọa độ tuyệt đối, sau đó khóa tia laser vào gương lăng kính 360° gắn trên lưng Robot.
 3. **Bước 3 (Robot tự chạy & In phun đa lớp trực tiếp lên sàn):**
    - Robot tự động lập kế hoạch đường đi tối ưu (Path Planning), tự lăn bánh trên mặt sàn bê tông và dùng đầu phun mực công nghiệp (khô ngay trong 2 giây, chống nước/bụi) in trực tiếp:
@@ -321,7 +321,7 @@ sequenceDiagram
 *Hình minh họa:* [`12_GD2_CP3_May_Xuc_Dan_Duong_3D_Machine_Guidance.jpg`](./12_GD2_CP3_May_Xuc_Dan_Duong_3D_Machine_Guidance.jpg)
 
 #### 1. Quy trình vận hành từng bước (Step-by-Step)
-1. **Bước 1 (Nạp bình đồ thiết kế 3D từ văn phòng vào cabin máy xúc):** Kỹ sư dữ liệu của CC1 chuyển bản vẽ thiết kế hố móng, mái dốc taluy hoặc nền đường cao tốc thành mô hình bề mặt lưới tam giác `3D TIN Surface (.LandXML / .TP3)` và đẩy qua mạng 4G/5G thẳng vào màn hình máy tính trong cabin máy xúc/máy ủi.
+1. **Bước 1 (Nạp bình đồ thiết kế 3D từ văn phòng vào cabin máy xúc):** Kỹ sư dữ liệu của doanh nghiệp chuyển bản vẽ thiết kế hố móng, mái dốc taluy hoặc nền đường cao tốc thành mô hình bề mặt lưới tam giác `3D TIN Surface (.LandXML / .TP3)` và đẩy qua mạng 4G/5G thẳng vào màn hình máy tính trong cabin máy xúc/máy ủi.
 2. **Bước 2 (Định vị răng gầu xúc chính xác từng centimet):**
    - 2 ăng-ten vệ tinh `RTK-GNSS` trên nóc cabin xác định chính xác vị trí và hướng xoay (Heading) của thân máy xúc.
    - 4 cảm biến góc nghiêng quán tính (`IMU Tilt Sensors`) gắn trên thân máy (Body), cần chính (Boom), tay gầu (Arm) và gầu xúc (Bucket) tính toán động học thuận (Forward Kinematics) để biết chính xác tọa độ 3D `(X, Y, Z)` của **mũi răng gầu xúc** ngay cả khi gầu đang chìm dưới nước hoặc bùn sâu.
@@ -353,7 +353,7 @@ sequenceDiagram
 *Hình minh họa:* [`13_GD2_CP4_AR_Mobile_BIM_Doi_Chieu_Nghiem_Thu_MEP.jpg`](./13_GD2_CP4_AR_Mobile_BIM_Doi_Chieu_Nghiem_Thu_MEP.jpg)
 
 #### 1. Quy trình vận hành từng bước (Step-by-Step)
-1. **Bước 1 (Đồng bộ mô hình BIM LOD 400 theo phân khu):** Trước khi lên công trường, kỹ sư MEP/QA-QC của CC1 tải phân khu mô hình BIM (ví dụ: Tầng 8 - Khu A) từ môi trường dữ liệu chung (`Autodesk Construction Cloud / Dalux / GAMMA AR`) về máy tính bảng `iPad Pro có cảm biến LiDAR`.
+1. **Bước 1 (Đồng bộ mô hình BIM LOD 400 theo phân khu):** Trước khi lên công trường, kỹ sư MEP/QA-QC của doanh nghiệp tải phân khu mô hình BIM (ví dụ: Tầng 8 - Khu A) từ môi trường dữ liệu chung (`Autodesk Construction Cloud / Dalux / GAMMA AR`) về máy tính bảng `iPad Pro có cảm biến LiDAR`.
 2. **Bước 2 (Khóa tọa độ không gian trong 5 giây - Spatial Anchor Alignment):**
    - Kỹ sư đứng tại giao điểm 2 cột bê tông hoặc quét mã `AR QR Marker` dán ở mốc trắc đạc trên cột bê tông.
    - Cảm biến LiDAR trên iPad quét bề mặt cột/dầm bê tông thực tế và tự động khóa khít (Snap) mô hình BIM 3D vào không gian thật với tỷ lệ `1:1`.
@@ -392,7 +392,7 @@ sequenceDiagram
 3. **Bước 3 (Quét 3D LiDAR độ chính xác cao & Quét Nhiệt PCCC):**
    - Tại mỗi điểm dừng thiết lập sẵn (Waypoints cách nhau 10m), Robot dừng lại 45 giây để cụm **3D Laser Scanner** trên lưng xoay 360° quét toàn bộ cột, vách, dầm, ống MEP với sai số chỉ `2mm`.
    - Đồng thời **Camera Nhiệt (Thermal IR)** quét phát hiện các tủ điện tạm đang quá nhiệt, mối hàn còn âm ỉ lửa hoặc rò rỉ nước ngầm trong đêm.
-4. **Bước 4 (Trở về đế sạc & Xuất báo cáo sáng hôm sau - 05:30 sáng):** Robot tự quay về đế sạc, đẩy toàn bộ dữ liệu Point Cloud 3D và ảnh nhiệt lên **CC1 Site OS**. Đúng 06:30 sáng, Chỉ huy trưởng nhận được bản đồ báo cáo: *"Tầng 9 hoàn thành 92% vách xây; Phát hiện 1 vách cốp-pha cột trục D-5 bị phình 18mm và 1 tủ điện tạm tầng 4 nóng 78°C cần xử lý ngay đầu ca sáng"*.
+4. **Bước 4 (Trở về đế sạc & Xuất báo cáo sáng hôm sau - 05:30 sáng):** Robot tự quay về đế sạc, đẩy toàn bộ dữ liệu Point Cloud 3D và ảnh nhiệt lên **Site OS**. Đúng 06:30 sáng, Chỉ huy trưởng nhận được bản đồ báo cáo: *"Tầng 9 hoàn thành 92% vách xây; Phát hiện 1 vách cốp-pha cột trục D-5 bị phình 18mm và 1 tủ điện tạm tầng 4 nóng 78°C cần xử lý ngay đầu ca sáng"*.
 
 #### 2. Hệ thống xử lý cái gì (AI & Software Pipeline)
 - **Legged Locomotion & 3D SLAM Navigation:** Hệ thống điều khiển cân bằng động học 12 bậc tự do kết hợp `3D LiDAR SLAM (LIO-SAM / FAST-LIO2)` giúp Robot định vị chính xác trong hầm kín/tầng nhà tối đen hoàn toàn không có sóng GPS.
@@ -424,7 +424,7 @@ sequenceDiagram
 
 #### 2. Hệ thống xử lý cái gì (AI & Software Pipeline)
 - **Human Motion Intention Recognition (Edge MCU):** Thuật toán phân tích tín hiệu từ cảm biến quán tính `6-Axis IMU` và cảm biến mô-men xoắn tại khớp hông/vai tần số `500Hz` để phân biệt rõ khi nào công nhân đang **đi bộ bình thường** (tắt trợ lực để đi lại nhẹ nhàng) và khi nào đang **cúi nâng vật nặng / giữ tay trên cao** (bật trợ lực tức thì).
-- **Ergonomic Fatigue & Productivity Analytics:** Tổng hợp chỉ số giảm tải cột sống và cảnh báo nguy cơ kiệt sức nhiệt (Heat Stress) về hệ thống HSE của CC1.
+- **Ergonomic Fatigue & Productivity Analytics:** Tổng hợp chỉ số giảm tải cột sống và cảnh báo nguy cơ kiệt sức nhiệt (Heat Stress) về hệ thống HSE của doanh nghiệp.
 
 #### 3. Danh mục thiết bị phần cứng (Hardware BOM)
 | Nhóm thiết bị | Thiết bị cụ thể & Thông số công nghiệp | Số lượng / Dự án thí điểm |
@@ -442,7 +442,7 @@ sequenceDiagram
 *Hình minh họa:* [`16_GD3_CP3_May_Cong_Trinh_Tu_Hanh_Hoan_Toan.jpg`](./16_GD3_CP3_May_Cong_Trinh_Tu_Hanh_Hoan_Toan.jpg)
 
 #### 1. Quy trình vận hành từng bước (Step-by-Step)
-1. **Bước 1 (Khoanh vùng khu vực thi công tự hành - Autonomous Workzone):** Tại các dự án hạ tầng quy mô lớn, lặp đi lặp lại của CC1 (như đắp nền đường cao tốc Bắc-Nam, san lấp khu công nghiệp, đắp đập thủy lợi), kỹ sư chỉ huy thiết lập ranh giới khu vực tự hành trên bản đồ số và giao nhiệm vụ (ví dụ: *"Lu lèn chặt 8 lượt lớp đất K98 tại phân đoạn Km12+000 đến Km12+500"*).
+1. **Bước 1 (Khoanh vùng khu vực thi công tự hành - Autonomous Workzone):** Tại các dự án hạ tầng quy mô lớn, lặp đi lặp lại của doanh nghiệp (như đắp nền đường cao tốc Bắc-Nam, san lấp khu công nghiệp, đắp đập thủy lợi), kỹ sư chỉ huy thiết lập ranh giới khu vực tự hành trên bản đồ số và giao nhiệm vụ (ví dụ: *"Lu lèn chặt 8 lượt lớp đất K98 tại phân đoạn Km12+000 đến Km12+500"*).
 2. **Bước 2 (Vận hành theo đàn không người lái - Swarm Execution):**
    - Đoàn xe lu rung tự hành (Autonomous Vibratory Rollers) và xe ủi tự hành tự khởi động, di chuyển theo các vệt song song chồng mí chính xác `20cm`, tự động điều chỉnh tần số đầm rung dựa trên cảm biến đo độ chặt nền đất thời gian thực (`Intelligent Compaction CMV Sensor`).
    - Máy xúc tự hành dùng LiDAR 3D quét vị trí thùng xe ben tự hành vừa lùi vào để tự động múc đất đổ đầy thùng xe.
@@ -507,22 +507,22 @@ sequenceDiagram
    - **Supply Chain Agent:** Tự động gọi API sang nhà cung cấp trạm trộn bê tông thương phẩm, lùi lịch xuất phát của 8 xe bồn bê tông sàn tầng 15 lại 4 tiếng (tránh cảnh 8 xe bồn xếp hàng chết cứng ngoài cổng làm hỏng bê tông).
    - **Cost & Legal Agent:** Tự động trích xuất biên bản cân LiDAR 3D và video tại cổng, đối chiếu điều khoản SLA trong hợp đồng mua thép, tự động soạn thảo Thông báo phạt giao hàng thiếu và khóa tạm thời hạn mức thanh toán tương ứng trên ERP.
    - **Safety & Robotics Agent:** Ra lệnh tự động hạ cẩu tháp về chế độ xoay tự do (Weathervane mode) trước 13:30 khi gió vượt ngưỡng `15m/s` và lên lịch cho Robot bốn chân quét kiểm tra an toàn sau cơn dông.
-3. **Bước 3 (Phê duyệt 1 chạm của Giám đốc Dự án - Human-in-the-Loop):** Trên bàn sa bàn Digital Twin 3D tại phòng chỉ huy, Giám đốc dự án CC1 xem phương án tối ưu đã được 4 Agent thống nhất và bấm **"PHÊ DUYỆT THI HÀNH (APPROVE)"**.
+3. **Bước 3 (Phê duyệt 1 chạm của Giám đốc Dự án - Human-in-the-Loop):** Trên bàn sa bàn Digital Twin 3D tại phòng chỉ huy, Giám đốc dự án doanh nghiệp xem phương án tối ưu đã được 4 Agent thống nhất và bấm **"PHÊ DUYỆT THI HÀNH (APPROVE)"**.
 
 #### 2. Hệ thống xử lý cái gì (AI & Software Pipeline)
 - **Multi-Agent Orchestration Framework:** Kiến trúc đa tác tử (`LangGraph / AutoGen Enterprise`) kết nối với mô hình ngôn ngữ lớn chuyên ngành xây dựng + bộ giải tối ưu hóa toán học (`OR-Tools / MILP Solver` cho bài toán lập lịch đường găng và điều phối chuỗi cung ứng).
 - **Real-time 3D Digital Twin Engine:** Nền tảng `Unreal Engine 5 / NVIDIA Omniverse / CesiumJS` kết xuất mô hình BIM 4D toàn dự án gắn trực tiếp dữ liệu IoT thời gian thực (vị trí từng công nhân UWB, từng xe cơ giới, tiến độ từng sàn và cảnh báo an toàn).
-- **Enterprise Connectors:** Tích hợp hai chiều với `Primavera P6 / MS Project`, `Autodesk Construction Cloud`, `SAP ERP` và hệ thống Zalo/App điều hành của CC1.
+- **Enterprise Connectors:** Tích hợp hai chiều với `Primavera P6 / MS Project`, `Autodesk Construction Cloud`, `SAP ERP` và hệ thống Zalo/App điều hành của doanh nghiệp.
 
 #### 3. Danh mục thiết bị phần cứng (Hardware BOM)
 | Nhóm thiết bị | Thiết bị cụ thể & Thông số công nghiệp | Số lượng / Trung tâm Chỉ huy |
 |---|---|---|
 | **Màn hình Trung tâm Chỉ huy** | Hệ thống màn hình ghép `LED Video Wall P1.2 / P1.5` cong hoặc phẳng kích thước `4.8m x 2.0m` độ phân giải 4K/8K hiển thị toàn cảnh Digital Twin & CCTV AI. | 1 hệ thống |
 | **Bàn Sa bàn Tương tác 3D** | Bàn cảm ứng đa điểm `Interactive Multitouch Table 65"–86" 4K` đặt giữa phòng họp giao ban để chỉ huy trưởng xoay/cắt lớp mô hình BIM trực tiếp. | 1 bộ |
-| **Máy chủ Điều hành & Hiển thị** | Cụm Server `CC1 Command Node` (2x GPU `NVIDIA RTX 6000 Ada / L40S`) phục vụ render Digital Twin thời gian thực và chạy các AI Agent nội bộ (On-Premise LLM). | 1 cụm |
+| **Máy chủ Điều hành & Hiển thị** | Cụm Server `Command Node` (2x GPU `NVIDIA RTX 6000 Ada / L40S`) phục vụ render Digital Twin thời gian thực và chạy các AI Agent nội bộ (On-Premise LLM). | 1 cụm |
 
 #### 4. Hạ tầng kỹ thuật tại công trường (Infrastructure)
-- **Container Chỉ huy Thông minh (CC1 Smart Command Container):** Thiết kế chuẩn hóa trong 1 cụm container 40 feet lắp ghép có cách âm, điều hòa chính xác cho tủ rack server, hệ thống UPS Online `10kVA` và 2 đường truyền Internet độc lập (Cáp quang chuyên kênh Leased Line/FTTH + Starlink Enterprise dự phòng).
+- **Container Chỉ huy Thông minh (Smart Command Container):** Thiết kế chuẩn hóa trong 1 cụm container 40 feet lắp ghép có cách âm, điều hòa chính xác cho tủ rack server, hệ thống UPS Online `10kVA` và 2 đường truyền Internet độc lập (Cáp quang chuyên kênh Leased Line/FTTH + Starlink Enterprise dự phòng).
 
 ---
 
@@ -555,7 +555,7 @@ sequenceDiagram
 
 #### 1. Quy trình vận hành từng bước (Step-by-Step)
 1. **Bước 1 (Giao tiếp rảnh tay Zero-UI tại vị trí làm việc):**
-   - Người thợ điện CC1 (hai tay đang bẩn vữa và cầm máy cắt) đứng trước bức tường gạch thô, không cần mở bản vẽ giấy hay rút điện thoại, chỉ hỏi tự nhiên: *"Ê, ổ cắm đầu giường phòng này đặt cao bao nhiêu?"*
+   - Người thợ điện (hai tay đang bẩn vữa và cầm máy cắt) đứng trước bức tường gạch thô, không cần mở bản vẽ giấy hay rút điện thoại, chỉ hỏi tự nhiên: *"Ê, ổ cắm đầu giường phòng này đặt cao bao nhiêu?"*
    - Micro chống ồn công trường và tai nghe truyền xương (`Bone-conduction headset`) thu nhận giọng nói; camera micro-AI trên gọng kính bảo hộ nhận diện ngay vị trí phòng và bức tường trước mặt.
 2. **Bước 2 (Phản hồi Âm thanh + Hiển thị HUD/Laser tại chỗ):**
    - Trong `0.5 giây`, Edge AI chiếu lên tròng kính HUD (hoặc tia laser định vị) đúng vị trí lắp đế âm trên tường kèm cảnh báo X-Ray đường ống nước ngầm và trả lời vào tai nghe: *"Cách sàn hoàn thiện 60 phân, dịch sang phải 10 phân nữa chú ơi, chỗ tay chú đang đặt vướng ống nước âm tường rồi."*
@@ -573,15 +573,15 @@ sequenceDiagram
 
 #### 3. Danh mục thiết bị phần cứng & Hạ tầng
 - **Thiết bị trên người công nhân:** Kính bảo hộ công trường đạt chuẩn chống va đập `ANSI Z87.1` tích hợp Camera AI góc rộng `12MP`, màn hình `Micro-LED Waveguide HUD` đơn sắc siêu sáng và Tai nghe truyền xương (`Shokz OpenComm Industrial / Smart Safety Glasses`) nặng tổng cộng `< 65g`, pin dùng trọn 1 ca 8 tiếng.
-- **Hạ tầng:** Mạng `Wi-Fi 6 / Private 5G` phủ sóng các tầng đang hoàn thiện kết nối về **CC1 Edge AI Box** và cổng kết nối API Ngân hàng lưu ký (`Escrow Banking API`) tích hợp trực tiếp với hệ thống ERP của Tập đoàn CC1.
+- **Hạ tầng:** Mạng `Wi-Fi 6 / Private 5G` phủ sóng các tầng đang hoàn thiện kết nối về **Edge AI Box** và cổng kết nối API Ngân hàng lưu ký (`Escrow Banking API`) tích hợp trực tiếp với hệ thống ERP của Tập đoàn.
 
 ---
 
 ## Bảng Tổng Hợp Phân Bổ Hạ Tầng & Chi Phí Đầu Tư Theo Giai Đoạn (Executive Summary)
 
-| Giai đoạn | Các Touchpoints Triển khai | Hạ tầng Cốt lõi Cần Lắp đặt tại Công trường | Mục tiêu Quản trị & ROI Thực chiến cho CC1 |
+| Giai đoạn | Các Touchpoints Triển khai | Hạ tầng Cốt lõi Cần Lắp đặt tại Công trường | Mục tiêu Quản trị & ROI Thực chiến cho doanh nghiệp |
 |---|---|---|---|
-| **Giai đoạn 1 (Năm 1)** | **1.1** Cổng AI PPE<br>**1.2** CCTV AI 24/7<br>**1.3** Drone 3D BIM<br>**1.4** Smart Gate OCR<br>**1.5** **3D Spatial Re-ID & UWB Helmet** | • 01 **CC1 On-Site Edge AI Box** (Jetson AGX Orin / L4)<br>• Cổng Turnstile + Stereo 3D Cam + Barrier OCR<br>• Mạng cáp quang nội bộ + CPE Wireless lên cẩu tháp<br>• Thẻ Chip UWB dán mũ bảo hộ (`~5–8 USD/mũ`) + UWB Anchors | • **Triệt tiêu 100%** chấm công khống, tráo mũ bảo hộ và nạn "quét cổng xong trốn việc".<br>• Giảm **70–80%** tai nạn lao động trên cao.<br>• Bóc tách tiến độ 3D độc lập hàng tuần, không phụ thuộc báo cáo cảm tính. |
+| **Giai đoạn 1 (Năm 1)** | **1.1** Cổng AI PPE<br>**1.2** CCTV AI 24/7<br>**1.3** Drone 3D BIM<br>**1.4** Smart Gate OCR<br>**1.5** **3D Spatial Re-ID & UWB Helmet** | • 01 **On-Site Edge AI Box** (Jetson AGX Orin / L4)<br>• Cổng Turnstile + Stereo 3D Cam + Barrier OCR<br>• Mạng cáp quang nội bộ + CPE Wireless lên cẩu tháp<br>• Thẻ Chip UWB dán mũ bảo hộ (`~5–8 USD/mũ`) + UWB Anchors | • **Triệt tiêu 100%** chấm công khống, tráo mũ bảo hộ và nạn "quét cổng xong trốn việc".<br>• Giảm **70–80%** tai nạn lao động trên cao.<br>• Bóc tách tiến độ 3D độc lập hàng tuần, không phụ thuộc báo cáo cảm tính. |
 | **Giai đoạn 2 (Năm 2)** | **2.1** Trạm cân 3D LiDAR<br>**2.2** Robot in sàn BIM<br>**2.3** Máy xúc 3D Guidance<br>**2.4** iPad AR BIM MEP | • Khung vòm Gantry LiDAR tại trạm cân<br>• 01 **Trạm Base RTK-GNSS cố định** trên nóc Ban chỉ huy<br>• Nâng cấp mô hình BIM công trường lên chuẩn **LOD 400** | • **Chặn đứng thất thoát** thép, bê tông, đất cát tại cổng vào.<br>• Trắc đạc in sàn nhanh gấp **5–10 lần**, xóa bỏ xung đột cơ điện MEP.<br>• Tiết kiệm **20–30%** nhiên liệu máy xúc và bê tông bù đắp do đào lố. |
 | **Giai đoạn 3 & 2030** | **3.1** Robot tuần đêm<br>**3.2** Khung xương Exoskeleton<br>**3.3** Đội xe tự hành<br>**3.4** Cẩu tháp AI<br>**3.5** Multi-Agent Site OS<br>**4.1** Nhà máy Container<br>**4.2** Zero-UI & Smart Payment | • Trung tâm chỉ huy **Digital Twin Command Center**<br>• Mạng **Private 5G / Mesh Wi-Fi 6** độ trễ thấp toàn công trường<br>• Tích hợp khép kín **Site OS ↔ BIM 4D ↔ ERP ↔ Banking API** | • Vận hành công trường **24/7** (Người làm ca ngày, Robot quét & chuẩn bị mặt bằng ca đêm).<br>• Tăng **200%** năng suất lắp đặt nặng.<br>• Giảm **10–15%** đơn giá thầu phụ nhờ thanh toán tức thời không nợ đọng vốn. |
 
