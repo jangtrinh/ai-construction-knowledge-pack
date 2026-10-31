@@ -50,11 +50,11 @@ Thang quyết định (mỗi bậc chỉ mở khi bộ đề chứng minh bậc 
 
 | Tầng | Vai trò | Công nghệ đề xuất | Liên hệ hồ sơ hiện có |
 |---|---|---|---|
-| 1. Biên | Thị giác máy, cảm biến, chạy khi mất mạng | DeepStream, YOLO, ReID, MQTT, Milvus/FAISS trong RAM | Edge AI Box Jetson AGX Orin 64GB / L4 |
+| 1. Biên | Thiết bị thu tại công trường (camera, drone, trạm cân, cổng LiDAR, chip UWB, GNSS); thị giác máy; chạy khi mất mạng | DeepStream, YOLO, ReID, MQTT, Milvus/FAISS trong RAM | Edge AI Box Jetson AGX Orin 64GB / L4 |
 | 2. Nền dữ liệu | Lưu mọi sự kiện, hồ sơ, mô hình 3D | Kho đối tượng S3 nội bộ; PostgreSQL + PostGIS + TimescaleDB; Kafka nhận từ MQTT | Mới |
 | 3. Tri thức | Ontology, đồ thị, chỉ mục hồ sơ | Neo4j hoặc Apache AGE; pgvector hoặc Qdrant; tìm kiếm lai BM25 + vector + rerank | Mới |
 | 4. Suy luận | LLM, tác tử, bộ giải | vLLM/SGLang, định tuyến mô hình nhỏ/lớn, LangGraph, OR-Tools | Site OS 3.5, Command Node 2× L40S |
-| 5. Ứng dụng | Người dùng cuối | Site OS, trợ lý kỹ sư, soạn nháp nhật ký/biên bản, cảnh báo Zalo | Điểm chạm 1.1–4.2, L1–L8 |
+| 5. Ứng dụng | Người dùng cuối và thiết bị tại công trường | Phần mềm: Site OS, trợ lý kỹ sư, soạn nháp nhật ký/biên bản, cảnh báo Zalo. Thiết bị: máy tính bảng, màn hình tại cổng, cổng xoay/barie, loa và đèn cảnh báo, vòng tay rung | Điểm chạm 1.1–4.2, L1–L8 |
 
 Xuyên suốt:
 
