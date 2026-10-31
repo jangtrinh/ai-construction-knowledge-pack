@@ -280,6 +280,9 @@ document.addEventListener('focusin',e=>{const b=e.target.closest('.idlink[data-g
 document.addEventListener('focusout',e=>{if(e.target.closest('.idlink[data-go]'))hidePeek()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')hidePeek()});
 addEventListener('scroll',hidePeek,{passive:true});document.addEventListener('click',hidePeek,true);
+// Warm the preview images once the page is idle, on hover-capable devices only, so the first hover is not blank.
+if(canHover.matches){const ids=[...new Set([...document.querySelectorAll('.idlink[data-go]')].map(b=>b.dataset.go))];const idle=window.requestIdleCallback||(cb=>setTimeout(cb,1500));
+ idle(()=>ids.forEach((id,n)=>setTimeout(()=>{const f=byId[id];const s=f&&firstShot(f);if(s){const im=new Image();im.decoding='async';im.src=s}},n*40)))}
 })();
 </script>
 
