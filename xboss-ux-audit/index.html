@@ -86,6 +86,22 @@ td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:n
 .theme .ids{display:flex;flex-wrap:wrap;gap:6px}
 .idlink{font:600 13px/20px var(--f-mono);background:var(--bg-canvas);color:var(--ink);border:1px solid var(--rule-strong);border-radius:var(--r-md);padding:2px 7px;cursor:pointer;min-height:28px}
 .idlink:hover{border-color:var(--accent);color:var(--accent)}
+.idlink:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* Finding preview: read-only card shown while a finding id is hovered or focused; clicking still jumps to the card. */
+.peek{position:fixed;z-index:40;width:min(400px,calc(100vw - 32px));display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:12px;background:var(--bg-canvas);border:1px solid var(--rule-strong);border-top:3px solid var(--c,var(--sev-low));border-radius:var(--r-xl);box-shadow:0 1px 2px rgba(17,24,28,.08),0 12px 32px rgba(17,24,28,.18);pointer-events:none;opacity:0;transform:translateY(4px);transition:opacity .12s ease-out,transform .12s ease-out}
+.peek.on{opacity:1;transform:none}
+.peek[hidden]{display:none}
+.peek .pimg{width:116px;height:252px;border-radius:var(--r-md);background:var(--bg-surface);overflow:hidden;outline:1px solid rgba(0,0,0,.1);outline-offset:-1px}
+.peek .pimg img{width:100%;height:100%;object-fit:contain;object-position:top;display:block}
+.peek .phead{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:6px}
+.peek .pid{font:600 13px/20px var(--f-mono);color:var(--ink)}
+.peek .psev{font:600 12px/18px var(--f-body);color:#fff;background:var(--c,var(--sev-low));border-radius:999px;padding:1px 8px}
+.peek .ptag{font:600 12px/18px var(--f-body);color:var(--ink-2);background:var(--bg-elevated);border-radius:999px;padding:1px 8px}
+.peek .ptitle{font:600 15px/1.35 var(--f-display);color:var(--ink);margin:0 0 6px;text-wrap:balance}
+.peek .pflow{font:12px/1.4 var(--f-body);color:var(--ink-3);margin:0 0 8px}
+.peek .pobs{font:13px/1.45 var(--f-body);color:var(--ink-2);margin:0;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.peek .pobs code{font-size:12px}
+@media (prefers-reduced-motion:reduce){.peek{transition:none;transform:none}}
 .fix{background:var(--accent-soft);border-radius:var(--r-lg);padding:10px 14px;color:var(--ink)!important}
 .fix strong{color:var(--accent-hover)}
 .board{display:grid;grid-template-columns:240px minmax(0,1fr);gap:32px;align-items:start}
@@ -242,6 +258,28 @@ document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g
 const im=e.target.closest('.shots img');if(im){const lb=document.createElement('div');lb.className='lightbox';lb.innerHTML=`<img src="${im.getAttribute('src')}" alt="${esc(im.alt)}"><p>${esc(im.alt)} · chạm để đóng</p>`;lb.addEventListener('click',()=>lb.remove());document.body.appendChild(lb)}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelector('.lightbox')?.remove()});
 if(location.hash){const el=$(location.hash.slice(1));if(el){el.open=true;setTimeout(()=>el.scrollIntoView(),60)}}
+// Finding preview on hover (mouse) or keyboard focus; touch keeps the plain tap-to-jump behaviour.
+const byId=Object.fromEntries(F.map(f=>[f.id,f]));
+const peek=document.createElement('div');peek.className='peek';peek.id='peek';peek.setAttribute('role','tooltip');peek.hidden=true;document.body.appendChild(peek);
+let peekFor=null,peekTimer=0;
+const firstShot=f=>(f.annotated&&f.annotated[0])?'annotated/'+f.annotated[0]:(f.image_files[0]?'screens/'+f.image_files[0]:'');
+function showPeek(btn){const f=byId[btn.dataset.go];if(!f)return;peekFor=btn;const src=firstShot(f);
+ peek.style.setProperty('--c',SEVC[f.sev]||'var(--sev-low)');
+ peek.innerHTML=`${src?`<div class="pimg"><img src="${esc(src)}" alt=""></div>`:''}<div><div class="phead"><span class="pid">${f.id}</span><span class="psev">${esc(f.sev)}</span><span class="ptag">${esc(f.tag)}</span></div><p class="ptitle">${fmt(f.title)}</p><p class="pflow">${esc(f.flow)} · ${esc(FLOWS[f.flow]||'')}</p><p class="pobs">${fmt((f.observation||'').replace(/^FACT:\s*/,''))}</p></div>`;
+ if(!src)peek.style.gridTemplateColumns='minmax(0,1fr)';else peek.style.gridTemplateColumns='';
+ peek.hidden=false;btn.setAttribute('aria-describedby','peek');
+ const r=btn.getBoundingClientRect(),w=peek.offsetWidth,h=peek.offsetHeight,g=16;
+ let top=r.bottom+8;if(top+h>innerHeight-g&&r.top-8-h>=g)top=r.top-8-h;top=Math.max(g,Math.min(top,innerHeight-h-g));
+ const left=Math.max(g,Math.min(r.left,innerWidth-w-g));peek.style.top=top+'px';peek.style.left=left+'px';
+ requestAnimationFrame(()=>peek.classList.add('on'))}
+function hidePeek(){clearTimeout(peekTimer);if(peekFor)peekFor.removeAttribute('aria-describedby');peekFor=null;peek.classList.remove('on');peek.hidden=true}
+const canHover=matchMedia('(hover:hover) and (pointer:fine)');
+document.addEventListener('mouseover',e=>{if(!canHover.matches)return;const b=e.target.closest('.idlink[data-go]');if(!b||b===peekFor)return;clearTimeout(peekTimer);peekTimer=setTimeout(()=>showPeek(b),120)});
+document.addEventListener('mouseout',e=>{const b=e.target.closest('.idlink[data-go]');if(b&&!b.contains(e.relatedTarget))hidePeek()});
+document.addEventListener('focusin',e=>{const b=e.target.closest('.idlink[data-go]');if(b&&b.matches(':focus-visible'))showPeek(b)});
+document.addEventListener('focusout',e=>{if(e.target.closest('.idlink[data-go]'))hidePeek()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')hidePeek()});
+addEventListener('scroll',hidePeek,{passive:true});document.addEventListener('click',hidePeek,true);
 })();
 </script>
 
