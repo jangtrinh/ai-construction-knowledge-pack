@@ -26,6 +26,12 @@ Một nền dữ liệu chung, phân quyền theo dự án, với ontology đủ
 
 ![Cảnh báo chênh lệch kèm phiếu cân, ảnh hiện trạng và dòng BOQ liên quan.](../../68b_AI_Core_KL_B4_Canh_Bao_Kem_Bang_Chung_HUD.jpg)
 
+### Hình chi tiết: Thiết bị đo và dẫn hướng máy
+
+![Máy quét laser trên chân máy; kỹ sư xem đám mây điểm chồng lên mô hình BIM để tìm chỗ lệch](../../81b_AI_Core_Quet_Laser_So_BIM_HUD.jpg)
+
+![Máy đào dẫn hướng 3D theo mặt thiết kế; kỹ sư trắc địa kiểm bằng máy thu GNSS, tệp hoàn công gửi về lõi](../../82b_AI_Core_Dan_Huong_May_Dao_3D_HUD.jpg)
+
 ## Việc cần làm
 
 1. Thiết kế ontology v0: dự án, hạng mục, cấu kiện, vật tư, công tác BOQ, hồ sơ, người, thiết bị.

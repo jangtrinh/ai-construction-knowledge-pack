@@ -48,6 +48,12 @@ Nạp toàn bộ dưới 30 dự án đang thi công, 10–15 dự án mỗi qu�
 
 ![Cảnh báo chênh lệch kèm phiếu cân, ảnh hiện trạng và dòng BOQ liên quan.](../../68b_AI_Core_KL_B4_Canh_Bao_Kem_Bang_Chung_HUD.jpg)
 
+### Hình chi tiết: Thiết bị chụp và back end OCR
+
+![QS chụp phiếu giao hàng bằng máy tính bảng công nghiệp; app tự cắt trang rồi gửi về cụm trong nước](../../79b_AI_Core_May_Tinh_Bang_Chup_Phieu_HUD.jpg)
+
+![Bản vẽ tách lớp: back end OCR sáu khâu, gồm nhận file, kho file, hàng đợi, mô hình OCR trên GPU, QS duyệt và ghi cơ sở dữ liệu](../../78b_AI_Core_Blueprint_Back_End_OCR_HUD.jpg)
+
 ## Việc cần làm
 
 1. Dựng luồng OCR: PaddleOCR-VL cho bố cục và bảng, VietOCR cho chữ viết tay; duyệt người khi độ tin thấp.

@@ -648,6 +648,8 @@ Lộ trình theo phương án B, 11 giai đoạn, M0 = tháng phê duyệt. Chi 
 
 Bảng dưới gọi tên cụ thể thiết bị, phần mềm và mô hình cho từng khối của lõi. Đây là **danh sách ứng viên để lấy báo giá và đưa vào vòng thi đấu bộ đề**, chưa phải quyết định mua. Mô hình chỉ chốt sau khi chạy bộ đề (VII.3). Giá là giá niêm yết công khai ở nước ngoài, ghi kèm ngày và nguồn; chưa gồm thuế nhập khẩu, VAT, vận chuyển, lắp đặt; không thay số ngân sách ở VII.12. Đối chiếu ngày 31/10/2026.
 
+![Bản vẽ tách lớp: bộ thiết bị một công trường gồm thu nhận hồ sơ, cổng ra vào, camera AI, máy tính biên, định vị UWB và đường truyền về cụm trong nước](./77b_AI_Core_Blueprint_Bo_Thiet_Bi_Cong_Truong_HUD.jpg)
+
 ### Trả lời nhanh: OCR dùng gì
 
 | Câu hỏi | Trả lời |
@@ -661,6 +663,8 @@ Bảng dưới gọi tên cụ thể thiết bị, phần mềm và mô hình ch
 Nhãn trong mục này: **[F]** đã mở trang gốc kiểm tra · **[V]** số nhà sản xuất tự công bố · **[S]** đại lý hoặc trang tổng hợp · **[I]** suy luận của nhóm tư vấn.
 
 ### 1. Thu nhận hồ sơ: máy quét và thiết bị chụp
+
+![QS chụp phiếu giao hàng bằng máy tính bảng công nghiệp; app tự cắt trang rồi gửi về cụm trong nước](./79b_AI_Core_May_Tinh_Bang_Chup_Phieu_HUD.jpg)
 
 | Thiết bị | Đặt ở đâu | Thông số chính | Giá tham khảo | Ghi chú |
 |---|---|---|---|---|
@@ -692,6 +696,8 @@ Không chọn:
 Chưa có số đo công khai nào về độ chính xác dấu tiếng Việt trên biên bản, nhật ký, phiếu cân. Thứ tự đo trên 200 trang CC1: PaddleOCR-VL-1.6, PP-OCRv5 với từ điển tiếng Việt, VietOCR đã tinh chỉnh. Tốc độ (trang/giờ) của PaddleOCR-VL-1.6 cũng phải đo trên đúng GPU của cụm trước khi cam kết thời gian số hóa.
 
 ### 3. Back end OCR
+
+![Bản vẽ tách lớp: back end OCR sáu khâu, gồm nhận file, kho file, hàng đợi, mô hình OCR trên GPU, QS duyệt và ghi cơ sở dữ liệu](./78b_AI_Core_Blueprint_Back_End_OCR_HUD.jpg)
 
 | Khâu | Phần mềm | Chạy ở đâu |
 |---|---|---|
@@ -731,6 +737,8 @@ Chưa có số đo công khai nào về độ chính xác dấu tiếng Việt t
 
 ### 6. Thiết bị đo khối lượng
 
+![Máy quét laser trên chân máy; kỹ sư xem đám mây điểm chồng lên mô hình BIM để tìm chỗ lệch](./81b_AI_Core_Quet_Laser_So_BIM_HUD.jpg)
+
 | Thiết bị | Vai trò | Thông số chính | Giá tham khảo | Ghi chú |
 |---|---|---|---|---|
 | DJI Matrice 4E | Ảnh RTK mặt bằng, đống vật liệu, đắp | 1.219 g, bay 49 phút, RTK 1 cm + 1 ppm ngang **[F]** | 5.189–5.499 USD (10/2026) **[S]** | Dưới 2 kg nhưng vẫn cần giấy phép bay theo Nghị định 288/2025/NĐ-CP |
@@ -746,6 +754,8 @@ Chưa có số đo công khai nào về độ chính xác dấu tiếng Việt t
 
 ### 7. Dẫn hướng máy và bê tông
 
+![Máy đào dẫn hướng 3D theo mặt thiết kế; kỹ sư trắc địa kiểm bằng máy thu GNSS, tệp hoàn công gửi về lõi](./82b_AI_Core_Dan_Huong_May_Dao_3D_HUD.jpg)
+
 | Thiết bị | Vai trò | Giá tham khảo | Ghi chú |
 |---|---|---|---|
 | Trimble Earthworks / Leica MC1 / Topcon MC-Max | Dẫn hướng 3D máy đào, ủi, san, lu theo mặt thiết kế | khoảng 45.000–80.000 USD/máy 3D **[S]**; Topcon kit máy đào 29.750 GBP **[S]** | Chỉ cho dự án tuyến mẫu; điều kiện là xuất được tệp hoàn công về lõi |
@@ -753,6 +763,8 @@ Chưa có số đo công khai nào về độ chính xác dấu tiếng Việt t
 | Command Center | Cùng việc, có dây | từ 49 USD/cảm biến **[V]** | Cường độ cho nghiệm thu vẫn theo phòng thí nghiệm; cảm biến dùng để quyết định thời điểm tháo ván khuôn |
 
 ### 8. Camera và máy tính biên
+
+![Máy tính biên đặt trong tủ tại lán, xử lý 4 luồng camera ngay tại chỗ](./80b_AI_Core_May_Tinh_Bien_Tai_Lan_HUD.jpg)
 
 | Thiết bị | Vai trò | Thông số chính | Giá tham khảo |
 |---|---|---|---|

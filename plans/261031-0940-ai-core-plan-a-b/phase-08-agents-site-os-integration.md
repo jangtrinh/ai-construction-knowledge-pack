@@ -40,6 +40,12 @@ Trợ lý làm được việc trong luồng công việc thật, bắt đầu c
 
 ![Nhật ký kiểm toán ghi ai duyệt, lúc nào, dựa trên bằng chứng nào.](../../76b_AI_Core_Tac_Tu_B3_Nhat_Ky_Kiem_Toan_HUD.jpg)
 
+### Hình chi tiết: Thiết bị tại công trường
+
+![Bản vẽ tách lớp: bộ thiết bị một công trường gồm thu nhận hồ sơ, cổng ra vào, camera AI, máy tính biên, định vị UWB và đường truyền về cụm trong nước](../../77b_AI_Core_Blueprint_Bo_Thiet_Bi_Cong_Truong_HUD.jpg)
+
+![Máy tính biên đặt trong tủ tại lán, xử lý 4 luồng camera ngay tại chỗ](../../80b_AI_Core_May_Tinh_Bien_Tai_Lan_HUD.jpg)
+
 ## Việc cần làm
 
 1. Nối trợ lý vào Site OS, ERP, hệ thống hồ sơ qua API có phân quyền.
