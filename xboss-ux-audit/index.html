@@ -324,7 +324,7 @@ document.querySelectorAll('.fbtn').forEach(b=>b.addEventListener('click',()=>{co
 $('q').addEventListener('input',e=>{st.q=e.target.value.trim().toLowerCase();render()});
 const FIELDS=[['location','Vị trí'],['observation','Quan sát'],['qa','Quan hệ với QA'],['friction','Loại ma sát'],['field','Điều kiện hiện trường'],['principle','Nguyên lý'],['measure','Số đo'],['recommendation','Đề xuất'],['metric','Chỉ số kiểm chứng']];
 const MK=D.mockups||[];const FLOWN=Object.keys(FLOWS);
-const mkImg=s=>'mockups/'+s.slug+'.jpg';
+const mkImg=s=>'mockups/'+s.slug+'.jpg?v=mk2';  // bump when the mockup images are re-rendered
 const sbs=s=>`<div class="sbs"><figure><figcaption>Hiện tại</figcaption><img loading="lazy" src="screens/${esc(s.current)}" alt="Màn hiện tại: ${esc(s.title)}"></figure><figure class="new"><figcaption>Đề xuất</figcaption><img loading="lazy" src="${mkImg(s)}" alt="Màn đề xuất: ${esc(s.title)}"></figure></div>`;
 const chg=(s,only)=>`<ol class="chg">${s.changes.filter(c=>!only||c.finding===only).map(c=>`<li><span class="n">${c.n}</span><span>${fmt(c.text)}</span><button class="idlink" data-go="${c.finding}">${c.finding}</button></li>`).join('')}</ol>`;
 const mkf={flow:''};
