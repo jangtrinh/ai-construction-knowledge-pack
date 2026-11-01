@@ -135,13 +135,24 @@ input[type=search]:focus{outline:2px solid var(--accent);outline-offset:1px}
 .cards{border-top:2px solid var(--ink)}
 .card{border-bottom:1px solid var(--rule);scroll-margin-top:80px}
 .card.flash{background:var(--accent-soft)}
-.card summary{list-style:none;cursor:pointer;padding:14px 0;display:grid;grid-template-columns:62px minmax(0,1fr) auto;gap:4px 14px;align-items:baseline;min-height:44px}
+.card summary{list-style:none;cursor:pointer;position:relative;padding:14px 0;display:grid;grid-template-columns:62px minmax(0,1fr) auto 32px;gap:4px 14px;align-items:baseline;min-height:44px}
 .card summary::-webkit-details-marker{display:none}
+.card summary,.card summary *{cursor:pointer}
+/* Expand affordance: a chevron that turns when open, plus a hint shown on hover. */
+.chev{align-self:center;justify-self:end;width:28px;height:28px;border-radius:50%;border:1px solid var(--rule-strong);display:grid;place-items:center;color:var(--ink-2);transition:transform .15s ease-out,background .15s ease-out}
+.chev::before{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg)}
+.card[open] .chev{transform:rotate(180deg)}
+.card summary .tip{position:absolute;right:0;bottom:calc(100% - 6px);z-index:5;background:var(--ink);color:#fff;font:600 13px/18px var(--f-body);padding:6px 10px;border-radius:var(--r-md);white-space:nowrap;opacity:0;transform:translateY(4px);pointer-events:none;transition:opacity .12s ease-out .25s,transform .12s ease-out .25s}
+.card summary .tip .c{display:none}
+.card[open] summary .tip .o{display:none}.card[open] summary .tip .c{display:inline}
+@media (hover:hover){.card summary:hover .chev{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}.card summary:hover .tip{opacity:1;transform:none}}
+.card summary:focus-visible .tip{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.chev,.card summary .tip{transition:none}}
 @media (hover:hover){.card summary:hover .ctitle{color:var(--accent)}}
 .cid{font:600 13px var(--f-mono);color:var(--ink-3)}
 .ctitle{font:700 16px/24px var(--f-display)}
 .badges{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
-@media (max-width:640px){.card summary{grid-template-columns:52px minmax(0,1fr)}.badges{grid-column:2;justify-content:flex-start}}
+@media (max-width:640px){.card summary{grid-template-columns:52px minmax(0,1fr) 32px}.badges{grid-column:2;justify-content:flex-start}.chev{grid-column:3;grid-row:1}}
 .badge{font:700 12px/20px var(--f-body);padding:1px 9px;border-radius:999px;white-space:nowrap}
 .badge.sev{background:var(--c);color:#fff}
 .badge.tag{background:var(--bg-elevated);color:var(--ink-2)}
@@ -312,7 +323,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-mkflow]');
 renderPairs();
 function fixBlock(f){const ss=MK.filter(s=>s.findings.includes(f.id));if(!ss.length)return'';const s=ss[0];
  return `<div class="fixp">${sbs(s)}<div><h4>Phương án: ${esc(s.title)}</h4>${chg(s,f.id)}<p class="more">${ss.map(x=>`<button type="button" data-mk="${esc(x.slug)}">Xem màn ${esc(x.title)}</button>`).join(' · ')}</p></div></div>`}
-function card(f){return `<details class="card" id="${f.id}" style="--c:${SEVC[f.sev]||'var(--sev-low)'}"><summary><span class="cid">${f.id}</span><span class="ctitle">${fmt(f.title)}</span><span class="badges"><span class="badge sev">${esc(f.sev)}</span><span class="badge tag">${esc(f.tag)}</span></span></summary><div class="body"><dl>${FIELDS.map(([k,l])=>f[k]?`<dt>${l}</dt><dd>${fmt(f[k])}</dd>`:'').join('')}</dl><div class="shots">${(f.annotated||[]).map(x=>`<figure class="ann"><img loading="lazy" src="annotated/${esc(x)}" alt="Ảnh đánh dấu ${esc(x)}"><figcaption>Đánh dấu · ${esc(x.split('__')[1])}</figcaption></figure>`).join('')}${f.image_files.filter(x=>!(f.annotated||[]).some(a=>a.endsWith('__'+x))).slice(0,Math.max(0,4-(f.annotated||[]).length)).map(x=>`<figure><img loading="lazy" src="screens/${esc(x)}" alt="Ảnh màn hình ${esc(x)}"><figcaption>${esc(x)}</figcaption></figure>`).join('')}</div>${fixBlock(f)}</div></details>`}
+function card(f){return `<details class="card" id="${f.id}" style="--c:${SEVC[f.sev]||'var(--sev-low)'}"><summary><span class="cid">${f.id}</span><span class="ctitle">${fmt(f.title)}</span><span class="badges"><span class="badge sev">${esc(f.sev)}</span><span class="badge tag">${esc(f.tag)}</span></span><span class="chev" aria-hidden="true"></span><span class="tip" aria-hidden="true"><span class="o">Bấm để mở: ảnh, số đo và phương án sửa</span><span class="c">Bấm để thu gọn</span></span></summary><div class="body"><dl>${FIELDS.map(([k,l])=>f[k]?`<dt>${l}</dt><dd>${fmt(f[k])}</dd>`:'').join('')}</dl><div class="shots">${(f.annotated||[]).map(x=>`<figure class="ann"><img loading="lazy" src="annotated/${esc(x)}" alt="Ảnh đánh dấu ${esc(x)}"><figcaption>Đánh dấu · ${esc(x.split('__')[1])}</figcaption></figure>`).join('')}${f.image_files.filter(x=>!(f.annotated||[]).some(a=>a.endsWith('__'+x))).slice(0,Math.max(0,4-(f.annotated||[]).length)).map(x=>`<figure><img loading="lazy" src="screens/${esc(x)}" alt="Ảnh màn hình ${esc(x)}"><figcaption>${esc(x)}</figcaption></figure>`).join('')}</div>${fixBlock(f)}</div></details>`}
 function render(){const q=st.q;const list=F.filter(f=>(!st.ids||st.ids.has(f.id))&&(!st.flow.size||st.flow.has(f.flow))&&(!st.sev.size||st.sev.has(f.sev))&&(!st.tag.size||st.tag.has(f.tag))&&(!q||JSON.stringify(f).toLowerCase().includes(q))).sort((a,b)=>SEV.indexOf(a.sev)-SEV.indexOf(b.sev)||a.id.localeCompare(b.id,undefined,{numeric:true}));
 $('cards').innerHTML=list.map(card).join('')||'<p class="note">Không có phát hiện khớp bộ lọc.</p>';$('rc').textContent=`${list.length} / ${F.length} phát hiện`;$('lensf').innerHTML=st.ids?`<div class="lensf"><span>Đang lọc theo bảng: <b>${esc(st.idsLabel)}</b></span><button type="button" id="lensclear">Bỏ lọc</button></div>`:''}
 render();
