@@ -182,6 +182,15 @@ dd{margin:0;white-space:pre-line;overflow-wrap:anywhere;color:var(--ink-2)}
 .chg .n{width:22px;height:22px;border-radius:50%;background:#E2008A;color:#fff;font:800 12px/22px var(--f-body);text-align:center}
 .chg .idlink{min-height:24px;padding:0 6px;font-size:12px}
 .mkf{margin-top:4px}
+.princ{border:1px solid var(--rule-strong);border-left:4px solid var(--accent);border-radius:var(--r-lg);background:var(--bg-canvas);padding:20px 24px;margin:0 0 28px;max-width:960px}
+.princ h3{font:700 16px/1.3 var(--f-display);color:var(--ink);margin:0 0 8px}
+.princ .lead{font:15px/1.55 var(--f-body);color:var(--ink-2);margin:0 0 18px;max-width:72ch}
+.princ ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 32px}
+@media (max-width:860px){.princ ul{grid-template-columns:1fr}.princ{padding:16px}}
+.princ li{position:relative;padding-left:18px;display:flex;flex-direction:column;gap:6px;font:14px/1.5 var(--f-body);color:var(--ink-2)}
+.princ li::before{content:"";position:absolute;left:2px;top:8px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.princ li b{color:var(--ink);font-weight:700}
+.princ .pids{display:flex;flex-wrap:wrap;gap:6px}
 .fixp{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:16px;display:grid;grid-template-columns:minmax(0,520px) minmax(0,1fr);gap:20px;align-items:start}
 @media (max-width:860px){.fixp{grid-template-columns:1fr}}
 .fixp h4{font:700 15px/1.3 var(--f-display);color:var(--ink);margin:0 0 8px}
@@ -240,7 +249,10 @@ dd{margin:0;white-space:pre-line;overflow-wrap:anywhere;color:var(--ink-2)}
 
 <section class="sec surface" id="phuong-an"><div class="inner">
   <div class="sec-head"><span class="eyebrow">Thiết kế lại</span><h2 id="mk-h"></h2>
-  <p class="note">Trái là màn đang có, phải là màn đề xuất. Số hồng trên màn đề xuất ứng với dòng thay đổi cùng số bên dưới. Giữ màu xanh XBOSS, thêm chế độ ngoài trời: chữ đậm, nút to, trạng thái có chữ và biểu tượng. Bấm vào ảnh để phóng to.</p></div>
+  <p class="note">Trái là màn đang có, phải là màn đề xuất. Số hồng trên màn đề xuất ứng với dòng thay đổi cùng số bên dưới. Bấm vào ảnh để phóng to.</p></div>
+  <div class="princ"><h3>Triết lý thiết kế</h3>
+  <p class="lead">Thiết kế cho người đứng ở cổng công trường: một tay cầm máy, nắng chói hoặc mưa, mạng lúc có lúc không. Giữ màu xanh, phông Nunito và bố cục XBOSS; chỉ đổi chỗ đang gây lỗi.</p>
+  <h3>Nguyên tắc</h3><ul><li><span><b>Mất mạng vẫn làm tiếp.</b> Phiếu lưu trên máy. Dải mạng luôn hiện, kèm số phiếu chờ gửi. Không báo xong khi chưa gửi được.</span><span class="pids"><button class="idlink" data-go="W1-04">W1-04</button><button class="idlink" data-go="W3-14">W3-14</button><button class="idlink" data-go="W3-01">W3-01</button></span></li><li><span><b>Đọc được dưới nắng.</b> Chữ tương phản từ 7:1, chữ to và đậm. Có chế độ Ngoài trời bật nhanh.</span><span class="pids"><button class="idlink" data-go="W1-14">W1-14</button></span></li><li><span><b>Bấm trúng bằng một ngón cái.</b> Nút cao từ 56 dp. Nút chính nằm ở nửa dưới màn hình.</span><span class="pids"><button class="idlink" data-go="W1-03">W1-03</button><button class="idlink" data-go="W1-06">W1-06</button></span></li><li><span><b>Trạng thái không chỉ dựa vào màu.</b> Luôn có chữ, biểu tượng và màu. Mỗi màu chỉ một nghĩa.</span><span class="pids"><button class="idlink" data-go="W1-05">W1-05</button><button class="idlink" data-go="W3-05">W3-05</button></span></li><li><span><b>Mỗi màn một việc chính.</b> Một nút chính rõ ràng. Nút xóa hay bỏ là nút phụ, đặt xa nút chính.</span><span class="pids"><button class="idlink" data-go="W3-13">W3-13</button><button class="idlink" data-go="W3-03">W3-03</button></span></li><li><span><b>Chặn lỗi trước khi gửi.</b> Kiểm tra ngay khi gõ, nói rõ còn thiếu gì, hỏi lại khi số lạ.</span><span class="pids"><button class="idlink" data-go="W2-04">W2-04</button><button class="idlink" data-go="W3-07">W3-07</button><button class="idlink" data-go="W4-05">W4-05</button></span></li><li><span><b>Không bắt nhập lại.</b> Điền sẵn từ phiếu, xe trước và tài khoản. Luôn lưu nháp.</span><span class="pids"><button class="idlink" data-go="W2-14">W2-14</button><button class="idlink" data-go="W2-11">W2-11</button><button class="idlink" data-go="W1-01">W1-01</button></span></li><li><span><b>Lời ngắn, nói thẳng.</b> Lỗi bằng tiếng Việt, nằm dưới ô, nói nguyên nhân và cách sửa.</span><span class="pids"><button class="idlink" data-go="W1-02">W1-02</button><button class="idlink" data-go="W4-08">W4-08</button><button class="idlink" data-go="W4-12">W4-12</button></span></li></ul></div>
   <div class="fgroup mkf" id="mk-flow" aria-label="Lọc theo luồng"></div>
   <div class="pairs" id="pairs"></div>
 </div></section>
